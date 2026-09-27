@@ -1,0 +1,26 @@
+# Agent Foundry
+
+> Canonical engineering system for reliable agent Skills, AGENTS.md, invariants, governance, evals, continuity, challenger discovery, runtime proof, interoperability, and trusted distribution.
+
+## Start
+- [README](https://github.com/Herbertofury/Agent-Foundry/blob/main/README.md)
+- [Wiki](https://github.com/Herbertofury/Agent-Foundry/wiki)
+- [AGENTS.md](https://github.com/Herbertofury/Agent-Foundry/blob/main/AGENTS.md)
+- [Product invariants](https://github.com/Herbertofury/Agent-Foundry/blob/main/PRODUCT_INVARIANTS.md)
+
+## Execution standards
+- [Challenger integration](https://github.com/Herbertofury/Agent-Foundry/blob/main/CHALLENGER_INTEGRATION_STANDARD.md)
+- [Failure intelligence](https://github.com/Herbertofury/Agent-Foundry/blob/main/FAILURE_INTELLIGENCE_STANDARD.md)
+- [Durable execution](https://github.com/Herbertofury/Agent-Foundry/blob/main/DURABLE_EXECUTION_STANDARD.md)
+- [Evaluation](https://github.com/Herbertofury/Agent-Foundry/blob/main/EVALUATION_STANDARD.md)
+- [Observability](https://github.com/Herbertofury/Agent-Foundry/blob/main/OBSERVABILITY_STANDARD.md)
+- [Runtime proof](https://github.com/Herbertofury/Agent-Foundry/blob/main/RUNTIME_PROOF.md)
+- [Performance acceptance](https://github.com/Herbertofury/Agent-Foundry/blob/main/PERFORMANCE_ACCEPTANCE.md)
+
+## Trust and interoperability
+- [Interoperability](https://github.com/Herbertofury/Agent-Foundry/blob/main/INTEROPERABILITY_STANDARD.md)
+- [Authorization/runtime control](https://github.com/Herbertofury/Agent-Foundry/blob/main/AUTHORIZATION_CONTROL_STANDARD.md)
+- [Third-party Skill security](https://github.com/Herbertofury/Agent-Foundry/blob/main/THIRD_PARTY_SKILL_SECURITY.md)
+- [Supply chain](https://github.com/Herbertofury/Agent-Foundry/blob/main/SUPPLY_CHAIN_STANDARD.md)
+- [Distribution](https://github.com/Herbertofury/Agent-Foundry/blob/main/DISTRIBUTION_STANDARD.md)
+- [Protocol registry](https://github.com/Herbertofury/Agent-Foundry/blob/main/registry/protocols.json)

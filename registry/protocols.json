@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-27",
+  "protocols": [
+    {
+      "id": "mcp",
+      "name": "Model Context Protocol",
+      "plane": "agent-tool-context",
+      "status": "adopt",
+      "stableVersion": "2026-07-28",
+      "capabilities": [
+        "stateless-core",
+        "extensions",
+        "tasks",
+        "apps",
+        "authorization"
+      ],
+      "source": "https://modelcontextprotocol.io/"
+    },
+    {
+      "id": "a2a",
+      "name": "Agent2Agent Protocol",
+      "plane": "agent-agent",
+      "status": "adopt",
+      "stableVersion": "1.0.0",
+      "capabilities": [
+        "capability-discovery",
+        "modalities",
+        "collaborative-tasks",
+        "artifacts"
+      ],
+      "source": "https://a2a-protocol.org/"
+    },
+    {
+      "id": "acp",
+      "name": "Agent Client Protocol",
+      "plane": "coding-agent-client",
+      "status": "adopt-stable-watch-draft",
+      "stableVersion": "v1",
+      "capabilities": [
+        "sessions",
+        "prompts",
+        "updates",
+        "permissions",
+        "cancellation"
+      ],
+      "source": "https://agentclientprotocol.com/"
+    },
+    {
+      "id": "ag-ui",
+      "name": "AG-UI",
+      "plane": "agent-user-ui",
+      "status": "compose",
+      "stableVersion": "registry-refresh-required",
+      "capabilities": [
+        "streaming-events",
+        "shared-state",
+        "generative-ui",
+        "frontend-interoperability"
+      ],
+      "source": "https://docs.ag-ui.com/"
+    },
+    {
+      "id": "acs",
+      "name": "OWASP Agent Control Standard",
+      "plane": "runtime-control",
+      "status": "compose-watch",
+      "stableVersion": "0.1.0",
+      "capabilities": [
+        "runtime-hooks",
+        "guardian-decisions",
+        "otel-trace",
+        "agbom",
+        "provenance-profiles"
+      ],
+      "notes": "Adopt portable concepts and interoperability; do not treat young reference implementations as the sole security boundary.",
+      "source": "https://genai.owasp.org/resource/agent-control-standard-acs/"
+    }
+  ]
+}
