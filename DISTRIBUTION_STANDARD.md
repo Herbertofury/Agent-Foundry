@@ -5,9 +5,25 @@ Agent Foundry should distribute Skills without locking users to one agent harnes
 ## Compatibility baseline
 
 Primary package compatibility target:
-- open Agent Skills <code>SKILL.md</code> structure;
+- the open Agent Skills <code>SKILL.md</code> specification;
 - Git repository as canonical source;
 - deterministic/pinned release artifact for durable versions.
+
+### Agent Skills compatibility
+
+A publishable Skill should preserve the open specification's required <code>SKILL.md</code> frontmatter and directory conventions rather than inventing a Foundry-only package shape. Keep the main Skill entrypoint concise and progressively disclose longer references/assets/scripts.
+
+Version-specific validation should use a current compatible validator (for example <code>skills-ref validate</code>) in addition to Foundry-specific acceptance checks.
+
+## Instruction compatibility
+
+Repository instructions should remain compatible with the open <code>AGENTS.md</code> convention:
+- root instructions apply broadly;
+- nested <code>AGENTS.md</code> files may scope behavior to subtrees;
+- the nearest applicable file takes precedence for local instructions;
+- user/developer authority remains above repository instruction files.
+
+Foundry invariants should be referenced by scoped adapters rather than copy-pasted into every nested file.
 
 ## Discovery/install adapters
 
