@@ -1,46 +1,19 @@
 # Agent Foundry Skill Catalog
 
-This catalog describes the current flagship skill architecture. Not every Skill is required for every task.
-
 ## Ultimate Agent Governance
 **Role:** shared acceptance constitution and governance authoring.
 
-Owns:
-- no blocker closeout;
-- unknown-not-absent;
-- challenger/integration standard;
-- modernization/fix-forward;
-- completeness proof;
-- reusable failure intelligence;
-- runtime/performance acceptance boundaries.
+Owns no blocker closeout, unknown-not-absent, challenger/integration, modernization/fix-forward, completeness proof, reusable failure intelligence, and runtime/performance acceptance boundaries.
 
 Current validated bundle:
-- SHA-256: \`8d42e1b1ead43a0342931c18adb708875391a62a561d99eff7429fae57742cf8\`
+- SHA-256: <code>8d42e1b1ead43a0342931c18adb708875391a62a561d99eff7429fae57742cf8</code>
 - [Drive bundle](https://drive.google.com/file/d/1uPozXLHOEJgqphore01mDoBtFnNmwkmR/view)
 
 ## Zero-Loss Chat Accelerator
-**Role:** always-on execution substrate.
-
-Owns:
-- continuity capsules;
-- anti-stall watchdog;
-- no rediscovery;
-- implementation crossing;
-- single-flight equivalent reads;
-- wait leases;
-- checkpoint-before-long-gate;
-- maximum useful effort with minimum wasted motion.
+**Role:** always-on execution substrate for continuity, anti-stall, no rediscovery, implementation crossing, single-flight equivalent reads, wait leases, checkpoint-before-long-gate, and maximum useful effort with minimum wasted motion.
 
 ## Project Brain Orchestrator
-**Role:** durable project control plane.
-
-Owns:
-- canonical project/repo/file identity;
-- checkpoints and handoffs;
-- Drive/GitHub persistence;
-- Project Constellation state;
-- build-first closeout discipline;
-- publication receipts.
+**Role:** durable project control plane for canonical identity, checkpoints, Drive/GitHub persistence, Project Constellation state, build-first closeout, and publication receipts.
 
 ## Minecraft Dev Kit
 **Role:** Minecraft implementation, ports, conversions, benchmarking, release QA, and real runtime proof.
@@ -49,7 +22,7 @@ Owns:
 **Role:** bounded diagnosis and repair of broken clients, servers, modpacks, worlds, loaders, configs, packs, and JARs.
 
 ## Project Visual QA Showcase
-**Role:** deterministic visual QA and polished showcase evidence from real project assets.
+**Role:** deterministic visual QA and showcase artifacts from real project assets.
 
 ## Artifact Browser Companion
 **Role:** searchable/browsable companion applications around canonical research artifacts.

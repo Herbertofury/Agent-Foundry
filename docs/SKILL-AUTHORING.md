@@ -3,9 +3,8 @@
 A strong Skill is a compact reusable operating manual, not a prompt dump.
 
 ## Structure
-A typical Skill contains:
 
-\`\`\`text
+~~~text
 skill-name/
 ├── SKILL.md
 ├── agents/
@@ -14,7 +13,7 @@ skill-name/
 ├── references/
 ├── assets/
 └── evals/
-\`\`\`
+~~~
 
 ## Design rules
 
@@ -22,13 +21,13 @@ skill-name/
 The Skill description should make it obvious when the Skill owns the task.
 
 ### Keep the entrypoint lean
-Put essential workflow in \`SKILL.md\`. Move long detail into references loaded only when needed.
+Put essential workflow in <code>SKILL.md</code>. Move long detail into references loaded only when needed.
 
 ### Use scripts for determinism
 Fragile, repeatable, or machine-checkable operations should prefer tested scripts over long prose.
 
 ### Inherit the execution constitution
-Substantive mutable skills must preserve the shared acceptance boundary: no blocker closeout, unknown-not-absent, full-result preservation, performance+quality, real proof, continuity, completeness, and challenger-before-reinventing.
+Substantive mutable skills must preserve the shared acceptance boundary.
 
 ### Preserve procedure ownership
 A governance/guardrail skill adds acceptance constraints; it does not steal a narrower domain skill's procedure or restart its discovery.
