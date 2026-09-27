@@ -15,7 +15,6 @@
 Agent Foundry is a living engineering system for making AI agents **more capable without becoming less reliable**.
 
 It exists to prevent the failure modes that ruin long, ambitious agent work:
-
 - forgetting requirements after a handoff or tool switch;
 - restarting solved discovery;
 - accepting blockers as completion;
@@ -46,7 +45,7 @@ It exists to prevent the failure modes that ruin long, ambitious agent work:
 
 ## Core execution loop
 
-\`\`\`mermaid
+~~~mermaid
 flowchart LR
     A[Resolve identity] --> B[Freeze acceptance]
     B --> C[Challenge before reinventing]
@@ -57,7 +56,7 @@ flowchart LR
     G --> H[Publish]
     H --> I[Learn & reuse]
     I --> A
-\`\`\`
+~~~
 
 ## What makes it different
 
@@ -70,8 +69,6 @@ It is a layered system:
 - **domain skills** own the actual procedure;
 - **Project Brain** preserves identity, checkpoints, and publication;
 - **evals/audits/runtime proof** turn important rules into evidence.
-
-That separation keeps the system powerful without flooding every task with irrelevant ceremony.
 
 ---
 

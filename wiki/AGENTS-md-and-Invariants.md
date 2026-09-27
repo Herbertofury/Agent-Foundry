@@ -1,6 +1,6 @@
 # AGENTS.md & Invariants
 
-A good \`AGENTS.md\` is a **router**, not an encyclopedia.
+A good <code>AGENTS.md</code> is a **router**, not an encyclopedia.
 
 ## Put in AGENTS.md
 - repository-wide execution rules;

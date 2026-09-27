@@ -22,6 +22,6 @@ A Minecraft repair Skill still decides *how* to repair Minecraft. Governance ens
 ## Canonical bundle
 Current validated Ultimate Agent Governance bundle:
 
-SHA-256: \`8d42e1b1ead43a0342931c18adb708875391a62a561d99eff7429fae57742cf8\`
+SHA-256: <code>8d42e1b1ead43a0342931c18adb708875391a62a561d99eff7429fae57742cf8</code>
 
 [Open the canonical bundle on Google Drive](https://drive.google.com/file/d/1uPozXLHOEJgqphore01mDoBtFnNmwkmR/view)

@@ -13,7 +13,7 @@ Examples:
 - runtime proof required before claiming completion.
 
 ## 2. Keep AGENTS.md lean
-Use \`AGENTS.md\` as a routing and repository-behavior layer. Point it to canonical standards instead of copying every long rule into the root context.
+Use <code>AGENTS.md</code> as a routing and repository-behavior layer. Point it to canonical standards instead of copying every long rule into the root context.
 
 ## 3. Put procedure into Skills
 A Skill should own a repeatable domain workflow: repair, porting, conversion, research, document generation, QA, publishing, etc.
