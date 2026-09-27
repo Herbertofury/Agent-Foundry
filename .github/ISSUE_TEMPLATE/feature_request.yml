@@ -1,0 +1,24 @@
+name: Foundry improvement
+description: Propose a capability, invariant, skill, eval, integration, or challenger.
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: User goal
+      description: What should become possible or more reliable?
+    validations:
+      required: true
+  - type: textarea
+    id: prior_art
+    attributes:
+      label: Challengers / prior art
+      description: Existing projects, skills, libraries, standards, or integrations worth adopting/merging/porting/wrapping/composing.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance evidence
+      description: What would prove this is complete without reducing quality or scope?
+    validations:
+      required: true

@@ -1,0 +1,57 @@
+name: Validate Foundry
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.md"
+      - ".github/workflows/validate-foundry.yml"
+  pull_request:
+    paths:
+      - "**.md"
+      - ".github/workflows/validate-foundry.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Verify canonical structure
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            README.md
+            AGENTS.md
+            PRODUCT_INVARIANTS.md
+            MODERNIZATION_STANDARD.md
+            FAILURE_INTELLIGENCE_STANDARD.md
+            CHALLENGER_INTEGRATION_STANDARD.md
+            PERFORMANCE_ACCEPTANCE.md
+            RUNTIME_PROOF.md
+            catalog/SKILLS.md
+            docs/ARCHITECTURE.md
+            docs/SKILL-AUTHORING.md
+            wiki/Home.md
+            wiki/_Sidebar.md
+          )
+          for file in "\${required[@]}"; do
+            test -s "$file" || { echo "::error file=$file::Required canonical file missing or empty"; exit 1; }
+          done
+
+      - name: Verify invariant anchors
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -qi "Blockers do not close work" PRODUCT_INVARIANTS.md
+          grep -qi "Unknown is not absent" PRODUCT_INVARIANTS.md
+          grep -qi "Challenge before reinventing" PRODUCT_INVARIANTS.md
+          grep -qi "Performance and quality improve together" PRODUCT_INVARIANTS.md
+          grep -qi "Continuity is mandatory" PRODUCT_INVARIANTS.md
+          grep -qi "Never suffer the same failure twice" PRODUCT_INVARIANTS.md
+          grep -qi "Challenger" wiki/_Sidebar.md
+          grep -qi "Zero-Loss" wiki/_Sidebar.md

@@ -1,0 +1,29 @@
+name: Publish Wiki
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "wiki/**"
+      - ".github/workflows/publish-wiki.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: agent-foundry-wiki
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Mirror wiki/ to GitHub Wiki
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout canonical source
+        uses: actions/checkout@v7
+
+      - name: Publish Agent Foundry Wiki
+        uses: step-security/github-wiki-action@v5
+        with:
+          path: wiki

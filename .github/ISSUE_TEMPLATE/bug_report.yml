@@ -1,0 +1,29 @@
+name: Reliability bug
+description: Report a behavior where Agent Foundry loses scope, continuity, proof, or execution quality.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected invariant
+      description: What behavior should have remained true?
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: What actually happened?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Logs, prompts, commits, screenshots, run IDs, or reproducible steps.
+  - type: textarea
+    id: recovery
+    attributes:
+      label: Known recovery or workaround
+      description: If this was fixed before, link the prior recovery so we do not rediscover it.
