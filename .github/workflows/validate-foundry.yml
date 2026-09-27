@@ -35,6 +35,17 @@ jobs:
           CHALLENGER_INTEGRATION_STANDARD.md
           PERFORMANCE_ACCEPTANCE.md
           RUNTIME_PROOF.md
+          DURABLE_EXECUTION_STANDARD.md
+          EVALUATION_STANDARD.md
+          OBSERVABILITY_STANDARD.md
+          INTEROPERABILITY_STANDARD.md
+          AUTHORIZATION_CONTROL_STANDARD.md
+          THIRD_PARTY_SKILL_SECURITY.md
+          SUPPLY_CHAIN_STANDARD.md
+          DISTRIBUTION_STANDARD.md
+          SECURITY.md
+          registry/protocols.json
+          llms.txt
           catalog/SKILLS.md
           docs/ARCHITECTURE.md
           docs/SKILL-AUTHORING.md
@@ -54,3 +65,23 @@ jobs:
           grep -qi "Never suffer the same failure twice" PRODUCT_INVARIANTS.md
           grep -qi "Challenger" wiki/_Sidebar.md
           grep -qi "Zero-Loss" wiki/_Sidebar.md
+          grep -qi "Interoperability" wiki/_Sidebar.md
+          grep -qi "Supply Chain" wiki/_Sidebar.md
+
+      - name: Verify machine-readable registries
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("registry/protocols.json")
+          data = json.loads(p.read_text(encoding="utf-8"))
+          assert data["schemaVersion"] == 1
+          ids = {x["id"] for x in data["protocols"]}
+          required = {"mcp", "a2a", "acp", "ag-ui", "acs"}
+          missing = required - ids
+          assert not missing, f"missing protocol entries: {sorted(missing)}"
+          assert data.get("checkedAt"), "checkedAt is required"
+          print("protocol registry OK:", ", ".join(sorted(ids)))
+          PY

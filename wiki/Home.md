@@ -41,6 +41,12 @@ It exists to prevent the failure modes that ruin long, ambitious agent work:
 | 🔌 [Cross-Agent Compatibility](Cross-Agent-Compatibility) | Thin adapters, one canonical truth |
 | 🛠️ [Building a Skill](Building-a-Skill) | How to build reusable, testable Skills |
 | 🌌 [Project Constellation Integration](Project-Constellation-Integration) | Durable project memory and continuation |
+| 🔌 [Interoperability Protocols](Interoperability-Protocols) | MCP, A2A, ACP, AG-UI, ACS |
+| 🧪 [Evaluation & Observability](Evaluation-and-Observability) | Real-harness evals, trajectories, telemetry |
+| ⏳ [Durable Execution](Durable-Execution) | Resumable tasks, idempotency, waits, cancellation |
+| 🛡️ [Trust & Supply Chain](Trust-and-Supply-Chain) | Skill quarantine, provenance, attestations, SBOM/AgBOM |
+| 🔐 [Authorization & Runtime Control](Authorization-and-Runtime-Control) | Policy-as-code and Guardian-style enforcement |
+| 📦 [Distribution & Sync](Distribution-and-Sync) | skills.sh, locks, desired-state multi-agent installs |
 | 🗺️ [Roadmap](Roadmap) | Where the Foundry goes next |
 
 ## Core execution loop

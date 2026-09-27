@@ -44,6 +44,14 @@ It combines reusable Skills, repository-level agent instructions, product invari
 | **Failure intelligence** | Unknown ≠ absent; blocker escalation; reusable incident recovery | [FAILURE_INTELLIGENCE_STANDARD.md](./FAILURE_INTELLIGENCE_STANDARD.md) |
 | **Runtime proof** | Real workflow evidence outranks static confidence | [RUNTIME_PROOF.md](./RUNTIME_PROOF.md) |
 | **Performance acceptance** | Faster and better together; never faster by doing less | [PERFORMANCE_ACCEPTANCE.md](./PERFORMANCE_ACCEPTANCE.md) |
+| **Durable execution** | Resumable task state, idempotency, cancellation, human waits | [DURABLE_EXECUTION_STANDARD.md](./DURABLE_EXECUTION_STANDARD.md) |
+| **Evaluation** | Real-harness behavioral delta, trigger controls, trajectory proof | [EVALUATION_STANDARD.md](./EVALUATION_STANDARD.md) |
+| **Observability** | Vendor-neutral causal traces without making telemetry the truth store | [OBSERVABILITY_STANDARD.md](./OBSERVABILITY_STANDARD.md) |
+| **Interoperability** | MCP / A2A / ACP / AG-UI / ACS boundary mapping | [INTEROPERABILITY_STANDARD.md](./INTEROPERABILITY_STANDARD.md) |
+| **Authorization** | Policy decision/enforcement boundaries for sensitive actions | [AUTHORIZATION_CONTROL_STANDARD.md](./AUTHORIZATION_CONTROL_STANDARD.md) |
+| **Skill trust** | Quarantine, scan, review, permission manifest, sandbox, pin | [THIRD_PARTY_SKILL_SECURITY.md](./THIRD_PARTY_SKILL_SECURITY.md) |
+| **Supply chain** | Checksums, attestations, SBOM/AgBOM, release provenance | [SUPPLY_CHAIN_STANDARD.md](./SUPPLY_CHAIN_STANDARD.md) |
+| **Distribution** | Open Agent Skills compatibility, multi-agent sync, locks | [DISTRIBUTION_STANDARD.md](./DISTRIBUTION_STANDARD.md) |
 
 ## Execution architecture
 
@@ -99,6 +107,25 @@ Every meaningful candidate gets one of these states:
 <code>adopt</code> · <code>merge</code> · <code>port</code> · <code>wrap</code> · <code>backport</code> · <code>compose</code> · <code>reject</code> · <code>unresolved</code>
 
 Read the full [Challenger & Integration Standard](./CHALLENGER_INTEGRATION_STANDARD.md).
+
+## Trust + interoperability layer
+
+The second challenger sweep found that the biggest missing pieces were not more prompt frameworks. They were **operational trust and open interoperability**.
+
+Agent Foundry now has explicit homes for:
+- MCP tool/context compatibility and durable Tasks;
+- A2A agent-to-agent collaboration;
+- ACP coding-agent/client compatibility;
+- AG-UI application-facing interaction;
+- OWASP ACS-compatible runtime controls and AgBOM concepts;
+- real-harness Skill evaluation;
+- OpenTelemetry-compatible observability;
+- third-party Skill quarantine/scanning;
+- SLSA-style artifact provenance;
+- skills.sh / open Agent Skills distribution compatibility;
+- desired-state multi-agent Skill synchronization.
+
+See [registry/protocols.json](./registry/protocols.json) for version-sensitive protocol state.
 
 ## Current flagship components
 
