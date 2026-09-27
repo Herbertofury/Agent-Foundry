@@ -18,7 +18,7 @@ Look across:
 ## Decide
 Use one explicit state:
 
-\`adopt\` · \`merge\` · \`port\` · \`wrap\` · \`backport\` · \`compose\` · \`reject\` · \`unresolved\`
+<code>adopt</code> · <code>merge</code> · <code>port</code> · <code>wrap</code> · <code>backport</code> · <code>compose</code> · <code>reject</code> · <code>unresolved</code>
 
 ## Best-of-breed composition
 One challenger does not need to win everything.

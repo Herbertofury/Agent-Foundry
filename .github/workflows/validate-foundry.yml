@@ -24,24 +24,23 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          required=(
-            README.md
-            AGENTS.md
-            PRODUCT_INVARIANTS.md
-            MODERNIZATION_STANDARD.md
-            FAILURE_INTELLIGENCE_STANDARD.md
-            CHALLENGER_INTEGRATION_STANDARD.md
-            PERFORMANCE_ACCEPTANCE.md
-            RUNTIME_PROOF.md
-            catalog/SKILLS.md
-            docs/ARCHITECTURE.md
-            docs/SKILL-AUTHORING.md
-            wiki/Home.md
-            wiki/_Sidebar.md
-          )
-          for file in "\${required[@]}"; do
+          while IFS= read -r file; do
             test -s "$file" || { echo "::error file=$file::Required canonical file missing or empty"; exit 1; }
-          done
+          done <<'EOF'
+          README.md
+          AGENTS.md
+          PRODUCT_INVARIANTS.md
+          MODERNIZATION_STANDARD.md
+          FAILURE_INTELLIGENCE_STANDARD.md
+          CHALLENGER_INTEGRATION_STANDARD.md
+          PERFORMANCE_ACCEPTANCE.md
+          RUNTIME_PROOF.md
+          catalog/SKILLS.md
+          docs/ARCHITECTURE.md
+          docs/SKILL-AUTHORING.md
+          wiki/Home.md
+          wiki/_Sidebar.md
+          EOF
 
       - name: Verify invariant anchors
         shell: bash

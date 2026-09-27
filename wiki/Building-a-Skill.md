@@ -4,7 +4,7 @@ A high-quality Skill is a reusable operating system for one class of work.
 
 ## Minimal structure
 
-\`\`\`text
+~~~text
 skill-name/
 ├── SKILL.md
 ├── agents/openai.yaml
@@ -12,7 +12,7 @@ skill-name/
 ├── references/
 ├── assets/
 └── evals/
-\`\`\`
+~~~
 
 ## Design checklist
 - precise trigger metadata;
