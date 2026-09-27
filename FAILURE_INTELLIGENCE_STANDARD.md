@@ -4,11 +4,11 @@ Failures are state transitions, not excuses and not deliverables.
 
 ## State model
 Use explicit states:
-- \`verified\`
-- \`unverified\`
-- \`unresolved-active\`
-- \`blocked-user-action\`
-- \`superseded\`
+- <code>verified</code>
+- <code>unverified</code>
+- <code>unresolved-active</code>
+- <code>blocked-user-action</code>
+- <code>superseded</code>
 
 Do not translate “first search missed it” into “does not exist.”
 
@@ -24,23 +24,10 @@ When a required path fails:
 Never loop an unchanged failure.
 
 ## Reusable incident knowledge
-A nontrivial verified recovery should capture:
-- signature;
-- environment/version;
-- root cause;
-- failed routes;
-- successful route;
-- verification evidence;
-- invalidation conditions;
-- regression protection.
-
-Future work must reuse or supersede that knowledge before rediscovering the same failure from scratch.
+A nontrivial verified recovery should capture signature, environment/version, root cause, failed routes, successful route, verification evidence, invalidation conditions, and regression protection.
 
 ## Completeness
-For exhaustive external data:
-- reconcile expected, discovered, accepted, rejected, and unresolved counts;
-- prove terminal pagination/coverage before claiming completeness;
-- preserve unresolved gaps explicitly.
+For exhaustive external data, reconcile expected, discovered, accepted, rejected, and unresolved counts and prove terminal pagination/coverage before claiming completeness.
 
 ## Anti-stall rule
 Two consecutive execution waves that add no evidence, reduce no uncertainty, advance no dependency, mutate no required deliverable, and satisfy no acceptance item force a strategy change.

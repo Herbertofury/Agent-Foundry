@@ -47,7 +47,7 @@ It combines reusable Skills, repository-level agent instructions, product invari
 
 ## Execution architecture
 
-\`\`\`mermaid
+~~~mermaid
 flowchart TD
     U[User goal] --> A[AGENTS.md / product invariants]
     A --> G[Ultimate Agent Governance]
@@ -61,24 +61,24 @@ flowchart TD
     R --> F[Failure intelligence / regression fixture]
     F --> G
     P --> N[Next task resumes from verified state]
-\`\`\`
+~~~
 
 ### The core loop
 
 **Resolve identity → preserve acceptance → challenge before reinventing → implement → targeted test → checkpoint → runtime proof → publish → learn.**
 
-The Foundry deliberately separates **procedure ownership** from **acceptance ownership**. A domain skill knows *how* to do the work. Governance ensures the work does not quietly become smaller, weaker, less verified, or disconnected from the user's actual goal.
+The Foundry deliberately separates **procedure ownership** from **acceptance ownership**.
 
 ## The invariants that matter most
 
 ### 🧭 Preserve the real objective
-Do not optimize for an easy-looking completion. Preserve requested functionality, quality, quantity, compatibility, provenance, fidelity, and verification.
+Preserve requested functionality, quality, quantity, compatibility, provenance, fidelity, and verification.
 
 ### 🔎 Challenge before reinventing
-Before substantial invention, actively look for stronger existing implementations across upstreams, GitHub, GitLab, Codeberg, forks, packages, plugins, standards, reference implementations, and authorized internal/commercial sources. Reuse the best authorized parts instead of rebuilding weaker duplicates.
+Before substantial invention, actively look for stronger existing implementations across upstreams, GitHub, GitLab, Codeberg, forks, packages, plugins, standards, reference implementations, and authorized internal/commercial sources.
 
 ### 🧱 Blockers are routing signals
-A failed route is not a deliverable. Repair the environment, change the route, install the dependency, fix auth, switch implementation, or preserve an explicit unresolved checkpoint.
+A failed route is not a deliverable.
 
 ### ⚡ Performance and quality improve together
 Performance work succeeds only when the target metric improves **and** protected behavior stays intact.
@@ -94,95 +94,36 @@ Skill switches, model changes, connectors, compaction, handoffs, retries, and ti
 
 ## Challenger intelligence
 
-Agent Foundry treats ecosystem discovery as an engineering phase, not casual browsing.
-
 Every meaningful candidate gets one of these states:
 
-\`adopt\` · \`merge\` · \`port\` · \`wrap\` · \`backport\` · \`compose\` · \`reject\` · \`unresolved\`
-
-A strong result is often **composition**, not a single winner: one project may have the best parser, another the best caching model, another the best UI behavior, and a fourth the best compatibility layer.
+<code>adopt</code> · <code>merge</code> · <code>port</code> · <code>wrap</code> · <code>backport</code> · <code>compose</code> · <code>reject</code> · <code>unresolved</code>
 
 Read the full [Challenger & Integration Standard](./CHALLENGER_INTEGRATION_STANDARD.md).
 
-## Skills are executable engineering knowledge
-
-A Foundry Skill is not just a prompt. A good Skill can carry:
-
-- concise trigger metadata;
-- deterministic scripts for fragile/repeatable work;
-- evaluation fixtures;
-- compatibility rules;
-- reference standards;
-- packaged assets;
-- recovery knowledge;
-- real validation procedures;
-- connector/tool guidance;
-- cross-skill inheritance rules.
-
-See [Skill Authoring](./docs/SKILL-AUTHORING.md).
-
 ## Current flagship components
 
-- **Ultimate Agent Governance** — the shared execution constitution and governance architecture.
-- **Zero-Loss Chat Accelerator** — persistent anti-stall orchestration and continuity.
-- **Project Brain Orchestrator** — project identity, checkpoints, persistence, and resume logic.
-- **Minecraft Dev Kit** — implementation, ports, conversions, benchmarking, and runtime proof.
-- **Minecraft Repair** — bounded diagnosis/repair that returns control to the active project workflow.
-- **Project Visual QA Showcase** — deterministic visual evidence and comparison.
-- **Artifact Browser Companion** — desktop/browser companions around canonical research artifacts.
-- **Revenue Operator** — real-world monetization and paid-work execution.
-- **Skill Creator** — reusable Skill design and packaging.
-
-The catalog grows without forcing every skill into every task. **One truth, many focused overlays.**
+- **Ultimate Agent Governance**
+- **Zero-Loss Chat Accelerator**
+- **Project Brain Orchestrator**
+- **Minecraft Dev Kit**
+- **Minecraft Repair**
+- **Project Visual QA Showcase**
+- **Artifact Browser Companion**
+- **Revenue Operator**
+- **Skill Creator**
 
 ## Canonical bundle
 
-The current validated **Ultimate Agent Governance** Skill bundle is mirrored durably on Google Drive:
-
-- File: \`ultimate-agent-governance-skill.zip\`
-- SHA-256: \`8d42e1b1ead43a0342931c18adb708875391a62a561d99eff7429fae57742cf8\`
-- Size: \`76,676 bytes\`
+- File: <code>ultimate-agent-governance-skill.zip</code>
+- SHA-256: <code>8d42e1b1ead43a0342931c18adb708875391a62a561d99eff7429fae57742cf8</code>
+- Size: <code>76,676 bytes</code>
 - [Open canonical Drive bundle](https://drive.google.com/file/d/1uPozXLHOEJgqphore01mDoBtFnNmwkmR/view)
-
-See [bundles/README.md](./bundles/README.md) for provenance and packaging rules.
-
-## Repository map
-
-\`\`\`text
-Agent-Foundry/
-├── AGENTS.md
-├── PRODUCT_INVARIANTS.md
-├── MODERNIZATION_STANDARD.md
-├── FAILURE_INTELLIGENCE_STANDARD.md
-├── CHALLENGER_INTEGRATION_STANDARD.md
-├── PERFORMANCE_ACCEPTANCE.md
-├── RUNTIME_PROOF.md
-├── catalog/
-│   └── SKILLS.md
-├── docs/
-│   ├── ARCHITECTURE.md
-│   └── SKILL-AUTHORING.md
-├── bundles/
-│   └── README.md
-├── wiki/                  # canonical wiki source mirror
-└── .github/
-    ├── workflows/
-    └── ISSUE_TEMPLATE/
-\`\`\`
 
 ## Wiki
 
-The Wiki is the friendly, browsable layer over the same canonical standards:
-
 **https://github.com/Herbertofury/Agent-Foundry/wiki**
 
-The repository keeps a source mirror under [wiki/](./wiki/) so documentation changes can be reviewed, versioned, validated, and automatically published rather than becoming an untracked second truth.
-
-## Contributing
-
-Improvements are welcome when they make the system measurably more reliable, capable, complete, reusable, or easier to operate **without manufacturing success by weakening acceptance**.
-
-Read [CONTRIBUTING.md](./CONTRIBUTING.md) before changing a canonical standard.
+The repository keeps a source mirror under [wiki/](./wiki/) so documentation changes can be reviewed, versioned, validated, and automatically published.
 
 ---
 
