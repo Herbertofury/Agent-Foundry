@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "targets": [
+    {"name": "codex", "root": "${HOME}/.codex/skills", "mode": "symlink", "enabled": false},
+    {"name": "claude", "root": "${HOME}/.claude/skills", "mode": "symlink", "enabled": false},
+    {"name": "cursor", "root": "${HOME}/.cursor/skills", "mode": "symlink", "enabled": false},
+    {"name": "opencode", "root": "${HOME}/.config/opencode/skills", "mode": "symlink", "enabled": false}
+  ],
+  "skills": [
+    {"name": "ultimate-agent-governance", "source": "skills/ultimate-agent-governance", "targets": ["codex", "claude", "cursor", "opencode"]},
+    {"name": "zero-loss-chat-accelerator", "source": "skills/zero-loss-chat-accelerator", "targets": ["codex", "claude", "cursor", "opencode"]},
+    {"name": "project-brain-orchestrator", "source": "skills/project-brain-orchestrator", "targets": ["codex", "claude", "cursor", "opencode"]}
+  ]
+}
