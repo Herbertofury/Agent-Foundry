@@ -1,14 +1,35 @@
-name: Dependency Review
+name: Dependency and Supply Chain Review
 
 on:
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  dependency-review:
+  review:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/dependency-review-action@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Audit GitHub Actions references
+        run: python tools/check_workflow_dependencies.py
+
+      - name: Audit Python dependency manifests when present
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! find . -type f \( -name 'requirements.txt' -o -name 'requirements-*.txt' \) -not -path './.git/*' | grep -q .; then
+            echo "No pip requirements manifests are committed; repo tooling currently uses the Python standard library."
+            exit 0
+          fi
+          python -m pip install "pip-audit==2.9.0"
+          find . -type f \( -name 'requirements.txt' -o -name 'requirements-*.txt' \) -not -path './.git/*' -print0 | sort -z | while IFS= read -r -d '' manifest; do
+            echo "::group::pip-audit $manifest"
+            pip-audit -r "$manifest"
+            echo "::endgroup::"
+          done
