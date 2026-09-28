@@ -83,6 +83,13 @@
         "string",
         "null"
       ]
+    },
+    "sourceTreeDigest": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-fA-F]{64}$"
     }
   },
   "additionalProperties": false
