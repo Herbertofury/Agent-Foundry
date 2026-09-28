@@ -1,3 +1,7 @@
+---
+name: artifact-browser-companion
+description: "Build or upgrade standalone companion browser apps around canonical research artifacts such as Sheets/Excel, Docs/Word, PDFs, CSV/JSON catalogs, and linked project lists. Use when the user wants a searchable/browsable desktop catalog, real in-app browser, project explorer, gallery browser, or source-synced companion. Do not use for ordinary spreadsheet/document edits alone. Preserve canonical source provenance, offline snapshots, real Chromium tabs, direct external-browser actions, update plumbing, and end-to-end QA. Compose with zero-loss-chat-accelerator and any active project/file-format skill without restarting resolved source discovery."
+---
 
 ## Mandatory governance bootstrap
 
