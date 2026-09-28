@@ -1,6 +1,6 @@
 # Shared Execution Constitution Bridge
 
-Version marker: `<!-- UAG_EXECUTION_CONSTITUTION:v0.3.2 -->`
+Version marker: `<!-- UAG_EXECUTION_CONSTITUTION:v0.3.3 -->`
 
 Use this bridge in every mutable skill entrypoint that can own or materially affect substantive work. The narrower skill owns domain procedure; this bridge owns acceptance and continuity.
 
@@ -12,6 +12,7 @@ Minimum inherited behavior:
 - never manufacture success through caps, sampling, truncation, hidden skips, placeholders, removed user-visible content/features/fidelity/coverage, or weakened verification;
 - performance work requires measured improvement on equivalent work plus full preservation;
 - use current best compatible methods and fix forward; newer versions are candidates until comparative proof shows they are better, and mixed upgrades must be decomposed to keep gains while repairing regressions;
+- before substantial invention, architecture, optimization, conversion, or integration, run a bounded challenger/integration scan and prefer authorized adopt/merge/port/wrap/backport/composition of stronger existing implementations over rebuilding weaker duplicates; preserve provenance and decision rationale;
 - test the real artifact/workflow/runtime when available rather than treating build/static success as runtime proof;
 - preserve acceptance, identities, evidence, checkpoints, no-repeat history, and exact next action across skill switches, compaction, retries, timeouts, and handoffs;
 - exhaustive external-result claims require expected/discovered/accepted/rejected/unresolved reconciliation plus terminal pagination/coverage proof.
@@ -32,4 +33,4 @@ Use `scripts/install_execution_constitution.py <skill-dir>` to add or refresh th
 
 ## Activation reality
 
-A correct governance ZIP does not alter already-installed skills. A narrower skill can be selected without loading governance, so every substantive work-driving skill must carry both the local bridge and the mandatory bootstrap URI. Package-level validation is not evidence that the user's installed skill library was replaced. After installation/replacement, verify the installed `SKILL.md` itself contains `UAG_BOOTSTRAP:v0.3.2` and `UAG_EXECUTION_CONSTITUTION:v0.3.2`.
+A correct governance ZIP does not alter already-installed skills. A narrower skill can be selected without loading governance, so every substantive work-driving skill must carry both the local bridge and the mandatory bootstrap URI. Package-level validation is not evidence that the user's installed skill library was replaced. After installation/replacement, verify the installed `SKILL.md` itself contains `UAG_BOOTSTRAP:v0.3.3` and `UAG_EXECUTION_CONSTITUTION:v0.3.3`.
