@@ -1,3 +1,7 @@
+---
+name: project-brain-orchestrator
+description: "Project control plane for substantive implementation, repository continuity, research decisions, verified builds, AGENTS governance, releases, and mandatory Google Drive persistence. Use for coding/debugging/product work, prior-chat continuation/recovery, agent/Codex work, Drive/GitHub delivery, or work that creates, modifies, saves, packages, checkpoints, or delivers a material file. Do not steal workflow ownership from a narrower domain skill that already covers the task; provide continuity/persistence/orchestration around it and preserve its still-applicable constraints. When zero-loss-chat-accelerator is installed, preserve its execution state across skill transitions instead of restarting discovery."
+---
 
 ## Mandatory governance bootstrap
 
