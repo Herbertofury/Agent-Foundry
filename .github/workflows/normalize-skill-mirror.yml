@@ -1,0 +1,52 @@
+name: Normalize Skill Mirrors
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "skills/**"
+      - "tools/normalize_skill_mirror.py"
+      - "tools/source_manifest.py"
+      - ".github/workflows/normalize-skill-mirror.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: normalize-agent-foundry-skill-mirrors
+  cancel-in-progress: false
+
+jobs:
+  normalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Normalize registry mirrors and governance bridges
+        run: |
+          python tools/normalize_skill_mirror.py --root skills
+          python tools/source_manifest.py --root skills --write
+          python tools/validate_skill_tree.py skills
+          python skills/ultimate-agent-governance/scripts/audit_cross_skill_constitution.py skills
+          git diff --check
+
+      - name: Commit normalized source and manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add skills SOURCE_MANIFEST.json
+          if git diff --cached --quiet; then
+            echo "Skill mirror already normalized"
+            exit 0
+          fi
+          git commit -m "skills: normalize governance bridges and source manifest"
+          git push origin HEAD:main
