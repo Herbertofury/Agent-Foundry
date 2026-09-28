@@ -23,6 +23,7 @@ REQUIRED = [
 ]
 
 REQUIRED_TOOLS = [
+    "scripts/challenger_gate.py",
     "scripts/audit_agent_governance.py",
     "scripts/invariant_harness.py",
     "scripts/performance_gate.py",
