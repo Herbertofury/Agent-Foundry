@@ -1,3 +1,7 @@
+---
+name: project-visual-qa-showcase
+description: "Create source-grounded visual QA and polished showcase deliverables from real project assets, models, animations, sprites, skins, UI states, or format ports. Use when the user asks to preview/compare actual project variants, produce deterministic PNG/GIF/MP4 evidence, verify animation/geometry fidelity, diagnose visual conversion defects, or present a completed visual project. For Minecraft implementation/native runtime proof, complement rather than replace Minecraft Dev Kit; preserve its current acceptance state and return to its exact next action. Never synthesize project-preview imagery unless the current message explicitly asks for image generation. Compose with zero-loss-chat-accelerator when installed."
+---
 
 ## Mandatory governance bootstrap
 
