@@ -1,0 +1,63 @@
+name: Package and Attest Skills
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "foundry-skills-v*"
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+  artifact-metadata: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Validate sources
+        run: |
+          python tools/validate_skill_tree.py skills
+          python -m unittest discover -s tests -v
+
+      - name: Build deterministic Skill bundles and receipts
+        shell: bash
+        run: |
+          set -euo pipefail
+          export SOURCE_DATE_EPOCH="$(git show -s --format=%ct "$GITHUB_SHA")"
+          python tools/package_skills.py             --skills-root skills             --out dist             --source-url "https://github.com/$GITHUB_REPOSITORY"             --revision "$GITHUB_SHA"
+
+          mkdir -p dist/release-assets
+          for zip in dist/*/skill.zip; do
+            skill="$(basename "$(dirname "$zip")")"
+            cp "$zip" "dist/release-assets/$skill-skill.zip"
+            cp "dist/$skill/release-receipt.json" "dist/release-assets/$skill-release-receipt.json"
+          done
+
+      - name: Attest all Skill release archives
+        uses: actions/attest@v4
+        with:
+          subject-path: "dist/release-assets/*-skill.zip"
+
+      - name: Upload packaged bundles and receipts
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-foundry-skill-bundles
+          path: dist/
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Publish tagged GitHub release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release create "$GITHUB_REF_NAME"             dist/release-assets/*-skill.zip             dist/release-assets/*-release-receipt.json             --repo "$GITHUB_REPOSITORY"             --generate-notes             --title "Agent Foundry Skills $GITHUB_REF_NAME"

@@ -1,0 +1,33 @@
+name: Test Foundry Tooling
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/**"
+      - "tests/**"
+      - "config/**"
+      - ".github/workflows/test-foundry-tools.yml"
+  pull_request:
+    paths:
+      - "tools/**"
+      - "tests/**"
+      - "config/**"
+      - ".github/workflows/test-foundry-tools.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Compile tooling
+        run: python -m py_compile tools/*.py
+      - name: Run integration tests
+        run: python -m unittest discover -s tests -v

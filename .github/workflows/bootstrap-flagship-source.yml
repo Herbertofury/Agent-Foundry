@@ -1,0 +1,62 @@
+name: Import Flagship Skill Sources
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".bootstrap/flagship-source/.ready"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Reconstruct and verify staged source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f .bootstrap/flagship-source/.ready
+          cat .bootstrap/flagship-source/part-* > /tmp/flagship-source.b64
+          base64 --decode /tmp/flagship-source.b64 > /tmp/flagship-source.tar.xz
+          echo "6fe18f9c50ef09d3d251deb0c7de89cbbece2d8ddb1b751d4a7cc57c0ab7979a  /tmp/flagship-source.tar.xz" | sha256sum -c -
+
+      - name: Replace placeholder flagship directories with exact source trees
+        shell: bash
+        run: |
+          set -euo pipefail
+          for skill in             artifact-browser-companion             minecraft-dev-kit             minecraft-repair             project-brain-orchestrator             project-visual-qa-showcase             revenue-operator             ultimate-agent-governance             zero-loss-chat-accelerator
+          do
+            rm -rf "skills/$skill"
+          done
+          tar -xJf /tmp/flagship-source.tar.xz -C .
+          rm -rf .bootstrap/flagship-source
+
+      - name: Validate imported source and Foundry tooling
+        run: |
+          python tools/validate_skill_tree.py skills
+          python -m unittest discover -s tests -v
+
+      - name: Commit verified source mirror
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A .bootstrap skills SOURCE_MANIFEST.json validation
+          if git diff --cached --quiet; then
+            echo "No source changes to commit"
+            exit 0
+          fi
+          git commit -m "skills: import verified Foundry flagship source mirrors"
+          git push origin HEAD:main
