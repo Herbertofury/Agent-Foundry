@@ -1,3 +1,7 @@
+---
+name: minecraft-repair
+description: "Diagnose and repair broken Minecraft clients, servers, modpacks, worlds, mod JARs, loader/config/datapack/resource-pack/shader setups, and launcher/runtime failures. Use when the user explicitly asks to fix/diagnose a Minecraft failure or provides crash logs, broken artifacts, error screenshots, worlds, or configs. For ordinary mod development/build/port work, prefer Minecraft Dev Kit; if Repair is invoked inside an active Dev Kit workflow, repair the bounded failure and return to the preserved Dev Kit next action. Reuse prior Repair Brain evidence instead of rereading it on every skill switch. Compose with zero-loss-chat-accelerator when installed."
+---
 
 ## Mandatory governance bootstrap
 
