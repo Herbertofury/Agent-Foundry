@@ -3,6 +3,10 @@ name: Package and Attest Skills
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
+    paths:
+      - ".release/foundry-skills-v*"
     tags:
       - "foundry-skills-v*"
 
@@ -17,13 +21,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
 
-      - name: Validate sources
+      - name: Resolve release identity
+        id: release
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+            tag="$GITHUB_REF_NAME"
+          else
+            marker="$(find .release -maxdepth 1 -type f -name 'foundry-skills-v*' -printf '%f\n' | sort -V | tail -n 1)"
+            test -n "$marker"
+            tag="$marker"
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "Release tag: $tag"
+
+      - name: Validate normalized sources
         run: |
           python tools/validate_skill_tree.py skills
+          python tools/source_manifest.py --root skills --check
+          python skills/ultimate-agent-governance/scripts/audit_cross_skill_constitution.py skills
+          python tools/normalize_skill_mirror.py --root skills
+          git diff --exit-code -- skills SOURCE_MANIFEST.json
           python -m unittest discover -s tests -v
 
       - name: Build deterministic Skill bundles and receipts
@@ -39,6 +64,7 @@ jobs:
             cp "$zip" "dist/release-assets/$skill-skill.zip"
             cp "dist/$skill/release-receipt.json" "dist/release-assets/$skill-release-receipt.json"
           done
+          cp dist/release-index.json dist/release-assets/release-index.json
 
       - name: Attest all Skill release archives
         uses: actions/attest@v4
@@ -53,11 +79,16 @@ jobs:
           if-no-files-found: error
           retention-days: 90
 
-      - name: Publish tagged GitHub release
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
         shell: bash
         run: |
           set -euo pipefail
-          gh release create "$GITHUB_REF_NAME"             dist/release-assets/*-skill.zip             dist/release-assets/*-release-receipt.json             --repo "$GITHUB_REPOSITORY"             --generate-notes             --title "Agent Foundry Skills $GITHUB_REF_NAME"
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release $RELEASE_TAG already exists; uploading current assets with clobber."
+            gh release upload "$RELEASE_TAG"               dist/release-assets/*               --repo "$GITHUB_REPOSITORY"               --clobber
+          else
+            gh release create "$RELEASE_TAG"               dist/release-assets/*               --repo "$GITHUB_REPOSITORY"               --target "$GITHUB_SHA"               --generate-notes               --title "Agent Foundry Skills $RELEASE_TAG"
+          fi
