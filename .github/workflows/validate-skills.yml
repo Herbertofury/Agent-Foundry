@@ -28,7 +28,12 @@ jobs:
           python-version: "3.13"
 
       - name: Foundry deterministic validation
-        run: python tools/validate_skill_tree.py skills
+        run: |
+          python tools/validate_skill_tree.py skills
+          python tools/source_manifest.py --root skills --check
+          python skills/ultimate-agent-governance/scripts/audit_cross_skill_constitution.py skills
+          python tools/normalize_skill_mirror.py --root skills
+          git diff --exit-code -- skills SOURCE_MANIFEST.json
 
       - name: Install pinned Agent Skills reference validator
         shell: bash
@@ -54,7 +59,6 @@ jobs:
 
       - name: Security scan flagship Skills
         id: scan
-        continue-on-error: true
         shell: bash
         run: |
           set -euo pipefail
@@ -74,8 +78,7 @@ jobs:
         with:
           sarif_file: skill-scan.sarif
 
-      - name: Explain advisory scanner gate
-        if: steps.scan.outcome == 'failure'
+      - name: Record scanner trust boundary
         run: |
-          echo "::warning::Skill Scanner reported findings. SARIF is preserved for review."
-          echo "Scanner findings are evidence, not certification. Foundry deterministic/spec gates remain blocking while this initial security baseline is reviewed."
+          echo "Cisco AI Defense Skill Scanner passed the current flagship source."
+          echo "A clean scanner result is evidence, not a guarantee of safety; provenance, review, permissions, evals, and runtime controls remain required."
