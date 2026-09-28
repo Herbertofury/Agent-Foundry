@@ -1,3 +1,7 @@
+---
+name: revenue-operator
+description: "Operate a real-world revenue workflow for the user. Use when the user asks ChatGPT to make money, find paid work, monetize technical skills/products, pursue freelance/consulting opportunities, build/sell digital products, track a revenue pipeline, or continue an existing campaign. Research current opportunities when freshness matters, choose the best path, produce the needed artifacts/outreach, and execute available connector actions. Reuse fresh market/pipeline/connector state rather than restarting research on skill activation. Compose with zero-loss-chat-accelerator when installed."
+---
 
 ## Mandatory governance bootstrap
 
