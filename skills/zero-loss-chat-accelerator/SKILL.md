@@ -1,3 +1,7 @@
+---
+name: zero-loss-chat-accelerator
+description: "Always-on maximum-effort execution orchestration for every ChatGPT task. Use when installed, especially for stalls, repeated reads/searches, connector continuity, CI, artifacts, and long workflows. Minimize wall-clock critical path through batching, state reuse, targeted validation, and stall recovery without reducing scope, reasoning depth, QA, persistence, creativity, or capability. More-specific skills are overlays: preserve Zero-Loss continuity, still-applicable domain constraints, blockers, no-repeat history, and the exact next action across transitions."
+---
 
 ## Mandatory governance bootstrap
 
