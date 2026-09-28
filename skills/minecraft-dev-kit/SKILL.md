@@ -3,28 +3,30 @@ name: minecraft-dev-kit
 description: "Build, port, convert, benchmark, test, and release Minecraft mods with the user's Minecraft Dev Kit and real runtime proof. Use for Forge/NeoForge/Fabric/Quilt development, version ports, Bedrock-to-Java conversions, gameplay/worldgen/network changes, model/texture/animation implementation, premium mob/boss pack production, reference-to-model reconstruction from images/GIFs, authorized server-plugin/resource-pack asset conversion into native mod assets, cache/toolchain work, release QA, or explicit in-game testing. For a primarily broken user instance/modpack/log/JAR/world, prefer Minecraft Repair; if Repair or Visual QA is invoked as a subtask, preserve this Dev Kit acceptance state and return to its exact next action. Compose with zero-loss-chat-accelerator when installed; never restart resolved work on skill activation."
 ---
 
+<!-- UAG_BRIDGE_START:v0.3.3 -->
 ## Mandatory governance bootstrap
 
-<!-- UAG_BOOTSTRAP:v0.3.2 -->
+<!-- UAG_BOOTSTRAP:v0.3.3 -->
 Before any substantive action, load `skills://ultimate-agent-governance/skill.md` once for the current continuity epoch, then return to this skill's domain workflow. Do **not** skip this because this skill is more specific. The domain skill owns procedure; Ultimate Agent Governance owns the shared acceptance boundary. If cross-skill loading is unavailable, fails, or is not supported in the current harness, enforce the embedded constitution below locally with no weakening.
 
 This bootstrap is a **start gate**, not optional guidance: do not mutate, repair, build, optimize, migrate, scrape, package, or claim completion until the shared acceptance contract is active. Skill switches, compaction, retries, timeouts, handoffs, and tool changes never clear it.
 
 ## Shared execution constitution
 
-<!-- UAG_EXECUTION_CONSTITUTION:v0.3.2 -->
+<!-- UAG_EXECUTION_CONSTITUTION:v0.3.3 -->
 - **No blocker closeout.** Failure is a routing signal, not a deliverable. Install/provision missing tools and dependencies; repair environment, DNS/network, cache, runtime, build, auth, or provider state; switch to materially different supported routes; and resume after interruption. Required unresolved work stays active and is never relabeled complete.
 - **Unknown is not absent.** A search/list/API/parser/auth/provider miss becomes `unresolved-active`, not “does not exist.” Use alternate authoritative routes until found or absence is actually proven.
 - **Never suffer the same failure twice.** Reuse prior verified recovery knowledge before rediscovery. After a nontrivial verified recovery, capture signature, environment, cause, failed routes, successful route, verification, invalidation conditions, and regression protection so recurrence is faster and deterministic.
 - **No fake or partial success.** Never manufacture success through caps, sampling, truncation, hidden skips, placeholders, removed user-visible features/content/fidelity/coverage, downgraded quality, or weakened verification. Preserve the complete requested result.
 - **Performance and quality improve together.** Equivalent-work performance tasks require a measured gain in the target metric/hot path **and** preservation of quality, quantity, correctness, content, fidelity, compatibility, and QoL. Faster-by-doing-less and preserved-but-flat both fail.
 - **Modernize and fix forward.** Check current best compatible methods/tools/versions when freshness matters. Newer is a candidate until comparative proof shows it is better. Mixed upgrades must be profiled/bisected/decomposed: retain/backport gains, patch/replace regressive internals, then retest before promotion.
+- **Challenge before reinventing.** For substantive implementation, architecture, optimization, conversion, integration, or tooling work, run a bounded challenger/integration scan across relevant upstreams, repositories, forks, package/plugin ecosystems, standards, and reference implementations. Prefer authorized adopt/merge/port/wrap/backport/reuse of materially superior pieces over rebuilding weaker duplicates; compose the best pieces when no single candidate wins, preserve provenance/licensing/permission constraints, and record candidate dispositions.
 - **Real proof beats structural proof.** When the real runtime/workflow is available, exercise the actual final artifact and affected user path. Build/static success alone is not runtime proof.
 - **Continuity is mandatory.** Preserve accepted requirements, identities, evidence, checkpoints, failed-route history, recovered fixes, and exact next action across skill switches, timeouts, handoffs, and retries. Never restart solved discovery without an invalidator.
 - **Completeness must be proven.** For exhaustive external results, reconcile expected/discovered/accepted/rejected/unresolved counts and terminal pagination/coverage before claiming complete.
 
 If progress reaches an action only the user can authorize or perform, preserve the exact checkpoint and request only that smallest action; the unresolved acceptance item remains in progress and must never be called complete.
-
+<!-- UAG_BRIDGE_END:v0.3.3 -->
 
 # Minecraft Dev Kit
 
