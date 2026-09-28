@@ -1,3 +1,7 @@
+---
+name: ultimate-agent-governance
+description: "Always apply the shared execution constitution to substantive work and build/update/audit coding-agent governance. Use for coding, debugging, repair, Minecraft/mod work, apps, optimization, ports, migrations, integrations, research/extraction, runtime QA, artifact delivery, project continuation, and AGENTS.md/invariant/skill governance. Preserve full results; never close on blockers or failed attempts; treat misses as unresolved not absent; reuse verified fixes; prove completeness; require real runtime/workflow evidence; improve performance without content/quality loss; modernize/fix forward; decompose mixed upgrades; preserve continuity across skills/timeouts/handoffs. Narrower domain skills keep procedure ownership but must inherit this acceptance contract."
+---
 
 ## Mandatory governance bootstrap
 
