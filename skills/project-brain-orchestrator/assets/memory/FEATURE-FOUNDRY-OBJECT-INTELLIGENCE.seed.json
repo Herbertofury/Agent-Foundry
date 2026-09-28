@@ -1,0 +1,687 @@
+{
+  "schema_version": 1,
+  "catalog_id": "feature-foundry-object-intelligence",
+  "verified_at_utc": "2026-08-04T00:00:00Z",
+  "review_due": "2026-11-04",
+  "purpose": "Reversible, provenance-preserving conversion of still images, animated media, 3D files and Blender scenes into editable Feature Foundry objects.",
+  "quality_lanes": [
+    {
+      "id": "instant-preview",
+      "latency_target": "interactive seconds",
+      "purpose": "Produce a truthful cutout, animated sticker, layered card or rough proxy immediately without pretending it is finished 3D.",
+      "may_use": [
+        "segmentation",
+        "alpha cleanup",
+        "depth layers",
+        "billboard proxy",
+        "simple collider"
+      ],
+      "promotion_gate": "User can inspect uncertainty and request a better lane."
+    },
+    {
+      "id": "interactive-draft",
+      "latency_target": "bounded background job",
+      "purpose": "Create editable parts, depth/material hints, collision, pivots, sockets, affordances and optional draft mesh.",
+      "may_use": [
+        "open-vocabulary detection",
+        "segmentation/tracking",
+        "monocular depth",
+        "multi-view synthesis",
+        "draft image-to-3D",
+        "part graph"
+      ],
+      "promotion_gate": "Geometry, materials, animations and behavior suggestions pass user review."
+    },
+    {
+      "id": "high-fidelity",
+      "latency_target": "explicit queued job",
+      "purpose": "Create the strongest available mesh/PBR/rig/LOD/collision result with deterministic export and full provenance.",
+      "may_use": [
+        "high-fidelity image-to-3D",
+        "promptable segmentation",
+        "PBR texture synthesis",
+        "Blender processing",
+        "gltf optimization",
+        "convex decomposition"
+      ],
+      "promotion_gate": "Fresh import validation, visual comparisons and runtime performance budgets pass."
+    }
+  ],
+  "derivation_pipeline": [
+    {
+      "order": 1,
+      "id": "preserve-original",
+      "title": "Preserve immutable original",
+      "outputs": [
+        "content hash",
+        "source record",
+        "rights record",
+        "metadata snapshot"
+      ],
+      "reversible": true,
+      "user_review": false
+    },
+    {
+      "order": 2,
+      "id": "probe-and-sanitize",
+      "title": "Probe, validate and isolate",
+      "outputs": [
+        "format report",
+        "dimensions",
+        "frame/scene inventory",
+        "security warnings"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 3,
+      "id": "subject-proposals",
+      "title": "Propose subjects and parts",
+      "outputs": [
+        "open-vocabulary boxes",
+        "object candidates",
+        "part candidates",
+        "uncertainty map"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 4,
+      "id": "segmentation",
+      "title": "Segment still or temporal masks",
+      "outputs": [
+        "editable masks",
+        "alpha mattes",
+        "occlusion order",
+        "tracked masks"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 5,
+      "id": "representation-selection",
+      "title": "Choose simplest truthful representation",
+      "outputs": [
+        "sticker",
+        "animated sticker",
+        "layered parallax",
+        "billboard",
+        "mesh card",
+        "reconstructed mesh",
+        "native 3D"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 6,
+      "id": "depth-and-geometry",
+      "title": "Infer depth and geometry",
+      "outputs": [
+        "depth map",
+        "normal hints",
+        "point cloud",
+        "draft mesh",
+        "backside uncertainty"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 7,
+      "id": "material-and-lighting",
+      "title": "Infer editable materials and lighting separation",
+      "outputs": [
+        "material regions",
+        "PBR hints",
+        "delighted texture",
+        "transparency classification"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 8,
+      "id": "part-affordance-graph",
+      "title": "Build part and affordance graph",
+      "outputs": [
+        "parts",
+        "joints",
+        "surfaces",
+        "handles",
+        "seats",
+        "screens",
+        "switches",
+        "containers",
+        "mascot affordances"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 9,
+      "id": "spatial-contract",
+      "title": "Create spatial contract",
+      "outputs": [
+        "baseline",
+        "pivot",
+        "scale hypothesis",
+        "orientation",
+        "sockets",
+        "snap planes",
+        "safe interaction lanes"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 10,
+      "id": "physics-and-collision",
+      "title": "Generate editable physics proxies",
+      "outputs": [
+        "colliders",
+        "mass/material hints",
+        "sensors",
+        "break states",
+        "grabbable zones"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 11,
+      "id": "animation-and-loops",
+      "title": "Preserve or author motion",
+      "outputs": [
+        "frame timing",
+        "loop policy",
+        "clips",
+        "rig suggestions",
+        "idle/reaction states"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 12,
+      "id": "theme-behavior-genome",
+      "title": "Map object into theme behavior genome",
+      "outputs": [
+        "material response family",
+        "interaction verbs",
+        "audio family",
+        "lighting response",
+        "mascot interactions",
+        "theme overrides"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 13,
+      "id": "optimization",
+      "title": "Generate runtime variants",
+      "outputs": [
+        "GLB",
+        "meshopt compression",
+        "KTX2 textures",
+        "LODs",
+        "thumbnail",
+        "silhouette",
+        "hit mask",
+        "shadow proxy"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 14,
+      "id": "validation",
+      "title": "Validate truth, quality and performance",
+      "outputs": [
+        "visual diff",
+        "metadata preservation report",
+        "collision test",
+        "animation fidelity test",
+        "device-tier budget"
+      ],
+      "reversible": true,
+      "user_review": true
+    },
+    {
+      "order": 15,
+      "id": "publish-lineage",
+      "title": "Publish with complete lineage",
+      "outputs": [
+        "object manifest",
+        "derivation graph",
+        "tool/model versions",
+        "rights/attribution",
+        "editable source links"
+      ],
+      "reversible": true,
+      "user_review": true
+    }
+  ],
+  "tools": [
+    {
+      "id": "grounded-sam2",
+      "name": "Grounded SAM 2",
+      "role": "Open-vocabulary detection plus image/video segmentation and tracking.",
+      "status": "candidate",
+      "maturity": "active-research",
+      "official_sources": [
+        "https://github.com/IDEA-Research/Grounded-SAM-2",
+        "https://github.com/facebookresearch/sam2"
+      ],
+      "license_review": "Review Apache/individual model licenses and checkpoint terms.",
+      "strengths": [
+        "Text-prompted detection",
+        "SAM 2.1 masks",
+        "video object tracking",
+        "JSON annotations and high-resolution workflows"
+      ],
+      "constraints": [
+        "GPU/VRAM requirements vary",
+        "Predictions need editable review",
+        "Not a rights classifier"
+      ],
+      "fallbacks": [
+        "SAM 2.1 promptable masks",
+        "manual brush/point/box segmentation"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "depth-anything-v2",
+      "name": "Depth Anything V2",
+      "role": "Monocular depth and relative-layer inference.",
+      "status": "candidate",
+      "maturity": "mature-research",
+      "official_sources": [
+        "https://github.com/DepthAnything/Depth-Anything-V2"
+      ],
+      "license_review": "Review code and checkpoint licenses per model size.",
+      "strengths": [
+        "Fine-grained relative depth",
+        "multiple model sizes",
+        "useful for parallax and geometry priors"
+      ],
+      "constraints": [
+        "Single-view scale/backside ambiguity",
+        "depth is not collision-ready geometry"
+      ],
+      "fallbacks": [
+        "manual depth layers",
+        "simple foreground/midground/background planes"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "spar3d",
+      "name": "SPAR3D",
+      "role": "Single-image editable 3D reconstruction with intermediate point cloud.",
+      "status": "candidate",
+      "maturity": "research-grade",
+      "official_sources": [
+        "https://github.com/Stability-AI/stable-point-aware-3d"
+      ],
+      "license_review": "Review repository and model license before redistribution.",
+      "strengths": [
+        "Editable point-cloud intermediate",
+        "strong backside/material reconstruction",
+        "fast draft path"
+      ],
+      "constraints": [
+        "Single-view uncertainty remains",
+        "GPU and model footprint",
+        "not every asset should become a mesh"
+      ],
+      "fallbacks": [
+        "Stable Fast 3D",
+        "TripoSR",
+        "layered or billboard representation"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "stable-fast-3d",
+      "name": "Stable Fast 3D",
+      "role": "Fast single-image mesh, UV and material draft generation.",
+      "status": "candidate",
+      "maturity": "research-grade",
+      "official_sources": [
+        "https://github.com/Stability-AI/stable-fast-3d"
+      ],
+      "license_review": "Review Stability model license and redistribution rules.",
+      "strengths": [
+        "Fast draft mesh",
+        "UV unwrapping",
+        "material prediction and delighting"
+      ],
+      "constraints": [
+        "Quality varies with topology and occlusion",
+        "needs geometry/material review"
+      ],
+      "fallbacks": [
+        "SPAR3D",
+        "TripoSR",
+        "billboard proxy"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "trellis2",
+      "name": "TRELLIS.2",
+      "role": "High-fidelity image-to-3D generation with complex topology and PBR-oriented output.",
+      "status": "candidate",
+      "maturity": "research-grade",
+      "official_sources": [
+        "https://github.com/microsoft/TRELLIS.2"
+      ],
+      "license_review": "Review repository/checkpoint licenses and model terms.",
+      "strengths": [
+        "High-fidelity geometry",
+        "complex topology",
+        "PBR-oriented generation"
+      ],
+      "constraints": [
+        "Large model footprint",
+        "high-quality lane only",
+        "requires strong GPU and post-validation"
+      ],
+      "fallbacks": [
+        "Hunyuan3D 2.1",
+        "SPAR3D",
+        "Stable Fast 3D"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "hunyuan3d-2-1",
+      "name": "Hunyuan3D 2.1",
+      "role": "High-fidelity shape and PBR texture synthesis.",
+      "status": "candidate",
+      "maturity": "research-grade",
+      "official_sources": [
+        "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1"
+      ],
+      "license_review": "Review Tencent Hunyuan community license and asset/model restrictions.",
+      "strengths": [
+        "Open framework",
+        "shape plus PBR texture pipeline",
+        "strong quality lane"
+      ],
+      "constraints": [
+        "License review required",
+        "GPU-heavy",
+        "needs deterministic cleanup/optimization"
+      ],
+      "fallbacks": [
+        "TRELLIS.2",
+        "SPAR3D",
+        "manual Blender refinement"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "triposr",
+      "name": "TripoSR",
+      "role": "Fast single-image 3D fallback.",
+      "status": "candidate",
+      "maturity": "research-grade",
+      "official_sources": [
+        "https://github.com/VAST-AI-Research/TripoSR"
+      ],
+      "license_review": "Review code/model license before shipping.",
+      "strengths": [
+        "Fast and comparatively lightweight",
+        "useful fallback/draft lane"
+      ],
+      "constraints": [
+        "Older quality ceiling than newer high-fidelity systems",
+        "requires mesh cleanup"
+      ],
+      "fallbacks": [
+        "Stable Fast 3D",
+        "billboard or layered representation"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "blender-4-5-lts",
+      "name": "Blender 4.5 LTS",
+      "role": "Isolated headless .blend inspection, semantic extraction, conversion and deterministic editing.",
+      "status": "recommended",
+      "maturity": "production",
+      "official_sources": [
+        "https://docs.blender.org/manual/en/4.5/advanced/command_line/arguments.html",
+        "https://www.blender.org/download/lts/4-5/"
+      ],
+      "license_review": "GPL tool boundary; preserve asset licenses separately.",
+      "strengths": [
+        "LTS stability",
+        "background mode",
+        "Python automation",
+        "broad format/material/rig support"
+      ],
+      "constraints": [
+        "Never parse .blend directly in the runtime",
+        "disable auto-execution",
+        "sandbox files/process/time/memory/output"
+      ],
+      "fallbacks": [
+        "Ask user to export GLB/glTF",
+        "manual Blender conversion"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "meshoptimizer-gltfpack",
+      "name": "meshoptimizer / gltfpack",
+      "role": "glTF optimization, simplification, quantization and mesh compression.",
+      "status": "recommended",
+      "maturity": "production",
+      "official_sources": [
+        "https://github.com/zeux/meshoptimizer",
+        "https://meshoptimizer.org/gltf/"
+      ],
+      "license_review": "MIT; verify external codecs and input-asset licenses.",
+      "strengths": [
+        "Strong runtime optimization",
+        "meshopt compression",
+        "LOD/simplification",
+        "metadata-preserving options"
+      ],
+      "constraints": [
+        "Must preserve named nodes/extras required by object intelligence",
+        "quality settings need tests"
+      ],
+      "fallbacks": [
+        "Blender glTF export optimization",
+        "uncompressed GLB fallback"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "basis-universal-ktx2",
+      "name": "Basis Universal / KTX2",
+      "role": "GPU texture compression and mip-chain generation.",
+      "status": "recommended",
+      "maturity": "production",
+      "official_sources": [
+        "https://github.com/BinomialLLC/basis_universal",
+        "https://registry.khronos.org/KTX/specs/2.0/ktxspec.v2.html"
+      ],
+      "license_review": "Apache 2.0 / spec; preserve source asset rights.",
+      "strengths": [
+        "GPU-friendly textures",
+        "mipmaps",
+        "LDR/HDR profiles",
+        "broad glTF ecosystem support"
+      ],
+      "constraints": [
+        "Choose UASTC/ETC1S and color/alpha settings correctly",
+        "retain editable source derivatives"
+      ],
+      "fallbacks": [
+        "PNG/JPEG/EXR derivatives"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "coacd",
+      "name": "CoACD",
+      "role": "Collision-aware convex decomposition for editable physics proxies.",
+      "status": "candidate",
+      "maturity": "production-capable",
+      "official_sources": [
+        "https://github.com/SarahWeiii/CoACD"
+      ],
+      "license_review": "MIT; validate packaged native bindings.",
+      "strengths": [
+        "Higher-quality convex decomposition",
+        "real-metric mode",
+        "useful compound colliders"
+      ],
+      "constraints": [
+        "Must cap complexity and runtime",
+        "visual mesh is not default collider"
+      ],
+      "fallbacks": [
+        "primitive/compound authored colliders",
+        "Blender convex hulls"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "rapier",
+      "name": "Rapier",
+      "role": "Event-driven 2D/3D physics and sensor runtime for living object behavior.",
+      "status": "recommended",
+      "maturity": "production",
+      "official_sources": [
+        "https://rapier.rs/docs/",
+        "https://github.com/dimforge/rapier.js"
+      ],
+      "license_review": "Apache 2.0; validate exact JS/WASM package versions.",
+      "strengths": [
+        "Sleeping islands",
+        "collision groups",
+        "sensors",
+        "contact-force events",
+        "deterministic options"
+      ],
+      "constraints": [
+        "Only enable events needed by authored behaviors",
+        "fixed-step and bounded wake-up required"
+      ],
+      "fallbacks": [
+        "simple tween/WAAPI behavior in reduced or safe modes"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "rive",
+      "name": "Rive",
+      "role": "State-machine-driven vector/UI object behavior with data binding and observability.",
+      "status": "candidate",
+      "maturity": "production-capable",
+      "official_sources": [
+        "https://rive.app/docs/runtimes/state-machines",
+        "https://rive.app/docs/runtimes/data-binding"
+      ],
+      "license_review": "Review Rive runtime/editor licensing for distribution.",
+      "strengths": [
+        "State machines",
+        "data binding",
+        "artboard/list/image properties",
+        "settled-state optimization"
+      ],
+      "constraints": [
+        "Do not require proprietary authoring for all assets",
+        "keep open fallback formats"
+      ],
+      "fallbacks": [
+        "Lottie/WAAPI/Pixi authored states"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "pixijs",
+      "name": "PixiJS",
+      "role": "2D object, sticker, mascot and particle runtime.",
+      "status": "recommended",
+      "maturity": "production",
+      "official_sources": [
+        "https://pixijs.com/8.x/guides/components/events",
+        "https://pixijs.com/8.x/guides/components/accessibility"
+      ],
+      "license_review": "MIT.",
+      "strengths": [
+        "Federated pointer events",
+        "high-volume sprites",
+        "accessibility overlay",
+        "controllable ticker"
+      ],
+      "constraints": [
+        "Must share authoritative scheduler and suspend hidden worlds"
+      ],
+      "fallbacks": [
+        "DOM/WAAPI safe mode"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    },
+    {
+      "id": "onnx-runtime",
+      "name": "ONNX Runtime",
+      "role": "Local inference host for segmentation, classification, material and affordance models.",
+      "status": "recommended",
+      "maturity": "production",
+      "official_sources": [
+        "https://onnxruntime.ai/docs/",
+        "https://github.com/microsoft/onnxruntime"
+      ],
+      "license_review": "MIT runtime; each model/checkpoint needs separate license review.",
+      "strengths": [
+        "Cross-platform execution providers",
+        "quantized task models",
+        "native and WebGPU options"
+      ],
+      "constraints": [
+        "Avoid GPU contention with live renderer",
+        "explicit warm-up/cancel/teardown"
+      ],
+      "fallbacks": [
+        "provider-specific native inference",
+        "manual processing"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04"
+    }
+  ],
+  "runtime_rules": [
+    "Use one authoritative command/event bus and one frame scheduler; do not start per-object endless loops.",
+    "Objects settle into stable states and retain bounded material memory rather than snapping back to a generic idle clip.",
+    "Every generated claim carries visible uncertainty, provenance, tool/model version and an editable override.",
+    "User input preempts simulation immediately; import/conversion jobs remain cancellable and resume safely.",
+    "No generated geometry, rights metadata, material, rig, socket or affordance is silently presented as verified truth."
+  ]
+}

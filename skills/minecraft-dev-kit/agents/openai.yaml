@@ -1,0 +1,13 @@
+interface:
+  display_name: Minecraft Dev Kit
+  short_description: Build, reconstruct, convert server assets, animate, port, and
+    prove Minecraft mods
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

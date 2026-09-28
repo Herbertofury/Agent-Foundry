@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-18",
+  "target_minecraft": "26.3",
+  "target_namespace": "official",
+  "target_obfuscation": false,
+  "notes": [
+    "Minecraft Java 26.1+ is unobfuscated. 26.3 target source/member names are the shipped official names; do not invent a Yarn/Intermediary target namespace.",
+    "Historical mappings are migration evidence. Preserve exact source mapping declarations and descriptors, then bridge old namespaces into target-native 26.3 semantics.",
+    "Mixins, class tweakers/access wideners, access transformers, reflection strings, invokedynamic SAM names, and generated refmaps are separate remap surfaces and must be audited explicitly."
+  ],
+  "sources": [
+    {
+      "id": "mojang_official",
+      "authority": "Mojang launcher metadata",
+      "kind": "launcher_manifest",
+      "manifest_url": "https://piston-meta.mojang.com/mc/game/version_manifest_v2.json",
+      "available_from": "1.14",
+      "formats": ["proguard"],
+      "namespaces": ["official", "obfuscated"],
+      "artifacts": ["client_mappings", "server_mappings"],
+      "purpose": "Bridge obfuscated names to Mojang official names on obfuscated releases. For 26.1+ the game is unobfuscated and this becomes identity/metadata rather than a required target mapping layer."
+    },
+    {
+      "id": "fabric_intermediary",
+      "authority": "Fabric Maven",
+      "kind": "maven_jar",
+      "url_template": "https://maven.fabricmc.net/net/fabricmc/intermediary/{minecraft}/intermediary-{minecraft}-v2.jar",
+      "jar_entry": "mappings/mappings.tiny",
+      "formats": ["tiny_v2"],
+      "namespaces": ["official_or_obfuscated", "intermediary"],
+      "purpose": "Resolve historical Fabric production names such as class_*, method_*, and field_* and bridge old compiled Fabric mods to a human/official namespace."
+    },
+    {
+      "id": "fabric_yarn",
+      "authority": "Fabric Maven",
+      "kind": "maven_metadata",
+      "metadata_url": "https://maven.fabricmc.net/net/fabricmc/yarn/maven-metadata.xml",
+      "artifact_url_template": "https://maven.fabricmc.net/net/fabricmc/yarn/{coordinate}/yarn-{coordinate}-v2.jar",
+      "jar_entry": "mappings/mappings.tiny",
+      "formats": ["tiny_v2"],
+      "namespaces": ["intermediary", "named"],
+      "deprecated_for_target_from": "26.1",
+      "purpose": "Resolve historical Yarn source names before moving a Fabric project to the official/unobfuscated 26.3 namespace."
+    },
+    {
+      "id": "forge_mcpconfig",
+      "authority": "MinecraftForge/MCPConfig",
+      "kind": "github_raw",
+      "url_template": "https://raw.githubusercontent.com/MinecraftForge/MCPConfig/master/versions/release/{minecraft}/joined.tsrg",
+      "formats": ["tsrg", "tsrg2"],
+      "namespaces": ["obfuscated", "srg"],
+      "purpose": "Resolve Forge SRG/TSRG owners and descriptors. For versions with Mojang official mappings, join on the obfuscated namespace to bridge SRG into official names."
+    },
+    {
+      "id": "forge_mcp_srg_legacy",
+      "authority": "Forge Maven / MCP",
+      "kind": "maven_zip",
+      "url_template": "https://maven.minecraftforge.net/de/oceanlabs/mcp/mcp/{minecraft}/mcp-{minecraft}-srg.zip",
+      "formats": ["srg", "exc", "csv"],
+      "namespaces": ["obfuscated", "srg"],
+      "purpose": "Legacy Forge/MCP structural mappings, especially 1.7.10-1.12.2."
+    },
+    {
+      "id": "forge_mcp_named_legacy",
+      "authority": "Forge Maven / MCP",
+      "kind": "maven_coordinate_from_source",
+      "coordinate_examples": [
+        "de.oceanlabs.mcp:mcp_snapshot:<timestamp>-<mc-base>",
+        "de.oceanlabs.mcp:mcp_stable:<stable>-<mc-base>"
+      ],
+      "formats": ["csv"],
+      "namespaces": ["srg", "mcp_named"],
+      "purpose": "Recover human MCP field/method names used by legacy Forge source. Exact snapshot/stable coordinate must be read from the source build whenever possible instead of guessing."
+    },
+    {
+      "id": "parchment_optional",
+      "authority": "ParchmentMC Maven",
+      "kind": "optional_enrichment",
+      "formats": ["parchment_json", "tiny_v2_layer"],
+      "namespaces": ["official", "parchment"],
+      "purpose": "Optional parameter-name/Javadoc enrichment only. Never use Parchment as the sole identity bridge for a Mixin/member migration."
+    }
+  ]
+}

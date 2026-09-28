@@ -1,0 +1,13 @@
+interface:
+  display_name: Zero-Loss Chat Accelerator
+  short_description: Always-on maximum effort with minimum wasted tool latency and
+    zero quality loss.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

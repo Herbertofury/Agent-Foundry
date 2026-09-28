@@ -1,0 +1,14 @@
+interface:
+  display_name: Project Brain Orchestrator
+  short_description: One project control plane for execution, continuity, verified
+    builds, and mandatory Google Drive persistence for material files, checkpoints,
+    and artifacts, with GitHub and ProjectDump synchronization when applicable.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

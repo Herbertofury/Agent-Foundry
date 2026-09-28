@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "note": "Semantic rig vocabulary, not fixed geometry. Add or remove bones only for visible articulation/runtime semantics.",
+  "archetypes": {
+    "humanoid": {
+      "required": ["root", "pelvis", "torso", "head", "arm_l", "arm_r", "leg_l", "leg_r"],
+      "optional": ["chest", "neck", "forearm_l", "forearm_r", "hand_l", "hand_r", "shin_l", "shin_r", "foot_l", "foot_r", "weapon", "offhand", "back_attachment", "vfx_origin"],
+      "notes": ["Put locomotion center at pelvis/root; keep weapon anchors separate from hand mesh when attacks swap weapons."]
+    },
+    "quadruped": {
+      "required": ["root", "body", "head", "leg_fl", "leg_fr", "leg_bl", "leg_br"],
+      "optional": ["neck", "jaw", "tail_01", "tail_02", "ear_l", "ear_r", "paw_fl", "paw_fr", "paw_bl", "paw_br", "saddle", "vfx_origin"],
+      "notes": ["Use shoulder/hip pivots that permit stride overlap; tail segmentation follows visible curvature, not arbitrary bone count."]
+    },
+    "avian": {
+      "required": ["root", "body", "head", "wing_l", "wing_r"],
+      "optional": ["neck", "beak", "tail", "leg_l", "leg_r", "foot_l", "foot_r", "wingtip_l", "wingtip_r", "vfx_origin"],
+      "notes": ["Separate primary wing fold from wingtip only if silhouette or flight cycle benefits; document glide/flap root policy."]
+    },
+    "serpentine": {
+      "required": ["root", "body_01", "head"],
+      "optional": ["body_02", "body_03", "body_04", "tail_01", "tail_02", "jaw", "fin_l", "fin_r", "vfx_origin"],
+      "notes": ["Segment count is driven by visible curvature and attack arcs; avoid tiny bones that add no readable motion."]
+    },
+    "arthropod": {
+      "required": ["root", "body", "head", "leg_1_l", "leg_1_r", "leg_2_l", "leg_2_r"],
+      "optional": ["abdomen", "mandible_l", "mandible_r", "leg_3_l", "leg_3_r", "leg_4_l", "leg_4_r", "antenna_l", "antenna_r", "vfx_origin"],
+      "notes": ["Stagger leg phases for grounded weight; extra segments require visible contribution to gait/readability."]
+    },
+    "floating": {
+      "required": ["root", "body"],
+      "optional": ["head", "core", "ring_01", "ring_02", "tendril_01", "tendril_02", "weapon", "vfx_origin"],
+      "notes": ["Floating does not mean motionless: build layered drift, rotational counter-motion, and attack anticipation."]
+    },
+    "dragon_or_multi_limb": {
+      "required": ["root", "pelvis", "torso", "neck", "head", "leg_fl", "leg_fr", "leg_bl", "leg_br"],
+      "optional": ["jaw", "neck_02", "tail_01", "tail_02", "tail_03", "wing_l", "wing_r", "wingtip_l", "wingtip_r", "horn_l", "horn_r", "vfx_mouth", "vfx_origin"],
+      "notes": ["Keep long chains shallow enough for stable authoring; isolate mouth/breath origin and wing roots for combat/event synchronization."]
+    }
+  }
+}

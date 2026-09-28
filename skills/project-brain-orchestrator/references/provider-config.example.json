@@ -1,0 +1,19 @@
+{
+  "name": "example-private-storage",
+  "upload": {
+    "url": "https://files.example.com/api/upload",
+    "method": "POST",
+    "mode": "multipart",
+    "field_name": "file",
+    "headers_from_environment": {
+      "X-API-Key": "EXAMPLE_STORAGE_API_KEY"
+    }
+  },
+  "response": {
+    "download_url_json_path": "data.download_url"
+  },
+  "verification": {
+    "requires_authentication": true,
+    "deep_verify": true
+  }
+}

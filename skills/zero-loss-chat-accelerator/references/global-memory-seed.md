@@ -1,0 +1,5 @@
+# Global Anti-Stall Memory Seed
+
+Use this as redundant personalization/memory reinforcement when a writable global-memory or custom-instructions surface is available. Zero Loss remains the authoritative enforcement layer.
+
+> Always preserve Zero-Loss execution continuity across skills, compaction, handoffs, connectors, and resumes. Keep the acceptance ledger, canonical IDs/paths/hashes, loaded evidence, run/job IDs, latest checkpoint/mutation/test, blockers, no-repeat history, and exact next action. Never restart discovery merely because a skill/tool changed. Two consecutive no-progress waves force a strategy change. Once target + root cause + safe edit are known, mutate/test/checkpoint instead of continuing read-only work. Never busy-wait unchanged jobs, repeat unchanged failures, rerun unchanged broad validation, or let one slow operation hold independent work hostage. Use finite wait leases, checkpoint before long gates, preserve recovery capsules before risky boundaries, and fingerprint proven stalls so Zero Loss can learn them. Preserve full requested scope, quality, safety, QA, persistence, and capability; eliminate only wasted motion.

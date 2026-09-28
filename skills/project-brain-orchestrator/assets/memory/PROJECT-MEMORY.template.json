@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "project_id": "generated-by-project_memory.py",
+  "name": "Project name",
+  "aliases": [],
+  "purpose": "",
+  "canonical_root": "",
+  "identity": {
+    "remotes": [],
+    "manifests": {},
+    "fingerprint": ""
+  }
+}

@@ -1,0 +1,4713 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-06",
+  "purpose": "Coverage registry for authorized Paper/Spigot/Purpur/Folia server -> native mod conversion. It is a detection/triage registry, not a redistribution license.",
+  "coverage_rule": "Known entries improve automatic classification; unknown plugin JAR/config folders are still inventoried and surfaced. Integration-hub and legacy aliases are included so 2026 and older server captures do not silently lose behavior.",
+  "entries": [
+    {
+      "name": "AAC",
+      "aliases": [
+        "AAC AntiCheat"
+      ],
+      "category": "anticheat",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy anticheat context.",
+      "markers": [
+        "aac"
+      ]
+    },
+    {
+      "name": "AdvancedBan",
+      "aliases": [
+        "Advanced Ban"
+      ],
+      "category": "moderation",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/DevLeoko/AdvancedBan",
+      "notes": "Moderation context only.",
+      "markers": [
+        "advancedban",
+        "advanced-ban"
+      ]
+    },
+    {
+      "name": "AdvancedEnchantments",
+      "aliases": [
+        "Advanced Enchantments"
+      ],
+      "category": "enchantments",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/advancedenchantments.43058/",
+      "notes": "Large custom enchant/effect ecosystem.",
+      "markers": [
+        "advanced-enchantments",
+        "advancedenchantments"
+      ]
+    },
+    {
+      "name": "AdvancedGUI",
+      "aliases": [
+        "Advanced GUI"
+      ],
+      "category": "menus-ui",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "GUI/display integration; inspect when found.",
+      "markers": [
+        "advanced-gui",
+        "advancedgui"
+      ]
+    },
+    {
+      "name": "AdvancedPets",
+      "aliases": [
+        "Advanced Pets"
+      ],
+      "category": "pets-mounts",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Custom pet/model semantics when present.",
+      "markers": [
+        "advanced-pets",
+        "advancedpets"
+      ]
+    },
+    {
+      "name": "AdvancedPortals",
+      "aliases": [
+        "Advanced Portals"
+      ],
+      "category": "teleport",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Custom portal destinations/actions can affect converted gameplay.",
+      "markers": [
+        "advancedportals",
+        "advanced-portals"
+      ]
+    },
+    {
+      "name": "AdvancedRegionMarket",
+      "aliases": [
+        "ARM",
+        "Advanced Region Market"
+      ],
+      "category": "protection",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Region rental/sale semantics.",
+      "markers": [
+        "advancedregionmarket",
+        "advanced-region-market"
+      ]
+    },
+    {
+      "name": "AdvancedSeasons",
+      "aliases": [
+        "Advanced Seasons"
+      ],
+      "category": "survival-overhaul",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Season/environment integration used by custom crop/content systems.",
+      "markers": [
+        "advancedseasons",
+        "advanced-seasons"
+      ]
+    },
+    {
+      "name": "Adyeshach",
+      "aliases": [],
+      "category": "npc",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/TabooLib/adyeshach",
+      "notes": "Packet/virtual NPC ecosystem.",
+      "markers": [
+        "adyeshach"
+      ]
+    },
+    {
+      "name": "Animated Java",
+      "aliases": [
+        "AJ",
+        "AnimatedJava"
+      ],
+      "category": "models-animation",
+      "impact": "direct-asset",
+      "adapter": "first-class",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Animated-Java/animated-java",
+      "notes": "Blockbench animation/export ecosystem.",
+      "markers": [
+        "ajmodel",
+        "animated-java",
+        "animatedjava"
+      ]
+    },
+    {
+      "name": "AnimatedScoreboard",
+      "aliases": [
+        "Animated Scoreboard"
+      ],
+      "category": "scoreboard-nametag",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy animated scoreboard source.",
+      "markers": [
+        "animated-scoreboard",
+        "animatedscoreboard"
+      ]
+    },
+    {
+      "name": "AuctionHouse",
+      "aliases": [
+        "Auction House"
+      ],
+      "category": "economy-shop",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "May preserve custom item metadata/provider identities.",
+      "markers": [
+        "auction-house",
+        "auctionhouse"
+      ]
+    },
+    {
+      "name": "AuraSkills",
+      "aliases": [
+        "Aurelium Skills",
+        "AureliumSkills"
+      ],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/auraskills",
+      "notes": "Skills/stats/abilities/loot; Aurelium Skills legacy alias.",
+      "markers": [
+        "auraskills",
+        "aurelium-skills",
+        "aureliumskills"
+      ]
+    },
+    {
+      "name": "AuthMeReloaded",
+      "aliases": [
+        "AuthMe",
+        "Auth Me Reloaded"
+      ],
+      "category": "authentication",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/AuthMe/AuthMeReloaded",
+      "notes": "Offline-mode authentication context.",
+      "markers": [
+        "authmereloaded",
+        "authme-reloaded",
+        "authme"
+      ]
+    },
+    {
+      "name": "BackpackPlus",
+      "aliases": [
+        "Backpack Plus"
+      ],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Backpack UI/item models; ResourcePackManager integration.",
+      "markers": [
+        "backpack-plus",
+        "backpackplus"
+      ]
+    },
+    {
+      "name": "BattlePass",
+      "aliases": [
+        "Battle Pass"
+      ],
+      "category": "quests-story",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Seasonal quest/reward progression; preserve objective/reward semantics if part of source behavior.",
+      "markers": [
+        "battlepass",
+        "battle-pass"
+      ]
+    },
+    {
+      "name": "BeautyQuests",
+      "aliases": [
+        "Beauty Quests"
+      ],
+      "category": "quests-story",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/beautyquests",
+      "notes": "Quest engine with broad historical version support.",
+      "markers": [
+        "beauty-quests",
+        "beautyquests"
+      ]
+    },
+    {
+      "name": "BentoBox",
+      "aliases": [
+        "Bento Box"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/BentoBoxWorld/BentoBox",
+      "notes": "Island/minigame platform context.",
+      "markers": [
+        "bento-box",
+        "bentobox"
+      ]
+    },
+    {
+      "name": "BetonQuest",
+      "aliases": [
+        "Beton Quest"
+      ],
+      "category": "quests-story",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://betonquest.org/",
+      "notes": "Quest graph with wide integration surface.",
+      "markers": [
+        "beton-quest",
+        "betonquest"
+      ]
+    },
+    {
+      "name": "BetterChatBubbles",
+      "aliases": [
+        "Better Chat Bubbles"
+      ],
+      "category": "hud-ui",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Chat bubble display semantics.",
+      "markers": [
+        "better-chat-bubbles",
+        "betterchatbubbles"
+      ]
+    },
+    {
+      "name": "BetterHud",
+      "aliases": [
+        "Better HUD"
+      ],
+      "category": "hud-ui",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/toxicity188/BetterHud",
+      "notes": "Generated RP HUD, animated images/text/heads and integrations.",
+      "markers": [
+        "better-hud",
+        "betterhud"
+      ]
+    },
+    {
+      "name": "BetterModel",
+      "aliases": [
+        "Better Model",
+        "BetterModel2"
+      ],
+      "category": "models-animation",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/toxicity188/BetterModel",
+      "notes": "Generic bbmodel server model engine.",
+      "markers": [
+        "better-model",
+        "bettermodel"
+      ]
+    },
+    {
+      "name": "BetterRTP",
+      "aliases": [
+        "Better RTP"
+      ],
+      "category": "teleport",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/betterrtp.36081/",
+      "notes": "Random teleport context.",
+      "markers": [
+        "betterrtp",
+        "better-rtp"
+      ]
+    },
+    {
+      "name": "BetterStructures",
+      "aliases": [
+        "Better Structures"
+      ],
+      "category": "structures",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Structure content/resource-pack integration.",
+      "markers": [
+        "better-structures",
+        "betterstructures"
+      ]
+    },
+    {
+      "name": "BlueMap",
+      "aliases": [
+        "Blue Map"
+      ],
+      "category": "web-map",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/bluemap",
+      "notes": "Web map rendering; may expose custom marker integrations.",
+      "markers": [
+        "bluemap",
+        "blue-map"
+      ]
+    },
+    {
+      "name": "BossShopPro",
+      "aliases": [
+        "Boss Shop Pro"
+      ],
+      "category": "economy-shop",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Menu/shop actions and custom item bridges.",
+      "markers": [
+        "boss-shop-pro",
+        "bossshoppro"
+      ]
+    },
+    {
+      "name": "Brewery",
+      "aliases": [
+        "BreweryX"
+      ],
+      "category": "food-drink",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-and-legacy",
+      "source": "",
+      "notes": "Custom drinks/recipes/effects; BreweryX successor lineage may appear.",
+      "markers": [
+        "brewery",
+        "breweryx"
+      ]
+    },
+    {
+      "name": "BungeeCord",
+      "aliases": [
+        "Bungee"
+      ],
+      "category": "proxy",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-and-legacy",
+      "source": "https://www.spigotmc.org/wiki/bungeecord/",
+      "notes": "Proxy platform context.",
+      "markers": [
+        "bungeecord"
+      ]
+    },
+    {
+      "name": "BungeeResourcepacks",
+      "aliases": [
+        "Bungee Resourcepacks",
+        "BungeeResourcePacks"
+      ],
+      "category": "resource-pack",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Proxy/world RP routing.",
+      "markers": [
+        "bungee-resourcepacks",
+        "bungeeresourcepacks"
+      ]
+    },
+    {
+      "name": "CalebCompass",
+      "aliases": [
+        "Caleb Compass"
+      ],
+      "category": "quests-story",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "BetonQuest navigation integration.",
+      "markers": [
+        "calebcompass",
+        "caleb-compass"
+      ]
+    },
+    {
+      "name": "CannonRTP",
+      "aliases": [
+        "Cannon RTP"
+      ],
+      "category": "teleport",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "ResourcePackManager integration but normally no native content conversion.",
+      "markers": [
+        "cannonrtp",
+        "cannon-rtp"
+      ]
+    },
+    {
+      "name": "ChatControlRed",
+      "aliases": [
+        "ChatControl",
+        "Chat Control Red"
+      ],
+      "category": "chat",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Chat formatting/rules.",
+      "markers": [
+        "chatcontrolred",
+        "chatcontrol",
+        "chat-control"
+      ]
+    },
+    {
+      "name": "ChestCommands",
+      "aliases": [
+        "Chest Commands"
+      ],
+      "category": "menus-ui",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy inventory GUI menu plugin.",
+      "markers": [
+        "chest-commands",
+        "chestcommands"
+      ]
+    },
+    {
+      "name": "ChestShop",
+      "aliases": [
+        "Chest Shop"
+      ],
+      "category": "economy-shop",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/ChestShop-authors/ChestShop-3",
+      "notes": "Long-lived sign/chest shop item semantics.",
+      "markers": [
+        "chestshop",
+        "chest-shop"
+      ]
+    },
+    {
+      "name": "Chunky",
+      "aliases": [],
+      "category": "world-tools",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/pop4959/Chunky",
+      "notes": "World pregeneration/border context.",
+      "markers": [
+        "chunky"
+      ]
+    },
+    {
+      "name": "ChunkyBorder",
+      "aliases": [
+        "Chunky Border"
+      ],
+      "category": "world-tools",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/pop4959/ChunkyBorder",
+      "notes": "World border companion to Chunky.",
+      "markers": [
+        "chunkyborder",
+        "chunky-border"
+      ]
+    },
+    {
+      "name": "Citizens",
+      "aliases": [
+        "Citizens2"
+      ],
+      "category": "npc",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://citizensnpcs.co/",
+      "notes": "NPC identity, traits, equipment, navigation and actions.",
+      "markers": [
+        "citizens"
+      ]
+    },
+    {
+      "name": "ClearLagg",
+      "aliases": [
+        "ClearLag",
+        "Clear Lag"
+      ],
+      "category": "performance",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "https://www.spigotmc.org/resources/clearlagg.68271/",
+      "notes": "Long-lived legacy entity cleanup/performance plugin; classify to avoid false unknowns in older captures.",
+      "markers": [
+        "clearlagg",
+        "clearlag"
+      ]
+    },
+    {
+      "name": "CMI",
+      "aliases": [],
+      "category": "server-core",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/cmi.3742/",
+      "notes": "Large server utility suite; commands/holograms/portals may be referenced.",
+      "markers": [
+        "cmi"
+      ]
+    },
+    {
+      "name": "CoinsEngine",
+      "aliases": [
+        "Coins Engine"
+      ],
+      "category": "economy-api",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Multi-currency provider context.",
+      "markers": [
+        "coinsengine",
+        "coins-engine"
+      ]
+    },
+    {
+      "name": "CommandHelper",
+      "aliases": [
+        "Command Helper"
+      ],
+      "category": "scripting",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "https://github.com/EngineHub/CommandHelper",
+      "notes": "Older server scripting/command logic.",
+      "markers": [
+        "command-helper",
+        "commandhelper"
+      ]
+    },
+    {
+      "name": "CommandPanels",
+      "aliases": [
+        "Command Panels"
+      ],
+      "category": "menus-ui",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/commandpanels",
+      "notes": "Inventory/dialog/Floodgate GUIs with animation/logic.",
+      "markers": [
+        "command-panels",
+        "commandpanels"
+      ]
+    },
+    {
+      "name": "CoreProtect",
+      "aliases": [
+        "Core Protect"
+      ],
+      "category": "logging",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/coreprotect",
+      "notes": "Block/action logging and rollback; inventory context only.",
+      "markers": [
+        "coreprotect",
+        "core-protect"
+      ]
+    },
+    {
+      "name": "CosmeticsCore",
+      "aliases": [
+        "Cosmetics Core"
+      ],
+      "category": "cosmetics",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Resource-pack cosmetics; may integrate ItemsAdder/ModelEngine.",
+      "markers": [
+        "cosmetics-core",
+        "cosmeticscore"
+      ]
+    },
+    {
+      "name": "CrackShot",
+      "aliases": [
+        "Crack Shot"
+      ],
+      "category": "weapons",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "legacy-or-migration",
+      "source": "https://www.spigotmc.org/resources/crackshot-guns.48301/",
+      "notes": "Classic gun config system; common legacy source.",
+      "markers": [
+        "crack-shot",
+        "crackshot"
+      ]
+    },
+    {
+      "name": "CrackShotPlus",
+      "aliases": [
+        "CSP",
+        "CrackShot Plus"
+      ],
+      "category": "weapons",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "legacy-or-migration",
+      "source": "https://www.spigotmc.org/resources/crackshotplus.18085/",
+      "notes": "CrackShot extension with visual/effect mechanics.",
+      "markers": [
+        "crackshot-plus",
+        "crackshotplus"
+      ]
+    },
+    {
+      "name": "CraftEngine",
+      "aliases": [
+        "Craft Engine"
+      ],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Xiao-MoMi/craft-engine",
+      "notes": "Server-side custom item/block/furniture framework.",
+      "markers": [
+        "craft-engine",
+        "craftengine"
+      ]
+    },
+    {
+      "name": "CrateReloaded",
+      "aliases": [
+        "Crate Reloaded"
+      ],
+      "category": "crates-loot",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy crate reward system.",
+      "markers": [
+        "crate-reloaded",
+        "cratereloaded"
+      ]
+    },
+    {
+      "name": "CrazyCrates",
+      "aliases": [
+        "Crazy Crates"
+      ],
+      "category": "crates-loot",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Crate reward/item/effect semantics.",
+      "markers": [
+        "crazy-crates",
+        "crazycrates"
+      ]
+    },
+    {
+      "name": "CrazyEnchantments",
+      "aliases": [
+        "Crazy Enchantments"
+      ],
+      "category": "enchantments",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy custom enchantment system common in older server packs.",
+      "markers": [
+        "crazyenchantments",
+        "crazy-enchantments"
+      ]
+    },
+    {
+      "name": "Custom_Crafter",
+      "aliases": [
+        "Custom Crafter",
+        "custom-crafter"
+      ],
+      "category": "crafting",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Sakaki-Aruka/custom-crafter",
+      "notes": "Paper/Folia custom recipe engine with legacy 1.20.1 line and current 26.x line.",
+      "markers": [
+        "custom_crafter",
+        "customcrafter",
+        "custom-crafter"
+      ]
+    },
+    {
+      "name": "CustomCrafting",
+      "aliases": [
+        "Custom Crafting"
+      ],
+      "category": "crafting",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/customcrafting-advanced-custom-recipe-plugin-1-16-1-21.55883/",
+      "notes": "Custom recipes and item-provider integrations.",
+      "markers": [
+        "custom-crafting",
+        "customcrafting"
+      ]
+    },
+    {
+      "name": "CustomCrops",
+      "aliases": [
+        "Custom Crops"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Xiao-MoMi/Custom-Crops",
+      "notes": "Crops/seasons/fertilizer/sprinkler mechanics; supports CraftEngine/ItemsAdder/Oraxen/Nexo.",
+      "markers": [
+        "customcrops",
+        "custom-crops"
+      ]
+    },
+    {
+      "name": "CustomFishing",
+      "aliases": [
+        "Custom Fishing"
+      ],
+      "category": "fishing",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Custom fish/item/loot systems; inspect provider-specific config.",
+      "markers": [
+        "custom-fishing",
+        "customfishing"
+      ]
+    },
+    {
+      "name": "CustomItems",
+      "aliases": [
+        "Custom Items"
+      ],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Generic legacy CustomModelData item systems; inspect exact vendor.",
+      "markers": [
+        "custom-items",
+        "customitems"
+      ]
+    },
+    {
+      "name": "CustomNameplates",
+      "aliases": [
+        "Custom Nameplates"
+      ],
+      "category": "hud-ui",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Xiao-MoMi/Custom-Nameplates",
+      "notes": "Nameplates/actionbar/bossbar/chat-bubble presentation and RP assets.",
+      "markers": [
+        "customnameplates",
+        "custom-nameplates"
+      ]
+    },
+    {
+      "name": "DailyRewards",
+      "aliases": [
+        "Daily Rewards"
+      ],
+      "category": "crates-loot",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Timed reward definitions; preserve reward/cooldown semantics when in conversion scope.",
+      "markers": [
+        "dailyrewards",
+        "daily-rewards"
+      ]
+    },
+    {
+      "name": "DecentHolograms",
+      "aliases": [
+        "DH",
+        "Decent Holograms"
+      ],
+      "category": "holograms",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/decentholograms",
+      "notes": "Hologram text/item/display semantics.",
+      "markers": [
+        "decent-holograms",
+        "decentholograms"
+      ]
+    },
+    {
+      "name": "DeluxeMenus",
+      "aliases": [
+        "Deluxe Menus"
+      ],
+      "category": "menus-ui",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/deluxemenus.11734/",
+      "notes": "Inventory menu/action semantics.",
+      "markers": [
+        "deluxe-menus",
+        "deluxemenus"
+      ]
+    },
+    {
+      "name": "Denizen",
+      "aliases": [],
+      "category": "scripting",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://denizenscript.com/",
+      "notes": "Scripted NPC/gameplay behavior; often paired with Citizens.",
+      "markers": [
+        "denizen"
+      ]
+    },
+    {
+      "name": "Depenizen",
+      "aliases": [],
+      "category": "scripting",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/DenizenScript/Depenizen",
+      "notes": "Denizen integration bridge for many plugins.",
+      "markers": [
+        "depenizen"
+      ]
+    },
+    {
+      "name": "DiceFurniture",
+      "aliases": [
+        "Dice Furniture"
+      ],
+      "category": "furniture",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy furniture/resource-pack model ecosystem.",
+      "markers": [
+        "dice-furniture",
+        "dicefurniture"
+      ]
+    },
+    {
+      "name": "DiscordSRV",
+      "aliases": [
+        "Discord SRV"
+      ],
+      "category": "chat-bridge",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/discordsrv.18494/",
+      "notes": "Chat/event bridge context.",
+      "markers": [
+        "discord-srv",
+        "discordsrv"
+      ]
+    },
+    {
+      "name": "DungeonsXL",
+      "aliases": [
+        "Dungeons XL"
+      ],
+      "category": "dungeons",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/dungeonsxl.9488/",
+      "notes": "Dungeon maps, triggers, mob/item integration.",
+      "markers": [
+        "dungeons-xl",
+        "dungeonsxl"
+      ]
+    },
+    {
+      "name": "Dynmap",
+      "aliases": [
+        "Dyn Map"
+      ],
+      "category": "web-map",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/webbukkit/dynmap",
+      "notes": "Long-lived web map/marker system.",
+      "markers": [
+        "dynmap",
+        "dyn-map"
+      ]
+    },
+    {
+      "name": "eco",
+      "aliases": [
+        "Eco Core",
+        "libreforge"
+      ],
+      "category": "library-bridge",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Auxilor/eco",
+      "notes": "Auxilor shared framework.",
+      "markers": [
+        "eco",
+        "libreforge"
+      ]
+    },
+    {
+      "name": "EcoArmor",
+      "aliases": [
+        "Eco Armor"
+      ],
+      "category": "cosmetics",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Custom armor/stat/effect ecosystem if present.",
+      "markers": [
+        "eco-armor",
+        "ecoarmor"
+      ]
+    },
+    {
+      "name": "EcoBosses",
+      "aliases": [
+        "Eco Bosses"
+      ],
+      "category": "mobs-skills",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://plugins.auxilor.io/ecobosses/",
+      "notes": "Eco boss definitions/skills.",
+      "markers": [
+        "eco-bosses",
+        "ecobosses"
+      ]
+    },
+    {
+      "name": "EcoCrates",
+      "aliases": [
+        "Eco Crates"
+      ],
+      "category": "crates-loot",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Crate/reward semantics if present.",
+      "markers": [
+        "eco-crates",
+        "ecocrates"
+      ]
+    },
+    {
+      "name": "EcoEnchants",
+      "aliases": [
+        "Eco Enchants"
+      ],
+      "category": "enchantments",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://plugins.auxilor.io/ecoenchants/",
+      "notes": "Custom enchant triggers/effects.",
+      "markers": [
+        "eco-enchants",
+        "ecoenchants"
+      ]
+    },
+    {
+      "name": "EcoItems",
+      "aliases": [
+        "Eco Items"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Auxilor/EcoItems",
+      "notes": "Custom item/effect trigger graph.",
+      "markers": [
+        "eco-items",
+        "ecoitems"
+      ]
+    },
+    {
+      "name": "EcoJobs",
+      "aliases": [
+        "Eco Jobs"
+      ],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Auxilor jobs/progression if present.",
+      "markers": [
+        "eco-jobs",
+        "ecojobs"
+      ]
+    },
+    {
+      "name": "EcoMobs",
+      "aliases": [
+        "Eco Mobs"
+      ],
+      "category": "mobs-skills",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://plugins.auxilor.io/ecomobs/",
+      "notes": "Eco custom mobs/abilities.",
+      "markers": [
+        "eco-mobs",
+        "ecomobs"
+      ]
+    },
+    {
+      "name": "EconomyShopGUI",
+      "aliases": [
+        "Economy Shop GUI"
+      ],
+      "category": "economy-shop",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Shop/menu item semantics.",
+      "markers": [
+        "economy-shop-gui",
+        "economyshopgui"
+      ]
+    },
+    {
+      "name": "EcoPets",
+      "aliases": [
+        "Eco Pets"
+      ],
+      "category": "pets-mounts",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Auxilor pet/progression ecosystem if present.",
+      "markers": [
+        "eco-pets",
+        "ecopets"
+      ]
+    },
+    {
+      "name": "EcoQuests",
+      "aliases": [
+        "Eco Quests"
+      ],
+      "category": "quests-story",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Auxilor quest semantics if present.",
+      "markers": [
+        "eco-quests",
+        "ecoquests"
+      ]
+    },
+    {
+      "name": "EcoSkills",
+      "aliases": [
+        "Eco Skills"
+      ],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://plugins.auxilor.io/ecoskills/",
+      "notes": "Eco RPG skills/stat semantics.",
+      "markers": [
+        "eco-skills",
+        "ecoskills"
+      ]
+    },
+    {
+      "name": "EffectLib",
+      "aliases": [
+        "Effect Lib"
+      ],
+      "category": "effects-vfx",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/elBukkit/EffectLib",
+      "notes": "Particle/effect definitions referenced by quests/magic.",
+      "markers": [
+        "effectlib",
+        "effect-lib"
+      ]
+    },
+    {
+      "name": "EliteMobs",
+      "aliases": [
+        "Elite Mobs"
+      ],
+      "category": "mobs-skills",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/MagmaGuy/EliteMobs",
+      "notes": "Bosses, mobs, items, quests, events, NPCs, progression.",
+      "markers": [
+        "elite-mobs",
+        "elitemobs"
+      ]
+    },
+    {
+      "name": "EpicWorldGenerator",
+      "aliases": [
+        "EWG",
+        "Epic World Generator"
+      ],
+      "category": "worldgen",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Older commercial world generation source.",
+      "markers": [
+        "epic-world-generator",
+        "epicworldgenerator"
+      ]
+    },
+    {
+      "name": "EssentialsAntiBuild",
+      "aliases": [
+        "EssentialsXAntiBuild",
+        "EssentialsX AntiBuild"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://essentialsx.net/",
+      "notes": "EssentialsX anti-build module.",
+      "markers": [
+        "essentialsantibuild",
+        "essentialsxantibuild"
+      ]
+    },
+    {
+      "name": "EssentialsChat",
+      "aliases": [
+        "EssentialsXChat",
+        "EssentialsX Chat"
+      ],
+      "category": "chat",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://essentialsx.net/",
+      "notes": "EssentialsX chat module.",
+      "markers": [
+        "essentialschat",
+        "essentialsxchat"
+      ]
+    },
+    {
+      "name": "EssentialsProtect",
+      "aliases": [
+        "EssentialsXProtect",
+        "EssentialsX Protect"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://essentialsx.net/",
+      "notes": "EssentialsX protection module.",
+      "markers": [
+        "essentialsprotect",
+        "essentialsxprotect"
+      ]
+    },
+    {
+      "name": "EssentialsSpawn",
+      "aliases": [
+        "EssentialsXSpawn",
+        "EssentialsX Spawn"
+      ],
+      "category": "server-core",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://essentialsx.net/",
+      "notes": "EssentialsX spawn module; classify separately because it ships as its own plugin JAR.",
+      "markers": [
+        "essentialsspawn",
+        "essentialsxspawn"
+      ]
+    },
+    {
+      "name": "EssentialsX",
+      "aliases": [
+        "Essentials"
+      ],
+      "category": "server-core",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://essentialsx.net/",
+      "notes": "Commands/economy/spawn context; not usually asset-converted.",
+      "markers": [
+        "essentials",
+        "essentialsx"
+      ]
+    },
+    {
+      "name": "EternalTD",
+      "aliases": [
+        "Eternal TD"
+      ],
+      "category": "minigame",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Tower-defense/minigame content; ResourcePackManager integration.",
+      "markers": [
+        "eternaltd",
+        "eternal-td"
+      ]
+    },
+    {
+      "name": "EvenMoreFish",
+      "aliases": [
+        "EMF-Fishing",
+        "Even More Fish"
+      ],
+      "category": "fishing",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/evenmorefish",
+      "notes": "Custom fish/baits/competitions/rewards.",
+      "markers": [
+        "even-more-fish",
+        "evenmorefish"
+      ]
+    },
+    {
+      "name": "ExcellentBackpacks",
+      "aliases": [
+        "Excellent Backpacks"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Backpack/item/storage semantics.",
+      "markers": [
+        "excellentbackpacks",
+        "excellent-backpacks"
+      ]
+    },
+    {
+      "name": "ExcellentCrates",
+      "aliases": [
+        "Excellent Crates"
+      ],
+      "category": "crates-loot",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Crate reward/item/effect semantics.",
+      "markers": [
+        "excellent-crates",
+        "excellentcrates"
+      ]
+    },
+    {
+      "name": "ExcellentEnchants",
+      "aliases": [
+        "Excellent Enchants"
+      ],
+      "category": "enchantments",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Custom enchantments with particle/sound effects.",
+      "markers": [
+        "excellent-enchants",
+        "excellentenchants"
+      ]
+    },
+    {
+      "name": "ExecutableBlocks",
+      "aliases": [
+        "EB",
+        "Executable Blocks"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://docs.ssomar.com/executableblocks/information-eb",
+      "notes": "Ability-driven custom blocks.",
+      "markers": [
+        "executable-blocks",
+        "executableblocks"
+      ]
+    },
+    {
+      "name": "ExecutableEvents",
+      "aliases": [
+        "Executable Events"
+      ],
+      "category": "events",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Event trigger graph may invoke EI/EB/custom content.",
+      "markers": [
+        "executable-events",
+        "executableevents"
+      ]
+    },
+    {
+      "name": "ExecutableItems",
+      "aliases": [
+        "EI",
+        "Executable Items"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://docs.ssomar.com/executableitems/information-ei",
+      "notes": "Ability-driven item trigger graph.",
+      "markers": [
+        "executable-items",
+        "executableitems"
+      ]
+    },
+    {
+      "name": "Factions",
+      "aliases": [
+        "FactionsUUID",
+        "Factions UUID"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Faction/territory context.",
+      "markers": [
+        "factions",
+        "factionsuuid"
+      ]
+    },
+    {
+      "name": "FakeBlock",
+      "aliases": [
+        "Fake Block"
+      ],
+      "category": "presentation",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Client-side fake block presentation used by quests.",
+      "markers": [
+        "fakeblock",
+        "fake-block"
+      ]
+    },
+    {
+      "name": "FancyHolograms",
+      "aliases": [
+        "Fancy Holograms"
+      ],
+      "category": "holograms",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/fancyholograms",
+      "notes": "Display-entity text/item/block holograms.",
+      "markers": [
+        "fancy-holograms",
+        "fancyholograms"
+      ]
+    },
+    {
+      "name": "FancyNpcs",
+      "aliases": [
+        "Fancy NPCs",
+        "FancyNPCs"
+      ],
+      "category": "npc",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/fancynpcs",
+      "notes": "Packet NPCs: skins, equipment, pose/variants/actions.",
+      "markers": [
+        "fancy-npcs",
+        "fancynpcs"
+      ]
+    },
+    {
+      "name": "FastAsyncWorldEdit",
+      "aliases": [
+        "FAWE",
+        "Fast Async WorldEdit"
+      ],
+      "category": "world-tools",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/IntellectualSites/FastAsyncWorldEdit",
+      "notes": "WorldEdit acceleration/extension.",
+      "markers": [
+        "fastasyncworldedit",
+        "fawe"
+      ]
+    },
+    {
+      "name": "FastLogin",
+      "aliases": [
+        "Fast Login"
+      ],
+      "category": "authentication",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/games647/FastLogin",
+      "notes": "Premium/offline auth bridge context.",
+      "markers": [
+        "fastlogin",
+        "fast-login"
+      ]
+    },
+    {
+      "name": "FeatherBoard",
+      "aliases": [
+        "Feather Board"
+      ],
+      "category": "scoreboard-nametag",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy scoreboard layouts/animations.",
+      "markers": [
+        "feather-board",
+        "featherboard"
+      ]
+    },
+    {
+      "name": "Floodgate",
+      "aliases": [
+        "Floodgate-Spigot"
+      ],
+      "category": "bedrock-bridge",
+      "impact": "bridge",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://geysermc.org/wiki/floodgate/",
+      "notes": "Bedrock identity/auth integration; affects UI/pack paths.",
+      "markers": [
+        "floodgate"
+      ]
+    },
+    {
+      "name": "ForcePack",
+      "aliases": [
+        "Force Pack"
+      ],
+      "category": "resource-pack",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Resource-pack delivery/version selection/hosting.",
+      "markers": [
+        "force-pack",
+        "forcepack"
+      ]
+    },
+    {
+      "name": "FreeMinecraftModels",
+      "aliases": [
+        "FMM",
+        "Free Minecraft Models"
+      ],
+      "category": "models-animation",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/MagmaGuy/FreeMinecraftModels",
+      "notes": "Open model engine; .fmmodel/resource-pack evidence.",
+      "markers": [
+        "fmmodel",
+        "free-minecraft-models",
+        "freeminecraftmodels"
+      ]
+    },
+    {
+      "name": "FurnitureLib",
+      "aliases": [
+        "Furniture Lib"
+      ],
+      "category": "furniture",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Furniture entity/seat/collision source.",
+      "markers": [
+        "furniture-lib",
+        "furniturelib"
+      ]
+    },
+    {
+      "name": "FurnitureMaker",
+      "aliases": [
+        "Furniture Maker"
+      ],
+      "category": "furniture",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/furnituremaker",
+      "notes": "FurnitureLib authoring/import addon for BlockDisplay/ArmorStand models.",
+      "markers": [
+        "furnituremaker",
+        "furniture-maker"
+      ]
+    },
+    {
+      "name": "GadgetsMenu",
+      "aliases": [
+        "Gadgets Menu"
+      ],
+      "category": "cosmetics",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/gadgetsmenu.10885/",
+      "notes": "Cosmetics/gadgets/pets/morphs/emotes.",
+      "markers": [
+        "gadgets-menu",
+        "gadgetsmenu"
+      ]
+    },
+    {
+      "name": "Geyser",
+      "aliases": [
+        "Geyser-Spigot",
+        "GeyserMC"
+      ],
+      "category": "bedrock-bridge",
+      "impact": "bridge",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://geysermc.org/",
+      "notes": "Java↔Bedrock bridge; custom item mappings and Bedrock RP may need parity.",
+      "markers": [
+        "geyser",
+        "geyser-spigot",
+        "geysermc"
+      ]
+    },
+    {
+      "name": "GeyserDisplayEntity",
+      "aliases": [
+        "Geyser Display Entity"
+      ],
+      "category": "bedrock-bridge",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/GeyserExtensionists/GeyserDisplayEntity",
+      "notes": "Bedrock display-entity compatibility; may affect presentation parity.",
+      "markers": [
+        "geyserdisplayentity",
+        "geyser-display-entity"
+      ]
+    },
+    {
+      "name": "GeyserModelEngine",
+      "aliases": [
+        "Geyser Model Engine",
+        "GME"
+      ],
+      "category": "bedrock-bridge",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/GeyserExtensionists/GeyserModelEngine",
+      "notes": "Converts ModelEngine/BetterModel models for Bedrock/Geyser; preserve generated Bedrock model/resource-pack semantics.",
+      "markers": [
+        "geysermodelengine",
+        "geyser-model-engine"
+      ]
+    },
+    {
+      "name": "GeyserUtils",
+      "aliases": [
+        "Geyser Utils"
+      ],
+      "category": "library-bridge",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/GeyserExtensionists/GeyserUtils",
+      "notes": "Bridge utility used by Geyser extension stacks.",
+      "markers": [
+        "geyserutils",
+        "geyser-utils"
+      ]
+    },
+    {
+      "name": "GriefDefender",
+      "aliases": [
+        "Grief Defender"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Claims context.",
+      "markers": [
+        "griefdefender",
+        "grief-defender"
+      ]
+    },
+    {
+      "name": "GriefPrevention",
+      "aliases": [
+        "Grief Prevention"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/griefprevention.1884/",
+      "notes": "Claims can gate interactions/placement.",
+      "markers": [
+        "grief-prevention",
+        "griefprevention"
+      ]
+    },
+    {
+      "name": "GrimAC",
+      "aliases": [
+        "Grim",
+        "Grim AntiCheat"
+      ],
+      "category": "anticheat",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/GrimAnticheat/Grim",
+      "notes": "Anticheat context; do not translate as gameplay content.",
+      "markers": [
+        "grimac",
+        "grim-anticheat"
+      ]
+    },
+    {
+      "name": "HappyHUD",
+      "aliases": [
+        "Happy HUD"
+      ],
+      "category": "hud-ui",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy HUD source; migrate semantics rather than dropping layouts.",
+      "markers": [
+        "happy-hud",
+        "happyhud"
+      ]
+    },
+    {
+      "name": "HeadDatabase",
+      "aliases": [
+        "Head Database",
+        "HDB"
+      ],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/head-database.14280/",
+      "notes": "Player-head texture/item provider; preserve concrete skull profile/texture data used by converted content.",
+      "markers": [
+        "headdatabase",
+        "head-database"
+      ]
+    },
+    {
+      "name": "Heroes",
+      "aliases": [],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "https://www.spigotmc.org/resources/heroes.24734/",
+      "notes": "Long-lived classes/skills plugin.",
+      "markers": [
+        "heroes"
+      ]
+    },
+    {
+      "name": "HMCCosmetics",
+      "aliases": [
+        "HMC Cosmetics"
+      ],
+      "category": "cosmetics",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/HibiscusMC/HMCCosmetics",
+      "notes": "Cosmetics slots/config plus RP assets.",
+      "markers": [
+        "hmc-cosmetics",
+        "hmccosmetics"
+      ]
+    },
+    {
+      "name": "HMCWraps",
+      "aliases": [
+        "HMC Wraps"
+      ],
+      "category": "cosmetics",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/HibiscusMC/HMCWraps",
+      "notes": "Item wraps/appearance resource-pack semantics.",
+      "markers": [
+        "hmc-wraps",
+        "hmcwraps"
+      ]
+    },
+    {
+      "name": "HolographicDisplays",
+      "aliases": [
+        "HD",
+        "Holographic Displays"
+      ],
+      "category": "holograms",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "legacy-or-migration",
+      "source": "https://dev.bukkit.org/projects/holographic-displays",
+      "notes": "Historical hologram system.",
+      "markers": [
+        "holographic-displays",
+        "holographicdisplays"
+      ]
+    },
+    {
+      "name": "HoloMobHealth",
+      "aliases": [
+        "Holo Mob Health"
+      ],
+      "category": "holograms",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/LOOHP/HoloMobHealth",
+      "notes": "Mob health hologram/name presentation.",
+      "markers": [
+        "holomobhealth",
+        "holo-mob-health"
+      ]
+    },
+    {
+      "name": "HonnyCompass",
+      "aliases": [
+        "Honny Compass"
+      ],
+      "category": "quests-story",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "BetonQuest navigation integration.",
+      "markers": [
+        "honnycompass",
+        "honny-compass"
+      ]
+    },
+    {
+      "name": "HuskChat",
+      "aliases": [
+        "Husk Chat"
+      ],
+      "category": "chat-bridge",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Cross-server chat context.",
+      "markers": [
+        "huskchat",
+        "husk-chat"
+      ]
+    },
+    {
+      "name": "HuskClaims",
+      "aliases": [
+        "Husk Claims"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Claim integration.",
+      "markers": [
+        "husk-claims",
+        "huskclaims"
+      ]
+    },
+    {
+      "name": "HuskHomes",
+      "aliases": [
+        "Husk Homes"
+      ],
+      "category": "teleport",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/huskhomes",
+      "notes": "Homes/warps/teleports context.",
+      "markers": [
+        "huskhomes",
+        "husk-homes"
+      ]
+    },
+    {
+      "name": "HuskSync",
+      "aliases": [
+        "Husk Sync"
+      ],
+      "category": "cross-server",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/WiIIiam278/HuskSync",
+      "notes": "Cross-server player-data sync context.",
+      "markers": [
+        "husksync",
+        "husk-sync"
+      ]
+    },
+    {
+      "name": "HuskTowns",
+      "aliases": [
+        "Husk Towns"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Town/claim integration.",
+      "markers": [
+        "husk-towns",
+        "husktowns"
+      ]
+    },
+    {
+      "name": "ImageFrame",
+      "aliases": [
+        "Image Frame"
+      ],
+      "category": "presentation",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/LOOHP/ImageFrame",
+      "notes": "Static/animated external images rendered on maps/item frames; preserve image bytes, layout, animation timing and map placement.",
+      "markers": [
+        "imageframe",
+        "image-frame"
+      ]
+    },
+    {
+      "name": "InfernalMobs",
+      "aliases": [
+        "Infernal Mobs"
+      ],
+      "category": "mobs-skills",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "legacy-or-migration",
+      "source": "https://www.spigotmc.org/resources/infernal-mobs.2156/",
+      "notes": "Long-lived custom mob modifier/loot system.",
+      "markers": [
+        "infernal-mobs",
+        "infernalmobs"
+      ]
+    },
+    {
+      "name": "InfiniteVehiclesBuilder",
+      "aliases": [
+        "Infinite Vehicles Builder",
+        "InfiniteVehicles"
+      ],
+      "category": "vehicles",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Textured/animated vehicle model ecosystem.",
+      "markers": [
+        "infinite-vehicles",
+        "infinitevehicles",
+        "infinitevehiclesbuilder"
+      ]
+    },
+    {
+      "name": "InteractionVisualizer",
+      "aliases": [
+        "Interaction Visualizer"
+      ],
+      "category": "presentation",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/LOOHP/InteractionVisualizer",
+      "notes": "Packet-driven item/block/entity visualization with animations; preserve visible state transitions when relevant.",
+      "markers": [
+        "interactionvisualizer",
+        "interaction-visualizer"
+      ]
+    },
+    {
+      "name": "InteractiveChat",
+      "aliases": [
+        "Interactive Chat"
+      ],
+      "category": "chat",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/LOOHP/InteractiveChat",
+      "notes": "Rich chat/item hover/display semantics.",
+      "markers": [
+        "interactivechat",
+        "interactive-chat"
+      ]
+    },
+    {
+      "name": "Iris",
+      "aliases": [
+        "Iris World Generator"
+      ],
+      "category": "worldgen",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Custom biome/world generator; preserve worldgen IDs/config if conversion includes worlds.",
+      "markers": [
+        "iris"
+      ]
+    },
+    {
+      "name": "ItemBridge",
+      "aliases": [
+        "Item Bridge"
+      ],
+      "category": "item-provider",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Cross-plugin custom item provider bridge.",
+      "markers": [
+        "item-bridge",
+        "itembridge"
+      ]
+    },
+    {
+      "name": "ItemJoin",
+      "aliases": [
+        "Item Join"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Join/command custom item semantics.",
+      "markers": [
+        "item-join",
+        "itemjoin"
+      ]
+    },
+    {
+      "name": "ItemsAdder",
+      "aliases": [
+        "Items Adder"
+      ],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "first-class",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://itemsadder.com/",
+      "notes": "Custom items, blocks, furniture, fonts, resource-pack generation.",
+      "markers": [
+        "items-adder",
+        "itemsadder"
+      ]
+    },
+    {
+      "name": "ItemsLite",
+      "aliases": [
+        "Items Lite"
+      ],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/itemslite-%E2%9A%A1%EF%B8%8Fcustom-items-blocks-recipes-drops-visual-armor.136531/",
+      "notes": "Custom items/blocks/recipes/drops/visual armor with generated resource pack.",
+      "markers": [
+        "itemslite",
+        "items-lite"
+      ]
+    },
+    {
+      "name": "ItemSmith",
+      "aliases": [
+        "Item Smith"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "pre-release-2026",
+      "source": "https://github.com/jimmyjames808/ItemSmith",
+      "notes": "Pre-release schema-driven custom item/ability engine; inventory for future captures but do not treat as established production dependency.",
+      "markers": [
+        "itemsmith",
+        "item-smith"
+      ]
+    },
+    {
+      "name": "ItemsXL",
+      "aliases": [
+        "Items XL"
+      ],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy custom item/resource pack system.",
+      "markers": [
+        "items-xl",
+        "itemsxl"
+      ]
+    },
+    {
+      "name": "JobsReborn",
+      "aliases": [
+        "Jobs Reborn"
+      ],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/jobs-reborn.4216/",
+      "notes": "Jobs, progression and rewards.",
+      "markers": [
+        "jobs-reborn",
+        "jobsreborn"
+      ]
+    },
+    {
+      "name": "JourneyBetonQuest",
+      "aliases": [
+        "Journey BetonQuest"
+      ],
+      "category": "quests-story",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Quest journal/integration.",
+      "markers": [
+        "journeybetonquest",
+        "journey-betonquest"
+      ]
+    },
+    {
+      "name": "Lands",
+      "aliases": [],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/lands.53313/",
+      "notes": "Claim/region integration.",
+      "markers": [
+        "lands"
+      ]
+    },
+    {
+      "name": "LevelledMobs",
+      "aliases": [
+        "LeveledMobs",
+        "Levelled Mobs"
+      ],
+      "category": "mobs-skills",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/ArcanePlugins/LevelledMobs",
+      "notes": "Mob level/scaling/drop semantics.",
+      "markers": [
+        "leveledmobs",
+        "levelled-mobs",
+        "levelledmobs"
+      ]
+    },
+    {
+      "name": "LibsDisguises",
+      "aliases": [
+        "Libs Disguises"
+      ],
+      "category": "entity-presentation",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/libs-disguises.32453/",
+      "notes": "Entity disguise/variant semantics can alter expected visuals.",
+      "markers": [
+        "libs-disguises",
+        "libsdisguises"
+      ]
+    },
+    {
+      "name": "LightAPI",
+      "aliases": [
+        "Light API"
+      ],
+      "category": "lighting",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Dynamic light integration used by weapons/content plugins.",
+      "markers": [
+        "light-api",
+        "lightapi"
+      ]
+    },
+    {
+      "name": "LiteBans",
+      "aliases": [
+        "Lite Bans"
+      ],
+      "category": "moderation",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Moderation context only.",
+      "markers": [
+        "litebans",
+        "lite-bans"
+      ]
+    },
+    {
+      "name": "LoneLibs",
+      "aliases": [
+        "Lone Libs"
+      ],
+      "category": "library-bridge",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Dependency used by LoneDev/ItemsAdder ecosystem.",
+      "markers": [
+        "lone-libs",
+        "lonelibs"
+      ]
+    },
+    {
+      "name": "LootEngine",
+      "aliases": [
+        "Loot Engine"
+      ],
+      "category": "crates-loot",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-2026",
+      "source": "https://github.com/ayethor/LootEngine",
+      "notes": "Custom loot/rarity/drop/particle/GUI system.",
+      "markers": [
+        "lootengine",
+        "loot-engine"
+      ]
+    },
+    {
+      "name": "LPC",
+      "aliases": [
+        "LuckPerms Chat"
+      ],
+      "category": "chat",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Chat formatting context.",
+      "markers": [
+        "lpc"
+      ]
+    },
+    {
+      "name": "LuckPerms",
+      "aliases": [
+        "Luck Perms"
+      ],
+      "category": "permissions",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://luckperms.net/",
+      "notes": "Permission gating context; normally not asset-converted.",
+      "markers": [
+        "luck-perms",
+        "luckperms"
+      ]
+    },
+    {
+      "name": "Magic",
+      "aliases": [
+        "Magic Plugin"
+      ],
+      "category": "magic",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/magic.1056/",
+      "notes": "Wands/items/spells/mobs and visual effects.",
+      "markers": [
+        "magic"
+      ]
+    },
+    {
+      "name": "MagicGem",
+      "aliases": [
+        "Magic Gem"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-2026",
+      "source": "https://modrinth.com/plugin/qinhcorelib",
+      "notes": "Gem/item provider observed in current item-source integration ecosystems; preserve provider IDs/effects.",
+      "markers": [
+        "magicgem",
+        "magic-gem"
+      ]
+    },
+    {
+      "name": "MagicSpells",
+      "aliases": [
+        "Magic Spells"
+      ],
+      "category": "magic",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/TheComputerGeek2/MagicSpells",
+      "notes": "Config-driven spell logic/effects.",
+      "markers": [
+        "magic-spells",
+        "magicspells"
+      ]
+    },
+    {
+      "name": "MassiveCore",
+      "aliases": [
+        "Massive Core"
+      ],
+      "category": "library-bridge",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy Factions ecosystem dependency.",
+      "markers": [
+        "massivecore",
+        "massive-core"
+      ]
+    },
+    {
+      "name": "Matrix",
+      "aliases": [
+        "Matrix AntiCheat"
+      ],
+      "category": "anticheat",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Anticheat context.",
+      "markers": [
+        "matrix"
+      ]
+    },
+    {
+      "name": "MCCosmetics",
+      "aliases": [
+        "MC Cosmetics"
+      ],
+      "category": "cosmetics",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Historical MythicCraft cosmetics lineage.",
+      "markers": [
+        "mc-cosmetics",
+        "mccosmetics"
+      ]
+    },
+    {
+      "name": "mcMMO",
+      "aliases": [
+        "MCMMO"
+      ],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/official-mcmmo-original-author-returns.64348/",
+      "notes": "Classic RPG skills/abilities.",
+      "markers": [
+        "mcmmo"
+      ]
+    },
+    {
+      "name": "MCPets",
+      "aliases": [
+        "MC Pets"
+      ],
+      "category": "pets-mounts",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://mcpets.gitbook.io/mcpets/",
+      "notes": "ModelEngine/MythicMobs-backed pets/mounts with skills/progression.",
+      "markers": [
+        "mc-pets",
+        "mcpets"
+      ]
+    },
+    {
+      "name": "MechanicsCore",
+      "aliases": [
+        "Mechanics Core"
+      ],
+      "category": "library-bridge",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/WeaponMechanics/MechanicsMain",
+      "notes": "WeaponMechanics shared mechanic framework.",
+      "markers": [
+        "mechanics-core",
+        "mechanicscore"
+      ]
+    },
+    {
+      "name": "MegaBlockSurvivors",
+      "aliases": [
+        "Mega Block Survivors"
+      ],
+      "category": "minigame",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Custom minigame/resource-pack integration.",
+      "markers": [
+        "megablocksurvivors",
+        "mega-block-survivors"
+      ]
+    },
+    {
+      "name": "MiniPlaceholders",
+      "aliases": [
+        "Mini Placeholders"
+      ],
+      "category": "placeholder-api",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/MiniPlaceholders/MiniPlaceholders",
+      "notes": "Modern placeholder bridge.",
+      "markers": [
+        "mini-placeholders",
+        "miniplaceholders"
+      ]
+    },
+    {
+      "name": "MMOCore",
+      "aliases": [
+        "MMO Core"
+      ],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Classes, skills, stats, quests and resource systems.",
+      "markers": [
+        "mmo-core",
+        "mmocore"
+      ]
+    },
+    {
+      "name": "MMOInventory",
+      "aliases": [
+        "MMO Inventory"
+      ],
+      "category": "hud-ui",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Custom RPG inventory/resource-pack UI; ResourcePackManager integration.",
+      "markers": [
+        "mmoinventory",
+        "mmo-inventory"
+      ]
+    },
+    {
+      "name": "MMOItems",
+      "aliases": [
+        "MMO Items"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Hephaisto-dev/mmoitems",
+      "notes": "RPG item types/templates/recipes/drop semantics.",
+      "markers": [
+        "mmo-items",
+        "mmoitems"
+      ]
+    },
+    {
+      "name": "MobArena",
+      "aliases": [
+        "Mob Arena"
+      ],
+      "category": "mobs-skills",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/mobarena.34110/",
+      "notes": "Arena waves/classes/rewards.",
+      "markers": [
+        "mob-arena",
+        "mobarena"
+      ]
+    },
+    {
+      "name": "ModelEngine",
+      "aliases": [
+        "Model Engine",
+        "ModelEngine4"
+      ],
+      "category": "models-animation",
+      "impact": "direct-asset",
+      "adapter": "first-class",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://wiki.mythiccraft.io/modelengine/",
+      "notes": "Generic Blockbench models, generated packs, states and special bones.",
+      "markers": [
+        "model-engine",
+        "modelengine"
+      ]
+    },
+    {
+      "name": "MTVehicles",
+      "aliases": [
+        "MT Vehicles"
+      ],
+      "category": "vehicles",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/mtvehicles-vehicle-plugin-free-downloadable.80910/",
+      "notes": "Resource-pack-backed vehicles.",
+      "markers": [
+        "mt-vehicles",
+        "mtvehicles"
+      ]
+    },
+    {
+      "name": "Multiverse-Core",
+      "aliases": [
+        "Multiverse",
+        "MultiverseCore"
+      ],
+      "category": "world-management",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Multiverse/Multiverse-Core",
+      "notes": "World identity/teleport context.",
+      "markers": [
+        "multiverse",
+        "multiverse-core",
+        "multiversecore"
+      ]
+    },
+    {
+      "name": "Multiverse-Inventories",
+      "aliases": [
+        "Multiverse Inventories"
+      ],
+      "category": "world-management",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Multiverse/Multiverse-Core",
+      "notes": "Per-world inventory/state module.",
+      "markers": [
+        "multiverse-inventories",
+        "multiverseinventories"
+      ]
+    },
+    {
+      "name": "Multiverse-NetherPortals",
+      "aliases": [
+        "Multiverse NetherPortals"
+      ],
+      "category": "teleport",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Multiverse/Multiverse-Core",
+      "notes": "Cross-world Nether portal routing.",
+      "markers": [
+        "multiverse-netherportals",
+        "multiversenetherportals"
+      ]
+    },
+    {
+      "name": "Multiverse-Portals",
+      "aliases": [
+        "Multiverse Portals"
+      ],
+      "category": "teleport",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Multiverse/Multiverse-Core",
+      "notes": "Multiverse portal definitions can carry world/teleport semantics that matter to a full conversion.",
+      "markers": [
+        "multiverse-portals",
+        "multiverseportals"
+      ]
+    },
+    {
+      "name": "Multiverse-SignPortals",
+      "aliases": [
+        "Multiverse SignPortals"
+      ],
+      "category": "teleport",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "https://github.com/Multiverse/Multiverse-Core",
+      "notes": "Legacy sign-based portal routing.",
+      "markers": [
+        "multiverse-signportals",
+        "multiversesignportals"
+      ]
+    },
+    {
+      "name": "MyPet",
+      "aliases": [
+        "MyPet 4",
+        "MyPet Legacy"
+      ],
+      "category": "pets-mounts",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-and-legacy",
+      "source": "",
+      "notes": "Pet skills/storage/mounts; multiple generations.",
+      "markers": [
+        "my-pet",
+        "mypet"
+      ]
+    },
+    {
+      "name": "MythicAchievements",
+      "aliases": [
+        "Mythic Achievements"
+      ],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://wiki.mythiccraft.io/",
+      "notes": "Achievements/event semantics in Mythic stack.",
+      "markers": [
+        "mythic-achievements",
+        "mythicachievements"
+      ]
+    },
+    {
+      "name": "MythicArmors",
+      "aliases": [
+        "Mythic Armors"
+      ],
+      "category": "cosmetics",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://wiki.mythiccraft.io/mythicarmors",
+      "notes": "3D armor/equipment model semantics.",
+      "markers": [
+        "mythic-armors",
+        "mythicarmors"
+      ]
+    },
+    {
+      "name": "MythicChat",
+      "aliases": [
+        "Mythic Chat"
+      ],
+      "category": "hud-ui",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Mythic/legacy chat presentation if encountered.",
+      "markers": [
+        "mythic-chat",
+        "mythicchat"
+      ]
+    },
+    {
+      "name": "MythicCosmetics",
+      "aliases": [
+        "Mythic Cosmetics"
+      ],
+      "category": "cosmetics",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://wiki.mythiccraft.io/mythiccosmetics",
+      "notes": "Mythic hats/accessories/emotes/mounts/pets; model semantics.",
+      "markers": [
+        "mythic-cosmetics",
+        "mythiccosmetics"
+      ]
+    },
+    {
+      "name": "MythicCrucible",
+      "aliases": [
+        "Crucible"
+      ],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "first-class",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://wiki.mythiccraft.io/mythiccrucible",
+      "notes": "Items/furniture and Mythic integration.",
+      "markers": [
+        "crucible",
+        "mythiccrucible"
+      ]
+    },
+    {
+      "name": "MythicDungeons",
+      "aliases": [
+        "Mythic Dungeons"
+      ],
+      "category": "dungeons",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://wiki.mythiccraft.io/mythicdungeons",
+      "notes": "Mythic dungeon semantics and encounters.",
+      "markers": [
+        "mythic-dungeons",
+        "mythicdungeons"
+      ]
+    },
+    {
+      "name": "MythicEnchants",
+      "aliases": [
+        "Mythic Enchants"
+      ],
+      "category": "enchantments",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://wiki.mythiccraft.io/mythicenchants",
+      "notes": "Mythic enchant behavior.",
+      "markers": [
+        "mythic-enchants",
+        "mythicenchants"
+      ]
+    },
+    {
+      "name": "MythicHUD",
+      "aliases": [
+        "Mythic HUD"
+      ],
+      "category": "hud-ui",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://wiki.mythiccraft.io/mythichud",
+      "notes": "Font/RP-based HUD; successor migration path from HappyHUD.",
+      "markers": [
+        "mythic-hud",
+        "mythichud"
+      ]
+    },
+    {
+      "name": "MythicLib",
+      "aliases": [
+        "Mythic Lib"
+      ],
+      "category": "library-bridge",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Shared MMOItems/MMOCore mechanics/stat library.",
+      "markers": [
+        "mythic-lib",
+        "mythiclib"
+      ]
+    },
+    {
+      "name": "MythicMobs",
+      "aliases": [
+        "Mythic Mobs"
+      ],
+      "category": "mobs-skills",
+      "impact": "gameplay-semantic",
+      "adapter": "first-class",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://wiki.mythiccraft.io/mythicmobs/",
+      "notes": "Skills, AI, targeters, triggers and mob definitions.",
+      "markers": [
+        "mythic-mobs",
+        "mythicmobs"
+      ]
+    },
+    {
+      "name": "MythicRPG",
+      "aliases": [
+        "Mythic RPG"
+      ],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://wiki.mythiccraft.io/mythicrpg",
+      "notes": "Mythic classes/skills/progression.",
+      "markers": [
+        "mythic-rpg",
+        "mythicrpg"
+      ]
+    },
+    {
+      "name": "NametagEdit",
+      "aliases": [
+        "Nametag Edit"
+      ],
+      "category": "scoreboard-nametag",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Nametag formatting/team semantics.",
+      "markers": [
+        "nametag-edit",
+        "nametagedit"
+      ]
+    },
+    {
+      "name": "NBTAPI",
+      "aliases": [
+        "NBT API",
+        "NBT-API"
+      ],
+      "category": "library-bridge",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/tr7zw/Item-NBT-API",
+      "notes": "NBT/item metadata bridge.",
+      "markers": [
+        "nbt-api",
+        "nbtapi"
+      ]
+    },
+    {
+      "name": "NeigeItems",
+      "aliases": [
+        "Neige Items"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/qinhcorelib",
+      "notes": "External custom item provider observed in current unified item-source integrations; exact vendor semantics require source-specific review.",
+      "markers": [
+        "neigeitems",
+        "neige-items"
+      ]
+    },
+    {
+      "name": "Nexo",
+      "aliases": [],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "first-class",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://docs.nexomc.com/",
+      "notes": "Modern item/block/furniture/resource-pack system.",
+      "markers": [
+        "nexo"
+      ]
+    },
+    {
+      "name": "NoCheatPlus",
+      "aliases": [
+        "NCP",
+        "No Cheat Plus"
+      ],
+      "category": "anticheat",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "https://github.com/Updated-NoCheatPlus/NoCheatPlus",
+      "notes": "Legacy anticheat context.",
+      "markers": [
+        "nocheatplus",
+        "no-cheat-plus"
+      ]
+    },
+    {
+      "name": "NotQuests",
+      "aliases": [
+        "Not Quests"
+      ],
+      "category": "quests-story",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Modern quest engine.",
+      "markers": [
+        "not-quests",
+        "notquests"
+      ]
+    },
+    {
+      "name": "Nova",
+      "aliases": [],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/xenondevs/Nova",
+      "notes": "Server-side modding framework with custom items/blocks/GUIs.",
+      "markers": [
+        "nova"
+      ]
+    },
+    {
+      "name": "nuNPCDestinations",
+      "aliases": [
+        "NPC Destinations",
+        "NPCDestinations"
+      ],
+      "category": "npc",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Citizens NPC destination/navigation integration.",
+      "markers": [
+        "nunpcdestinations",
+        "npcdestinations"
+      ]
+    },
+    {
+      "name": "NuVotifier",
+      "aliases": [
+        "Votifier"
+      ],
+      "category": "library-bridge",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Vote notification bridge.",
+      "markers": [
+        "nuvotifier",
+        "votifier"
+      ]
+    },
+    {
+      "name": "NxEquipements",
+      "aliases": [
+        "Nx Equipment",
+        "NxEquipments"
+      ],
+      "category": "cosmetics",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Custom equipment and generated RP.",
+      "markers": [
+        "nx-equipment",
+        "nxequipements",
+        "nxequipments"
+      ]
+    },
+    {
+      "name": "Oraxen",
+      "aliases": [],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "first-class",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/oraxen/oraxen",
+      "notes": "Custom content and resource-pack mechanics.",
+      "markers": [
+        "oraxen"
+      ]
+    },
+    {
+      "name": "Origami",
+      "aliases": [],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "YAML custom items/blocks/recipes and resource-pack generation.",
+      "markers": [
+        "origami"
+      ]
+    },
+    {
+      "name": "PacketEvents",
+      "aliases": [
+        "Packet Events"
+      ],
+      "category": "protocol-library",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/retrooper/packetevents",
+      "notes": "Packet API dependency.",
+      "markers": [
+        "packet-events",
+        "packetevents"
+      ]
+    },
+    {
+      "name": "PetBlocks",
+      "aliases": [
+        "Pet Blocks"
+      ],
+      "category": "pets-mounts",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/petblocks.12056/",
+      "notes": "Custom model/resource-pack pets with long version reach.",
+      "markers": [
+        "pet-blocks",
+        "petblocks"
+      ]
+    },
+    {
+      "name": "PlaceholderAPI",
+      "aliases": [
+        "PAPI"
+      ],
+      "category": "placeholder-api",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/placeholderapi.6245/",
+      "notes": "Resolve placeholder-driven UI/quest text dependencies.",
+      "markers": [
+        "placeholder-api",
+        "placeholderapi"
+      ]
+    },
+    {
+      "name": "Plan",
+      "aliases": [
+        "Player Analytics"
+      ],
+      "category": "analytics",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/plan-player-analytics/Plan",
+      "notes": "Analytics only; recognize to avoid false conversion risk.",
+      "markers": [
+        "plan",
+        "playeranalytics"
+      ]
+    },
+    {
+      "name": "PlayerPoints",
+      "aliases": [
+        "Player Points"
+      ],
+      "category": "economy-api",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Rosewood-Development/PlayerPoints",
+      "notes": "Points currency referenced by shops/quests.",
+      "markers": [
+        "playerpoints",
+        "player-points"
+      ]
+    },
+    {
+      "name": "PlotMe",
+      "aliases": [
+        "Plot Me"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy plot system.",
+      "markers": [
+        "plotme",
+        "plot-me"
+      ]
+    },
+    {
+      "name": "PlotSquared",
+      "aliases": [
+        "Plot Squared"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/IntellectualSites/PlotSquared",
+      "notes": "Plot/claim interaction rules.",
+      "markers": [
+        "plot-squared",
+        "plotsquared"
+      ]
+    },
+    {
+      "name": "PlugManX",
+      "aliases": [
+        "PlugMan",
+        "Plug Man X"
+      ],
+      "category": "server-core",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Test-Account666/PlugManX",
+      "notes": "Plugin lifecycle utility; context only.",
+      "markers": [
+        "plugmanx",
+        "plugman"
+      ]
+    },
+    {
+      "name": "PremiumVanish",
+      "aliases": [
+        "Premium Vanish"
+      ],
+      "category": "moderation",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Staff vanish/moderation context.",
+      "markers": [
+        "premiumvanish",
+        "premium-vanish"
+      ]
+    },
+    {
+      "name": "ProdigyCape",
+      "aliases": [
+        "Prodigy Cape"
+      ],
+      "category": "cosmetics",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/FancyMcPlugins",
+      "notes": "Cape/visual customization family.",
+      "markers": [
+        "prodigy-cape",
+        "prodigycape"
+      ]
+    },
+    {
+      "name": "ProSkillAPI",
+      "aliases": [
+        "Pro Skill API",
+        "SkillAPI"
+      ],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy class/skill system.",
+      "markers": [
+        "pro-skill-api",
+        "proskillapi",
+        "skillapi"
+      ]
+    },
+    {
+      "name": "ProtectionLib",
+      "aliases": [
+        "Protection Lib"
+      ],
+      "category": "library-bridge",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Historical furniture protection dependency.",
+      "markers": [
+        "protection-lib",
+        "protectionlib"
+      ]
+    },
+    {
+      "name": "ProtectionStones",
+      "aliases": [
+        "Protection Stones"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/espidev/ProtectionStones",
+      "notes": "Claim/block protection context.",
+      "markers": [
+        "protectionstones",
+        "protection-stones"
+      ]
+    },
+    {
+      "name": "ProtocolLib",
+      "aliases": [
+        "Protocol Lib"
+      ],
+      "category": "protocol-library",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/dmulloy2/ProtocolLib",
+      "notes": "Packet API dependency; not a content source by itself.",
+      "markers": [
+        "protocol-lib",
+        "protocollib"
+      ]
+    },
+    {
+      "name": "PyroFishingPro",
+      "aliases": [
+        "Pyro Fishing Pro"
+      ],
+      "category": "fishing",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Fishing progression/custom catches.",
+      "markers": [
+        "pyro-fishing",
+        "pyrofishingpro"
+      ]
+    },
+    {
+      "name": "QinhCoreLib",
+      "aliases": [
+        "Qinh Core Lib"
+      ],
+      "category": "library-bridge",
+      "impact": "bridge",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-2026",
+      "source": "https://modrinth.com/plugin/qinhcorelib",
+      "notes": "Unified item-source/model/economy bridge for Qinh ecosystem.",
+      "markers": [
+        "qinhcorelib",
+        "qinh-core-lib"
+      ]
+    },
+    {
+      "name": "QinhForge",
+      "aliases": [
+        "Qinh Forge"
+      ],
+      "category": "crafting",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-2026",
+      "source": "https://modrinth.com/plugin/qinhcorelib",
+      "notes": "Qinh ecosystem forge/crafting semantics.",
+      "markers": [
+        "qinhforge",
+        "qinh-forge"
+      ]
+    },
+    {
+      "name": "QinhItems",
+      "aliases": [
+        "Qinh Items"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-2026",
+      "source": "https://modrinth.com/plugin/qinhcorelib",
+      "notes": "Qinh ecosystem item provider referenced by QinhCoreLib unified item-source bridge.",
+      "markers": [
+        "qinhitems",
+        "qinh-items"
+      ]
+    },
+    {
+      "name": "QinhSkills",
+      "aliases": [
+        "Qinh Skills"
+      ],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-2026",
+      "source": "https://modrinth.com/plugin/qinhcorelib",
+      "notes": "Qinh ecosystem skills/progression plugin; preserve cross-plugin item and attribute references.",
+      "markers": [
+        "qinhskills",
+        "qinh-skills"
+      ]
+    },
+    {
+      "name": "QinhStrengthen",
+      "aliases": [
+        "Qinh Strengthen"
+      ],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-2026",
+      "source": "https://modrinth.com/plugin/qinhcorelib",
+      "notes": "Qinh ecosystem strengthening/upgrading semantics.",
+      "markers": [
+        "qinhstrengthen",
+        "qinh-strengthen"
+      ]
+    },
+    {
+      "name": "QualityArmory",
+      "aliases": [
+        "QA",
+        "Quality Armory"
+      ],
+      "category": "weapons",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/quality-armory.47561/",
+      "notes": "Guns/ammo with built-in resource-pack distribution.",
+      "markers": [
+        "quality-armory",
+        "qualityarmory"
+      ]
+    },
+    {
+      "name": "QualityArmoryVehicles",
+      "aliases": [
+        "QAVehicles",
+        "Quality Armory Vehicles"
+      ],
+      "category": "vehicles",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Vehicles related to QualityArmory ecosystem.",
+      "markers": [
+        "qa-vehicles",
+        "qualityarmoryvehicles"
+      ]
+    },
+    {
+      "name": "QuestCreator",
+      "aliases": [
+        "Quest Creator"
+      ],
+      "category": "quests-story",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Quest/cutscene workflow encountered on older servers.",
+      "markers": [
+        "quest-creator",
+        "questcreator"
+      ]
+    },
+    {
+      "name": "Quests",
+      "aliases": [
+        "PikaMug Quests"
+      ],
+      "category": "quests-story",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://pikamug.gitbook.io/quests/",
+      "notes": "Long-lived quest engine.",
+      "markers": [
+        "quests"
+      ]
+    },
+    {
+      "name": "QuickShop-Hikari",
+      "aliases": [
+        "QuickShop",
+        "Quick Shop Hikari"
+      ],
+      "category": "economy-shop",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/QuickShop-Community/QuickShop-Hikari",
+      "notes": "Chest shop item/economy semantics.",
+      "markers": [
+        "quickshophikari",
+        "quickshop-hikari",
+        "quickshop"
+      ]
+    },
+    {
+      "name": "Rainbow",
+      "aliases": [
+        "Rainbow Geyser"
+      ],
+      "category": "bedrock-bridge",
+      "impact": "bridge",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Java resource-pack to Bedrock conversion/helper ecosystem when present.",
+      "markers": [
+        "rainbow"
+      ]
+    },
+    {
+      "name": "RealisticSeasons",
+      "aliases": [
+        "Realistic Seasons"
+      ],
+      "category": "survival-overhaul",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Season/environment mechanics used by farming/content plugins.",
+      "markers": [
+        "realisticseasons",
+        "realistic-seasons"
+      ]
+    },
+    {
+      "name": "RealisticSurvival",
+      "aliases": [
+        "Realistic Survival"
+      ],
+      "category": "survival-overhaul",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Survival mechanics plus merged resource pack.",
+      "markers": [
+        "realistic-survival",
+        "realisticsurvival"
+      ]
+    },
+    {
+      "name": "RedisBungee",
+      "aliases": [
+        "Redis Bungee"
+      ],
+      "category": "cross-server",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/ProxioDev/RedisBungee",
+      "notes": "Proxy network context.",
+      "markers": [
+        "redisbungee",
+        "redis-bungee"
+      ]
+    },
+    {
+      "name": "RedisChat",
+      "aliases": [
+        "Redis Chat"
+      ],
+      "category": "chat-bridge",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Cross-server chat integration.",
+      "markers": [
+        "redischat",
+        "redis-chat"
+      ]
+    },
+    {
+      "name": "Residence",
+      "aliases": [],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Region/claim context.",
+      "markers": [
+        "residence"
+      ]
+    },
+    {
+      "name": "ResourcePackManager",
+      "aliases": [
+        "RSPM",
+        "Resource Pack Manager"
+      ],
+      "category": "resource-pack",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "S",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Pack merge/distribution hub with many plugin integrations.",
+      "markers": [
+        "resource-pack-manager",
+        "resourcepackmanager",
+        "rspm"
+      ]
+    },
+    {
+      "name": "ResurrectionChest",
+      "aliases": [
+        "Resurrection Chest"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Resource-pack/content integration.",
+      "markers": [
+        "resurrectionchest",
+        "resurrection-chest"
+      ]
+    },
+    {
+      "name": "RoseStacker",
+      "aliases": [
+        "Rose Stacker"
+      ],
+      "category": "performance",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Rosewood-Development/RoseStacker",
+      "notes": "Entity/item/spawner stacking can alter observed runtime counts; keep as context evidence.",
+      "markers": [
+        "rosestacker",
+        "rose-stacker"
+      ]
+    },
+    {
+      "name": "RPGItems",
+      "aliases": [
+        "RPG Items"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/NyaaCat/RPGitems-reloaded",
+      "notes": "RPG powers/items; legacy/current lineage.",
+      "markers": [
+        "rpg-items",
+        "rpgitems"
+      ]
+    },
+    {
+      "name": "Sentinel",
+      "aliases": [],
+      "category": "npc",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://wiki.citizensnpcs.co/Sentinel",
+      "notes": "Citizens combat NPC traits.",
+      "markers": [
+        "sentinel"
+      ]
+    },
+    {
+      "name": "ServerListPlus",
+      "aliases": [
+        "Server List Plus"
+      ],
+      "category": "server-list",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "MOTD/server-list presentation.",
+      "markers": [
+        "serverlistplus",
+        "server-list-plus"
+      ]
+    },
+    {
+      "name": "ShopGUIPlus",
+      "aliases": [
+        "Shop GUI Plus",
+        "ShopGUI+"
+      ],
+      "category": "economy-shop",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Shop inventories, custom item providers and commands.",
+      "markers": [
+        "shop-gui-plus",
+        "shopguiplus"
+      ]
+    },
+    {
+      "name": "Shopkeepers",
+      "aliases": [
+        "Shopkeepers Plugin"
+      ],
+      "category": "npc",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Shopkeepers/Shopkeepers",
+      "notes": "NPC/shop trade semantics and custom items.",
+      "markers": [
+        "shopkeepers"
+      ]
+    },
+    {
+      "name": "SkBee",
+      "aliases": [
+        "Sk Bee"
+      ],
+      "category": "scripting",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/ShaneBeee/SkBee",
+      "notes": "Skript NBT/entity/resource mechanics extension.",
+      "markers": [
+        "sk-bee",
+        "skbee"
+      ]
+    },
+    {
+      "name": "Skellett",
+      "aliases": [],
+      "category": "scripting",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "https://github.com/TheLimeGlass/Skellett",
+      "notes": "Historical Skript addon.",
+      "markers": [
+        "skellett"
+      ]
+    },
+    {
+      "name": "SkinsRestorer",
+      "aliases": [
+        "Skins Restorer"
+      ],
+      "category": "skins",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://skinsrestorer.net/",
+      "notes": "NPC/player skin source context.",
+      "markers": [
+        "skins-restorer",
+        "skinsrestorer"
+      ]
+    },
+    {
+      "name": "Skript",
+      "aliases": [],
+      "category": "scripting",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/SkriptLang/Skript",
+      "notes": "General server scripting; arbitrary behavior may live here.",
+      "markers": [
+        "skript"
+      ]
+    },
+    {
+      "name": "Slimefun",
+      "aliases": [
+        "Slimefun 5",
+        "Slimefun4"
+      ],
+      "category": "custom-content",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Slimefun/Slimefun4",
+      "notes": "Large item/machine/recipe ecosystem with add-ons.",
+      "markers": [
+        "slimefun"
+      ]
+    },
+    {
+      "name": "SMCConverter",
+      "aliases": [
+        "SMC Converter"
+      ],
+      "category": "bedrock-bridge",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-2026",
+      "source": "https://docs.smcconverter.com/",
+      "notes": "Java resource-pack/custom-content to Bedrock conversion bridge supporting Nexo/ItemsAdder/Oraxen/DeluxeMenus and GeyserModelEngine.",
+      "markers": [
+        "smcconverter",
+        "smc-converter"
+      ]
+    },
+    {
+      "name": "spark",
+      "aliases": [
+        "Spark"
+      ],
+      "category": "profiling",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://spark.lucko.me/",
+      "notes": "Profiler only; recognize to avoid false conversion risk.",
+      "markers": [
+        "spark"
+      ]
+    },
+    {
+      "name": "squaremap",
+      "aliases": [
+        "Squaremap",
+        "Square Map"
+      ],
+      "category": "web-map",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/squaremap",
+      "notes": "Web map/marker integrations.",
+      "markers": [
+        "squaremap",
+        "square-map"
+      ]
+    },
+    {
+      "name": "StackMob",
+      "aliases": [
+        "Stack Mob"
+      ],
+      "category": "performance",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Mob stacking; runtime context for entity counts/loot.",
+      "markers": [
+        "stackmob",
+        "stack-mob"
+      ]
+    },
+    {
+      "name": "SuperVanish",
+      "aliases": [
+        "Super Vanish"
+      ],
+      "category": "moderation",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Staff vanish/moderation context.",
+      "markers": [
+        "supervanish",
+        "super-vanish"
+      ]
+    },
+    {
+      "name": "TAB",
+      "aliases": [
+        "TAB Plugin"
+      ],
+      "category": "scoreboard-nametag",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/NEZNAMY/TAB",
+      "notes": "Tablist/nametag/scoreboard/bossbar presentation.",
+      "markers": [
+        "tab"
+      ]
+    },
+    {
+      "name": "Terra",
+      "aliases": [
+        "Terra World Generator"
+      ],
+      "category": "worldgen",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/PolyhedralDev/Terra",
+      "notes": "Data-driven world generator.",
+      "markers": [
+        "terra"
+      ]
+    },
+    {
+      "name": "TerraformGenerator",
+      "aliases": [
+        "Terraform Generator"
+      ],
+      "category": "worldgen",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/Hex27/TerraformGenerator",
+      "notes": "Custom world generation.",
+      "markers": [
+        "terraform-generator",
+        "terraformgenerator"
+      ]
+    },
+    {
+      "name": "TheNewEconomy",
+      "aliases": [
+        "TNE",
+        "The New Economy"
+      ],
+      "category": "economy-api",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Economy provider context.",
+      "markers": [
+        "theneweconomy",
+        "the-new-economy"
+      ]
+    },
+    {
+      "name": "TokenEnchant",
+      "aliases": [
+        "Token Enchant"
+      ],
+      "category": "enchantments",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy enchant/token progression plugin.",
+      "markers": [
+        "tokenenchant",
+        "token-enchant"
+      ]
+    },
+    {
+      "name": "Towny",
+      "aliases": [
+        "Towny Advanced",
+        "TownyAdvanced"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/TownyAdvanced/Towny",
+      "notes": "Town/claim permissions.",
+      "markers": [
+        "towny",
+        "townyadvanced"
+      ]
+    },
+    {
+      "name": "TrainCarts",
+      "aliases": [
+        "Train Carts"
+      ],
+      "category": "vehicles",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/traincarts.39592/",
+      "notes": "Minecart train/attachment/control semantics.",
+      "markers": [
+        "train-carts",
+        "traincarts"
+      ]
+    },
+    {
+      "name": "Trinity",
+      "aliases": [
+        "Trinity Content Engine"
+      ],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "emerging-2026",
+      "source": "https://github.com/faustyu1/trinity",
+      "notes": "Emerging YAML custom item/block/mob/recipe engine with automatic resource pack; classify as emerging, not assumed common.",
+      "markers": [
+        "trinity"
+      ]
+    },
+    {
+      "name": "TrMenu",
+      "aliases": [
+        "Tr Menu"
+      ],
+      "category": "menus-ui",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/TrPlugins/TrMenu",
+      "notes": "Scriptable inventory/menu presentation.",
+      "markers": [
+        "tr-menu",
+        "trmenu"
+      ]
+    },
+    {
+      "name": "TypeWriter",
+      "aliases": [
+        "Typewriter"
+      ],
+      "category": "quests-story",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://docs.typewritermc.com/",
+      "notes": "Story/cinematics/dialogue/NPC/camera timelines.",
+      "markers": [
+        "typewriter"
+      ]
+    },
+    {
+      "name": "UltimateClaims",
+      "aliases": [
+        "Ultimate Claims"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Claims context.",
+      "markers": [
+        "ultimateclaims",
+        "ultimate-claims"
+      ]
+    },
+    {
+      "name": "UltraCosmetics",
+      "aliases": [
+        "Ultra Cosmetics"
+      ],
+      "category": "cosmetics",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/ultracosmetics.10905/",
+      "notes": "Hats, particles, gadgets, pets, morphs, mounts.",
+      "markers": [
+        "ultra-cosmetics",
+        "ultracosmetics"
+      ]
+    },
+    {
+      "name": "ValhallaMMO",
+      "aliases": [
+        "Valhalla MMO"
+      ],
+      "category": "rpg-progression",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/valhallammo",
+      "notes": "Skills, custom items, recipes, loot, attributes and effects.",
+      "markers": [
+        "valhalla-mmo",
+        "valhallammo"
+      ]
+    },
+    {
+      "name": "vane-core",
+      "aliases": [
+        "Vane Core",
+        "vane"
+      ],
+      "category": "custom-content",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://github.com/oddlama/vane",
+      "notes": "Server extension suite with resource-pack content.",
+      "markers": [
+        "vanecore",
+        "vane-core"
+      ]
+    },
+    {
+      "name": "Vault",
+      "aliases": [],
+      "category": "economy-api",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/vault.34315/",
+      "notes": "Economy/permission/chat bridge.",
+      "markers": [
+        "vault"
+      ]
+    },
+    {
+      "name": "VehicleFramework",
+      "aliases": [
+        "Vehicle Framework"
+      ],
+      "category": "vehicles",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Vehicle models, seats and persistence; ModelEngine integration.",
+      "markers": [
+        "vehicle-framework",
+        "vehicleframework"
+      ]
+    },
+    {
+      "name": "Vehicles",
+      "aliases": [
+        "Vehicles Plugin"
+      ],
+      "category": "vehicles",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Older vehicle plugins may carry custom item/model state.",
+      "markers": [
+        "vehicles"
+      ]
+    },
+    {
+      "name": "Velocity",
+      "aliases": [
+        "Velocity Proxy"
+      ],
+      "category": "proxy",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://papermc.io/software/velocity",
+      "notes": "Proxy platform context.",
+      "markers": [
+        "velocity"
+      ]
+    },
+    {
+      "name": "VentureChat",
+      "aliases": [
+        "Venture Chat"
+      ],
+      "category": "chat",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Chat channel context.",
+      "markers": [
+        "venturechat",
+        "venture-chat"
+      ]
+    },
+    {
+      "name": "ViaBackwards",
+      "aliases": [
+        "Via Backwards"
+      ],
+      "category": "version-bridge",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://viaversion.com/",
+      "notes": "Backward protocol compatibility.",
+      "markers": [
+        "via-backwards",
+        "viabackwards"
+      ]
+    },
+    {
+      "name": "ViaRewind",
+      "aliases": [
+        "Via Rewind"
+      ],
+      "category": "version-bridge",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "B",
+      "era": "legacy-or-migration",
+      "source": "https://viaversion.com/",
+      "notes": "Older protocol compatibility.",
+      "markers": [
+        "via-rewind",
+        "viarewind"
+      ]
+    },
+    {
+      "name": "ViaVersion",
+      "aliases": [
+        "Via Version"
+      ],
+      "category": "version-bridge",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://viaversion.com/",
+      "notes": "Protocol version compatibility; do not infer asset schema from client version alone.",
+      "markers": [
+        "via-version",
+        "viaversion"
+      ]
+    },
+    {
+      "name": "VotingPlugin",
+      "aliases": [
+        "Voting Plugin"
+      ],
+      "category": "server-core",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Voting/reward orchestration; usually not asset-owned.",
+      "markers": [
+        "votingplugin",
+        "voting-plugin"
+      ]
+    },
+    {
+      "name": "Vulcan",
+      "aliases": [
+        "Vulcan AntiCheat"
+      ],
+      "category": "anticheat",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Anticheat context.",
+      "markers": [
+        "vulcan"
+      ]
+    },
+    {
+      "name": "Waterfall",
+      "aliases": [],
+      "category": "proxy",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "https://papermc.io/software/waterfall",
+      "notes": "Legacy proxy platform context.",
+      "markers": [
+        "waterfall"
+      ]
+    },
+    {
+      "name": "WeaponMechanics",
+      "aliases": [
+        "Weapon Mechanics"
+      ],
+      "category": "weapons",
+      "impact": "gameplay-semantic",
+      "adapter": "generic",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://www.spigotmc.org/resources/weaponmechanics-guns-in-minecraft.99913/",
+      "notes": "Gun mechanics, ammo, recoil, scopes, projectiles and effects.",
+      "markers": [
+        "weapon-mechanics",
+        "weaponmechanics"
+      ]
+    },
+    {
+      "name": "WildStacker",
+      "aliases": [
+        "Wild Stacker"
+      ],
+      "category": "performance",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-or-long-lived",
+      "source": "",
+      "notes": "Entity/item/spawner stacking; runtime context.",
+      "markers": [
+        "wildstacker",
+        "wild-stacker"
+      ]
+    },
+    {
+      "name": "WorldBorder",
+      "aliases": [
+        "World Border"
+      ],
+      "category": "world-tools",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "Legacy world-border/pre-generation utility.",
+      "markers": [
+        "worldborder",
+        "world-border"
+      ]
+    },
+    {
+      "name": "WorldEdit",
+      "aliases": [
+        "World Edit"
+      ],
+      "category": "world-tools",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://enginehub.org/worldedit/",
+      "notes": "Selection/clipboard/world editing context.",
+      "markers": [
+        "world-edit",
+        "worldedit"
+      ]
+    },
+    {
+      "name": "WorldGuard",
+      "aliases": [
+        "World Guard"
+      ],
+      "category": "protection",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "A",
+      "era": "current-or-long-lived",
+      "source": "https://enginehub.org/worldguard/",
+      "notes": "Region flags may gate abilities/spawns/interactions.",
+      "markers": [
+        "world-guard",
+        "worldguard"
+      ]
+    },
+    {
+      "name": "WorldResourcepacks",
+      "aliases": [
+        "World Resourcepacks",
+        "WorldResourcePacks"
+      ],
+      "category": "resource-pack",
+      "impact": "direct-asset",
+      "adapter": "generic",
+      "tier": "C",
+      "era": "legacy-or-migration",
+      "source": "",
+      "notes": "World-specific RP delivery.",
+      "markers": [
+        "world-resourcepacks",
+        "worldresourcepacks"
+      ]
+    },
+    {
+      "name": "X-ClearLag",
+      "aliases": [
+        "XClearLag",
+        "X Clearlag"
+      ],
+      "category": "performance",
+      "impact": "context",
+      "adapter": "context-only",
+      "tier": "C",
+      "era": "current-2026",
+      "source": "https://github.com/fabianfamr/X-Clearlag",
+      "notes": "Modern 1.8-26.x entity cleanup plugin.",
+      "markers": [
+        "x-clearlag",
+        "xclearlag"
+      ]
+    },
+    {
+      "name": "ZNPCsPlus",
+      "aliases": [
+        "ZNPCs Plus",
+        "ZNPCs+"
+      ],
+      "category": "npc",
+      "impact": "presentation",
+      "adapter": "generic",
+      "tier": "B",
+      "era": "current-or-long-lived",
+      "source": "https://modrinth.com/plugin/znpcsplus",
+      "notes": "Interactable fake-entity NPC system with legacy reach.",
+      "markers": [
+        "znpcs-plus",
+        "znpcsplus"
+      ]
+    }
+  ],
+  "family_adapter_note": "Entries marked generic outside dedicated first-class adapters are covered by category-aware server_family_ir.py with unmatched-key preservation; generic means normalized migration evidence, never vendor-specific full parity without review."
+}

@@ -1,0 +1,428 @@
+{
+  "schema_version": 2,
+  "entries": [
+    {
+      "id": "P-001",
+      "title": "Premature completion after superficial checks",
+      "scope": "universal",
+      "trigger": "A task has code edits, configuration changes, a passing build, lint, mocks, health checks, or logs but the exact user flow has not run.",
+      "failure": "The agent reports success before the real runtime behavior is proven.",
+      "replacement": "Continue through the actual client, runtime, backend, persistence, and exact user flow; keep a requirement-to-evidence ledger.",
+      "verification": "Exercise the requested path in the current production-equivalent build and record the observed result.",
+      "basis": [
+        "explicit-user-correction",
+        "repeated-independent-failure"
+      ],
+      "status": "active",
+      "rule_version": 1,
+      "confidence": "high",
+      "last_reviewed_at_utc": "2026-08-02T05:07:42.769801+00:00",
+      "review_after_utc": "2027-01-29T05:07:42.769801+00:00",
+      "evidence": [],
+      "evidence_fingerprints": [],
+      "independent_incident_count": 1
+    },
+    {
+      "id": "P-002",
+      "title": "Missing tooling treated as a final blocker",
+      "scope": "universal",
+      "trigger": "A required tool, runtime, service, plugin, dependency, browser capability, or process is absent or stopped.",
+      "failure": "The agent routes around the missing capability or gives up while a realistic recovery path exists.",
+      "replacement": "Diagnose, install, repair, configure, start, reconnect, build, or use a fully capable supported compatibility path before claiming a blocker.",
+      "verification": "Use the recovered capability in the intended end-to-end workflow.",
+      "basis": [
+        "explicit-user-correction",
+        "repeated-independent-failure"
+      ],
+      "status": "active",
+      "rule_version": 1,
+      "confidence": "high",
+      "last_reviewed_at_utc": "2026-08-02T05:07:42.769801+00:00",
+      "review_after_utc": "2027-01-29T05:07:42.769801+00:00",
+      "evidence": [],
+      "evidence_fingerprints": [],
+      "independent_incident_count": 1
+    },
+    {
+      "id": "P-003",
+      "title": "Rendered controls mistaken for working features",
+      "scope": "user-facing software",
+      "trigger": "A control exists visually or has a handler, toast, modal, log, mock result, or hardcoded success path.",
+      "failure": "The interface promises functionality that is dead, fake, disconnected, or only partially wired.",
+      "replacement": "Connect every affected control through validation, real domain logic, backend or storage, observable result, truthful errors, and persistence where relevant.",
+      "verification": "Inventory and click-test every in-scope control in the real build, including success and failure paths.",
+      "basis": [
+        "explicit-user-correction",
+        "repeated-independent-failure"
+      ],
+      "status": "active",
+      "rule_version": 1,
+      "confidence": "high",
+      "last_reviewed_at_utc": "2026-08-02T05:07:42.769801+00:00",
+      "review_after_utc": "2027-01-29T05:07:42.769801+00:00",
+      "evidence": [],
+      "evidence_fingerprints": [],
+      "independent_incident_count": 1
+    },
+    {
+      "id": "P-004",
+      "title": "Generic destination substituted for exact contextual action",
+      "scope": "navigation and contextual actions",
+      "trigger": "An action promises to open, show, guide, continue, locate, download, or navigate to a specific current item or step.",
+      "failure": "The action opens a generic root, homepage, search screen, empty workspace, or unrelated destination and leaves the user to finish manually.",
+      "replacement": "Resolve and preserve the exact entity, route, selection, coordinates, tab, filters, version, and authorization state promised by the control.",
+      "verification": "Start from each relevant context and confirm the final visible state exactly matches the promised destination.",
+      "basis": [
+        "explicit-user-correction",
+        "repeated-independent-failure"
+      ],
+      "status": "active",
+      "rule_version": 1,
+      "confidence": "high",
+      "last_reviewed_at_utc": "2026-08-02T05:07:42.769801+00:00",
+      "review_after_utc": "2027-01-29T05:07:42.769801+00:00",
+      "evidence": [],
+      "evidence_fingerprints": [],
+      "independent_incident_count": 1
+    },
+    {
+      "id": "P-005",
+      "title": "Cosmetic theater substituted for evolution",
+      "scope": "product improvement",
+      "trigger": "The request uses broad outcome language such as evolve, upgrade, magical, smarter, seamless, or next-generation.",
+      "failure": "The agent renames things, adds slogans, decorations, wrappers, novelty UI, or documentation without meaningful capability improvement.",
+      "replacement": "Translate the outcome into measurable gains in capability, usability, speed, reliability, intelligence, integration, or polish, then prove them.",
+      "verification": "Show before-and-after evidence in the affected workflow; renamed files or added UI alone do not count.",
+      "basis": [
+        "explicit-user-correction",
+        "repeated-independent-failure"
+      ],
+      "status": "active",
+      "rule_version": 1,
+      "confidence": "high",
+      "last_reviewed_at_utc": "2026-08-02T05:07:42.769801+00:00",
+      "review_after_utc": "2027-01-29T05:07:42.769801+00:00",
+      "evidence": [],
+      "evidence_fingerprints": [],
+      "independent_incident_count": 1
+    },
+    {
+      "id": "P-006",
+      "title": "Project example copied into universal policy",
+      "scope": "instruction authoring",
+      "trigger": "The user provides a product-specific label, screenshot, route, quest, file, or repository as an example of a broader failure.",
+      "failure": "The universal AGENTS contract becomes contaminated with one-off names or implementation details.",
+      "replacement": "Extract the general acceptance pattern and keep project-specific language in local instructions only.",
+      "verification": "Review universal files for product names, paths, labels, or domain details that were not explicitly requested as universal.",
+      "basis": [
+        "explicit-user-correction",
+        "objective-reproduction"
+      ],
+      "status": "active",
+      "rule_version": 1,
+      "confidence": "high",
+      "last_reviewed_at_utc": "2026-08-02T05:07:42.769801+00:00",
+      "review_after_utc": "2027-01-29T05:07:42.769801+00:00",
+      "evidence": [],
+      "evidence_fingerprints": [],
+      "independent_incident_count": 1
+    },
+    {
+      "id": "P-007",
+      "title": "Stale familiarity preferred over stronger current tools",
+      "scope": "research and tool selection",
+      "trigger": "The task asks for current, best, bleeding-edge, latest, or high-capability tools and approaches.",
+      "failure": "The agent recommends a familiar older option after shallow research or rejects a superior newer option merely because it needs hardening.",
+      "replacement": "Search the current ecosystem broadly, compare serious candidates, prefer the strongest fit, and treat fixable rough edges as engineering work.",
+      "verification": "Provide current source-backed maintenance, capability, compatibility, and tradeoff evidence for the selected option and qualified alternatives.",
+      "basis": [
+        "explicit-user-correction",
+        "repeated-independent-failure"
+      ],
+      "status": "active",
+      "rule_version": 1,
+      "confidence": "high",
+      "last_reviewed_at_utc": "2026-08-02T05:07:42.769801+00:00",
+      "review_after_utc": "2027-01-29T05:07:42.769801+00:00",
+      "evidence": [],
+      "evidence_fingerprints": [],
+      "independent_incident_count": 1
+    },
+    {
+      "id": "P-008",
+      "title": "Wrong target or stale build mistaken for current work",
+      "scope": "repositories, builds, and runtimes",
+      "trigger": "Multiple repositories, worktrees, branches, copies, generated outputs, installations, profiles, or cached builds may exist.",
+      "failure": "The agent edits or tests the wrong target and reports success from stale output.",
+      "replacement": "Resolve the canonical target before editing and prove the runtime loaded the new artifact using path plus version, hash, timestamp, or unmistakable behavior.",
+      "verification": "Launch or install from a fresh canonical output and confirm the exact changed behavior after reload or restart.",
+      "basis": [
+        "explicit-user-correction",
+        "repeated-independent-failure"
+      ],
+      "status": "active",
+      "rule_version": 1,
+      "confidence": "high",
+      "last_reviewed_at_utc": "2026-08-02T05:07:42.769801+00:00",
+      "review_after_utc": "2027-01-29T05:07:42.769801+00:00",
+      "evidence": [],
+      "evidence_fingerprints": [],
+      "independent_incident_count": 1
+    },
+    {
+      "id": "P-009",
+      "title": "Existing project restarted or duplicated without continuity resolution",
+      "scope": "project continuity",
+      "trigger": "A user names, resumes, revisits, or starts work resembling an existing project, repository, artifact, or prior research effort.",
+      "failure": "The agent initializes a new project, edits a similarly named copy, or starts over before locating and validating prior work, causing divergence, duplication, corruption, or loss of continuity.",
+      "replacement": "Search available memory and files, inspect project identity markers, Git remotes, manifests, artifacts, handoffs, and registry candidates, then resolve the canonical project before any mutation; remain read-only while identity is ambiguous.",
+      "verification": "Record the selected project ID, canonical path, remote/fingerprint, loaded handoff, and current repository baseline before editing; prove no unresolved duplicate candidate was ignored.",
+      "basis": [
+        "explicit-user-universal-rule"
+      ],
+      "evidence": [
+        "User explicitly required prevention of accidental project restarts and corrupted duplicate work across chats."
+      ],
+      "evidence_fingerprints": [],
+      "independent_incident_count": 1,
+      "confidence": "high",
+      "status": "active",
+      "rule_version": 1,
+      "created_at_utc": "2026-08-02T06:00:42.105375+00:00",
+      "last_reviewed_at_utc": "2026-08-02T06:00:42.105375+00:00",
+      "review_after_utc": "2027-01-29T06:00:42.105394+00:00",
+      "promoted_at_utc": "2026-08-02T06:00:42.105375+00:00",
+      "promotion_reason": "explicit user universalization"
+    },
+    {
+      "id": "P-010",
+      "title": "Stale or unsourced research memory treated as current truth",
+      "scope": "research and toolchain memory",
+      "trigger": "A prior chat, handoff, note, or project ledger contains a tool recommendation, coding method, version claim, benchmark, compatibility statement, or best-option decision.",
+      "failure": "The agent reuses remembered research without provenance or freshness checks, or repeats an old decision after the ecosystem, project constraints, or evidence changed.",
+      "replacement": "Store source, date, version, applicability, evidence, confidence, alternatives, decision rationale, and review date; search prior research first, then revalidate stale or version-sensitive claims before reuse and mark superseded findings without deleting history.",
+      "verification": "The selected method cites current evidence or a still-valid verified record, identifies the research record used, and records whether the prior decision was confirmed, updated, or overturned.",
+      "basis": [
+        "explicit-user-universal-rule"
+      ],
+      "evidence": [
+        "User explicitly requested durable research memory for best tools and coding methods without poisoning or forgetting."
+      ],
+      "evidence_fingerprints": [],
+      "independent_incident_count": 1,
+      "confidence": "high",
+      "status": "active",
+      "rule_version": 1,
+      "created_at_utc": "2026-08-02T06:00:42.105375+00:00",
+      "last_reviewed_at_utc": "2026-08-02T06:00:42.105375+00:00",
+      "review_after_utc": "2027-01-29T06:00:42.105394+00:00",
+      "promoted_at_utc": "2026-08-02T06:00:42.105375+00:00",
+      "promotion_reason": "explicit user universalization"
+    },
+    {
+      "id": "P-011",
+      "title": "New cross-chat artifact missed or left unreconciled",
+      "scope": "project continuity and artifact progression",
+      "trigger": "A named project resumes and another chat may have created a newer file, version, build, prompt, research result, or reference artifact, including one that reuses an older filename.",
+      "failure": "The agent continues from stale memory or an older artifact because it did not sweep recent cross-chat sources, did not open the newer candidate, or found it but failed to record it in durable project memory.",
+      "root_cause": "Cross-chat discovery and durable reconciliation were treated as optional or separate steps.",
+      "wrong_behavior": "Trust filenames, old handoffs, metadata alone, or conversational recall; overwrite same-name versions; continue without refreshing the project handoff.",
+      "replacement": "Before planning or editing, sweep recent project sources, open plausible candidates, compare source identity and content, preserve same-name versions with lineage, reconcile them into the artifact ledger, update STATUS and HANDOFF, and reread the durable state.",
+      "verification": "The current session identifies and opens every plausible newer candidate since the last checkpoint, records stable identity or content signature plus lineage in artifacts.jsonl, refreshes STATUS.json and HANDOFF.md, rereads them, and proves no newer unresolved candidate was ignored.",
+      "basis": [
+        "explicit-user-universal-rule"
+      ],
+      "evidence": [
+        "User explicitly required project progress made in one chat to carry into another and used a newly created v4 HTML reference as the acceptance test."
+      ],
+      "evidence_fingerprints": [
+        "5816cb93aa2af9024d4c86fba623c80c519059d578a64b2c732f1933e9be065b"
+      ],
+      "independent_incident_count": 1,
+      "confidence": "high",
+      "status": "active",
+      "rule_version": 1,
+      "created_at_utc": "2026-08-02T07:05:43.530148+00:00",
+      "last_reviewed_at_utc": "2026-08-02T07:05:48.454681+00:00",
+      "review_after_utc": "2027-01-29T07:05:48.454685+00:00",
+      "promoted_at_utc": "2026-08-02T07:05:48.454662+00:00",
+      "promotion_reason": "explicit user universalization"
+    },
+    {
+      "id": "P-012",
+      "title": "Project progress exists but the master project catalog is not updated",
+      "scope": "cross-chat project tracking",
+      "trigger": "A chat discovers, creates, versions, packages, checkpoints, merges, renames, or supersedes work for any ongoing project.",
+      "failure": "The agent updates only the current chat or project-local memory, leaving the user's cross-project database stale so another chat resumes an older version, loses relationships, or starts over.",
+      "root_cause": "No mandatory durable cross-project reconciliation and reread gate.",
+      "wrong_behavior": "Treat chat history, filenames, or the immutable skill seed as the current project database.",
+      "replacement": "Load the live cross-project catalog before named project work; reconcile every verified project, version, artifact, repository, relationship, checkpoint, confidence change, and next action; render and reread the Markdown mirror; preserve all older versions; export the catalog when durable storage is unavailable.",
+      "verification": "The catalog JSON, Markdown mirror, and append-only event log contain the new or changed project state; the changed entry is reread; the catalog doctor passes; older versions remain present; and the next chat can locate the latest verified state without relying on conversation memory.",
+      "basis": [
+        "explicit-user-universal-rule"
+      ],
+      "evidence": [
+        "User explicitly requested that the skill include the recovered all-project Markdown database and keep projects, versions, and progress synchronized across chats."
+      ],
+      "evidence_fingerprints": [
+        "11a4382a9640f712341d9a27e41710d7bf2f1a013a990bc214c409d11191f95f"
+      ],
+      "independent_incident_count": 1,
+      "confidence": "high",
+      "status": "active",
+      "rule_version": 1,
+      "created_at_utc": "2026-08-02T11:54:46.877780+00:00",
+      "last_reviewed_at_utc": "2026-08-02T11:54:49.835072+00:00",
+      "review_after_utc": "2027-01-29T11:54:49.835074+00:00",
+      "promoted_at_utc": "2026-08-02T11:54:49.835055+00:00",
+      "promotion_reason": "explicit user universalization"
+    },
+    {
+      "id": "P-013",
+      "title": "Unsafe or untracked artifact-library cleanup loses project history",
+      "scope": "artifact library, storage, and bundle management",
+      "trigger": "The user has storage pressure, duplicate files, repeated exports, same-name versions, or scattered project bundles and asks the agent to organize or delete files.",
+      "failure": "The agent deletes or replaces files from names, dates, or appearances alone; removes a canonical or referenced artifact; scatters bundle dependencies; or claims ChatGPT Library cleanup without a real delete action, causing lost versions, broken handoffs, or false storage reports.",
+      "root_cause": "Storage cleanup was treated as ordinary file deletion instead of project-aware inventory, lineage, dependency, and recovery work.",
+      "wrong_behavior": "Assume newest filename is canonical, auto-delete near duplicates, permanently erase files without quarantine, or report account storage changes that were not verified.",
+      "replacement": "Inventory every candidate, source current usage, classify canonical/protected/versioned/referenced items, require exact SHA-256 equality for automatic duplicate quarantine, preserve same-name different-content versions, keep bundles and dependencies together, require explicit cleanup approval, quarantine local removals, and treat external Library deletion as manual unless a supported delete action succeeds.",
+      "verification": "The library catalog and Markdown mirror list every in-scope item with identity, version, hash/signature, source, protection, references, and storage impact; the cleanup plan names the kept copy and reasons; local removals are restorable; external deletion is confirmed or remains manual; organized project bundles include manifests and dependencies; and the library doctor passes.",
+      "basis": [
+        "explicit-user-universal-rule"
+      ],
+      "evidence": [
+        "User explicitly requested a skill that organizes Library storage, warns near limits, removes redundant files safely, and keeps required bundles and related files in organized folders."
+      ],
+      "evidence_fingerprints": [
+        "feb3c1d9e29a46e84cab2b61c1a03ea4c4c199a7ab029936f78b4c6969cb0851"
+      ],
+      "independent_incident_count": 1,
+      "confidence": "high",
+      "status": "active",
+      "rule_version": 1,
+      "created_at_utc": "2026-08-02T12:16:32.718416+00:00",
+      "last_reviewed_at_utc": "2026-08-02T12:16:33.274963+00:00",
+      "review_after_utc": "2027-01-29T12:16:33.274966+00:00",
+      "promoted_at_utc": "2026-08-02T12:16:33.274947+00:00",
+      "promotion_reason": "explicit user universalization"
+    },
+    {
+      "id": "P-014",
+      "title": "Substantial project session closes without durable verified artifact",
+      "scope": "project implementation, builds, repairs, and artifact delivery",
+      "trigger": "A substantial task has valid source changes or partial verification but more solvable work remains, the workspace may be ephemeral, or the user requested a final build or publication.",
+      "failure": "The agent stops with an unfinished-status response or leaves progress only in temporary source state, so later cleanup, compaction, restart, or workspace loss destroys the work and no usable build reaches the user.",
+      "root_cause": "Premature closeout treated partial progress and temporary workspace state as sufficient even though the requested final build and solvable verification remained.",
+      "wrong_behavior": "Return an audit status, apology, or unfinished source tree without packaging, checkpointing, publishing, and verifying the latest full build.",
+      "replacement": "Continue through all realistically solvable defects. Before any closeout or interruption-prone handoff, create a durable source checkpoint and a complete verified runnable artifact. When delivery was requested, publish it and verify remote bytes. If a hard external blocker truly remains, preserve and deliver the latest verified full artifact plus exact checkpoint and evidence instead of leaving only mutable source.",
+      "verification": "Confirm the final response links or precisely identifies a complete verified artifact, its hash, durable checkpoint or handoff, and remote byte verification when publication was requested; confirm no substantive progress exists only in an ephemeral workspace.",
+      "basis": [
+        "explicit-user-universal-rule"
+      ],
+      "evidence": [
+        "User explicitly required this as a high-ranking universal rule after GameSync progress risked being lost when a temporary workspace was cleared; the failure mode was directly observed in the active task."
+      ],
+      "evidence_fingerprints": [
+        "db94584afd3b968b538264efc69990bfd2c8e928e48b602a204472ef6fdd4c80"
+      ],
+      "independent_incident_count": 1,
+      "confidence": "high",
+      "status": "active",
+      "rule_version": 1,
+      "created_at_utc": "2026-08-03T02:29:16.396394+00:00",
+      "last_reviewed_at_utc": "2026-08-03T02:29:20.796629+00:00",
+      "review_after_utc": "2027-01-30T02:29:20.796632+00:00",
+      "promoted_at_utc": "2026-08-03T02:29:20.796611+00:00",
+      "promotion_reason": "explicit user universalization"
+    },
+    {
+      "id": "P-015",
+      "title": "First working state mistaken for final project quality",
+      "scope": "universal project work",
+      "trigger": "A project task reaches its first correct or requested working state.",
+      "failure": "The agent stops at the first working solution and leaves material capability, performance, reliability, integration, or polish improvements unexplored.",
+      "root_cause": "unknown",
+      "wrong_behavior": "unknown",
+      "replacement": "Apply the Maximum Improvement Rule: establish the relevant starting state or baseline when useful, use the strongest current technique and relevant bleeding-edge research, treat 100x better as non-numeric shorthand for maximum-effort improvement, continue evidence-backed improvements to convergence, then run an independent outside-the-box pass and finish fully testable and ready to run.",
+      "verification": "The evidence ledger records the starting state or meaningful baseline, final observed result, current-tech decision when material, convergence pass, outside-the-box pass, and complete real-runtime tests/artifact verification.",
+      "basis": [
+        "explicit-user-universal-rule"
+      ],
+      "evidence": [
+        "User explicitly required this as a hard rule for every project task on 2026-08-10.",
+        "User clarified on 2026-08-10 that '100x better' is intentionally non-literal and must mean maximum-effort improvement on every project task, not a numeric multiplier or measurement target."
+      ],
+      "evidence_fingerprints": [
+        "1142a21c4e0ea1f533be6f52348747719360e7a03077a6f208c89ba0706c30e8",
+        "e97a65c21d505ed5c9bcb83ae2a6f0ffa107be4f3e75bb9ad83b4714bd54dd2d"
+      ],
+      "independent_incident_count": 2,
+      "confidence": "high",
+      "status": "active",
+      "rule_version": 2,
+      "created_at_utc": "2026-08-10T09:25:39.119268+00:00",
+      "last_reviewed_at_utc": "2026-08-10T10:07:04.052793+00:00",
+      "review_after_utc": "2027-02-06T09:25:47.253396+00:00",
+      "promoted_at_utc": "2026-08-10T09:25:47.253378+00:00",
+      "promotion_reason": "explicit user universalization"
+    },
+    {
+      "id": "P-016",
+      "title": "Status and test ceremony displaces the runnable session build",
+      "scope": "project chat closeout and artifact readiness",
+      "trigger": "A project chat approaches closeout after implementation work, or spends substantial time on repeated broad tests, STATUS/HANDOFF files, catalogs, or reports.",
+      "failure": "The session consumes time on testing/status ceremony and ends without a current usable build ready for immediate user testing.",
+      "root_cause": "Closeout treated documentation and repeated verification as primary work instead of keeping the runnable artifact as the session invariant.",
+      "wrong_behavior": "Spend the remaining session repeatedly updating status documents or rerunning unchanged full suites, then close with source changes and no usable artifact.",
+      "replacement": "Enforce the build-first session invariant: every project chat retains a usable build; implementation-changing chats produce a fresh build from current canonical source before status work; research-only chats reuse the latest verified build. Run exact/targeted tests during iteration, broad required suites once at convergence, then write concise status deltas.",
+      "verification": "Confirm a runnable artifact/build ID exists at closeout, fresh-copy or install smoke testing passed for implementation changes, closeout receipt records build proof, and status/handoff work occurred only after artifact availability.",
+      "basis": [
+        "explicit-user-universal-rule"
+      ],
+      "evidence": [
+        "User explicitly required every project chat to end with a usable testable build and complained that excessive testing/status work delays or prevents that artifact."
+      ],
+      "evidence_fingerprints": [
+        "725a660d565d27ddc27064de03cab9ca70b591beaaa252a8d40ca51be4d1ace7"
+      ],
+      "independent_incident_count": 1,
+      "confidence": "high",
+      "status": "active",
+      "rule_version": 1,
+      "created_at_utc": "2026-08-10T10:22:34.169322+00:00",
+      "last_reviewed_at_utc": "2026-08-10T10:22:37.884435+00:00",
+      "review_after_utc": "2027-02-06T10:22:37.884438+00:00",
+      "promoted_at_utc": "2026-08-10T10:22:37.884419+00:00",
+      "promotion_reason": "explicit user universalization"
+    },
+    {
+      "id": "P-017",
+      "title": "Skill transition resets execution state",
+      "scope": "cross-skill orchestration",
+      "trigger": "A task activates, transitions to, or composes multiple skills after work has already begun.",
+      "failure": "The newly active skill treats itself as a fresh workflow, repeats resolved discovery or status reads, drops the current acceptance ledger or exact next action, and stalls without advancing the task.",
+      "root_cause": "Skill routing can prefer a more-specific skill without reloading the general accelerator body, so domain skills need an explicit composition bridge.",
+      "wrong_behavior": "Re-run connector, schema, repository, Drive, or project scans or restart step 1 solely because another skill activated.",
+      "replacement": "Treat domain skills as overlays on persistent Zero-Loss continuity. Carry acceptance requirements, canonical identifiers, loaded evidence, hashes, run/job IDs, latest durable checkpoint/mutation/test, blocker, no-repeat history, and exact next action across skill transitions; reuse existing evidence unless invalidated; after two unchanged waves change strategy.",
+      "verification": "During a multi-skill task, verify that transition into a domain skill reuses prior IDs/evidence and advances from the preserved next action without restarting discovery; audit every personal skill for an explicit Zero-Loss composition bridge.",
+      "basis": [
+        "explicit-user-universal-rule"
+      ],
+      "evidence": [
+        "2026-08-30 user explicitly requested all personal skills remain aware of Zero Loss to prevent stalls during skill switching."
+      ],
+      "evidence_fingerprints": [
+        "e5dc44c42b1ca0c7371b51d3c423014898b18de8a539174f76738cd35c1c339a"
+      ],
+      "independent_incident_count": 1,
+      "confidence": "high",
+      "status": "active",
+      "rule_version": 1,
+      "created_at_utc": "2026-08-30T18:36:00.139447+00:00",
+      "last_reviewed_at_utc": "2026-08-30T18:36:04.980403+00:00",
+      "review_after_utc": "2027-02-26T18:36:04.980406+00:00",
+      "promoted_at_utc": "2026-08-30T18:36:04.980382+00:00",
+      "promotion_reason": "explicit user universalization"
+    }
+  ]
+}

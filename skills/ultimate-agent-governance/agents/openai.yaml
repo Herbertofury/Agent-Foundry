@@ -1,0 +1,13 @@
+interface:
+  display_name: Ultimate Agent Governance
+  short_description: Govern agent rules and enforce them during real coding/repair
+    work.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

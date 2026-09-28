@@ -1,0 +1,65 @@
+{
+  "schema_version": 2,
+  "bundle_version": "4.0.3",
+  "generated_at_utc": "2026-08-30T19:00:38.668878+00:00",
+  "catalog_sha256": "06ea2fd4e32de844e24c6760e66ae8e2a0d9174150b25ee888a1dc7382eff891",
+  "canonical_root": "assets/agents-md-hybrid",
+  "files": {
+    "AGENTS.md": {
+      "sha256": "275c7edb66abb0ccc9f90ce38abaf2bffd764a8e0d1b1cdf586110370cbd9b09",
+      "bytes": 30847
+    },
+    "AGENTS.modular.md": {
+      "sha256": "a9c822b3acb4b7c9a4821540e3b387c19c4a45cbc17f1e1a4e8b3b94b9101322",
+      "bytes": 9556
+    },
+    "README.md": {
+      "sha256": "c311bac55320d893c1b1c1d678547aa5746ee9bd613db561bf9c006365135589",
+      "bytes": 3945
+    },
+    ".agents/ENVIRONMENT.md": {
+      "sha256": "40dc14f8cdb9191d0047260bab449010e0806be53bd2817afcce7547c05300ce",
+      "bytes": 2527
+    },
+    ".agents/EXECUTION.md": {
+      "sha256": "310899f9cabd05c8762e9a7c6289bf480e1fcc998379496c3527ff0ede94b6fc",
+      "bytes": 10574
+    },
+    ".agents/LEARNING.md": {
+      "sha256": "1b36032e2a69ac9a82fa99fca0bfe43b636afca02a08cb10187e84ff0fc4a907",
+      "bytes": 3838
+    },
+    ".agents/MEMORY-CONTINUITY.md": {
+      "sha256": "d53820ee68c0afe121cda9c6e83693e125ffc3fd85423fc72e4e336637b4e882",
+      "bytes": 12844
+    },
+    ".agents/LIBRARY-STORAGE.md": {
+      "sha256": "1019dff170f9b3c4b3c78140680b78bed202a7d419b31c63be537f1748142165",
+      "bytes": 6035
+    },
+    ".agents/PITFALLS.md": {
+      "sha256": "9a7d9500991153d2e36930f24f428341f0608a5fb325eb0398963ce3f35e5b78",
+      "bytes": 17495
+    },
+    ".agents/PITFALLS-QUARANTINE.md": {
+      "sha256": "4734524aff1303be593ad0f731ff645d57d889d10cd847b18149a0d31f21456b",
+      "bytes": 37
+    },
+    ".agents/RESEARCH.md": {
+      "sha256": "2a5d19135771d3f69c328c50e94d5281ce3ade4a5e5b45af3f1f2419faddd66e",
+      "bytes": 6161
+    },
+    ".agents/SAFETY-CLOSEOUT.md": {
+      "sha256": "da4e646aa640993bbdae3701bc099b93b25842c2b1c65a7651a4034e7eed318c",
+      "bytes": 7962
+    },
+    ".agents/UI-FUNCTIONALITY.md": {
+      "sha256": "09f1e1c377a421b7d61db74f941816376661bd168e137752bd4254d75cb1acc0",
+      "bytes": 4869
+    },
+    ".agents/VERIFICATION.md": {
+      "sha256": "1849c0d77d9992cd667e79635694e921377bcb9ddb7e2c4d3bc4509ad86a32a1",
+      "bytes": 6300
+    }
+  }
+}

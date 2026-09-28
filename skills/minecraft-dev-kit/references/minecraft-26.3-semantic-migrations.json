@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "target": "26.3",
+  "snapshot_date": "2026-09-18",
+  "sources": [
+    "https://www.fabricmc.net/2026/03/14/261.html",
+    "https://www.fabricmc.net/2026/09/15/263.html",
+    "https://docs.fabricmc.net/develop/porting/mappings/",
+    "https://docs.neoforged.net/primer/docs/26.1/",
+    "https://www.minecraft.net/en-us/article/minecraft-java-edition-26-3"
+  ],
+  "rules": [
+    {
+      "id": "fabric-old-loom-remap-plugin",
+      "category": "build",
+      "loader": "fabric",
+      "severity": "blocker",
+      "kind": "content_regex",
+      "pattern": "net\\.fabricmc\\.fabric-loom-remap|id\\s*['\"]fabric-loom['\"]",
+      "replacement": "Use the unobfuscated net.fabricmc.fabric-loom plugin for 26.3; do not remap Minecraft/mod jars.",
+      "automation": "safe-build-rewrite",
+      "qa": ["gradle-sync", "build"]
+    },
+    {
+      "id": "fabric-remap-configurations",
+      "category": "build",
+      "loader": "fabric",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "\\b(?:modImplementation|modCompileOnly|modRuntimeOnly|modApi|remapJar)\\b",
+      "replacement": "Move obsolete remapped dependency/task configurations to standard implementation/compileOnly/runtimeOnly/api and jar equivalents appropriate to the declaration.",
+      "automation": "context-required",
+      "qa": ["gradle-sync", "build"]
+    },
+    {
+      "id": "fabric-depends-old-fabric-id",
+      "category": "metadata",
+      "loader": "fabric",
+      "severity": "blocker",
+      "kind": "content_regex",
+      "pattern": "['\"]fabric['\"]\\s*:",
+      "replacement": "Depend on fabric-api rather than the removed aggregate fabric mod id.",
+      "automation": "safe-json-rewrite",
+      "qa": ["metadata", "client", "server"]
+    },
+    {
+      "id": "fabric-item-group-events-rename",
+      "category": "api-rename",
+      "loader": "fabric",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "\\bItemGroupEvents\\b",
+      "replacement": "Migrate to CreativeModeTabEvents and re-resolve callbacks using official-name Fabric API.",
+      "automation": "symbolic",
+      "qa": ["build", "client"]
+    },
+    {
+      "id": "fabric-hud-render-callback-removed",
+      "category": "rendering",
+      "loader": "fabric",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "\\bHudRenderCallback\\b",
+      "replacement": "Migrate HUD registration to HudElementRegistry; preserve ordering and render state.",
+      "automation": "semantic",
+      "qa": ["build", "native-client", "visual"]
+    },
+    {
+      "id": "fabric-block-color-registry",
+      "category": "rendering",
+      "loader": "fabric",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "\\bColorProviderRegistry\\.BLOCK\\b|\\bColorProviderRegistry\\b",
+      "replacement": "Migrate block tint registration to BlockColorRegistry/BlockTintSource semantics.",
+      "automation": "semantic",
+      "qa": ["build", "native-client", "visual"]
+    },
+    {
+      "id": "fabric-trade-offer-helper-data-driven",
+      "category": "data-driven",
+      "loader": "fabric",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "\\bTradeOfferHelper\\b|\\bVillagerTrades\\.(?:TRADES|EXPERIMENTAL_TRADES|WANDERING_TRADER_TRADES)\\b",
+      "replacement": "Port trades to data/<namespace>/villager_trade, trade_set, and villager_trade tags; preserve conditions/count/xp/pricing semantics.",
+      "automation": "semantic-data-generation",
+      "qa": ["datagen", "server", "integrated", "restart"]
+    },
+    {
+      "id": "fabric-fluid-render-handler-replaced",
+      "category": "rendering",
+      "loader": "fabric",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "\\bFluidRenderHandler\\b|\\bFluidRenderHandlerRegistry\\b",
+      "replacement": "Prefer 26.x FluidModel/FluidRenderingRegistry behavior; port only custom behavior still needed.",
+      "automation": "semantic",
+      "qa": ["build", "native-client", "visual"]
+    },
+    {
+      "id": "raw-opengl-client-code",
+      "category": "rendering",
+      "loader": "any",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "\\borg\\.lwjgl\\.opengl\\.|\\bGL(?:11|12|13|14|15|20|21|30|31|32|33|40|41|42|43|44|45|46)\\.",
+      "replacement": "Replace raw OpenGL assumptions with Blaze3D/current renderer abstractions so OpenGL/Vulkan backend changes do not break the mod.",
+      "automation": "semantic",
+      "qa": ["build", "native-client", "visual", "backend-variation"]
+    },
+    {
+      "id": "static-itemstack-bootstrap",
+      "category": "bootstrap",
+      "loader": "any",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "static\\s+final\\s+ItemStack\\s+\\w+\\s*=\\s*new\\s+ItemStack\\s*\\(",
+      "replacement": "26.x ItemStack construction is world-bound; represent immutable bootstrap values with ItemStackTemplate or lazy runtime construction as appropriate.",
+      "automation": "semantic",
+      "qa": ["build", "client", "server"]
+    },
+    {
+      "id": "legacy-recipe-serializer-class",
+      "category": "recipes",
+      "loader": "any",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "implements\\s+RecipeSerializer|class\\s+\\w+Serializer\\s+implements\\s+RecipeSerializer",
+      "replacement": "Port recipe serialization to 26.x RecipeSerializer(MapCodec, StreamCodec) records/codecs and current recipe info/template semantics.",
+      "automation": "semantic",
+      "qa": ["build", "datagen", "server", "integrated"]
+    },
+    {
+      "id": "manual-terrain-render-layer",
+      "category": "rendering",
+      "loader": "any",
+      "severity": "medium",
+      "kind": "content_regex",
+      "pattern": "\\b(?:BlockRenderLayerMap|ItemBlockRenderTypes|RenderLayer\\.TRANSLUCENT|RenderType\\.translucent)\\b",
+      "replacement": "Review against 26.x automatic ChunkSectionLayer/material selection; retain explicit overrides only where current model APIs require them.",
+      "automation": "semantic",
+      "qa": ["build", "native-client", "visual"]
+    },
+    {
+      "id": "configured-feature-path",
+      "category": "worldgen",
+      "loader": "any",
+      "severity": "high",
+      "kind": "path_regex",
+      "pattern": "(?:^|/)data/[^/]+/worldgen/configured_feature/",
+      "replacement": "Move/translate configured feature data into 26.3 worldgen/feature and inline configuration as required.",
+      "automation": "semantic-data-generation",
+      "qa": ["datagen", "server", "worldgen", "restart"]
+    },
+    {
+      "id": "configured-carver-path",
+      "category": "worldgen",
+      "loader": "any",
+      "severity": "high",
+      "kind": "path_regex",
+      "pattern": "(?:^|/)data/[^/]+/worldgen/configured_carver/",
+      "replacement": "Translate to 26.3 worldgen/carver schema and migrate changed/inlined carver fields.",
+      "automation": "semantic-data-generation",
+      "qa": ["datagen", "server", "worldgen", "restart"]
+    },
+    {
+      "id": "surface-rule-to-material-rule",
+      "category": "worldgen",
+      "loader": "any",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "\\bsurface_rule\\b|worldgen/surface_rule",
+      "replacement": "Translate surface_rule to 26.3 material_rule plus material_condition registries/references.",
+      "automation": "semantic-data-generation",
+      "qa": ["datagen", "server", "worldgen", "visual", "restart"]
+    },
+    {
+      "id": "legacy-number-provider-registry",
+      "category": "data-schema",
+      "loader": "any",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "minecraft:number_provider(?:_type)?|\\bNumberProvider\\b",
+      "replacement": "Review whether the use is context-free worldgen or the 26.3 context_int_provider/context_float_provider split; preserve numeric semantics and ranges.",
+      "automation": "semantic",
+      "qa": ["datagen", "server", "behavior"]
+    },
+    {
+      "id": "block-state-property-condition-removed",
+      "category": "data-schema",
+      "loader": "any",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "minecraft:block_state_property",
+      "replacement": "Migrate the removed block_state_property condition to minecraft:match_block with equivalent state/NBT/component predicates.",
+      "automation": "semantic-data-generation",
+      "qa": ["datagen", "server", "behavior"]
+    },
+    {
+      "id": "legacy-block-transform-registries",
+      "category": "components",
+      "loader": "fabric",
+      "severity": "blocker",
+      "kind": "content_regex",
+      "pattern": "\\b(?:StrippableBlockRegistry|TillableBlockRegistry|FlattenableBlockRegistry)\\b",
+      "replacement": "Generate/use 26.3 block_transformer component/registry data with equivalent block-state provider, sound and particle semantics.",
+      "automation": "semantic-data-generation",
+      "qa": ["datagen", "server", "integrated"]
+    },
+    {
+      "id": "legacy-fuel-compost-brewing-registry",
+      "category": "components",
+      "loader": "fabric",
+      "severity": "blocker",
+      "kind": "content_regex",
+      "pattern": "\\b(?:FuelRegistry|CompostingChanceRegistry|FabricPotionBrewingBuilder)\\b",
+      "replacement": "Translate fuel/compost/brewing behavior into 26.3 components and data-driven recipes/providers while preserving values/remainders/chances.",
+      "automation": "semantic-data-generation",
+      "qa": ["datagen", "server", "integrated"]
+    },
+    {
+      "id": "forge-to-neoforge-package-migration",
+      "category": "loader-api",
+      "loader": "neoforge",
+      "severity": "high",
+      "kind": "content_regex",
+      "pattern": "\\bnet\\.minecraftforge\\.",
+      "replacement": "Resolve each Forge-owned API to its exact NeoForge 26.3 equivalent; do not global string-replace package names.",
+      "automation": "symbolic",
+      "qa": ["build", "server", "client"]
+    }
+  ]
+}

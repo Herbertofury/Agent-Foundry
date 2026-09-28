@@ -1,0 +1,1 @@
+{"schema_version":1,"entries":[{"id":"P-900","title":"Fixture rule","scope":"fixture","trigger":"test","failure":"test","replacement":"test","verification":"test","basis":["explicit-user-universal-rule"],"status":"active"}]}

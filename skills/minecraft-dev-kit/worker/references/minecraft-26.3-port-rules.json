@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "target_minecraft": "26.3",
+  "snapshot_date": "2026-09-18",
+  "minimum_java": 25,
+  "rules": [
+    {
+      "id": "fabric-composting-registry-removed",
+      "severity": "blocker",
+      "loader": "fabric",
+      "kind": "content_regex",
+      "pattern": "\\bCompostingChanceRegistry\\b",
+      "summary": "Fabric CompostingChanceRegistry was removed for 26.3.",
+      "remediation": "Move composting behavior to the 26.3 item-component/data-driven path using DataComponents.COMPOSTABLE or target-native equivalent."
+    },
+    {
+      "id": "fabric-fuel-registry-removed",
+      "severity": "blocker",
+      "loader": "fabric",
+      "kind": "content_regex",
+      "pattern": "\\bFuelRegistry\\b",
+      "summary": "Fabric FuelRegistry was removed for 26.3.",
+      "remediation": "Use DataComponents.COOKING_FUEL or the current target-native component/data path."
+    },
+    {
+      "id": "fabric-potion-brewing-builder-removed",
+      "severity": "blocker",
+      "loader": "fabric",
+      "kind": "content_regex",
+      "pattern": "\\bFabricPotionBrewingBuilder\\b",
+      "summary": "FabricPotionBrewingBuilder was removed for 26.3.",
+      "remediation": "Port brewing recipes to 26.3 data-driven recipe data and use DataComponents.BREWING_FUEL where applicable."
+    },
+    {
+      "id": "fabric-strippable-registry-removed",
+      "severity": "blocker",
+      "loader": "fabric",
+      "kind": "content_regex",
+      "pattern": "\\bStrippableBlockRegistry\\b",
+      "summary": "StrippableBlockRegistry was removed for 26.3.",
+      "remediation": "Port to vanilla block-transformer data/component behavior for stripping."
+    },
+    {
+      "id": "fabric-tillable-registry-removed",
+      "severity": "blocker",
+      "loader": "fabric",
+      "kind": "content_regex",
+      "pattern": "\\bTillableBlockRegistry\\b",
+      "summary": "TillableBlockRegistry was removed for 26.3.",
+      "remediation": "Port to vanilla block-transformer data/component behavior for tilling."
+    },
+    {
+      "id": "fabric-flattenable-registry-removed",
+      "severity": "blocker",
+      "loader": "fabric",
+      "kind": "content_regex",
+      "pattern": "\\bFlattenableBlockRegistry\\b",
+      "summary": "FlattenableBlockRegistry was removed for 26.3.",
+      "remediation": "Port to vanilla block-transformer data/component behavior for flattening."
+    },
+    {
+      "id": "fabric-fluid-colored-name-api-changed",
+      "severity": "high",
+      "loader": "fabric",
+      "kind": "content_regex",
+      "pattern": "enableColoredVanillaFluidNames",
+      "summary": "The previous colored vanilla fluid-name helper changed in the 26.3 fluids API.",
+      "remediation": "Migrate to FluidVariantAttributes.getColoredName and re-check fluid rendering/name behavior."
+    },
+    {
+      "id": "glfw-direct-input",
+      "severity": "blocker",
+      "loader": "any",
+      "kind": "content_regex",
+      "pattern": "(?:org\\.lwjgl\\.glfw\\.GLFW|\\bGLFW\\.GLFW_|\\bGLFW_KEY_|\\bGLFW_MOUSE_BUTTON_)",
+      "summary": "Minecraft 26.3 removed GLFW in favor of SDL; direct GLFW constants/calls are not a safe 26.3 input abstraction.",
+      "remediation": "Use vanilla InputConstants and target-native input APIs; custom text widgets must integrate with the current TextInputManager behavior."
+    },
+    {
+      "id": "old-configured-feature-data-path",
+      "severity": "high",
+      "loader": "any",
+      "kind": "path_regex",
+      "pattern": "(?:^|/)data/[^/]+/worldgen/configured_feature/",
+      "summary": "26.3 worldgen feature data was reorganized; configured features moved/combined into worldgen/feature.",
+      "remediation": "Translate configured feature resources and code to the 26.3 worldgen/feature model and validate registry references."
+    },
+    {
+      "id": "old-surface-rule-data-path",
+      "severity": "high",
+      "loader": "any",
+      "kind": "path_regex",
+      "pattern": "(?:^|/)data/[^/]+/worldgen/surface_rule/",
+      "summary": "Surface rules were renamed/reworked as material rules in the 26.3 worldgen model.",
+      "remediation": "Port data/code to worldgen/material_rule and current material-condition registrations."
+    },
+    {
+      "id": "block-codec-registration",
+      "severity": "high",
+      "loader": "any",
+      "kind": "content_regex",
+      "pattern": "(?:\\bMapCodec<[^>]*Block|\\bCODEC\\s*=.*Block|\\bblock_type\\b)",
+      "summary": "Block codecs / the prior block_type registry changed or were removed in 26.3.",
+      "remediation": "Review custom block serialization/registration against the 26.3 block construction and registry model instead of carrying old block codecs verbatim."
+    },
+    {
+      "id": "forge-package-on-neoforge-target",
+      "severity": "high",
+      "loader": "neoforge",
+      "kind": "content_regex",
+      "pattern": "\\bnet\\.minecraftforge\\.",
+      "summary": "Forge package references remain in a NeoForge 26.3 target candidate.",
+      "remediation": "Resolve each Forge-owned type/event/capability/config hook to its NeoForge 26.3 owner or an explicit compatibility dependency."
+    },
+    {
+      "id": "legacy-forge-mods-toml",
+      "severity": "high",
+      "loader": "neoforge",
+      "kind": "path_exact",
+      "pattern": "META-INF/mods.toml",
+      "summary": "A legacy Forge mods.toml is present in a NeoForge target candidate.",
+      "remediation": "Use the current NeoForge mod metadata template (normally META-INF/neoforge.mods.toml or generated template metadata) and migrate dependency declarations."
+    },
+    {
+      "id": "legacy-java-target",
+      "severity": "blocker",
+      "loader": "any",
+      "kind": "content_regex",
+      "pattern": "(?:JavaLanguageVersion\\.of\\((?:8|11|16|17|18|19|20|21|22|23|24)\\)|JavaVersion\\.VERSION_(?:1_8|11|16|17|18|19|20|21|22|23|24)|options\\.release\\s*=\\s*(?:8|11|16|17|18|19|20|21|22|23|24)\\b)",
+      "summary": "The project explicitly targets Java below 25.",
+      "remediation": "Move the 26.3 target build/toolchain to Java 25, then fix source/API failures rather than suppressing the target level."
+    },
+    {
+      "id": "fabric-yarn-mapping-on-26-3-target",
+      "severity": "blocker",
+      "loader": "fabric",
+      "kind": "content_regex",
+      "pattern": "net\\.fabricmc:yarn:",
+      "summary": "A Fabric 26.3 target still declares Yarn mappings even though Minecraft 26.1+ is unobfuscated.",
+      "remediation": "Use official/unobfuscated 26.3 names. Harvest Yarn only as historical source-migration evidence; do not add it to the finished 26.3 target."
+    },
+    {
+      "id": "fabric-intermediary-mapping-on-26-3-target",
+      "severity": "blocker",
+      "loader": "fabric",
+      "kind": "content_regex",
+      "pattern": "(?:net\\.fabricmc:intermediary|mappings[^\\n]{0,120}\\bintermediary\\b)",
+      "summary": "A Fabric 26.3 target still carries an Intermediary mapping declaration.",
+      "remediation": "Translate historical Intermediary names through the mapping lineage cache, then keep the 26.3 target in official names."
+    },
+    {
+      "id": "legacy-mapped-symbol-residue",
+      "severity": "blocker",
+      "loader": "any",
+      "kind": "content_regex",
+      "pattern": "\\b(?:func_\\d+_[A-Za-z_]*|field_\\d+_[A-Za-z_]*|m_\\d+_|f_\\d+_|method_\\d+|class_\\d+)\\b",
+      "summary": "Historical MCP/SRG/Intermediary symbol names remain in a 26.3 target candidate.",
+      "remediation": "Resolve the declaring owner and exact JVM descriptor through authoritative historical mappings, translate to the current official 26.3 symbol, then re-audit Mixins/reflection/access files separately."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "request": "",
+  "canonical_target": "",
+  "requested_artifact": "",
+  "active_instruction_hashes": {},
+  "requirements": [],
+  "decisions": [],
+  "failures": [],
+  "blockers": [],
+  "remaining": [],
+  "completed": []
+}

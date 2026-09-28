@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-08-30",
+  "purpose": "Self-contained proven anti-stall pattern catalog for Zero-Loss Chat Accelerator.",
+  "promotion_policy": "Promote only from explicit user correction, objective reproduction, repeated independent incident, or authoritative specification plus observed behavior. Never weaken scope, safety, verification, or required persistence.",
+  "rules": [
+    {
+      "id": "SB-001",
+      "slug": "skill-transition-reset",
+      "scope": "cross-skill",
+      "failure": "Skill transition drops the current execution state",
+      "required_behavior": "Preserve the full continuity capsule and resume the exact next action; skills overlay rather than restart.",
+      "signals": [
+        "skill transition",
+        "fresh workflow",
+        "repeated discovery",
+        "exact next action"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-002",
+      "slug": "guardrail-owner-theft",
+      "scope": "cross-skill",
+      "failure": "A guardrail/subskill becomes the workflow owner",
+      "required_behavior": "Perform the bounded gate/subroutine and immediately return ownership to the parent domain workflow.",
+      "signals": [
+        "guardrail",
+        "subskill",
+        "workflow ownership",
+        "re-baseline"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-003",
+      "slug": "activation-enumeration",
+      "scope": "discovery",
+      "failure": "Skill activation triggers broad skill/connector/repository/history enumeration",
+      "required_behavior": "Read exact known targets first; enumerate broadly only when identity or a named acceptance gap is unresolved.",
+      "signals": [
+        "enumerate",
+        "list resources",
+        "connector surface",
+        "history scan"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-004",
+      "slug": "hot-path-bloat",
+      "scope": "skill-design",
+      "failure": "Always-loaded instructions carry cold detail and increase context/latency",
+      "required_behavior": "Keep SKILL.md compact and push cold provider/QA/benchmark/troubleshooting detail into conditional references.",
+      "signals": [
+        "entrypoint",
+        "hot path",
+        "context",
+        "bloat"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-005",
+      "slug": "unchanged-state-reread",
+      "scope": "state-reuse",
+      "failure": "Equivalent reads/searches/discovery repeat without invalidation",
+      "required_behavior": "Single-flight and reuse versioned evidence until a real invalidator exists.",
+      "signals": [
+        "repeated read",
+        "rediscovery",
+        "same version",
+        "single-flight"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-006",
+      "slug": "implementation-avoidance",
+      "scope": "implementation",
+      "failure": "Read-only investigation continues after root cause and edit set are actionable",
+      "required_behavior": "Apply implementation crossing/read-only circuit breaker, mutate, targeted-test, or checkpoint.",
+      "signals": [
+        "read-only",
+        "root cause known",
+        "implementation crossing",
+        "narration"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-007",
+      "slug": "same-family-search-loop",
+      "scope": "research",
+      "failure": "Multiple equivalent queries add no new material fact",
+      "required_behavior": "After two no-new-fact searches, change source/strategy or act on existing evidence.",
+      "signals": [
+        "search again",
+        "same-family",
+        "no new fact",
+        "query rewrite"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-008",
+      "slug": "unchanged-status-polling",
+      "scope": "waiting",
+      "failure": "Same job/run/state is observed repeatedly without transition",
+      "required_behavior": "After two unchanged observations, stop busy-waiting; use exact identity, milestones, and independent work.",
+      "signals": [
+        "poll",
+        "unchanged status",
+        "busy-wait",
+        "run id"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-009",
+      "slug": "ci-rediscovery",
+      "scope": "ci",
+      "failure": "Broad workflow/run discovery repeats after exact run identity is known",
+      "required_behavior": "Query the exact run/job ID; rediscover only when evidence proves a replacement run.",
+      "signals": [
+        "CI",
+        "workflow runs",
+        "run id",
+        "rediscovery"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-010",
+      "slug": "unchanged-retry",
+      "scope": "recovery",
+      "failure": "A failed operation is retried on the same route/payload with no invalidator",
+      "required_behavior": "Retry only after route/payload/pressure/auth/provider state changes or a real retry window.",
+      "signals": [
+        "retry",
+        "same failure",
+        "same route",
+        "invalidator"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-011",
+      "slug": "rate-limit-hammer",
+      "scope": "recovery",
+      "failure": "Provider is retried before Retry-After/backoff expires",
+      "required_behavior": "Honor provider backoff and advance unrelated work during the wait.",
+      "signals": [
+        "429",
+        "rate limit",
+        "Retry-After",
+        "backoff"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-012",
+      "slug": "unbounded-wait-budget",
+      "scope": "waiting",
+      "failure": "Network/subprocess calls or retry budgets can hold an interactive run for minutes",
+      "required_behavior": "Use finite timeouts, small retry ceilings, resumable state, and exact recovery identity.",
+      "signals": [
+        "timeout",
+        "socket",
+        "subprocess",
+        "retry ceiling"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-013",
+      "slug": "repeated-full-validation",
+      "scope": "verification",
+      "failure": "Broad validation reruns on unchanged state",
+      "required_behavior": "Use targeted checks during iteration and broad suites at convergence or after material state change.",
+      "signals": [
+        "full suite",
+        "validation",
+        "unchanged state",
+        "reassurance"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-014",
+      "slug": "status-ceremony-before-build",
+      "scope": "closeout",
+      "failure": "Status/handoff/report work displaces creation of a current runnable artifact",
+      "required_behavior": "Protect build-first: produce/retain the usable artifact before concise closeout ceremony.",
+      "signals": [
+        "build-first",
+        "status",
+        "handoff",
+        "runnable artifact"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-015",
+      "slug": "full-gate-stack-every-edit",
+      "scope": "verification",
+      "failure": "Static/server/client/render/package gates rerun after each micro-edit",
+      "required_behavior": "Run the smallest disconfirming gate during iteration, then the full release gate at convergence.",
+      "signals": [
+        "gate stack",
+        "every edit",
+        "targeted test",
+        "convergence"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-016",
+      "slug": "unchanged-rerender",
+      "scope": "visual-qa",
+      "failure": "Unchanged visual states are rendered repeatedly",
+      "required_behavior": "Reuse deterministic render evidence/config and render only changed/risky/final required states.",
+      "signals": [
+        "rerender",
+        "visual QA",
+        "unchanged",
+        "frames"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-017",
+      "slug": "source-reenumeration-after-subskill",
+      "scope": "cross-skill",
+      "failure": "Returning from a file-format/helper skill triggers a full canonical-source rescan",
+      "required_behavior": "Reuse source IDs/hashes and process only changed sources, then resume parent exact next action.",
+      "signals": [
+        "spreadsheet",
+        "docx",
+        "pdf",
+        "source re-enumeration"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-018",
+      "slug": "history-reread-loop",
+      "scope": "memory",
+      "failure": "Repair/history knowledge is reread in full after each iteration",
+      "required_behavior": "Do one targeted lookup keyed to the current signature/version and reuse it until invalidated.",
+      "signals": [
+        "history",
+        "repair brain",
+        "full reread",
+        "signature"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-019",
+      "slug": "freshness-overpoll",
+      "scope": "research",
+      "failure": "Market/pipeline/current-state sources refresh repeatedly without a freshness need",
+      "required_behavior": "Reuse a fresh sourced snapshot; refresh the exact target only before the action that needs freshness.",
+      "signals": [
+        "market",
+        "pipeline",
+        "fresh snapshot",
+        "poll"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-020",
+      "slug": "duplicate-mutation",
+      "scope": "mutation",
+      "failure": "Send/apply/delete/publish/write actions are duplicated or fragmented speculatively",
+      "required_behavior": "Never speculative-duplicate mutations; coalesce coherent writes and record authoritative write responses.",
+      "signals": [
+        "duplicate mutation",
+        "send twice",
+        "fragmented writes",
+        "write response"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-021",
+      "slug": "persistence-ceremony",
+      "scope": "persistence",
+      "failure": "Unchanged bytes/state are re-uploaded, relisted, or reverified repeatedly",
+      "required_behavior": "Batch changed artifacts at coherent checkpoints, reuse remote IDs, and verify once per changed state.",
+      "signals": [
+        "Drive",
+        "GitHub",
+        "re-upload",
+        "unchanged bytes"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-022",
+      "slug": "no-checkpoint-before-long-gate",
+      "scope": "continuity",
+      "failure": "Useful progress remains only in ephemeral state during a long CI/native/package gate",
+      "required_behavior": "Checkpoint coherent proven state before the long gate and preserve exact recovery identity.",
+      "signals": [
+        "checkpoint",
+        "long gate",
+        "ephemeral",
+        "CI"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-023",
+      "slug": "resource-contention",
+      "scope": "scheduling",
+      "failure": "Heavyweight jobs are overlapped on the same constrained runner/cache",
+      "required_behavior": "Avoid competing heavy gates; overlap them with non-heavy independent work instead.",
+      "signals": [
+        "Gradle",
+        "Minecraft",
+        "runner",
+        "contention"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-024",
+      "slug": "barrier-wave-blocking",
+      "scope": "scheduling",
+      "failure": "A slow low-priority sibling blocks a fast gateway in a barriered wave",
+      "required_behavior": "Split waves so the gateway can unlock the downstream critical path first.",
+      "signals": [
+        "barrier",
+        "wave",
+        "gateway",
+        "slow sibling"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-025",
+      "slug": "truncation-restart",
+      "scope": "recovery",
+      "failure": "Partial/truncated results cause the whole expensive operation to restart",
+      "required_behavior": "Treat truncation as partial success and continue from returned cursor/range/resource boundary.",
+      "signals": [
+        "truncation",
+        "cursor",
+        "partial success",
+        "restart"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-026",
+      "slug": "reask-resolved-info",
+      "scope": "interaction",
+      "failure": "User is asked again for information already available",
+      "required_behavior": "Reuse conversation/connector/tool/standing-rule state; ask only for genuinely blocking user-only choices.",
+      "signals": [
+        "clarifying question",
+        "already known",
+        "user-only",
+        "resolved"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-027",
+      "slug": "wrong-target-rework",
+      "scope": "continuity",
+      "failure": "Work is performed on a stale/wrong repository/file/build and must be repeated",
+      "required_behavior": "Resolve canonical identity once, preserve it, and prove the runtime loaded the new artifact.",
+      "signals": [
+        "wrong target",
+        "stale build",
+        "canonical",
+        "rework"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-028",
+      "slug": "tool-recovery-loop",
+      "scope": "environment",
+      "failure": "Missing tooling either stops the task prematurely or is reinstalled/reprobed repeatedly",
+      "required_behavior": "Recover required tooling once on the critical path, prove it, and reuse the recovered environment state.",
+      "signals": [
+        "missing tool",
+        "install loop",
+        "toolchain",
+        "re-probe"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-029",
+      "slug": "narration-nonprogress",
+      "scope": "progress",
+      "failure": "Multiple waves only restate plans/status without changing evidence or state",
+      "required_behavior": "Treat narration as non-progress; after two dead waves force a strategy change and real state transition.",
+      "signals": [
+        "narration",
+        "status update",
+        "no progress",
+        "strategy change"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-030",
+      "slug": "micro-checkpoint-ceremony",
+      "scope": "persistence",
+      "failure": "Status/handoff/catalog artifacts are rewritten after every micro-edit",
+      "required_behavior": "Checkpoint meaningful coherent state and write concise deltas after useful progress.",
+      "signals": [
+        "handoff",
+        "catalog",
+        "micro-edit",
+        "ceremony"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-031",
+      "slug": "research-restart",
+      "scope": "research",
+      "failure": "A resumed task repeats the same broad ecosystem survey instead of advancing unresolved coverage",
+      "required_behavior": "Maintain a coverage ledger and search only frontier gaps/stronger sources/deep candidates.",
+      "signals": [
+        "broad research",
+        "coverage ledger",
+        "frontier",
+        "restart"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-032",
+      "slug": "resume-loses-next-action",
+      "scope": "continuity",
+      "failure": "Compaction/resume/handoff loses the exact next action and triggers rediscovery",
+      "required_behavior": "Persist a compact watermark/capsule before interruption and resume from it with delta-only retrieval.",
+      "signals": [
+        "compaction",
+        "resume",
+        "handoff",
+        "watermark"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-033",
+      "slug": "hostage-operation",
+      "scope": "progress",
+      "failure": "One slow connector/process/job holds the entire workflow hostage",
+      "required_behavior": "Give the wait a finite interactive lease, preserve exact identity, checkpoint coherent progress, and advance every independent acceptance item after lease expiry.",
+      "signals": [
+        "hostage wait",
+        "slow connector",
+        "blocked workflow",
+        "wait lease"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-034",
+      "slug": "wallclock-without-progress",
+      "scope": "progress",
+      "failure": "Elapsed wall-clock time grows while evidence, mutation, checkpoint, acceptance, and blocker state remain unchanged",
+      "required_behavior": "Judge health by progress signatures and meaningful milestones; after two no-progress waves change strategy instead of merely waiting longer.",
+      "signals": [
+        "wall clock",
+        "no progress",
+        "dead wave",
+        "meaningful milestone"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-035",
+      "slug": "known-action-delay",
+      "scope": "implementation",
+      "failure": "Canonical target, root cause, and safe edit are known but the workflow continues reading or explaining",
+      "required_behavior": "Apply the known-action mandate: within the next wave mutate, targeted-test, checkpoint, or identify the exact blocker preventing mutation.",
+      "signals": [
+        "known fix",
+        "safe edit",
+        "still reading",
+        "known-action mandate"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-036",
+      "slug": "missing-recovery-capsule",
+      "scope": "continuity",
+      "failure": "Compaction, long wait, risky handoff, or interruption occurs without a compact resumable execution state",
+      "required_behavior": "Persist acceptance/completion, canonical IDs/hashes, run IDs, checkpoint/mutation/test, blocker, no-repeat history, and exact next action before the risky boundary.",
+      "signals": [
+        "recovery capsule",
+        "compaction",
+        "long wait",
+        "exact next action"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-037",
+      "slug": "expired-lease-polling",
+      "scope": "polling",
+      "failure": "An interactive wait lease expires but orchestration keeps polling the unchanged operation",
+      "required_behavior": "Release the hostage wait, preserve identity, advance independent work, and resume observation only after a real invalidator or meaningful milestone window.",
+      "signals": [
+        "lease expired",
+        "unchanged poll",
+        "preserve identity",
+        "resume observation"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-038",
+      "slug": "recovered-stall-not-fingerprinted",
+      "scope": "learning",
+      "failure": "A real stall is recovered but its causal signature and successful recovery are not captured",
+      "required_behavior": "Record a compact stall fingerprint and promote only proven recurring/generalizable causes into the embedded Stall Brain and machine audits.",
+      "signals": [
+        "stall fingerprint",
+        "recovery",
+        "causal lesson",
+        "promotion"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-039",
+      "slug": "memory-only-enforcement",
+      "scope": "continuity",
+      "failure": "Anti-stall behavior relies only on hidden/global/user memory that may not load or may be unavailable",
+      "required_behavior": "Keep Zero Loss itself as the enforceable source of truth; use persistent memory/custom instructions only as redundant reinforcement, never as the sole control plane.",
+      "signals": [
+        "global memory",
+        "hidden memory",
+        "redundant reinforcement",
+        "source of truth"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "SB-040",
+      "slug": "watchdog-ceremony",
+      "scope": "watchdog",
+      "failure": "Watchdog bookkeeping creates extra calls/files/status churn on ordinary short tasks",
+      "required_behavior": "Apply watchdog behavior silently; run the watchdog script only for long, interruption-prone, or already-stalled work where deterministic state tracking materially helps.",
+      "signals": [
+        "watchdog overhead",
+        "bookkeeping",
+        "per-wave ceremony",
+        "short task"
+      ],
+      "status": "active"
+    }
+  ]
+}

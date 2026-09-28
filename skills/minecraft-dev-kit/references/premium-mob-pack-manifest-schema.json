@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openai.local/minecraft-dev-kit/premium-mob-pack-manifest.schema.json",
+  "title": "Minecraft Dev Kit Premium Mob Pack Manifest",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "pack", "art_direction", "entities", "controls", "qa"],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "pack": {
+      "type": "object",
+      "required": ["id", "name", "profile", "minecraft", "loader", "version"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9_.-]+$"},
+        "name": {"type": "string", "minLength": 1},
+        "profile": {"enum": ["boss-mega-2026", "mob-mega-2026", "supreme-boss-2026", "custom"]},
+        "minecraft": {"type": "string", "minLength": 1},
+        "loader": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1}
+      }
+    },
+    "art_direction": {
+      "type": "object",
+      "required": ["fantasy", "silhouette_language", "palette_rules", "material_language", "texture_density", "scale_ladder", "variant_rule"],
+      "properties": {
+        "fantasy": {"type": "string", "minLength": 1},
+        "silhouette_language": {"type": "string", "minLength": 1},
+        "palette_rules": {"type": "string", "minLength": 1},
+        "material_language": {"type": "string", "minLength": 1},
+        "texture_density": {"type": "string", "minLength": 1},
+        "scale_ladder": {"type": "string", "minLength": 1},
+        "variant_rule": {"type": "string", "minLength": 1}
+      }
+    },
+    "entities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/entity"}
+    },
+    "controls": {
+      "type": "object",
+      "required": ["tuning", "documentation"],
+      "properties": {
+        "tuning": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "documentation": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    },
+    "qa": {
+      "type": "object",
+      "required": ["native_client", "dedicated_server", "stress", "visual_showcase"],
+      "properties": {
+        "native_client": {"const": true},
+        "dedicated_server": {"const": true},
+        "visual_showcase": {"const": true},
+        "stress": {
+          "type": "object",
+          "required": ["simultaneous_entities"],
+          "properties": {"simultaneous_entities": {"type": "integer", "minimum": 1}}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "variant": {
+      "oneOf": [
+        {"type": "string", "minLength": 1},
+        {
+          "type": "object",
+          "required": ["id", "changes"],
+          "properties": {
+            "id": {"type": "string", "minLength": 1},
+            "changes": {
+              "type": "array",
+              "minItems": 2,
+              "uniqueItems": true,
+              "items": {"enum": ["silhouette", "attachments", "palette", "materials", "animation_personality", "combat", "audio", "vfx", "environmental_role"]}
+            }
+          }
+        }
+      ]
+    },
+    "attack": {
+      "type": "object",
+      "required": ["id", "animation", "windup", "active", "recovery", "hitbox", "cooldown", "vfx", "sfx", "telegraph", "interrupt_policy", "impact_marker", "vfx_marker", "sfx_marker"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "animation": {"type": "string", "minLength": 1},
+        "windup": {"type": "number", "exclusiveMinimum": 0},
+        "active": {"type": "number", "exclusiveMinimum": 0},
+        "recovery": {"type": "number", "exclusiveMinimum": 0},
+        "cooldown": {"type": "number", "minimum": 0},
+        "hitbox": {},
+        "vfx": {"type": "string", "minLength": 1},
+        "sfx": {"type": "string", "minLength": 1},
+        "telegraph": {"type": "string", "minLength": 1},
+        "interrupt_policy": {"type": "string", "minLength": 1},
+        "impact_marker": {"type": "string", "minLength": 1},
+        "vfx_marker": {"type": "string", "minLength": 1},
+        "sfx_marker": {"type": "string", "minLength": 1}
+      }
+    },
+    "entity": {
+      "type": "object",
+      "required": ["id", "name", "kind", "role", "archetype", "model_file", "animations", "variants", "attacks", "vfx", "sfx", "ai_features", "performance"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9_.-]+$"},
+        "name": {"type": "string", "minLength": 1},
+        "kind": {"type": "string", "minLength": 1},
+        "role": {"type": "string", "minLength": 1},
+        "archetype": {"type": "string", "minLength": 1},
+        "model_file": {"type": "string", "minLength": 1},
+        "creature_spec": {"type": "string", "minLength": 1},
+        "encounter_file": {"type": "string", "minLength": 1},
+        "animations": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "variants": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/variant"}},
+        "attacks": {"type": "array", "items": {"$ref": "#/$defs/attack"}},
+        "vfx": {"type": "array", "items": {"type": "string"}},
+        "sfx": {"type": "array", "items": {"type": "string"}},
+        "ai_features": {"type": "array", "items": {"type": "string"}},
+        "performance": {
+          "type": "object",
+          "required": ["bone_budget", "cube_budget", "max_vfx_concurrency"],
+          "properties": {
+            "bone_budget": {"type": "integer", "minimum": 1},
+            "cube_budget": {"type": "integer", "minimum": 1},
+            "max_vfx_concurrency": {"type": "integer", "minimum": 1}
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"kind": {"enum": ["boss", "miniboss"]}}, "required": ["kind"]},
+          "then": {"required": ["encounter_file"]}
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+# Optional Codex settings. Verify keys against the official documentation for the installed version.
+# A larger project-document budget may reduce truncation but does not replace a compact root AGENTS.md.
+project_doc_max_bytes = 65536
+
+# Configure the installed Codex version's compaction prompt setting to use:
+# .agents/compact-prompt.md
+# Configure lifecycle hooks only if the installed version supports them; see ../hooks/README.md.

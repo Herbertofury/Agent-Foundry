@@ -1,0 +1,1107 @@
+{
+  "schema_version": 1,
+  "project_id": "feature-foundry",
+  "revision": 65,
+  "updated_at_utc": "2026-08-04T12:42:09.137522+00:00",
+  "northpoints": [
+    {
+      "id": "np-living-world-ui",
+      "title": "The interface is a living world",
+      "statement": "Make every workspace feel alive, responsive, and inhabited while preserving professional usability, speed, accessibility, and user control.",
+      "priority": "foundational",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "verification": [
+        "Every major workspace has theme-authored ambient life and event responses",
+        "Effects remain subtle around focused work and can be reduced or disabled",
+        "Performance Mode returns CPU/GPU activity to the themed normal-UI baseline"
+      ]
+    }
+  ],
+  "goals": [
+    {
+      "id": "goal-theme-sovereignty",
+      "title": "Every theme is its own authored world",
+      "statement": "Each theme must have a distinct asset ecology, motion grammar, interaction language, lighting behavior, sounds, mascot behavior, and environmental reactions rather than recoloring or recycling one world.",
+      "priority": "foundational",
+      "status": "active",
+      "verification": [
+        "Theme-to-theme asset reuse requires an explicit shared-universe rationale",
+        "A grayscale and silhouette comparison still distinguishes each theme",
+        "Each theme passes an independent reality matrix"
+      ],
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "goal-theme-native-interaction-ecology",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Every interaction belongs to the active world",
+      "statement": "Every direct manipulation and ambient contact must feel authored by the active theme. Buttons, cards, panels, objects, mascots, lighting, sound, particles, and nearby scenery participate in one coherent material-aware reaction ecology rather than isolated generic animations.",
+      "priority": "foundational",
+      "verification": [
+        "Frutiger Aero, liminal, and graffiti/Jet Set-inspired button presses remain recognizably different without relying on color",
+        "Dragging and placing the same card produces a distinct theme-native material and spatial response in every theme",
+        "No theme reuses a generic press, drag, placement, collision, or release effect without an explicit shared-world rationale"
+      ]
+    },
+    {
+      "id": "goal-world-native-object-intelligence",
+      "title": "Imported media becomes intelligent world objects",
+      "statement": "The auto object maker must turn images, animated stickers, and blend files into immediately usable world objects with inferred structure, materials, pivots, collisions, interaction affordances, animation opportunities, and editable metadata rather than leaving them as dumb flat assets.",
+      "priority": "foundational",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "verification": [
+        "A single still image can become a clean editable object with cutout, materials, pivot, collision, and interaction handles",
+        "An animated GIF or sticker import preserves looping behavior and can be used as a live sticker/object without flattening away the motion",
+        "A blend file import preserves hierarchy, named parts, materials, anchors, and sensible interaction points for the authored object"
+      ]
+    },
+    {
+      "id": "goal-continuous-causal-world-model",
+      "title": "The whole interface behaves as one continuous causal world",
+      "statement": "Every meaningful user or world event should produce a coherent, bounded and theme-native chain of anticipation, contact, follow-through, material recovery and environmental memory across only the relevant nearby elements.",
+      "priority": "foundational",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "verification": [
+        "A cause-and-effect trace identifies one initiating event, every participating element and the bounded stop condition",
+        "The same semantic event has a recognizably different physical story in every theme",
+        "After the reaction, surfaces settle into a plausible residual state instead of snapping to a generic reset"
+      ]
+    },
+    {
+      "id": "goal-alive-on-any-hardware",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "The complete living world scales from potato to cinematic hardware",
+      "statement": "Preserve every feature, card, object, data set, authoring tool, workflow and task-result quality on all supported hardware while scaling only visual, audio, physics, simulation and transition fidelity through measured, reversible capability tiers.",
+      "priority": "foundational",
+      "verification": [
+        "Efficient mode loads the same complete large project and all tools as Ultra, with theme-native low-cost reactions and no viewport caps, hidden cards, data loss or workflow removal."
+      ]
+    },
+    {
+      "id": "goal-authoring-capability-continuously-expands",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Authoring capability continuously expands with the ecology",
+      "statement": "Because Feature Foundry exists to create and improve features, every new living-world capability must ship with professional authoring, inspection, profiling, testing, versioning, export and extension tools rather than only runtime presets.",
+      "priority": "foundational",
+      "verification": [
+        "Each ecology system maps to editable tools, deterministic previews, undo/version history, tier simulation, runtime validation and reusable export."
+      ]
+    }
+  ],
+  "feature_pillars": [
+    {
+      "id": "pillar-semantic-reactions",
+      "title": "Semantic environmental reactions",
+      "statement": "Product events create restrained theme-specific environmental feedback: tab changes may ripple grass or architecture; additions may cast a faint positive-energy response; deletions may cast a faint warning-energy response.",
+      "status": "active"
+    },
+    {
+      "id": "pillar-ambient-physics",
+      "title": "Bounded ambient physics",
+      "statement": "Loose props, balls, plants, cloth, particles, and architecture respond gently to navigation, music, nearby motion, and interaction without blocking controls or wasting resources.",
+      "status": "active"
+    },
+    {
+      "id": "pillar-mascot-agency",
+      "title": "Mascots inhabit and affect the environment",
+      "statement": "Mascots navigate authored safe lanes, use objects, disturb responsive scenery, leave temporary traces, and react to workspace events without becoming distracting or destructive.",
+      "status": "active"
+    },
+    {
+      "id": "pillar-theme-native-input-language",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Theme-native input language",
+      "statement": "Clicks, presses, holds, drags, drops, reorders, resizes, selections, confirmations, cancellations, and destructive actions each use the active world's own tactile, visual, sonic, and physical grammar. Frutiger Aero may compress like a water-gel toy and ripple; liminal worlds may press with soft uncanny depth and restrained eerie timing; graffiti worlds may snap, spray, stamp, peel, scribble, or sticker-lock into place."
+    },
+    {
+      "id": "pillar-cross-element-causality",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Cross-element causality",
+      "statement": "A meaningful interaction must propagate a bounded, coherent reaction beyond the touched element when the world logic supports it: nearby cards, surfaces, props, lighting, sound, particles, mascots, and scenery acknowledge the same event through theme-native cause and effect."
+    },
+    {
+      "id": "pillar-material-aware-direct-manipulation",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Material-aware direct manipulation",
+      "statement": "Card and object motion responds to apparent material, scale, mass, velocity, direction, surface, depth, and surrounding medium. Moving a large card across a Frutiger Aero surface displaces more water and creates broader ripples than moving a small card; liminal motion can carry controlled spatial unease; graffiti motion can drag ink, paper, sticker, or spray energy."
+    },
+    {
+      "id": "pillar-interruptible-world-physics",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Interruptible world physics",
+      "statement": "UI elements and world objects may collide, deform, absorb, swallow, rebound, eject, peel, splash, smear, or transfer energy according to the theme, but every reaction remains live and reversible. The user can grab, yank, redirect, cancel, or continue the object at any point without waiting for an animation to finish."
+    },
+    {
+      "id": "pillar-multimodal-object-maker",
+      "title": "Multimodal auto object maker",
+      "statement": "Object creation from media must infer silhouettes, layered regions, likely depth, materials, emissive areas, semantic parts, attachment points, mass hints, collision envelopes, interaction verbs, and sensible edit controls from a single image, sequence, or asset package.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-blend-aware-ingestion",
+      "title": "Blend-aware scene and object ingestion",
+      "statement": "When a user imports a blend file, Feature Foundry should preserve object hierarchy, transforms, materials, cameras, empties, armatures, animations, and useful named parts wherever possible, then expose them as editable scene furniture, toys, props, or mascots rather than as an opaque blob.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-gif-sticker-pipeline",
+      "title": "Animated sticker and GIF pipeline",
+      "statement": "Animated media from GIF or sticker hubs should import as looping stickers or lightweight world objects with retained timing, transparency where available, interaction anchors, and optional conversion into physics-aware props or ambient decals.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-federated-resource-hubs",
+      "title": "Federated resource hubs for Asset Vault",
+      "statement": "Asset Vault should not depend on one source. Build intelligent collection, preview, save, and import flows across image and inspiration hubs such as Pinterest, X/Twitter, ArtStation, DeviantArt, Tumblr, Bluesky, Pixiv, Behance, Dribbble, Instagram, Reddit image communities, Imgur, plus animated media hubs such as Giphy and Tenor, with room for more site adapters over time.",
+      "status": "active",
+      "source": "assistant-curated-known-platforms"
+    },
+    {
+      "id": "pillar-theme-reactive-imports",
+      "title": "Theme-reactive imported objects",
+      "statement": "The object maker should propose and optionally auto-attach theme-native behavior to imported assets. A water-like object in Frutiger Aero can inherit buoyancy and ripple responses; a sticker in a graffiti world can inherit peel, slap, and spray reactions; a liminal prop can gain soft uncanny damping and restrained spatial presence.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-causal-field-router",
+      "title": "Causal field router",
+      "statement": "Route semantic events, pointer trajectories, collisions, audio energy and nearby-world state through one bounded spatial/semantic influence field so related UI and scenery respond coherently without broadcasting globally.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-material-memory-and-recovery",
+      "title": "Material memory and recovery",
+      "statement": "Materials remember recent compression, wetness, heat, deformation, paint, dust, sticker adhesion, impact and absorption long enough to recover naturally or retain authored residue.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-attention-governor",
+      "title": "Attention governor",
+      "statement": "Budget salience, motion, sound, brightness, particle count and reaction depth so the world remains unmistakably alive while the active task stays visually dominant.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-anticipation-contact-followthrough",
+      "title": "Anticipation, contact and follow-through",
+      "statement": "Author micro-anticipation, contact response, momentum transfer, follow-through and settling rather than spawning an effect only after the interaction is complete.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-cross-modal-coherence",
+      "title": "Cross-modal coherence",
+      "statement": "Coordinate motion, deformation, lighting, shadow, particles and sound from one physical event model so feedback never looks or sounds disconnected.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-rare-authored-moments",
+      "title": "Rare authored moments",
+      "statement": "Allow low-frequency context-aware moments and mascot discoveries that feel surprising and alive without becoming random noise or repeating on a short loop.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-object-behavior-genome",
+      "title": "Object behavior genome",
+      "statement": "Give each object a reusable behavior genome describing materials, affordances, emotional tone, theme overrides, mascot relationships, damage/recovery states, attention cost and permitted reaction chains.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-representation-ladder",
+      "title": "Truthful representation ladder",
+      "statement": "Choose the simplest representation that preserves the source truth: sticker, animated sticker, layered parallax, billboard, mesh card, reconstructed mesh or native 3D. Never force every image into fake full 3D.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-reversible-derivation-graph",
+      "title": "Reversible derivation graph",
+      "statement": "Preserve every segmentation, depth, mesh, material, rig, collider, animation, behavior and optimization step as an inspectable branch that can be edited, replaced or regenerated without destroying the original.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-affordance-graph",
+      "title": "Part and affordance graph",
+      "statement": "Infer editable parts, joints, seats, handles, switches, screens, containers, surfaces, sockets, mascot uses and safe interaction zones with visible uncertainty.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-confidence-and-multiview",
+      "title": "Confidence and multi-view refinement",
+      "statement": "Expose uncertainty for masks, depth, backside geometry, scale, materials and affordances; request extra views or user corrections when a single image cannot support a truthful result.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-isolated-blend-processing",
+      "title": "Isolated Blender processing",
+      "statement": "Open untrusted blend files only in a sandboxed headless Blender worker with auto-execution disabled, strict file/process/time/memory/output boundaries and truthful logs.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-progressive-quality-lanes",
+      "title": "Progressive quality lanes",
+      "statement": "Offer instant preview, interactive draft and explicit high-fidelity lanes so users can work immediately while better results finish in cancellable background jobs.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-runtime-optimization",
+      "title": "Runtime-ready derivation",
+      "statement": "Generate GLB, optimized geometry, GPU textures, LODs, collision proxies, thumbnails, silhouettes, hit masks and shadow proxies while preserving names, hierarchy, extras, rigs, materials and lineage.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "pillar-intent-aware-anticipation",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Intent-aware anticipation",
+      "statement": "Use short-lived local trajectory, dwell, pressure, tilt, contact geometry, drag context, keyboard direction and controller signals to prepare likely targets and effects without committing state, moving the pointer or changing hit targets.",
+      "priority": "foundational",
+      "verification": [
+        "Contradictory input cancels every speculative cue within one frame and no anticipation changes selection, data or focus."
+      ]
+    },
+    {
+      "id": "pillar-ecology-director",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Authoritative Ecology Director",
+      "statement": "Coordinate semantic events, world modes, causal fields, attention budgets, cross-modal timing, relationship propagation, deterministic variation and stable settling through one inspectable director instead of independent effect systems.",
+      "priority": "foundational",
+      "verification": [
+        "Every complex reaction exposes one source event, participating entities, budgets, deterministic seed and bounded stop condition."
+      ]
+    },
+    {
+      "id": "pillar-transition-depth-ladder",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Transition depth ladder from ambient echo to full world traversal",
+      "statement": "Provide authored levels 0 through 5: instant/focus, ambient echo, local material journey, shared-element continuity, workspace recomposition and full world traversal, configurable globally, per theme, per action and per workspace.",
+      "priority": "foundational",
+      "verification": [
+        "The same navigation works at all six levels with unchanged destination state, focus, selection and data; only presentation depth changes."
+      ]
+    },
+    {
+      "id": "pillar-spatial-micro-audio",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Theme-native spatial micro-audio",
+      "statement": "Create optional material-aware, position-aware, distance-aware and occlusion-aware interaction audio with procedural or multi-sample variation, priority budgets, ambience ducking and accessible non-audio equivalents.",
+      "priority": "high",
+      "verification": [
+        "Mass, velocity, material and position audibly affect the same interaction while mute and reduced-sensory modes retain complete visible meaning."
+      ]
+    },
+    {
+      "id": "pillar-relationship-social-physics",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Editable object relationships and social physics",
+      "statement": "Let objects, cards, mascots and environments form authored attracts, repels, supports, absorbs, transfers, illuminates, wets, repairs, awakens, follows and similar relationships with ranges, conditions, priorities and stop rules.",
+      "priority": "high",
+      "verification": [
+        "Dense relationship tests fire only eligible bounded edges and never take a grabbed object away from the user."
+      ]
+    },
+    {
+      "id": "pillar-theme-native-ai-presence",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Theme-native AI presence",
+      "statement": "Let assistance inhabit the active world through theme-authored environmental cues, mascots, signage, light, water, stickers or terminals while preserving explicit text, confidence, diffs, commit state and undo.",
+      "priority": "high",
+      "verification": [
+        "Every AI environmental cue has an accessible explicit equivalent and suggestions remain visibly distinct from committed actions."
+      ]
+    },
+    {
+      "id": "pillar-environmental-data-embodiment",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Environmental data embodiment",
+      "statement": "Map real product state into authored environmental behavior such as queues, health, completion, errors, storage pressure and background work without replacing exact labels, numbers, warnings or controls.",
+      "priority": "high",
+      "verification": [
+        "Every metaphor traces to a real state field and never exaggerates, invents or hides the underlying status."
+      ]
+    },
+    {
+      "id": "pillar-living-time-microclimates",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Living time and workspace microclimates",
+      "statement": "Give each workspace authorable time, lighting, weather, airflow, humidity, water, dust, fog, temperature, activity climate, seasonal and milestone states with deterministic seeds and quiet idle settling.",
+      "priority": "high",
+      "verification": [
+        "Seeded timeline replays produce identical climate behavior and every climate has accessible and low-cost equivalents."
+      ]
+    },
+    {
+      "id": "pillar-causal-undo-replay",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Physical undo, causal replay and inspection",
+      "statement": "Record semantic commands and propagated world reactions as reversible causal histories so logical undo is immediate and the visible world can reverse, scrub, replay and explain its behavior.",
+      "priority": "foundational",
+      "verification": [
+        "Undo during any reaction restores functional state immediately and the causal DAG, material states, audio, haptics and performance costs remain inspectable."
+      ]
+    },
+    {
+      "id": "pillar-ecology-authoring-studio",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Professional Ecology Authoring Studio",
+      "statement": "Provide transition choreography, gesture recording, record-to-rule synthesis, material labs, causal graphs, relationship editing, spatial audio, world memory, AI presence, device/tier simulation, causal debugging, optimization compilation, version control and extension SDKs.",
+      "priority": "foundational",
+      "verification": [
+        "A recorded interaction can become an editable graph, be tested across themes/devices/tiers, packaged and proven in the production runtime."
+      ]
+    },
+    {
+      "id": "pillar-cross-device-embodiment",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Cross-device embodiment",
+      "statement": "Use mouse, touch, multi-touch, pen pressure/tilt/twist, keyboard, controller, optional haptics, opt-in orientation and future spatial input while keeping every core action available through device-independent equivalents.",
+      "priority": "high",
+      "verification": [
+        "Each core workflow completes with mouse, touch, pen, keyboard and controller simulations without device-exclusive functionality."
+      ]
+    },
+    {
+      "id": "pillar-adaptive-capability-ladder",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Measured adaptive capability ladder",
+      "statement": "Offer Auto, Efficient, Balanced, High, Ultra and Cinematic Lab behavior using measured frame time, interaction latency, long frames and sustained headroom, with visible reasons, hysteresis, pinning and per-system overrides.",
+      "priority": "foundational",
+      "verification": [
+        "Injected performance pressure lowers only the responsible effect dimension, preserves semantics and later restores quality after stable headroom without oscillation."
+      ]
+    },
+    {
+      "id": "pillar-age-and-usage-patina",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Separate chronological and interaction patina",
+      "statement": "Let cards and objects show reversible theme-native age from domain timestamps and optional polish or handling wear from usage, while keeping those channels independent, inspectable and user-controlled.",
+      "priority": "high",
+      "verification": [
+        "Age-only, usage-only, combined and disabled modes preserve factual status, readability, pristine reset and source provenance."
+      ]
+    }
+  ],
+  "principles": [
+    {
+      "id": "principle-no-cosmetic-clones",
+      "title": "No palette-swap themes",
+      "statement": "Do not reuse the same assets, layout motifs, motion verbs, or effects across themes merely with different colors.",
+      "status": "active"
+    },
+    {
+      "id": "principle-event-meaning",
+      "title": "Motion communicates meaning",
+      "statement": "Environmental reactions must correspond to real product state and remain truthful, restrained, and reversible.",
+      "status": "active"
+    },
+    {
+      "id": "principle-subtle-unmistakable",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Subtle but unmistakable",
+      "statement": "Interaction feedback must stay refined and non-obstructive while remaining clearly perceptible through timing, material response, spatial propagation, sound, and secondary motion. Do not confuse subtle with barely visible or noticeable with loud and distracting."
+    },
+    {
+      "id": "principle-input-sovereignty",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "User input always wins",
+      "statement": "No flourish, absorption, transition, collision, or world reaction may capture input, delay the requested action, steal focus, block controls, or make the user wait. Direct manipulation immediately overrides simulation and preserves exact intent."
+    },
+    {
+      "id": "principle-world-common-sense",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "World-common-sense reactions",
+      "statement": "Choose reactions that feel physically and emotionally inevitable for the active theme, the involved materials, and the current event. Avoid random spectacle, canned effects, or reactions that look impressive but contradict the world."
+    },
+    {
+      "id": "principle-interaction-distinctness",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Interaction identity survives without color",
+      "statement": "A theme's press, drag, placement, collision, absorption, and release language must be distinguishable by shape, timing, deformation, sound, particles, force transfer, and environmental response, not merely by recoloring one shared animation."
+    },
+    {
+      "id": "principle-imports-become-editable-entities",
+      "title": "Imports become editable entities",
+      "statement": "Imported media should become structured, inspectable, tweakable entities with editable inference rather than locked opaque blobs.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "principle-source-diversity",
+      "title": "Source diversity over single-hub dependence",
+      "statement": "Do not let Asset Vault or the object pipeline depend on one inspiration or media hub. Preserve broad source coverage and graceful fallbacks so the creative pipeline remains resilient and rich.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "principle-explicit-inference-review",
+      "title": "Inference is visible and overridable",
+      "statement": "When the auto object maker infers cutouts, materials, pivots, collisions, tags, loops, or behavior, show the result clearly and let the user refine any inference quickly instead of hiding the decision.",
+      "status": "active",
+      "source": "assistant-synthesis"
+    },
+    {
+      "id": "principle-one-cause-visible-consequences",
+      "title": "One cause, visible consequences",
+      "statement": "Each reaction chain must be traceable to a real cause and explain why every affected element participated.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "principle-world-settles-not-resets",
+      "title": "The world settles instead of resetting",
+      "statement": "After interaction, materials and nearby objects recover or retain subtle residue according to their authored physics rather than snapping to the same initial state.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "principle-original-is-immutable",
+      "title": "Originals are immutable",
+      "statement": "Keep every downloaded or user-provided source byte-for-byte intact; all cleanup, conversion and optimization creates linked derivatives.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "principle-simplest-truthful-representation",
+      "title": "Use the simplest truthful representation",
+      "statement": "Prefer an excellent sticker or layered object over hallucinated geometry when the source does not justify full 3D.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "principle-show-uncertainty",
+      "title": "Show uncertainty instead of hiding it",
+      "statement": "Every inferred mask, depth, backside, scale, material, part, socket, collider and affordance must expose confidence and a direct correction path.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "principle-rights-travel-with-asset",
+      "title": "Rights travel with every derivative",
+      "statement": "Source URL, creator, license, attribution, provider restrictions, NoAI flags and transformation lineage remain attached through every derivative, pack and export.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "principle-speculation-never-commits",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Speculation prepares but never commits",
+      "statement": "Intent prediction may prewarm, reveal or pose the world, but confirmed input alone changes selection, state, routing, hit targets or data.",
+      "priority": "foundational",
+      "verification": [
+        "Reverse direction, change tool or press Escape during anticipation and verify no functional state changed."
+      ]
+    },
+    {
+      "id": "principle-functional-state-independent-of-transition",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Functional state is independent from transition duration",
+      "statement": "Commit navigation and command state safely so a transition can be skipped, interrupted, reversed or visually simplified without losing work or delaying control.",
+      "priority": "foundational",
+      "verification": [
+        "Cancel every transition level mid-flight and verify destination state, selection, focus, history and undo remain correct."
+      ]
+    },
+    {
+      "id": "principle-semantic-equivalence-across-tiers",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Performance tiers preserve semantic equivalence",
+      "statement": "Lower tiers use cheaper but still theme-native material, movement, lighting and audio representations; a generic fade, pulse or silent feature removal is not an acceptable fallback.",
+      "priority": "foundational",
+      "verification": [
+        "GPU-disabled and Efficient-mode comparisons remain recognizably the same themed interaction story and exact workflow result."
+      ]
+    },
+    {
+      "id": "principle-measure-not-assume-hardware",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Measure behavior instead of trusting hardware labels",
+      "statement": "Choose adaptive quality from observed frame, input, render, audio and simulation performance with hysteresis and user override rather than assuming capability from device names alone.",
+      "priority": "high",
+      "verification": [
+        "Auto mode records its measurements and reason for every tier change and remains stable under fluctuating short spikes."
+      ]
+    },
+    {
+      "id": "principle-authoring-first-for-new-capabilities",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Every capability must be authorable",
+      "statement": "A new ecology behavior is incomplete until users can create, edit, inspect, test, profile, version, share and restore it through professional authoring tools.",
+      "priority": "foundational",
+      "verification": [
+        "Each registry capability has at least one editor, inspector, test path, undo path and export representation."
+      ]
+    },
+    {
+      "id": "principle-patina-channels-remain-distinct",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Age, handling and authored memory remain distinct",
+      "statement": "Chronological patina, interaction patina and authored story memory use separate data channels, controls and provenance so one cannot masquerade as another.",
+      "priority": "high",
+      "verification": [
+        "Changing one channel never changes the values, history or rendering source of another."
+      ]
+    }
+  ],
+  "wants": [
+    {
+      "id": "want-tab-grass-wave",
+      "statement": "Grass or equivalent theme-native scenery should subtly wave when tabs change.",
+      "status": "accepted"
+    },
+    {
+      "id": "want-physics-nudge",
+      "statement": "Balls and other suitable physical props should move slightly from nearby navigation or environmental energy.",
+      "status": "accepted"
+    },
+    {
+      "id": "want-add-delete-light",
+      "statement": "Adding an item should create a faint theme-native positive light response; deleting one should create a faint warning/red response where appropriate.",
+      "status": "accepted"
+    },
+    {
+      "id": "want-frutiger-gel-button",
+      "status": "accepted",
+      "source": "explicit-user-example",
+      "statement": "In Frutiger Aero, pressing a button should feel like compressing a polished water-gel toy: soft refraction, elastic displacement, pleasant concentric ripples, tiny buoyant recovery, and restrained watery audio."
+    },
+    {
+      "id": "want-frutiger-card-water-drag",
+      "status": "accepted",
+      "source": "explicit-user-example",
+      "statement": "Dragging cards in Frutiger Aero should feel like moving a solid object across or through water, with realistic ripple width, wake, displacement, refraction, drag, and settling scaled to the card's size, speed, direction, and depth."
+    },
+    {
+      "id": "want-liminal-soft-uncanny-input",
+      "status": "accepted",
+      "source": "explicit-user-example",
+      "statement": "In liminal themes, button presses and card movement should remain extremely soft and usable while carrying controlled uncanny depth, muted spatial response, faint delayed room acknowledgment, and eerie but non-startling motion."
+    },
+    {
+      "id": "want-graffiti-input-placement",
+      "status": "accepted",
+      "source": "explicit-user-example",
+      "statement": "In graffiti or Jet Set-inspired themes, presses and placements should use authored spray, marker, stamp, sticker-peel, paper slap, ink drag, or tag-lock effects that feel fast, tactile, rebellious, and native to the world rather than decorative overlays."
+    },
+    {
+      "id": "want-placement-world-reaction",
+      "status": "accepted",
+      "source": "explicit-user-rule",
+      "statement": "Placing an item must cause a theme-native world response that reaches appropriate surrounding elements: Frutiger Aero can send displacement ripples and buoyant object reactions; graffiti worlds can produce a small spray, sticker peel, stamp, or surface acknowledgment; other themes invent their own coherent equivalent."
+    },
+    {
+      "id": "want-card-object-absorption",
+      "status": "accepted",
+      "source": "explicit-user-example",
+      "statement": "When a ball or object hits a card, the card may react according to its theme and material: a liminal card can softly swallow and later eject it, while a Frutiger Aero slime or water card can visibly absorb, deform around, slow, and gradually push it back out with high-fidelity material behavior."
+    },
+    {
+      "id": "want-live-rescue-during-absorption",
+      "status": "accepted",
+      "source": "explicit-user-example",
+      "statement": "While an object is being swallowed, absorbed, peeled, stuck, or otherwise processed by the world, the user can seize and pull it free instantly, with the material and surrounding world reacting coherently to that intervention."
+    },
+    {
+      "id": "want-single-image-object-understanding",
+      "statement": "From a single reference image, the auto object maker should intelligently remove background, isolate foreground subjects, split meaningful parts when possible, infer depth/material hints, choose pivots and collision shapes, and present the result as a usable object instead of a flat picture.",
+      "status": "accepted",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "want-blend-file-object-intake",
+      "statement": "Blend files should import as usable authored objects or scene furniture with preserved named parts, materials, transforms, animations, and anchor points that can participate in the alive-world UI.",
+      "status": "accepted",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "want-gif-stickers-as-live-assets",
+      "statement": "Popular GIF and sticker media should import into Asset Vault as live animated stickers or lightweight objects that can be placed, layered, themed, and optionally given subtle world interactions.",
+      "status": "accepted",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "want-resource-hub-expansion",
+      "statement": "Improve resource hub coverage for Asset Vault beyond Pinterest to include platforms like X/Twitter, ArtStation, DeviantArt, Tumblr, Bluesky, Pixiv, Behance, Dribbble, Imgur, Reddit image communities, and GIF-centric sources such as Giphy and Tenor.",
+      "status": "accepted",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "want-theme-native-import-suggestions",
+      "statement": "After import, the system should suggest how an asset can behave inside the current theme world, including material presets, subtle reactions, sticker/prop roles, likely mascot interactions, and optional physics behaviors.",
+      "status": "accepted",
+      "source": "assistant-synthesis"
+    },
+    {
+      "id": "want-source-hub-capability-matrix",
+      "statement": "Asset Vault should search and capture from a broad capability-tested matrix including open-license libraries, photography hubs, social platforms, portfolio sites, GIF/sticker providers and 3D marketplaces without pretending every site exposes the same API.",
+      "status": "accepted",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "want-gif-sticker-presets",
+      "statement": "GIF, animated WebP, APNG and short video imports should become editable looping stickers with preserved frame timing, alpha, crop, loop policy, interaction states and theme-reactive placement behavior.",
+      "status": "accepted",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "want-multi-view-object-refinement",
+      "statement": "Users should be able to add more images or rotate a native 3D source to correct hidden surfaces, scale and part relationships without restarting the object.",
+      "status": "accepted",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "want-transition-depth-control",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Transition intensity from grass wave to full world traversal",
+      "statement": "Let users choose anything from a small environmental acknowledgement such as grass waving to a complete theme-authored world transformation, with Auto and per-theme/action controls.",
+      "priority": "high",
+      "verification": [
+        "The transition control exposes all six levels and previews them before saving."
+      ]
+    },
+    {
+      "id": "want-age-based-card-wear",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Age-based card and object patina",
+      "statement": "Use meaningful domain age such as last played or last updated to drive reversible theme-native wear, freshness or environmental memory.",
+      "priority": "high",
+      "verification": [
+        "Cards with different source dates show authored differences while their exact dates remain visible and resettable."
+      ]
+    },
+    {
+      "id": "want-usage-polish-opt-in",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Optional handling polish from real use",
+      "statement": "When enabled, frequently moved, opened or manipulated cards and objects may develop subtle polished edges, softened surfaces or signs of care independently from chronological age.",
+      "priority": "high",
+      "verification": [
+        "Usage history can be previewed, reset, exported or disabled without affecting age patina."
+      ]
+    },
+    {
+      "id": "want-potato-to-cinematic-settings",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Game-style Efficient-to-Cinematic settings",
+      "statement": "Provide understandable game-like graphics and simulation settings plus Auto so the most advanced world possible runs on each machine while retaining a beautiful, alive efficient baseline.",
+      "priority": "foundational",
+      "verification": [
+        "A settings matrix shows every subsystem, tier difference, measured cost and user override."
+      ]
+    }
+  ],
+  "guardrails": [
+    {
+      "id": "guardrail-professional-ui",
+      "statement": "Alive-world behavior may never cover controls, steal focus, reduce readability, delay input, or make workspaces harder to use.",
+      "status": "active"
+    },
+    {
+      "id": "guardrail-accessibility",
+      "statement": "Honor reduced motion, reduced transparency, photosensitivity, sound, and distraction controls with authored alternatives.",
+      "status": "active"
+    },
+    {
+      "id": "guardrail-performance",
+      "statement": "Use event-driven shared schedulers, sleeping physics, bounded effects, and full suspension in Performance Mode; no independent timer farms or permanent hidden loops.",
+      "status": "active"
+    },
+    {
+      "id": "guardrail-interaction-never-blocks",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "statement": "Theme-native feedback may never obscure the target, alter hit testing incorrectly, create accidental clicks, hold pointer capture after release, delay state changes, interrupt typing, steal focus, or prevent immediate grab, cancel, undo, or redirect actions."
+    },
+    {
+      "id": "guardrail-bounded-reaction-chains",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "statement": "Cross-element reactions must be local, short-lived, deterministic enough to understand, and budgeted. One interaction may awaken the world but may not trigger endless chain reactions, visual noise, audio clutter, layout instability, or background simulation storms."
+    },
+    {
+      "id": "guardrail-material-quality",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "statement": "Do not fake material behavior with a generic scale pulse, opacity flash, stock particle burst, or color wash. Use authored deformation, propagation, contact, damping, rebound, refraction, smear, peel, absorption, and release appropriate to the theme and quality target."
+    },
+    {
+      "id": "guardrail-import-reviewability",
+      "statement": "The object maker may automate aggressively, but it must expose cutouts, inferred parts, materials, pivots, collisions, tags, loops, and behaviors for fast inspection and override without forcing a full restart of the import process.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "guardrail-provenance-memory",
+      "statement": "Asset Vault should retain local provenance metadata for imported media when available, including source site, creator or poster label, source URL, and acquisition time, so users can re-find, organize, and evolve their assets later.",
+      "status": "active",
+      "source": "assistant-synthesis"
+    },
+    {
+      "id": "guardrail-nonblocking-import-flow",
+      "statement": "Heavy object inference, GIF decoding, preview generation, and blend introspection must not freeze the creative workspace. Long imports should stream progress and yield usable partial results when safe.",
+      "status": "active",
+      "source": "assistant-synthesis"
+    },
+    {
+      "id": "guardrail-attention-budget",
+      "statement": "Every theme and workspace enforces a measured attention budget for motion, sound, brightness, particles and reaction-chain depth; focused controls remain dominant.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "guardrail-effect-cooldowns",
+      "statement": "Rare moments and expensive reactions use semantic cooldowns, deduplication and stop conditions; no ambient system becomes a short repeating loop.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "guardrail-untrusted-blend-isolation",
+      "statement": "Never open untrusted blend files in the user session or with script auto-execution. Use an isolated headless worker and preserve the original.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "guardrail-no-hidden-hallucinated-geometry",
+      "statement": "Never present reconstructed backside geometry, inferred scale, materials, rigging or affordances as verified truth; expose uncertainty and fallback to a simpler representation.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "guardrail-license-and-noai",
+      "statement": "Do not strip licenses, attribution, provider restrictions, mature-content labels or NoAI metadata. Block incompatible export or training uses instead of silently proceeding.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "guardrail-provider-failure-fallback",
+      "statement": "Every source adapter has a truthful fallback such as oEmbed, browser clipping, source-page capture or manual import; login walls, rate limits and API removal may not produce fake success.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "guardrail-no-performance-feature-loss",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Performance modes cannot remove product capability",
+      "statement": "Never hide or cap cards, objects, data, tabs, authoring tools, relationships or workflows to gain speed; only effect fidelity, resolution, sample count, simulation substeps and transition depth may scale.",
+      "priority": "foundational",
+      "verification": [
+        "Efficient tier passes a full feature and data parity audit against Ultra."
+      ]
+    },
+    {
+      "id": "guardrail-no-viewport-content-culling",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "No viewport content culling as a performance shortcut",
+      "statement": "Do not make cards, objects or project data unavailable, deferred, unsearchable or absent because they are offscreen; settled simulations may sleep while every entity and state remains fully available.",
+      "priority": "foundational",
+      "verification": [
+        "Large-project tests access and manipulate every entity without viewport caps, hidden rows or quantity loss."
+      ]
+    },
+    {
+      "id": "guardrail-gpu-is-optional",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "GPU-enhanced effects remain optional",
+      "statement": "WebGPU or advanced GPU paths may add richer fluids, paint, volumetrics, particles and world transitions, but every capability requires a stable semantically equivalent non-WebGPU path.",
+      "priority": "high",
+      "verification": [
+        "Disable GPU acceleration and verify exact workflows and recognizable theme reactions still function."
+      ]
+    },
+    {
+      "id": "guardrail-adaptation-visible-and-reversible",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Automatic quality adaptation is visible and reversible",
+      "statement": "Show the active tier, the measured reason and the exact dimensions changed; allow users to pin, override or restore quality without restarting or losing state.",
+      "priority": "high",
+      "verification": [
+        "Force a tier change and verify the UI reports it, accepts override and restores the previous setting safely."
+      ]
+    },
+    {
+      "id": "guardrail-patina-never-changes-facts",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Patina never changes factual status",
+      "statement": "Age or usage styling must not alter update status, compatibility, sort order, timestamps, metadata, controls or task-critical imagery unless the user separately chooses such behavior.",
+      "priority": "high",
+      "verification": [
+        "Patina toggles change only the declared visual/material channels and leave factual data byte-identical."
+      ]
+    }
+  ],
+  "acceptance_signals": [
+    {
+      "id": "signal-theme-reality-matrix",
+      "statement": "For every theme, verify unique assets, motion verbs, UI reactions, object ecology, mascot-environment interactions, add/delete feedback, accessibility variants, restart persistence, and performance budgets in the real packaged runtime.",
+      "status": "active"
+    },
+    {
+      "id": "signal-theme-interaction-language-matrix",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "statement": "For every theme, verify a unique interaction language for button press, hold, release, card drag, reorder, resize, drop, placement, collision, absorption or equivalent transformation, cancellation, destructive action, and keyboard/controller activation in the real packaged runtime."
+    },
+    {
+      "id": "signal-cross-element-causality-test",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "statement": "Run representative interaction chains and confirm the touched element, nearby relevant UI, world objects, lighting, sound, particles, mascots, and scenery respond as one coherent event without unrelated elements reacting."
+    },
+    {
+      "id": "signal-live-interruption-test",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "statement": "During every long-form reaction such as absorption, swallowing, peel, rebound, or ejection, seize the object at multiple phases and verify immediate control, stable state, coherent material response, correct pointer release, undo behavior, and no lost data."
+    },
+    {
+      "id": "signal-material-scale-velocity-test",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "statement": "Test the same interaction across small and large elements, slow and fast motion, shallow and deep contact, different directions, and different materials; confirm force, wake, deformation, damping, sound, and settling change plausibly rather than playing one canned clip."
+    },
+    {
+      "id": "signal-subtle-unmistakable-test",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "statement": "In focused work, effects remain out of the way; in normal viewing, users can immediately feel and identify the active theme's interaction character without hunting for it. Verify both conditions with motion, sound, and world-reaction intensity controls."
+    },
+    {
+      "id": "signal-single-image-object-roundtrip",
+      "statement": "Import several varied single images and verify the generated objects have a believable cutout, editable inference, sensible pivots, collisions, placement behavior, and optional theme-native reaction suggestions.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-blend-intake-preservation",
+      "statement": "Import representative blend files and verify hierarchy, named parts, transforms, materials, anchor points, and animations survive into editable Foundry objects or scene assemblies.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-gif-sticker-loop-test",
+      "statement": "Import animated GIF or sticker media and verify loop timing, transparency or masking, layering, placement, and optional interaction behavior survive without flattening the motion away.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-resource-hub-ingestion-matrix",
+      "statement": "Verify preview, collect, metadata capture, import, and re-open flows across the supported resource-hub matrix, including still-image hubs and animated-media hubs, with truthful per-site capability reporting.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-theme-reactive-import-behavior",
+      "statement": "After import, confirm the same asset can receive different suggested behaviors, materials, and world reactions when placed into different themes without losing user control or editability.",
+      "status": "active",
+      "source": "assistant-synthesis"
+    },
+    {
+      "id": "signal-causal-trace-test",
+      "statement": "Trace representative click, drag, placement, collision and mascot events through initiating cause, affected elements, intensity falloff, attention cost, interruption and bounded stop condition.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-material-memory-recovery",
+      "statement": "Deform, wet, paint, compress, absorb or impact representative materials and verify authored recovery/residue over time, including immediate user takeover.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-attention-budget-test",
+      "statement": "Run dense professional workflows with living worlds enabled and verify salience budgets, no obscured controls, no repeated distraction and no input latency regression.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-cross-modal-coherence",
+      "statement": "For representative events, verify motion, deformation, light, shadow, particles and sound derive from the same timing/energy model and remain synchronized under pause, interruption and reduced motion.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-rare-moment-cooldown",
+      "statement": "Run long sessions and verify rare authored moments are contextual, non-repeating within their cooldowns, cancellable and absent in Focus/Performance variants where required.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-quality-lane-comparison",
+      "statement": "Import the same still image through instant, draft and high-fidelity lanes; compare source fidelity, uncertainty, editability, runtime cost and truthful fallback choice.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-uncertainty-correction",
+      "statement": "Correct segmentation, depth, scale, backside and affordance uncertainty without losing the original or unrelated accepted edits; regenerate only dependent derivatives.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-blend-security-preservation",
+      "statement": "Import representative blend files with scripts, linked assets, rigs, materials, collections and custom properties; prove script auto-execution is disabled, failures are isolated, and supported semantics survive GLB conversion.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-provenance-license-roundtrip",
+      "statement": "Capture assets from API, clipper and manual sources, create derivatives, export/reimport a pack and verify creator, source, license, attribution, restrictions, NoAI, provider IDs and hashes remain intact.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-source-adapter-contract",
+      "statement": "For every enabled hub, test auth, pagination/rate limits, attribution, rights fields, moderation, cache policy, API failure, fallback capture and freshness review; disable unsupported capabilities rather than faking them.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-gif-frame-fidelity",
+      "statement": "Import GIF, animated WebP, APNG and short video examples and verify frame order/timing, transparency, loop policy, crop, color, interaction states, pause/reduced-motion behavior and restart persistence.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-object-behavior-genome",
+      "statement": "Place one imported object across multiple themes and verify its invariant affordances remain intact while material response, sound, lighting, mascot relationships and visual language change through explicit theme overrides.",
+      "status": "active",
+      "source": "explicit-user-rule"
+    },
+    {
+      "id": "signal-intent-reversal-test",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Intent anticipation reversal test",
+      "statement": "Approach a target, reverse before contact and confirm cues cancel within one frame with no selection, focus, pointer or hit-target change.",
+      "priority": "high",
+      "verification": [
+        "Automated trace and visual recording prove no functional state was committed."
+      ]
+    },
+    {
+      "id": "signal-transition-depth-matrix",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Six-level transition matrix",
+      "statement": "Run representative navigation through levels 0-5 across Frutiger Aero, liminal and graffiti worlds and compare continuity, interruption, focus, data and theme identity.",
+      "priority": "high",
+      "verification": [
+        "All matrix cells pass and no level changes functional output."
+      ]
+    },
+    {
+      "id": "signal-potato-feature-parity",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Efficient-tier full feature parity",
+      "statement": "Load a production-scale project in Efficient mode and prove every card, object, tab, authoring tool, relationship, search, export and workflow remains available.",
+      "priority": "foundational",
+      "verification": [
+        "No viewport cap, data truncation, hidden entity or disabled tool is observed."
+      ]
+    },
+    {
+      "id": "signal-adaptive-quality-stability",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Adaptive tier stability test",
+      "statement": "Apply sustained pressure and later restore headroom; verify targeted degradation, hysteresis, explanation, user override and gradual quality restoration.",
+      "priority": "high",
+      "verification": [
+        "Performance logs show stable changes without oscillation or semantic loss."
+      ]
+    },
+    {
+      "id": "signal-patina-channel-separation",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Patina channel separation test",
+      "statement": "Test chronological, interaction and authored memory independently and together, including preview, reset, export and pristine restoration.",
+      "priority": "high",
+      "verification": [
+        "Each channel retains distinct provenance and cannot modify factual status."
+      ]
+    },
+    {
+      "id": "signal-authoring-roundtrip",
+      "status": "active",
+      "source": "explicit-user-rule",
+      "title": "Ecology authoring production roundtrip",
+      "statement": "Record or author an interaction, edit its graph, simulate devices and tiers, package it, reload the application and verify the exact production behavior.",
+      "priority": "foundational",
+      "verification": [
+        "The runtime behavior, causal trace, undo, performance budget and exported schema all match the authoring source."
+      ]
+    }
+  ],
+  "publication_targets": [
+    {
+      "id": "drive",
+      "provider": "google_drive",
+      "path": "AGENTS Project Vault/Feature Foundry",
+      "required": true
+    },
+    {
+      "id": "library",
+      "provider": "chatgpt_file_library",
+      "path": "Feature Foundry/current",
+      "required": true,
+      "fallback": "Return a validated export when direct upload is unavailable."
+    }
+  ]
+}

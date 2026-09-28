@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-18",
+  "target_minecraft": "26.3",
+  "profiles": [
+    {"minecraft": "1.7.10", "loader": "forge", "note": "Legacy MCP/SRG structural cache. Named MCP requires the exact source-declared stable/snapshot mapping and is intentionally not guessed."},
+    {"minecraft": "1.12.2", "loader": "forge", "note": "Legacy MCPConfig/SRG cache; source-declared named MCP snapshot/stable is harvested per project."},
+    {"minecraft": "1.16.5", "loader": "forge"},
+    {"minecraft": "1.18.2", "loader": "forge"},
+    {"minecraft": "1.20.1", "loader": "forge"},
+    {"minecraft": "1.21.1", "loader": "neoforge"},
+    {"minecraft": "1.16.5", "loader": "fabric"},
+    {"minecraft": "1.18.2", "loader": "fabric"},
+    {"minecraft": "1.20.1", "loader": "fabric"},
+    {"minecraft": "1.20.4", "loader": "fabric"},
+    {"minecraft": "1.20.6", "loader": "fabric"},
+    {"minecraft": "1.21.1", "loader": "fabric"},
+    {"minecraft": "26.3", "loader": "fabric", "note": "Identity/official target; no target mapping artifact should be invented."},
+    {"minecraft": "26.3", "loader": "neoforge", "note": "Identity/official target; no target mapping artifact should be invented."}
+  ]
+}

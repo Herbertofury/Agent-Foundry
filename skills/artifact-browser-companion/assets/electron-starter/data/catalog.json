@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "sample-catalog",
+  "title": "__APP_NAME__",
+  "generatedAt": "__GENERATED_AT__",
+  "sources": [],
+  "build": {"standard":"artifact-browser-companion"},
+  "items": [
+    {
+      "id": "sample-1",
+      "name": "Replace with normalized source data",
+      "summary": "The scaffold is functional, but this sample record must be replaced before release.",
+      "categories": ["Sample"],
+      "sources": [{"provider":"Example","url":"https://example.com/","verified":true}],
+      "authors": [],
+      "gallery": []
+    }
+  ]
+}

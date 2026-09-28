@@ -1,0 +1,820 @@
+{
+  "schema_version": 1,
+  "catalog_id": "feature-foundry-source-hubs",
+  "verified_at_utc": "2026-08-04T00:00:00Z",
+  "review_due": "2026-11-04",
+  "purpose": "Truthful, rights-aware source adapter registry for Feature Foundry Inspiration Vault and Asset Vault.",
+  "adapter_contract": {
+    "modes": [
+      "official_api",
+      "oauth_api",
+      "public_api",
+      "oembed",
+      "browser_clipper",
+      "manual_import",
+      "launcher",
+      "legacy_existing_clients"
+    ],
+    "statuses": [
+      "active",
+      "restricted",
+      "legacy_existing_clients",
+      "clipper_only",
+      "manual_only",
+      "verify_before_enable"
+    ],
+    "requirements": [
+      "Use only documented provider capabilities",
+      "Preserve source URL, creator, license and provider metadata",
+      "Respect rate limits, attribution, moderation labels and cache rules",
+      "Provide a clipper or manual fallback when discovery APIs are unavailable",
+      "Never scrape private endpoints or invent an API",
+      "Revalidate provider status before shipping an adapter"
+    ]
+  },
+  "hubs": [
+    {
+      "id": "openverse",
+      "name": "Openverse",
+      "media_types": [
+        "images",
+        "audio"
+      ],
+      "adapter_modes": [
+        "public_api"
+      ],
+      "preferred_mode": "public_api",
+      "status": "active",
+      "auth": "No auth required for ordinary public search; authenticated clients may receive higher limits.",
+      "rate_limit": "Provider-published limits apply; use backoff and local result caching.",
+      "attribution": "Preserve creator, source, license and attribution fields.",
+      "rights_policy": "Only import media whose license and downstream use fit the project.",
+      "moderation": "Preserve sensitivity metadata and user filters.",
+      "cache_policy": "Cache search metadata and thumbnails within provider guidance; content-address imported originals.",
+      "fallback": "Open the source page or browser clipper when direct import is unavailable.",
+      "official_docs": [
+        "https://api.openverse.org/v1/",
+        "https://docs.openverse.org/api/reference/index.html"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "wikimedia-commons",
+      "name": "Wikimedia Commons",
+      "media_types": [
+        "images",
+        "audio",
+        "video",
+        "3d"
+      ],
+      "adapter_modes": [
+        "public_api"
+      ],
+      "preferred_mode": "public_api",
+      "status": "active",
+      "auth": "Public MediaWiki APIs; authenticated editing is separate.",
+      "rate_limit": "Use maxlag, continuation, descriptive User-Agent and respectful request pacing.",
+      "attribution": "Preserve author, source page, license template, attribution and modification requirements.",
+      "rights_policy": "Reuser is responsible for verifying each file license and any non-copyright restrictions.",
+      "moderation": "Respect deletion, warning, and category metadata.",
+      "cache_policy": "Cache metadata with revision identity; keep source URL and SHA-1 when provided.",
+      "fallback": "Open the Commons file page when rights metadata is incomplete.",
+      "official_docs": [
+        "https://www.mediawiki.org/wiki/API:Imageinfo",
+        "https://www.mediawiki.org/wiki/API:Main_page",
+        "https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "flickr",
+      "name": "Flickr",
+      "media_types": [
+        "images",
+        "video"
+      ],
+      "adapter_modes": [
+        "official_api",
+        "oauth_api"
+      ],
+      "preferred_mode": "official_api",
+      "status": "active",
+      "auth": "API key for public search; OAuth for private/user actions.",
+      "rate_limit": "Honor per-key limits and paginate using documented fields.",
+      "attribution": "Preserve owner, title, source URL and license.",
+      "rights_policy": "Use license filters and do not infer reuse rights from visibility.",
+      "moderation": "Respect safe-search and content-type filters.",
+      "cache_policy": "Cache IDs/metadata and generate local derivatives only after import.",
+      "fallback": "Browser clipper or manual URL import.",
+      "official_docs": [
+        "https://www.flickr.com/services/api/flickr.photos.search.html",
+        "https://www.flickr.com/services/api/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "unsplash",
+      "name": "Unsplash",
+      "media_types": [
+        "images"
+      ],
+      "adapter_modes": [
+        "official_api",
+        "oauth_api"
+      ],
+      "preferred_mode": "official_api",
+      "status": "restricted",
+      "auth": "Access key; OAuth for user actions. Demo and production modes differ.",
+      "rate_limit": "Demo requests are limited; production access requires review.",
+      "attribution": "Required Unsplash attribution and API usage links must remain visible.",
+      "rights_policy": "Follow API terms; do not replicate the core Unsplash experience.",
+      "moderation": "Use provider collections/search and respect takedowns.",
+      "cache_policy": "Hotlink API image URLs where required; do not permanently proxy originals without permission.",
+      "fallback": "Browser clipper or source-page import with rights review.",
+      "official_docs": [
+        "https://unsplash.com/documentation",
+        "https://help.unsplash.com/en/articles/2511258-guideline-triggering-a-download",
+        "https://help.unsplash.com/en/articles/2511315-guideline-attribution"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "pexels",
+      "name": "Pexels",
+      "media_types": [
+        "images",
+        "video"
+      ],
+      "adapter_modes": [
+        "official_api"
+      ],
+      "preferred_mode": "official_api",
+      "status": "active",
+      "auth": "API key.",
+      "rate_limit": "Default quotas apply; read response headers and request increases when needed.",
+      "attribution": "Credit Pexels and photographers where required/recommended.",
+      "rights_policy": "Use only under the Pexels API and content license terms.",
+      "moderation": "Respect provider search and content controls.",
+      "cache_policy": "Cache metadata and thumbnails; preserve source IDs and URLs.",
+      "fallback": "Browser clipper or manual import.",
+      "official_docs": [
+        "https://www.pexels.com/api/documentation/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "pixabay",
+      "name": "Pixabay",
+      "media_types": [
+        "images",
+        "illustrations",
+        "vectors",
+        "gif",
+        "video",
+        "audio"
+      ],
+      "adapter_modes": [
+        "official_api"
+      ],
+      "preferred_mode": "official_api",
+      "status": "active",
+      "auth": "API key.",
+      "rate_limit": "Documented per-minute limits; use 24-hour query caching and no mass download.",
+      "attribution": "Show Pixabay source attribution in search experiences.",
+      "rights_policy": "Follow Pixabay content license and API restrictions for each asset.",
+      "moderation": "Use safe-search where appropriate.",
+      "cache_policy": "Do not permanent-hotlink imported media; download approved assets into content-addressed storage.",
+      "fallback": "Browser clipper or manual import.",
+      "official_docs": [
+        "https://pixabay.com/api/docs/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "poly-haven",
+      "name": "Poly Haven",
+      "media_types": [
+        "3d",
+        "hdris",
+        "textures"
+      ],
+      "adapter_modes": [
+        "public_api"
+      ],
+      "preferred_mode": "public_api",
+      "status": "active",
+      "auth": "No account required for public API; send a distinct User-Agent.",
+      "rate_limit": "Respect service capacity and cache metadata/files.",
+      "attribution": "Credit the API service as requested even though assets are CC0.",
+      "rights_policy": "Assets are CC0; still preserve source and authorship metadata.",
+      "moderation": "No special moderation model; validate files and previews.",
+      "cache_policy": "Aggressively cache metadata and content-address imported files.",
+      "fallback": "Direct website download/manual import.",
+      "official_docs": [
+        "https://polyhaven.com/our-api",
+        "https://api.polyhaven.com/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "sketchfab",
+      "name": "Sketchfab",
+      "media_types": [
+        "3d"
+      ],
+      "adapter_modes": [
+        "official_api",
+        "oauth_api"
+      ],
+      "preferred_mode": "oauth_api",
+      "status": "active",
+      "auth": "OAuth required for downloadable model access; public search has documented API routes.",
+      "rate_limit": "Honor API quotas and temporary download URL expiry.",
+      "attribution": "Preserve creator, model page and license attribution.",
+      "rights_policy": "Only download models marked downloadable and comply with the selected license.",
+      "moderation": "Respect mature-content filters and moderation state.",
+      "cache_policy": "Cache metadata; immediately ingest authorized downloads into the vault before temporary URLs expire.",
+      "fallback": "Open model page or manual GLB/glTF import.",
+      "official_docs": [
+        "https://sketchfab.com/developers/data-api/v3",
+        "https://sketchfab.com/developers/download-api/downloading-models"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "fab",
+      "name": "Fab",
+      "media_types": [
+        "3d",
+        "materials",
+        "audio",
+        "plugins"
+      ],
+      "adapter_modes": [
+        "launcher",
+        "manual_import"
+      ],
+      "preferred_mode": "launcher",
+      "status": "restricted",
+      "auth": "Epic/Fab account through official launcher or website.",
+      "rate_limit": "No general-purpose public discovery/download API is assumed.",
+      "attribution": "Preserve seller, listing, license tier and source URL.",
+      "rights_policy": "Respect Fab Standard/CC/other listing-specific licenses and seat/tier terms.",
+      "moderation": "Use provider maturity/content controls.",
+      "cache_policy": "Import user-acquired files and preserve manifests; do not mirror marketplace content.",
+      "fallback": "Manual import from an authorized Fab download.",
+      "official_docs": [
+        "https://dev.epicgames.com/documentation/en-us/fab/fab-documentation",
+        "https://www.fab.com/eula"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "pinterest",
+      "name": "Pinterest",
+      "media_types": [
+        "images",
+        "video",
+        "boards"
+      ],
+      "adapter_modes": [
+        "oauth_api",
+        "browser_clipper"
+      ],
+      "preferred_mode": "browser_clipper",
+      "status": "restricted",
+      "auth": "Approved Pinterest app and user OAuth for documented account/board operations.",
+      "rate_limit": "Use current Pinterest API limits for approved endpoints.",
+      "attribution": "Preserve Pin, creator/site and source-link attribution.",
+      "rights_policy": "Do not treat Pinterest discovery as proof of reuse rights; follow the original source license.",
+      "moderation": "Respect provider safety and board visibility.",
+      "cache_policy": "Store references and thumbnails, not unlicensed source copies, until import is authorized.",
+      "fallback": "Browser clipper is the default for arbitrary inspiration discovery.",
+      "official_docs": [
+        "https://developers.pinterest.com/docs/api/v5/",
+        "https://developers.pinterest.com/docs/getting-started/introduction/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "deviantart",
+      "name": "DeviantArt",
+      "media_types": [
+        "images",
+        "animation",
+        "literature"
+      ],
+      "adapter_modes": [
+        "oauth_api",
+        "browser_clipper"
+      ],
+      "preferred_mode": "oauth_api",
+      "status": "active",
+      "auth": "OAuth 2.0; scopes vary by browse, collections and user actions.",
+      "rate_limit": "Honor documented endpoint limits and pagination.",
+      "attribution": "Preserve artist, deviation page and any display requirements.",
+      "rights_policy": "Do not infer download/reuse rights; preserve artist terms and source flags.",
+      "moderation": "Use mature-content filters and provider metadata.",
+      "cache_policy": "Cache metadata/previews only as permitted; ingest originals only through authorized routes.",
+      "fallback": "Browser clipper/manual source import.",
+      "official_docs": [
+        "https://www.deviantart.com/developers/http/v1/20210526",
+        "https://www.deviantart.com/developers/http/v1/20210526/collections_folders/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "tumblr",
+      "name": "Tumblr",
+      "media_types": [
+        "images",
+        "gif",
+        "video",
+        "audio",
+        "text"
+      ],
+      "adapter_modes": [
+        "official_api",
+        "oauth_api",
+        "browser_clipper"
+      ],
+      "preferred_mode": "official_api",
+      "status": "active",
+      "auth": "API key for public endpoints; OAuth for user/private actions.",
+      "rate_limit": "Documented consumer-key limits apply per hour/day.",
+      "attribution": "Preserve blog, post URL, creator and reblog/source chain.",
+      "rights_policy": "Respect copyright and post-specific permissions; visibility is not a reuse license.",
+      "moderation": "Honor mature/content filters and deletion state.",
+      "cache_policy": "Cache post metadata and imported user-authorized media; avoid mirroring entire blogs.",
+      "fallback": "Browser clipper/manual import.",
+      "official_docs": [
+        "https://www.tumblr.com/docs/en/api/v2",
+        "https://github.com/tumblr/tumblr.js"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "bluesky",
+      "name": "Bluesky / AT Protocol",
+      "media_types": [
+        "images",
+        "gif",
+        "video",
+        "posts"
+      ],
+      "adapter_modes": [
+        "public_api",
+        "oauth_api",
+        "oembed",
+        "browser_clipper"
+      ],
+      "preferred_mode": "public_api",
+      "status": "active",
+      "auth": "Many public AppView endpoints require no auth; user actions require authenticated sessions.",
+      "rate_limit": "Honor endpoint and host limits; paginate with cursors.",
+      "attribution": "Preserve DID/handle, post URI, source URL, alt text and embed metadata.",
+      "rights_policy": "Visibility is not a reuse license; preserve source context and creator information.",
+      "moderation": "Carry moderation labels and user preferences into previews.",
+      "cache_policy": "Cache record IDs and blobs only when imported/allowed; support refresh by URI/CID.",
+      "fallback": "oEmbed or browser clipper.",
+      "official_docs": [
+        "https://docs.bsky.app/docs/api/app-bsky-feed-get-author-feed",
+        "https://docs.bsky.app/docs/advanced-guides/posts",
+        "https://docs.bsky.app/docs/advanced-guides/oembed"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "x",
+      "name": "X",
+      "media_types": [
+        "images",
+        "gif",
+        "video",
+        "posts"
+      ],
+      "adapter_modes": [
+        "official_api",
+        "oembed",
+        "browser_clipper"
+      ],
+      "preferred_mode": "browser_clipper",
+      "status": "restricted",
+      "auth": "Official API enrollment and an applicable paid/access plan; oEmbed for supported public posts.",
+      "rate_limit": "Plan- and endpoint-specific limits must be read dynamically.",
+      "attribution": "Preserve author, post URL and source context.",
+      "rights_policy": "Do not scrape private/internal endpoints or treat posts as reusable assets without permission.",
+      "moderation": "Respect withheld/deleted/sensitive-content state.",
+      "cache_policy": "Store references and provider IDs; import media only through authorized user workflows.",
+      "fallback": "Browser clipper or oEmbed when API access is unavailable.",
+      "official_docs": [
+        "https://docs.x.com/x-api",
+        "https://developer.x.com/en/docs/x-for-websites/oembed-api"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "media_types": [
+        "images",
+        "gif",
+        "video",
+        "posts"
+      ],
+      "adapter_modes": [
+        "official_api",
+        "oauth_api",
+        "browser_clipper"
+      ],
+      "preferred_mode": "official_api",
+      "status": "restricted",
+      "auth": "OAuth/application identity for API usage.",
+      "rate_limit": "Honor documented rate-limit headers and listing pagination.",
+      "attribution": "Preserve subreddit, post, author and original linked source.",
+      "rights_policy": "Do not treat a post as a reusable-license grant; follow original source rights.",
+      "moderation": "Respect NSFW/quarantine/removal/deletion state.",
+      "cache_policy": "Cache IDs/metadata and approved imports; do not mirror communities.",
+      "fallback": "Browser clipper/manual source import.",
+      "official_docs": [
+        "https://www.reddit.com/dev/api/",
+        "https://github.com/reddit-archive/reddit/wiki/API"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "imgur",
+      "name": "Imgur",
+      "media_types": [
+        "images",
+        "gif",
+        "video"
+      ],
+      "adapter_modes": [
+        "official_api",
+        "oauth_api",
+        "browser_clipper"
+      ],
+      "preferred_mode": "official_api",
+      "status": "restricted",
+      "auth": "Client ID for anonymous/public access; OAuth for account operations.",
+      "rate_limit": "Read current API limits; revalidate developer portal status before release.",
+      "attribution": "Preserve account/gallery/post URL and source context.",
+      "rights_policy": "Do not assume upload or gallery visibility grants reuse rights.",
+      "moderation": "Respect mature/removed content state.",
+      "cache_policy": "Cache IDs/metadata; ingest only user-authorized content.",
+      "fallback": "Browser clipper/manual import if API enrollment changes.",
+      "official_docs": [
+        "https://apidocs.imgur.com/",
+        "https://api.imgur.com/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "giphy",
+      "name": "GIPHY",
+      "media_types": [
+        "gif",
+        "stickers",
+        "clips"
+      ],
+      "adapter_modes": [
+        "official_api"
+      ],
+      "preferred_mode": "official_api",
+      "status": "active",
+      "auth": "API key; beta and production keys have different review and quotas.",
+      "rate_limit": "Beta is limited; production access requires approval and analytics compliance.",
+      "attribution": "Display Powered by GIPHY and provider attribution as required.",
+      "rights_policy": "Use only through approved API terms; preserve creator/source metadata.",
+      "moderation": "Use rating/content filters and moderation fields.",
+      "cache_policy": "Cache IDs/metadata within terms; prefer MP4 for GIF playback and WebP for transparent stickers when supported.",
+      "fallback": "Manual GIF/WebP/video import or another approved GIF source.",
+      "official_docs": [
+        "https://developers.giphy.com/docs/api/",
+        "https://developers.giphy.com/docs/sdk/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "tenor",
+      "name": "Tenor",
+      "media_types": [
+        "gif",
+        "stickers"
+      ],
+      "adapter_modes": [
+        "legacy_existing_clients",
+        "manual_import"
+      ],
+      "preferred_mode": "legacy_existing_clients",
+      "status": "legacy_existing_clients",
+      "auth": "Existing approved clients only; new API clients are no longer accepted.",
+      "rate_limit": "Existing-client quotas and cache guidance apply.",
+      "attribution": "Retain Tenor attribution and content descriptions where required.",
+      "rights_policy": "Do not build a new dependency on unavailable enrollment.",
+      "moderation": "Respect content filters/ratings.",
+      "cache_policy": "Cache results according to existing-client rules.",
+      "fallback": "Use GIPHY, Openverse, Wikimedia, Imgur, Tumblr, or manual user import.",
+      "official_docs": [
+        "https://developers.googleblog.com/en/changes-to-the-tenor-api/",
+        "https://developers.google.com/tenor/guides/endpoints"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "arena",
+      "name": "Are.na",
+      "media_types": [
+        "images",
+        "links",
+        "text",
+        "channels"
+      ],
+      "adapter_modes": [
+        "official_api",
+        "browser_clipper"
+      ],
+      "preferred_mode": "browser_clipper",
+      "status": "verify_before_enable",
+      "auth": "OAuth/current API credentials if the current v3 developer route is available.",
+      "rate_limit": "Do not ship against deprecated v2 behavior; verify current v3 limits first.",
+      "attribution": "Preserve channel, block, creator and source URL.",
+      "rights_policy": "Treat blocks as references unless source rights permit import.",
+      "moderation": "Respect private channels and account visibility.",
+      "cache_policy": "Cache reference metadata; do not clone channels.",
+      "fallback": "Browser clipper/manual import is the safe default.",
+      "official_docs": [
+        "https://dev.are.na/",
+        "https://help.are.na/help/are-na-api"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "artstation",
+      "name": "ArtStation",
+      "media_types": [
+        "images",
+        "animation",
+        "3d",
+        "projects"
+      ],
+      "adapter_modes": [
+        "browser_clipper",
+        "manual_import"
+      ],
+      "preferred_mode": "browser_clipper",
+      "status": "clipper_only",
+      "auth": "No verified general public developer API is assumed.",
+      "rate_limit": "N/A for clipper; use ordinary user-driven browsing.",
+      "attribution": "Preserve artist, project URL, original source and NoAI metadata.",
+      "rights_policy": "Do not download beyond user-authorized browser access; preserve NoAI and artist terms.",
+      "moderation": "Respect mature-content settings and project visibility.",
+      "cache_policy": "Store reference cards and user-selected authorized imports only.",
+      "fallback": "Manual download/import with provenance.",
+      "official_docs": [
+        "https://www.artstation.com/about",
+        "https://help.artstation.com/s/article/11451085663505-Use-NoAI-to-protect-your-artwork-from-AI-training"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "behance",
+      "name": "Behance",
+      "media_types": [
+        "images",
+        "video",
+        "projects"
+      ],
+      "adapter_modes": [
+        "browser_clipper",
+        "manual_import"
+      ],
+      "preferred_mode": "browser_clipper",
+      "status": "clipper_only",
+      "auth": "No general Asset Vault discovery API is assumed.",
+      "rate_limit": "N/A for clipper.",
+      "attribution": "Preserve creator, project and source URL.",
+      "rights_policy": "Treat as inspiration until rights are explicitly cleared.",
+      "moderation": "Respect mature/project visibility.",
+      "cache_policy": "Store references, not mirrored portfolios.",
+      "fallback": "Manual authorized import.",
+      "official_docs": [
+        "https://www.behance.net/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "dribbble",
+      "name": "Dribbble",
+      "media_types": [
+        "images",
+        "animation",
+        "projects"
+      ],
+      "adapter_modes": [
+        "browser_clipper",
+        "manual_import"
+      ],
+      "preferred_mode": "browser_clipper",
+      "status": "clipper_only",
+      "auth": "Do not assume new public API enrollment without current verification.",
+      "rate_limit": "N/A for clipper.",
+      "attribution": "Preserve designer, shot and source URL.",
+      "rights_policy": "Treat as reference unless licensed or creator-authorized.",
+      "moderation": "Respect account/project visibility.",
+      "cache_policy": "Store references, not bulk copies.",
+      "fallback": "Manual authorized import.",
+      "official_docs": [
+        "https://dribbble.com/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "media_types": [
+        "images",
+        "video",
+        "reels",
+        "posts"
+      ],
+      "adapter_modes": [
+        "oauth_api",
+        "oembed",
+        "browser_clipper"
+      ],
+      "preferred_mode": "browser_clipper",
+      "status": "restricted",
+      "auth": "Official Meta APIs apply to supported user/business content; not a general public scraping API.",
+      "rate_limit": "App-review and endpoint limits vary.",
+      "attribution": "Preserve account, post and source URL.",
+      "rights_policy": "Never scrape private endpoints or bypass login; import only user-authorized content.",
+      "moderation": "Respect private accounts, age/sensitive content and deletion.",
+      "cache_policy": "Cache provider IDs/metadata; do not mirror feeds.",
+      "fallback": "oEmbed or browser clipper/manual import.",
+      "official_docs": [
+        "https://developers.facebook.com/docs/instagram-platform/",
+        "https://developers.facebook.com/docs/features-reference/oembed-read"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "pixiv",
+      "name": "Pixiv",
+      "media_types": [
+        "images",
+        "animation",
+        "manga"
+      ],
+      "adapter_modes": [
+        "browser_clipper",
+        "manual_import"
+      ],
+      "preferred_mode": "browser_clipper",
+      "status": "clipper_only",
+      "auth": "No verified stable public developer API is assumed.",
+      "rate_limit": "N/A for clipper.",
+      "attribution": "Preserve artist, work ID, page URL and tags.",
+      "rights_policy": "Follow creator permissions and Pixiv terms; do not scrape internal APIs.",
+      "moderation": "Respect age/mature and visibility controls.",
+      "cache_policy": "Store references and user-authorized files only.",
+      "fallback": "Manual import.",
+      "official_docs": [
+        "https://www.pixiv.net/terms/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "cara",
+      "name": "Cara",
+      "media_types": [
+        "images",
+        "animation",
+        "portfolio"
+      ],
+      "adapter_modes": [
+        "browser_clipper",
+        "manual_import"
+      ],
+      "preferred_mode": "browser_clipper",
+      "status": "clipper_only",
+      "auth": "No verified public developer API is assumed.",
+      "rate_limit": "N/A for clipper.",
+      "attribution": "Preserve creator and post URL.",
+      "rights_policy": "Treat as reference unless creator-authorized/licensed.",
+      "moderation": "Respect visibility and content controls.",
+      "cache_policy": "Store references only by default.",
+      "fallback": "Manual import.",
+      "official_docs": [
+        "https://cara.app/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "cosmos",
+      "name": "Cosmos",
+      "media_types": [
+        "images",
+        "links",
+        "collections"
+      ],
+      "adapter_modes": [
+        "browser_clipper",
+        "manual_import"
+      ],
+      "preferred_mode": "browser_clipper",
+      "status": "clipper_only",
+      "auth": "No verified general public API is assumed.",
+      "rate_limit": "N/A for clipper.",
+      "attribution": "Preserve collection/source URL and original source.",
+      "rights_policy": "Treat as inspiration references unless rights are cleared.",
+      "moderation": "Respect collection/account visibility.",
+      "cache_policy": "Store reference metadata and thumbnails.",
+      "fallback": "Manual import.",
+      "official_docs": [
+        "https://www.cosmos.so/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    },
+    {
+      "id": "savee",
+      "name": "Savee",
+      "media_types": [
+        "images",
+        "collections"
+      ],
+      "adapter_modes": [
+        "browser_clipper",
+        "manual_import"
+      ],
+      "preferred_mode": "browser_clipper",
+      "status": "clipper_only",
+      "auth": "No verified general public API is assumed.",
+      "rate_limit": "N/A for clipper.",
+      "attribution": "Preserve collection/source URL and original source.",
+      "rights_policy": "Treat as inspiration references unless rights are cleared.",
+      "moderation": "Respect account visibility.",
+      "cache_policy": "Store references, not bulk mirrors.",
+      "fallback": "Manual import.",
+      "official_docs": [
+        "https://savee.it/"
+      ],
+      "verified_at": "2026-08-04",
+      "review_due": "2026-11-04",
+      "notes": ""
+    }
+  ]
+}

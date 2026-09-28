@@ -1,0 +1,20 @@
+interface:
+  display_name: Project Visual QA Showcase
+  short_description: Create source-grounded visual QA and polished showcase deliverables
+    for projects with real visual assets, models, animations, skins, sprites, UI states,
+    or format ports. Use when a user asks to show actual project variants, mobs/models/items
+    and their eggs/icons, produce PNG/GIF/MP4 previews, verify animation/geometry
+    fidelity, compare source versus converted output, diagnose protruding or malformed
+    model parts, or present a completed visual project at release quality. Especially
+    useful for Minecraft Bedrock-to-Java model/animation ports and similar cross-format
+    conversions. Do not use generative image synthesis for project previews unless
+    the user explicitly asks for generated imagery.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

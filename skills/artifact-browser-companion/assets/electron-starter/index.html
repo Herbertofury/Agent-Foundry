@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self'; script-src 'self'">
+  <title>__APP_NAME__</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="appbar">
+    <strong>__APP_NAME__</strong>
+    <nav><button id="catalogMode" class="active">Catalog</button><button id="browserMode">Browser</button></nav>
+  </header>
+  <section id="catalogPage" class="page">
+    <div class="catalog-tools"><input id="search" type="search" placeholder="Search projects, authors, tags..."><span id="count"></span></div>
+    <main id="catalog" class="cards"></main>
+  </section>
+  <section id="browserPage" class="page browser-page" hidden>
+    <div id="tabStrip" class="tab-strip"><button id="newTab" title="New tab">+</button><button id="reopenTab" title="Reopen closed tab">Reopen</button></div>
+    <div class="nav-bar">
+      <button id="back" title="Back">Back</button><button id="forward" title="Forward">Forward</button><button id="reload" title="Reload or stop">Reload</button>
+      <form id="addressForm"><input id="address" aria-label="Address" placeholder="https://..."></form>
+      <button id="copyUrl">Copy URL</button><button id="external">Open in your browser</button>
+      <button id="findButton">Find</button><button id="zoomOut">-</button><button id="zoomReset">100%</button><button id="zoomIn">+</button>
+    </div>
+    <div id="browserViewport" class="browser-viewport"></div>
+    <div id="browserStatus" class="statusbar">Ready</div>
+  </section>
+  <dialog id="permissionDialog"><form method="dialog"><h3>Site permission</h3><p id="permissionText"></p><menu><button value="block">Block</button><button value="allow">Allow once</button></menu></form></dialog>
+  <script src="renderer.js"></script>
+</body>
+</html>

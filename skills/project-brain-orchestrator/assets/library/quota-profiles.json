@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-08-02T12:10:00Z",
+  "source": "https://help.openai.com/en/articles/20001052-library",
+  "warning": "Plan limits can change. Prefer the current ChatGPT Library Storage view as source of truth.",
+  "profiles": {
+    "free": 524288000,
+    "go": 4294967296,
+    "plus": 21474836480,
+    "business": 21474836480,
+    "pro": 107374182400
+  },
+  "warning_thresholds": [0.7, 0.85, 0.95]
+}
