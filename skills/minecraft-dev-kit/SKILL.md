@@ -1,3 +1,7 @@
+---
+name: minecraft-dev-kit
+description: "Build, port, convert, benchmark, test, and release Minecraft mods with the user's Minecraft Dev Kit and real runtime proof. Use for Forge/NeoForge/Fabric/Quilt development, version ports, Bedrock-to-Java conversions, gameplay/worldgen/network changes, model/texture/animation implementation, premium mob/boss pack production, reference-to-model reconstruction from images/GIFs, authorized server-plugin/resource-pack asset conversion into native mod assets, cache/toolchain work, release QA, or explicit in-game testing. For a primarily broken user instance/modpack/log/JAR/world, prefer Minecraft Repair; if Repair or Visual QA is invoked as a subtask, preserve this Dev Kit acceptance state and return to its exact next action. Compose with zero-loss-chat-accelerator when installed; never restart resolved work on skill activation."
+---
 
 ## Mandatory governance bootstrap
 
