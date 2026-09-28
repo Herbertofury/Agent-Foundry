@@ -1,6 +1,12 @@
 name: Dependency and Supply Chain Review
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/**"
+      - "tools/check_workflow_dependencies.py"
+      - "requirements*.txt"
   pull_request:
   workflow_dispatch:
 
