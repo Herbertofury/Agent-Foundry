@@ -1,7 +1,7 @@
 interface:
   display_name: Ultimate Agent Governance
-  short_description: Govern agent rules and enforce them during real coding/repair
-    work.
+  short_description: Govern agent rules, challenger discovery, and real coding/repair
+    acceptance.
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
 policy:
