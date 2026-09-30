@@ -32,14 +32,15 @@ Do not duplicate long canonical policy across adapters or wiki pages.
 4. Before substantial invention, perform a bounded challenger/integration pass and prefer authorized reuse, merge, port, wrap, backport, or composition over rebuilding a weaker duplicate.
 5. Once target + root cause + safe edit are known, cross into implementation.
 6. Performance changes must improve the requested metric and preserve protected behavior.
-7. Build/static success is intermediate evidence; exercise the real affected workflow when available.
-8. Verified nontrivial recoveries become reusable incident knowledge or regression evidence.
-9. Skill/tool/model/connector transitions do not reset accepted requirements, canonical IDs, checkpoints, prior evidence, or exact next action.
-10. Important rules should have the strongest practical mechanical enforcement.
-11. Third-party Skills remain untrusted until provenance, content, capabilities, and security evidence are reviewed.
-12. Sensitive actions require real authorization/enforcement boundaries; prompt text alone is not a security boundary.
-13. Published bundles must have verifiable source/digest lineage, and signed attestations should be preferred when the build path supports them.
-14. Protocol adapters preserve native task, cancellation, permission, identity, and streaming semantics rather than flattening them for convenience.
+7. Root-cause fixes over regression workarounds: repair the causal defect or bottleneck instead of removing/disabling features, shrinking work, adding sleeps/delays/polling/retries, forcing serialization/blocking, duplicating work, or shifting cost elsewhere. Any such materially regressive workaround is temporary containment, remains unresolved, and is not the final fix unless the user explicitly accepts the tradeoff.
+8. Build/static success is intermediate evidence; exercise the real affected workflow when available.
+9. Verified nontrivial recoveries become reusable incident knowledge or regression evidence.
+10. Skill/tool/model/connector transitions do not reset accepted requirements, canonical IDs, checkpoints, prior evidence, or exact next action.
+11. Important rules should have the strongest practical mechanical enforcement.
+12. Third-party Skills remain untrusted until provenance, content, capabilities, and security evidence are reviewed.
+13. Sensitive actions require real authorization/enforcement boundaries; prompt text alone is not a security boundary.
+14. Published bundles must have verifiable source/digest lineage, and signed attestations should be preferred when the build path supports them.
+15. Protocol adapters preserve native task, cancellation, permission, identity, and streaming semantics rather than flattening them for convenience.
 
 ## Change discipline
 
