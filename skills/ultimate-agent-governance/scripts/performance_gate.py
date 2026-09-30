@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compare baseline and candidate performance evidence without allowing scope shrinkage."""
+"""Compare baseline and candidate performance evidence with a continuous zero-loss ratchet."""
 from __future__ import annotations
 
 import argparse
@@ -52,6 +52,21 @@ def compare(baseline: dict[str, Any], candidate: dict[str, Any], policy: dict[st
         errors.append("policy must contain at least one metric rule")
         metric_policy = {}
 
+    ignored = policy.get("ignore_baseline_metrics", [])
+    if ignored is None:
+        ignored = []
+    if not isinstance(ignored, list) or not all(isinstance(x, str) for x in ignored):
+        errors.append("ignore_baseline_metrics must be a list of metric names")
+        ignored = []
+    ignored_set = set(ignored)
+
+    untracked_baseline_metrics = sorted(set(base_metrics) - set(metric_policy) - ignored_set)
+    if policy.get("require_policy_for_all_baseline_metrics", True) and untracked_baseline_metrics:
+        errors.append(
+            "baseline metrics are unprotected by policy: " + ", ".join(untracked_baseline_metrics)
+            + "; protect them or explicitly list them in ignore_baseline_metrics"
+        )
+
     any_improved = False
     required_improvement_metrics: list[str] = []
 
@@ -70,11 +85,22 @@ def compare(baseline: dict[str, Any], candidate: dict[str, Any], policy: dict[st
             continue
 
         direction = rule.get("direction", "lower")
+        if direction not in {"lower", "higher"}:
+            errors.append(f"metric {name!r} has invalid direction {direction!r}")
+            continue
         max_regression = finite_number(rule.get("max_regression_percent", 0), f"policy max_regression_percent for {name}")
         min_improvement = finite_number(rule.get("min_improvement_percent", 0), f"policy min_improvement_percent for {name}")
         required_improvement = bool(rule.get("required_improvement", False))
         if required_improvement:
             required_improvement_metrics.append(name)
+
+        if max_regression > 0 and policy.get("require_regression_budget_reason", True):
+            reason = rule.get("regression_budget_reason")
+            if not isinstance(reason, str) or not reason.strip():
+                errors.append(
+                    f"metric {name!r} allows {max_regression:.3f}% regression without regression_budget_reason; "
+                    "zero-loss is the default and tolerances must be explicit"
+                )
 
         if base == 0:
             delta_pct = 0.0 if cand == 0 else math.inf
@@ -99,9 +125,7 @@ def compare(baseline: dict[str, Any], candidate: dict[str, Any], policy: dict[st
             "required_improvement": required_improvement,
             "passed": passed,
         }
-        if direction not in {"lower", "higher"}:
-            errors.append(f"metric {name!r} has invalid direction {direction!r}")
-        elif not passed:
+        if not passed:
             if required_improvement and improvement_pct <= 0:
                 errors.append(f"metric {name!r} failed: this primary metric must improve, but it did not")
             else:
@@ -118,7 +142,7 @@ def compare(baseline: dict[str, Any], candidate: dict[str, Any], policy: dict[st
             if metric and not metric.get("passed") and not any(e.startswith(f"metric {name!r} failed") for e in errors):
                 errors.append(f"metric {name!r} failed required improvement")
 
-    return {"passed": not errors, "errors": errors, "metrics": results}
+    return {"passed": not errors, "errors": errors, "metrics": results, "untracked_baseline_metrics": untracked_baseline_metrics}
 
 
 def main() -> int:
