@@ -71,6 +71,39 @@ class PerformanceGateTests(unittest.TestCase):
         self.assertFalse(result["passed"])
         self.assertTrue(any("regression_budget_reason" in error for error in result["errors"]))
 
+    def test_measurement_noise_budget_requires_kind_and_can_pass(self):
+        candidate = {
+            **self.base(),
+            "metrics": {"latency_ms": 80, "memory_mb": 505, "cpu_ms": 75},
+        }
+        policy = self.policy()
+        policy["metrics"]["memory_mb"].update({
+            "max_regression_percent": 2,
+            "regression_budget_reason": "benchmark run-to-run noise",
+            "regression_budget_kind": "measurement_noise",
+        })
+        result = MOD.compare(self.base(), candidate, policy)
+        self.assertTrue(result["passed"], result["errors"])
+
+    def test_real_tradeoff_requires_explicit_acceptance(self):
+        candidate = {
+            **self.base(),
+            "metrics": {"latency_ms": 80, "memory_mb": 505, "cpu_ms": 75},
+        }
+        policy = self.policy()
+        policy["metrics"]["memory_mb"].update({
+            "max_regression_percent": 2,
+            "regression_budget_reason": "trade memory for latency",
+            "regression_budget_kind": "user_accepted_tradeoff",
+        })
+        result = MOD.compare(self.base(), candidate, policy)
+        self.assertFalse(result["passed"])
+        self.assertTrue(any("explicit_tradeoff_accepted" in error for error in result["errors"]))
+
+        policy["explicit_tradeoff_accepted"] = True
+        result = MOD.compare(self.base(), candidate, policy)
+        self.assertTrue(result["passed"], result["errors"])
+
 
 if __name__ == "__main__":
     unittest.main()
