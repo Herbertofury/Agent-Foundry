@@ -1,7 +1,7 @@
 {
   "fileCount": 418,
   "schemaVersion": 1,
-  "sizeBytes": 3624875,
+  "sizeBytes": 3625784,
   "skillCount": 8,
   "skills": {
     "artifact-browser-companion": {
@@ -2031,8 +2031,8 @@
         },
         {
           "path": "scripts/performance_gate.py",
-          "sha256": "7ea1c87e64ff2ecc99c6d207da16a972ae42b84570e460b2584a854531783350",
-          "sizeBytes": 7722
+          "sha256": "90798f4b94a49ba024c2290b8b9a0f39863c9920d55d12e25c7c45c4ffc3db1b",
+          "sizeBytes": 8631
         },
         {
           "path": "scripts/site_adapter_manifest_check.py",
@@ -2045,8 +2045,8 @@
           "sizeBytes": 6818
         }
       ],
-      "sizeBytes": 189945,
-      "treeDigest": "369ec69d38d21cda4da2d6b2edeeb9a482011e28bfa1d7e7269822196696d36a"
+      "sizeBytes": 190854,
+      "treeDigest": "86de09ef0a1af5b55f49615b48a6c88bf346bcbe34156c49e10bc9374bb7f664"
     },
     "zero-loss-chat-accelerator": {
       "fileCount": 19,
