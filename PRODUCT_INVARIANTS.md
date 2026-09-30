@@ -15,7 +15,7 @@ Search/API/parser/provider misses stay <code>unresolved-active</code> until alte
 Before substantial invention, look for mature challengers and integration opportunities. Prefer authorized adoption, merge, port, wrapping, backporting, or composition when it produces a stronger result than rebuilding from scratch.
 
 ## 5. Performance and quality improve together
-Equivalent-work performance tasks require a measured improvement in the target metric or hot path and preservation of correctness, content, quantity, fidelity, compatibility, and user-visible QoL.
+Performance is a first-class engineering objective, not a cleanup step reserved for explicitly labeled optimization tasks. Equivalent-work performance tasks require a measured improvement in the target metric or hot path and preservation of correctness, content, quantity, fidelity, compatibility, safety, and user-visible QoL.
 
 ## 6. Real proof outranks structural proof
 When the actual runtime or workflow is available, exercise the final artifact and affected user path.
@@ -50,3 +50,20 @@ Optimize orchestration waste, repeated discovery, redundant polling, and avoidab
 **Regression requirements.** Preserve feature and behavior contracts and compare the relevant before/after performance or resource metrics. Add a focused regression check when the failure mode is repeatable.
 
 **Acceptance test.** Did the solution remove the causal failure while preserving the complete result and avoiding material performance/QoL regressions or hidden cost-shifting?
+
+## 14. Continuous zero-loss performance ratchet
+**Rule.** Always look for safe ways to make substantive runtime work faster, leaner, and more responsive, and take verified wins at the loss of nothing. Performance is a continuous ratchet: once a better equivalent-work baseline is proven, later changes may not materially regress it without explicit user approval.
+
+**Scope.** Substantive implementation, repair, refactor, migration, integration, optimization, rendering, ticking, startup, I/O, networking, data processing, build/runtime tooling, and other changes that can materially affect runtime cost or responsiveness.
+
+**Required behavior.** On touched or causally related hot paths, perform a bounded free-speed pass for unnecessary work, algorithmic/data-structure improvements, batching, fewer round trips, incremental computation, correct caching/indexing, allocation reduction, safe concurrency/parallelism, async I/O, scheduling, native/runtime fast paths, and hardware acceleration where appropriate. If a no-loss improvement is verified, integrate it rather than leaving an obviously slower path in place. Do not stall the task optimizing unrelated code when no evidence or plausible causal opportunity exists.
+
+**Zero-loss promotion gate.** A candidate is promotable only when equivalent-work behavior is preserved and no relevant protected dimension materially regresses beyond measurement noise or an explicit accepted budget. Protected dimensions include, when relevant: correctness, complete results, feature coverage, fidelity, compatibility, determinism, data safety, UX/QoL, p50/p95/p99 latency, first-useful-result time, full-completion time, FPS/frame time, TPS/tick time, throughput, cold/warm startup, memory, allocations/GC, CPU, GPU, disk I/O, network requests/bytes, and power/thermal behavior. Improving one metric by silently worsening another is not a zero-loss win.
+
+**Architecture requirement.** Preserve benchmarkable workload/result identity, measure end-to-end rather than only a relocated sub-step, instrument meaningful hot paths, and prefer architectures that remove work instead of hiding or postponing it. Backgrounding, caching, concurrency, or hardware acceleration counts only when correctness and total-system cost remain within the protected baseline.
+
+**Exceptions.** A real tradeoff may be accepted only when the user explicitly chooses it or an external hard constraint makes it unavoidable; record the tradeoff and do not describe it as zero-loss optimization.
+
+**Regression requirements.** Compare the verified baseline and candidate on representative equivalent work. Protect all relevant measured dimensions, reject scope/result drift, and ratchet the winning candidate into the next baseline. For an explicitly requested performance task, at least one target/hot-path metric must materially improve; preservation alone is incomplete.
+
+**Acceptance test.** Did we actively check the affected runtime path for plausible no-loss speedups, integrate any verified win, prove equivalent results, improve at least one required performance metric when performance was requested, and avoid material regression or hidden cost-shifting across every relevant protected dimension?
