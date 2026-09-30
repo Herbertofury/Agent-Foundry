@@ -5,15 +5,15 @@ import argparse
 from pathlib import Path
 import sys
 
-MARKER = "<!-- UAG_EXECUTION_CONSTITUTION:v0.3.3 -->"
-BOOTSTRAP = "<!-- UAG_BOOTSTRAP:v0.3.3 -->"
+MARKER = "<!-- UAG_EXECUTION_CONSTITUTION:v0.3.4 -->"
+BOOTSTRAP = "<!-- UAG_BOOTSTRAP:v0.3.4 -->"
 GOVERNANCE_URI = "skills://ultimate-agent-governance/skill.md"
 REQUIRED = [
     "No blocker closeout",
     "Unknown is not absent",
     "Never suffer the same failure twice",
     "No fake or partial success",
-    "Performance and quality improve together",
+    "Performance is an always-on zero-loss ratchet",
     "Modernize and fix forward",
     "Challenge before reinventing",
     "Real proof beats structural proof",
