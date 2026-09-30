@@ -1,4 +1,5 @@
 name: Validate Skills
+# Normalized-head validation trigger: source manifest and skill bridges must already converge.
 
 on:
   push:
