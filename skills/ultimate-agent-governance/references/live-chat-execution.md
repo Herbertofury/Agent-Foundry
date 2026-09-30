@@ -67,19 +67,24 @@ For Minecraft/mod repair in particular:
 
 Find the earliest causal owner and repair it.
 
-## C004 — Performance Work Requires Dual Success
+## C004 — Performance Is an Always-On Zero-Loss Ratchet
 
-For FPS, TPS, frame time, tick time, latency, startup, throughput, memory, load time, responsiveness, scalability, or similar work, **both** are mandatory:
+For substantive work that can materially affect FPS, TPS, frame time, tick time, latency, startup, throughput, memory, load time, responsiveness, scalability, I/O, network cost, CPU/GPU use, or similar runtime behavior, performance is always active as a protected objective. Run a bounded free-speed pass on the touched or causal path and integrate verified no-loss wins.
 
-1. demonstrate a real improvement in the requested metric, causal hot path, or equivalent representative scenario; and
-2. preserve the complete required content, behavior, fidelity, quantity, correctness, compatibility, stability, coverage, and QoL.
+For an explicitly requested performance task, **all** are mandatory:
+
+1. demonstrate a real improvement in the requested metric, causal hot path, or equivalent representative scenario;
+2. preserve the complete required content, behavior, fidelity, quantity, correctness, compatibility, stability, coverage, and QoL; and
+3. avoid material regression in every other relevant protected performance/resource dimension on equivalent work. Improving one metric by quietly worsening another is a tradeoff, not a zero-loss win.
 
 Therefore:
 
 - faster by doing less = fail;
 - full preservation with no requested performance improvement = incomplete;
 - “I cannot improve this without removing content” = the attempted strategy failed, not the objective;
-- a first profiling/optimization dead end requires a stronger route, not abandonment.
+- a first profiling/optimization dead end requires a stronger route, not abandonment;
+- a verified better candidate becomes the next baseline; future changes may not materially regress it without explicit user acceptance;
+- moving cost to memory/CPU/GPU/I/O/network/background completion, or dropping an existing measured dimension from the comparison, does not count as zero-loss optimization.
 
 Escalate through better algorithms/data structures, batching, pipelining, safe parallelism, thread/core utilization, async I/O, render/tick scheduling, cache/index/incremental design, allocation reduction, native/runtime APIs, GPU paths where appropriate, event/data-flow redesign, and architectural changes while preserving the result.
 
