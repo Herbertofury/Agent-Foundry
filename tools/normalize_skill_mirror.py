@@ -10,6 +10,7 @@ from pathlib import Path
 FOOTER_MARKER = "---\nTo read any file's contents"
 UAG = "ultimate-agent-governance"
 CHALLENGE_BULLET = "- **Challenge before reinventing.** For substantive implementation, architecture, optimization, conversion, integration, or tooling work, run a bounded challenger/integration scan across relevant upstreams, repositories, forks, package/plugin ecosystems, standards, and reference implementations. Prefer authorized adopt/merge/port/wrap/backport/reuse of materially superior pieces over rebuilding weaker duplicates; compose the best pieces when no single candidate wins, preserve provenance/licensing/permission constraints, and record candidate dispositions."
+PERFORMANCE_BULLET = "- **Performance is an always-on zero-loss ratchet.** For substantive runtime-affecting work, perform a bounded free-speed pass on the touched or causal path and integrate verified no-loss wins. Explicit performance tasks require at least one measured target/hot-path gain plus no material regression across relevant protected behavior and performance/resource dimensions on equivalent work. Faster-by-doing-less, preservation-only, hidden cost-shifting, and one-metric wins that worsen another protected dimension fail. Every verified better baseline becomes the new floor."
 
 
 def strip_registry_footer(text: str) -> str:
@@ -24,14 +25,30 @@ def strip_registry_footer(text: str) -> str:
 
 def normalize_uag(text: str) -> str:
     text = strip_registry_footer(text)
-    text = text.replace("UAG_BOOTSTRAP:v0.3.2", "UAG_BOOTSTRAP:v0.3.3")
-    text = text.replace("UAG_EXECUTION_CONSTITUTION:v0.3.2", "UAG_EXECUTION_CONSTITUTION:v0.3.3")
+    text = text.replace("UAG_BOOTSTRAP:v0.3.2", "UAG_BOOTSTRAP:v0.3.4")
+    text = text.replace("UAG_BOOTSTRAP:v0.3.3", "UAG_BOOTSTRAP:v0.3.4")
+    text = text.replace("UAG_EXECUTION_CONSTITUTION:v0.3.2", "UAG_EXECUTION_CONSTITUTION:v0.3.4")
+    text = text.replace("UAG_EXECUTION_CONSTITUTION:v0.3.3", "UAG_EXECUTION_CONSTITUTION:v0.3.4")
     if "proactively scan challengers/integrations" not in text:
         text = text.replace(
             "modernize/fix forward; decompose mixed upgrades;",
             "modernize/fix forward; proactively scan challengers/integrations and reuse superior authorized implementations before reinventing; decompose mixed upgrades;",
             1,
         )
+    if "**Performance is an always-on zero-loss ratchet.**" not in text:
+        old = "- **Performance and quality improve together.**"
+        pos = text.find(old)
+        if pos >= 0:
+            line_end = text.find("\n", pos)
+            text = text[:pos] + PERFORMANCE_BULLET + text[line_end:]
+        else:
+            anchor = "- **No fake or partial success.**"
+            pos = text.find(anchor)
+            if pos >= 0:
+                line_end = text.find("\n", pos)
+                text = text[: line_end + 1] + PERFORMANCE_BULLET + "\n" + text[line_end + 1 :]
+            else:
+                raise RuntimeError("UAG performance invariant anchor not found")
     if "**Challenge before reinventing.**" not in text:
         anchor = "- **Modernize and fix forward.**"
         pos = text.find(anchor)
