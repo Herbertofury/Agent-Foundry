@@ -1,7 +1,7 @@
 {
   "fileCount": 418,
   "schemaVersion": 1,
-  "sizeBytes": 3618768,
+  "sizeBytes": 3622962,
   "skillCount": 8,
   "skills": {
     "artifact-browser-companion": {
@@ -9,8 +9,8 @@
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "02064e453af76c2d286c8b309545c23b7c4d26a3ba0e9b2a4304dddab231a14d",
-          "sizeBytes": 13381
+          "sha256": "0e94d968b9499fd51bcc0c89754e736f0571b3938d5be797e9064161f99204c9",
+          "sizeBytes": 13665
         },
         {
           "path": "agents/openai.yaml",
@@ -113,8 +113,8 @@
           "sizeBytes": 4162
         }
       ],
-      "sizeBytes": 64837,
-      "treeDigest": "fce20f66551a9ba8824be1ae977f58f02635e3efe0ab4b0ada7f4e39e5b77b85"
+      "sizeBytes": 65121,
+      "treeDigest": "7756a45e37e77de65a7aedaa74f60f57d19830f5f75d5e2d950b687e861bc1de"
     },
     "minecraft-dev-kit": {
       "fileCount": 220,
@@ -126,8 +126,8 @@
         },
         {
           "path": "SKILL.md",
-          "sha256": "94a53f18f3a405b793b621a42dd73a358b5c80abd6dbf66c712af4460fa241a0",
-          "sizeBytes": 22050
+          "sha256": "19b4ff8ca1ea554d1346ac97a51a08376628a902dc56aeda6223530020db089f",
+          "sizeBytes": 22334
         },
         {
           "path": "VERIFICATION.md",
@@ -1220,16 +1220,16 @@
           "sizeBytes": 2836
         }
       ],
-      "sizeBytes": 1990869,
-      "treeDigest": "886d478bfa3d46b421a252c5e563d8ffe696e37c6c6875febfdeeaeec94285a8"
+      "sizeBytes": 1991153,
+      "treeDigest": "9740dd04b4c0adfc4dcba2a081a1ad5332d0d82fc7d4f46e52b4db9084833a0a"
     },
     "minecraft-repair": {
       "fileCount": 15,
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "00f1a82e9ece500ac62c16c13669528bda6fd34788578a2bf8ea1276c0220430",
-          "sizeBytes": 18119
+          "sha256": "13b7a7191913b137cbcd0fccf5dbd290d0ca05dbf48021d27b0c90c83e885d91",
+          "sizeBytes": 18403
         },
         {
           "path": "agents/openai.yaml",
@@ -1302,8 +1302,8 @@
           "sizeBytes": 7827
         }
       ],
-      "sizeBytes": 85642,
-      "treeDigest": "484a121db751a49f522383fb463716ea5c7af40bed0369f3ea6c19eb4f32ec17"
+      "sizeBytes": 85926,
+      "treeDigest": "55e9cbbaab16bd6113afda863cd598ebe44a3cb668621d56292887b9498f9c83"
     },
     "project-brain-orchestrator": {
       "fileCount": 100,
@@ -1315,8 +1315,8 @@
         },
         {
           "path": "SKILL.md",
-          "sha256": "86e5941161fbf61a787b6a7a26d5b24d1f4e136491124ea16c918c5a748603b9",
-          "sizeBytes": 16608
+          "sha256": "c723e963d8fa148eecce22b210de097743fff80bf9c583601a07269fd5d994df",
+          "sizeBytes": 16892
         },
         {
           "path": "VERSION",
@@ -1809,16 +1809,16 @@
           "sizeBytes": 20558
         }
       ],
-      "sizeBytes": 1049666,
-      "treeDigest": "75ef82bc8d16150f12afa5b811134a0368ebb4e52dc5b7353fb07536fb5caba6"
+      "sizeBytes": 1049950,
+      "treeDigest": "91cf4996c9d7491f48c1e7fc5c9f7a3301e0e13bde556166f5f90d1bdad60c30"
     },
     "project-visual-qa-showcase": {
       "fileCount": 8,
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "7abdbab886a8891bdef2fb618013f01f00af2d27a5e71569f5dd1182d6706016",
-          "sizeBytes": 12648
+          "sha256": "501915424af9be8dbe677d31260bd0f83ccca0fd1dbad62e3b215424eb481a35",
+          "sizeBytes": 12932
         },
         {
           "path": "agents/openai.yaml",
@@ -1856,16 +1856,16 @@
           "sizeBytes": 1911
         }
       ],
-      "sizeBytes": 34584,
-      "treeDigest": "f9446de0b7d1f81caad3c2cf3ff5671dd19443f749dbaa1058f46e225ef070d3"
+      "sizeBytes": 34868,
+      "treeDigest": "5227091287b5537217bb630a6c453b473ff2d435c06bf363d3c448a845a033a3"
     },
     "revenue-operator": {
       "fileCount": 7,
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "2e24b23bbc9c0ee896745ba1834f35f28d8c80e5552434618ed9787a5608ed31",
-          "sizeBytes": 9806
+          "sha256": "c5c017ec7a23f8e49fb3d2355aef3ed7ab2524623b2606ea5ebd52c595b9974e",
+          "sizeBytes": 10090
         },
         {
           "path": "agents/openai.yaml",
@@ -1898,16 +1898,16 @@
           "sizeBytes": 3101
         }
       ],
-      "sizeBytes": 22234,
-      "treeDigest": "bbc2ccfd4fffd2eba55abc0dab5206c291e70180fc01b78a7534221535261bc0"
+      "sizeBytes": 22518,
+      "treeDigest": "282dce86c7164c6ef760595c9328560d4996492a4d1d3e1a9ebb7e943a015de4"
     },
     "ultimate-agent-governance": {
       "fileCount": 28,
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "c579d2a0a0c716c3bcd7f8a11de20be6e1cecd3ca01f2e8fd18a297a4bab912e",
-          "sizeBytes": 17700
+          "sha256": "9db383404917f7efca2155514534c4b1a513906a10908104c408b55a50f3fda5",
+          "sizeBytes": 18067
         },
         {
           "path": "agents/openai.yaml",
@@ -1976,8 +1976,8 @@
         },
         {
           "path": "references/shared-execution-constitution.md",
-          "sha256": "4f03005d2f52e8cbef3987775bd876ca6af068472eebe57757f27faa48da8c30",
-          "sizeBytes": 3167
+          "sha256": "b7a0838633d6055fd614640cbba00da4297a8d4e138e1b166b367dcf03b3ee26",
+          "sizeBytes": 3454
         },
         {
           "path": "references/site-adapter-platform.md",
@@ -1996,8 +1996,8 @@
         },
         {
           "path": "scripts/audit_cross_skill_constitution.py",
-          "sha256": "cd83c40f931d89954ffe0df91d86f51bca989b6be468739011a297c5911c3b04",
-          "sizeBytes": 2669
+          "sha256": "0ea8284093c71229ddc57e211072f158ed9b44b12192cb10390c2a6e83546dad",
+          "sizeBytes": 2674
         },
         {
           "path": "scripts/challenger_gate.py",
@@ -2021,8 +2021,8 @@
         },
         {
           "path": "scripts/install_execution_constitution.py",
-          "sha256": "8c2288c9f29018f641c397f2b1f82448e2c6742c871930ca840d020377e6b72a",
-          "sizeBytes": 7064
+          "sha256": "29f80abae2793b27edf5beacc3b039495a9d04692ca3b971ffb11fba9b0288b3",
+          "sizeBytes": 7348
         },
         {
           "path": "scripts/invariant_harness.py",
@@ -2031,8 +2031,8 @@
         },
         {
           "path": "scripts/performance_gate.py",
-          "sha256": "353ea9bb3175ab575c8c1be630767b2ef133d5f8e528efc919f760caeef309bf",
-          "sizeBytes": 6459
+          "sha256": "7ea1c87e64ff2ecc99c6d207da16a972ae42b84570e460b2584a854531783350",
+          "sizeBytes": 7722
         },
         {
           "path": "scripts/site_adapter_manifest_check.py",
@@ -2045,16 +2045,16 @@
           "sizeBytes": 6818
         }
       ],
-      "sizeBytes": 185826,
-      "treeDigest": "3523f736466b8cbe8dd0612a4ac5fd2a7a1875c5c6dc1bab965f909ebddcd096"
+      "sizeBytes": 188032,
+      "treeDigest": "bac783da20c3f47862b871ca662ae324a4519e016b883fe3b9887816ce91811a"
     },
     "zero-loss-chat-accelerator": {
       "fileCount": 19,
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "db56859f24d857719bc8f2b7192c6f25faecf39423dc10f90b9abe1ff966f94f",
-          "sizeBytes": 15325
+          "sha256": "3818c02283c3d33ceec8d0d528ca447036fed3eff4e3539a30d278f1dea5d71a",
+          "sizeBytes": 15609
         },
         {
           "path": "agents/openai.yaml",
@@ -2147,8 +2147,8 @@
           "sizeBytes": 11938
         }
       ],
-      "sizeBytes": 185110,
-      "treeDigest": "9b5c373a13498e08088cc4b95e9a8e19eb33000b8e9608e83d5ec9fa553f040f"
+      "sizeBytes": 185394,
+      "treeDigest": "1ce68bcd10242c7da4f4b1ace351f856860ae3f9af148ec03ba3c3c91ec1ff22"
     }
   },
   "sourceRoot": "skills"
