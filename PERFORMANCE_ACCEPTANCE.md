@@ -9,6 +9,9 @@ A performance change passes only when:
 
 Protected behavior can include correctness, result count, content, visual fidelity, compatibility, determinism, data safety, feature coverage, and user-visible QoL.
 
+## Root-cause requirement
+Repair and optimization must address the actual causal bottleneck. A workaround that makes the symptom disappear by moving cost into end-to-end latency, throughput, memory/CPU/GPU/network use, startup, responsiveness, blocking, repeated work, or future maintenance is containment—not a completed fix. If containment is temporarily necessary, label it unresolved and keep the causal repair active.
+
 ## Invalid shortcuts
 The following do not count as optimization:
 - rendering fewer things without permission;
@@ -17,7 +20,11 @@ The following do not count as optimization:
 - lowering quality/fidelity;
 - skipping validation;
 - caching stale or wrong results;
-- disabling expensive features rather than engineering them efficiently.
+- disabling expensive features rather than engineering them efficiently;
+- adding sleeps, delays, polling, retries, or timeout inflation to hide races/state bugs;
+- forcing serialization or blocking solely to avoid fixing concurrency/ownership defects;
+- duplicating scans, requests, transforms, or validation to paper over bad state flow;
+- shifting expensive work to another thread/process/background path while end-to-end completion, resource use, or responsiveness regresses.
 
 ## Evidence
 Prefer equivalent-work measurements:
