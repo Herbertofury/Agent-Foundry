@@ -37,3 +37,16 @@ Long policy has one canonical source. Skills, agent files, wiki pages, and tool-
 
 ## 12. Maximum useful effort, minimum wasted motion
 Optimize orchestration waste, repeated discovery, redundant polling, and avoidable serialization—not quality, reasoning depth, verification, capability, or requested breadth.
+
+## 13. Root-cause fixes over regression workarounds
+**Rule.** Solve the causal defect or bottleneck; do not manufacture a pass by making the product do less or by moving the cost somewhere less visible.
+
+**Scope.** Repair, optimization, compatibility, migration, integration, refactor, reliability, and performance work.
+
+**Required behavior.** Do not remove or disable features, reduce scope/coverage/fidelity, add sleeps/delays/polling/retries, force serialization/blocking, duplicate work, or shift expensive work to another path when that materially worsens protected behavior, end-to-end latency, throughput, resource use, responsiveness, UX, or maintainability. A workaround with such regressions is temporary containment only, remains `unresolved-active`, and may not be called the fix unless the user explicitly accepts the tradeoff.
+
+**Architecture requirement.** Identify the earliest causal owner, repair it at the appropriate shared layer, and compare equivalent work end-to-end so costs cannot be hidden by relocation.
+
+**Regression requirements.** Preserve feature and behavior contracts and compare the relevant before/after performance or resource metrics. Add a focused regression check when the failure mode is repeatable.
+
+**Acceptance test.** Did the solution remove the causal failure while preserving the complete result and avoiding material performance/QoL regressions or hidden cost-shifting?
