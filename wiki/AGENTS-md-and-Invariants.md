@@ -22,6 +22,8 @@ Large repeated instruction blocks create drift, waste context, and make it harde
 
 **Agent Foundry principle: one truth, many thin adapters.**
 
+**Root-cause fixes over regression workarounds.** Removing features, reducing work, adding waits/polling/retries, forcing serialization, duplicating work, or shifting cost elsewhere does not count as a completed fix when equivalent behavior or performance regresses. Temporary containment stays unresolved until the causal defect is repaired or the user explicitly accepts the tradeoff.
+
 Canonical repository files:
 - [PRODUCT_INVARIANTS.md](https://github.com/Herbertofury/Agent-Foundry/blob/main/PRODUCT_INVARIANTS.md)
 - [AGENTS.md](https://github.com/Herbertofury/Agent-Foundry/blob/main/AGENTS.md)
