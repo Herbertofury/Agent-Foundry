@@ -1,7 +1,7 @@
 {
   "fileCount": 418,
   "schemaVersion": 1,
-  "sizeBytes": 3622962,
+  "sizeBytes": 3624875,
   "skillCount": 8,
   "skills": {
     "artifact-browser-companion": {
@@ -1931,8 +1931,8 @@
         },
         {
           "path": "references/app-runtime-performance.md",
-          "sha256": "ad74195fbeb3f4d562835193bb5def131804829ba70119f5cba0d5458a178e68",
-          "sizeBytes": 7079
+          "sha256": "8f35831376aca49823460ff7c53d3792be8a4e00a79f7bee7da803d91580d64a",
+          "sizeBytes": 8190
         },
         {
           "path": "references/challenger-integration.md",
@@ -1966,8 +1966,8 @@
         },
         {
           "path": "references/live-chat-execution.md",
-          "sha256": "d14e36ae6930a93694489af63f04850988135374e89c19145faf4035d0896a1a",
-          "sizeBytes": 16011
+          "sha256": "be68c7b7372c19f4170c62967c5391183130165d1fd8097eb025f1d4ed077c72",
+          "sizeBytes": 16813
         },
         {
           "path": "references/research-basis.md",
@@ -2045,8 +2045,8 @@
           "sizeBytes": 6818
         }
       ],
-      "sizeBytes": 188032,
-      "treeDigest": "bac783da20c3f47862b871ca662ae324a4519e016b883fe3b9887816ce91811a"
+      "sizeBytes": 189945,
+      "treeDigest": "369ec69d38d21cda4da2d6b2edeeb9a482011e28bfa1d7e7269822196696d36a"
     },
     "zero-loss-chat-accelerator": {
       "fileCount": 19,
