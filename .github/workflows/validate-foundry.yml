@@ -75,6 +75,10 @@ jobs:
           grep -qi "Unknown is not absent" PRODUCT_INVARIANTS.md
           grep -qi "Challenge before reinventing" PRODUCT_INVARIANTS.md
           grep -qi "Performance and quality improve together" PRODUCT_INVARIANTS.md
+          grep -qi "Root-cause fixes over regression workarounds" PRODUCT_INVARIANTS.md
+          grep -qi "temporary containment" PRODUCT_INVARIANTS.md
+          grep -qi "Root-cause requirement" PERFORMANCE_ACCEPTANCE.md
+          grep -qi "adding sleeps, delays, polling, retries" PERFORMANCE_ACCEPTANCE.md
           grep -qi "Continuity is mandatory" PRODUCT_INVARIANTS.md
           grep -qi "Never suffer the same failure twice" PRODUCT_INVARIANTS.md
           grep -qi "Challenger" wiki/_Sidebar.md
