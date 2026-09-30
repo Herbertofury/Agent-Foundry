@@ -52,11 +52,16 @@ When runtime cannot be exercised, require an explicit unverified acceptance bloc
 
 ## Performance acceptance
 
-Treat performance and result quality/completeness as simultaneous optimization objectives across apps, mods, tools, and integrations. Agents should actively pursue the strongest practical speed/snappiness/throughput using profiling, algorithms, batching, safe concurrency, available CPU threads/cores, async I/O, caching/indexing/incremental state, native fast paths, and hardware acceleration where useful, without sacrificing capability, fidelity, coverage, correctness, or verification. Solvable blockers are engineering work, not permission to ship a degraded result.
+Treat performance as an **always-on zero-loss ratchet** alongside result quality/completeness across apps, mods, tools, and integrations. For substantive runtime-affecting work, run a bounded free-speed pass on the touched or causal path even when the user did not explicitly label the task an optimization. Actively pursue the strongest practical speed/snappiness/throughput using profiling, better algorithms/data structures, batching, fewer round trips, safe concurrency, available CPU threads/cores, async I/O, caching/indexing/incremental state, allocation reduction, native fast paths, and hardware acceleration where useful, without sacrificing capability, fidelity, coverage, correctness, verification, or another relevant performance/resource dimension. Verified no-loss wins become the new baseline. Solvable blockers are engineering work, not permission to ship a degraded result.
 
 A performance task has a **dual-success gate**: (1) show a material improvement in the requested metric, causal hot path, or representative scenario, and (2) preserve or improve the complete intended result. Passing only preservation is incomplete; passing only speed by reducing content/quality is a failure. If the first safe optimization route cannot deliver both, profile deeper, repair/provision the environment or toolchain if necessary, and change algorithms, scheduling, data flow, runtime/native paths, transport/build lanes, or architecture until both are achieved. A failed route is unresolved work, not closeout.
 
-Performance gates must first establish workload/result equivalence. Reject a faster candidate if it truncates results, reduces fidelity, disables work, changes semantics, or weakens verification.
+Performance gates must first establish workload/result equivalence. Reject a faster candidate if it truncates results, reduces fidelity, disables work, changes semantics, weakens verification, or materially worsens another relevant protected dimension.
+
+### Multi-dimensional performance protection
+Protect the relevant vector, not just one headline number: p50/p95/p99 latency, first-useful and full-completion time, FPS/frame time, TPS/tick time, throughput, cold/warm startup, memory, allocations/GC, CPU, GPU, disk I/O, network requests/bytes, and power/thermal behavior where relevant. Improving one by materially worsening another is a tradeoff, not a zero-loss win. Any nonzero regression tolerance must be explicit and justified as measurement noise or an accepted budget rather than silently granted.
+
+Every verified better equivalent-work candidate ratchets the baseline forward. Do not compare future work against an older slower baseline merely because it is easier to pass.
 
 Measure first-useful-result latency separately from full completion for interactive workflows.
 
