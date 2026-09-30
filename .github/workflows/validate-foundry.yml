@@ -76,6 +76,11 @@ jobs:
           grep -qi "Challenge before reinventing" PRODUCT_INVARIANTS.md
           grep -qi "Performance and quality improve together" PRODUCT_INVARIANTS.md
           grep -qi "Root-cause fixes over regression workarounds" PRODUCT_INVARIANTS.md
+          grep -qi "Continuous zero-loss performance ratchet" PRODUCT_INVARIANTS.md
+          grep -qi "Always-on free-speed pass" PERFORMANCE_ACCEPTANCE.md
+          grep -qi "Continuous performance ratchet" PERFORMANCE_ACCEPTANCE.md
+          grep -qi "Multi-dimensional zero-loss gate" PERFORMANCE_ACCEPTANCE.md
+          grep -qi "Ratchet rule" PERFORMANCE_ACCEPTANCE.md
           grep -qi "temporary containment" PRODUCT_INVARIANTS.md
           grep -qi "Root-cause requirement" PERFORMANCE_ACCEPTANCE.md
           grep -qi "adding sleeps, delays, polling, retries" PERFORMANCE_ACCEPTANCE.md
