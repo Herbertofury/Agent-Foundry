@@ -91,15 +91,29 @@ def compare(baseline: dict[str, Any], candidate: dict[str, Any], policy: dict[st
         max_regression = finite_number(rule.get("max_regression_percent", 0), f"policy max_regression_percent for {name}")
         min_improvement = finite_number(rule.get("min_improvement_percent", 0), f"policy min_improvement_percent for {name}")
         required_improvement = bool(rule.get("required_improvement", False))
+        if max_regression < 0:
+            errors.append(f"metric {name!r} has negative max_regression_percent")
+        if min_improvement < 0:
+            errors.append(f"metric {name!r} has negative min_improvement_percent")
         if required_improvement:
             required_improvement_metrics.append(name)
 
         if max_regression > 0 and policy.get("require_regression_budget_reason", True):
             reason = rule.get("regression_budget_reason")
+            kind = rule.get("regression_budget_kind")
             if not isinstance(reason, str) or not reason.strip():
                 errors.append(
                     f"metric {name!r} allows {max_regression:.3f}% regression without regression_budget_reason; "
                     "zero-loss is the default and tolerances must be explicit"
+                )
+            if kind not in {"measurement_noise", "user_accepted_tradeoff"}:
+                errors.append(
+                    f"metric {name!r} has a positive regression budget without regression_budget_kind="
+                    "measurement_noise or user_accepted_tradeoff"
+                )
+            elif kind == "user_accepted_tradeoff" and not policy.get("explicit_tradeoff_accepted", False):
+                errors.append(
+                    f"metric {name!r} uses a real regression tradeoff without policy explicit_tradeoff_accepted=true"
                 )
 
         if base == 0:
@@ -112,7 +126,9 @@ def compare(baseline: dict[str, Any], candidate: dict[str, Any], policy: dict[st
         improvement_pct = -delta_pct
         if improvement_pct > 0:
             any_improved = True
-        passed = delta_pct <= max_regression and improvement_pct >= min_improvement
+        passed = delta_pct <= max_regression
+        if min_improvement > 0 and improvement_pct < min_improvement:
+            passed = False
         if required_improvement and improvement_pct <= 0:
             passed = False
         results[name] = {
