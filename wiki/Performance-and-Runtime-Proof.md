@@ -5,7 +5,7 @@ Optimization must show:
 - a real target-metric improvement; **and**
 - preserved correctness, content, quantity, fidelity, compatibility, and QoL.
 
-Faster by doing less is not optimization.
+Faster by doing less is not optimization. Likewise, a symptom-hiding workaround—such as feature removal, sleeps/delays, extra polling/retries, forced serialization/blocking, duplicated work, or cost-shifting—is not a completed fix if equivalent-work performance or QoL regresses.
 
 ## Runtime proof
 Use the strongest practical proof ladder:
