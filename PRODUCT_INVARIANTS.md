@@ -67,3 +67,22 @@ Optimize orchestration waste, repeated discovery, redundant polling, and avoidab
 **Regression requirements.** Compare the verified baseline and candidate on representative equivalent work. Protect all relevant measured dimensions, reject scope/result drift, and ratchet the winning candidate into the next baseline. For an explicitly requested performance task, at least one target/hot-path metric must materially improve; preservation alone is incomplete.
 
 **Acceptance test.** Did we actively check the affected runtime path for plausible no-loss speedups, integrate any verified win, prove equivalent results, improve at least one required performance metric when performance was requested, and avoid material regression or hidden cost-shifting across every relevant protected dimension?
+
+
+## 15. Durable multi-remote checkpoint sync
+**Rule.** A material project checkpoint is not durable merely because it exists in a chat, sandbox, local workspace, or one provider. At each coherent checkpoint—and always before compaction, handoff, interruption-prone long gates, or closeout—persist the same lineage to every required durable remote.
+
+**Required behavior.** Keep source/history in the canonical GitHub/VCS repository when applicable. Keep material artifacts and project/checkpoint exports in connected Google Drive when available. Record stable remote identities such as repository/branch/commit and Drive file/folder IDs, plus size/digest/readback evidence when the provider exposes it. ChatGPT Library, sandbox files, local scratch space, and conversation memory are convenience caches, never the sole durable copy of current material progress.
+
+**Failure behavior.** If a required remote write or verification fails, preserve the exact pending operation, local bytes/checksum or source commit, remote target identity, blocker, and next recovery action. The checkpoint remains `unresolved-active`; do not call the project fully synchronized or complete.
+
+**Acceptance test.** Could a fresh chat recover the latest verified material state from durable remotes without relying on this conversation?
+
+## 16. Live GitHub Wiki parity
+**Rule.** When a GitHub project uses a Wiki, the **actual live GitHub Wiki** is part of the documentation acceptance surface. A repository-side `wiki/` directory is only the canonical source mirror and does not satisfy publication by itself.
+
+**Required behavior.** Update user-facing Wiki pages in the same coherent checkpoint as material feature, architecture, compatibility, installation, operational, or governance changes. Publish the mirror to the repository's `.wiki.git` backend and verify the live Wiki readback or publishing workflow against the intended source. If a required Wiki does not yet exist, create/bootstrap it through an authorized supported route, establish `Home` and navigation, then publish the full source mirror.
+
+**Failure behavior.** A missing, stale, or unverified live Wiki is unresolved documentation work. Do not silently substitute README/docs/source-mirror updates or claim Wiki parity until the live GitHub Wiki exists and reflects the intended checkpoint.
+
+**Acceptance test.** Does the live GitHub Wiki exist, navigate cleanly, and reflect the same current project lineage as the source checkpoint it documents?
