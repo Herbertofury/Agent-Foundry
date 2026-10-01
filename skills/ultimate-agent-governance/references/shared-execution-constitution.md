@@ -1,6 +1,6 @@
 # Shared Execution Constitution Bridge
 
-Version marker: `<!-- UAG_EXECUTION_CONSTITUTION:v0.3.5 -->`
+Version marker: `<!-- UAG_EXECUTION_CONSTITUTION:v0.3.6 -->`
 
 Use this bridge in every mutable skill entrypoint that can own or materially affect substantive work. The narrower skill owns domain procedure; this bridge owns acceptance and continuity.
 
@@ -15,6 +15,7 @@ Minimum inherited behavior:
 - before substantial invention, architecture, optimization, conversion, or integration, run a bounded challenger/integration scan and prefer authorized adopt/merge/port/wrap/backport/composition of stronger existing implementations over rebuilding weaker duplicates; preserve provenance and decision rationale;
 - test the real artifact/workflow/runtime when available rather than treating build/static success as runtime proof;
 - preserve acceptance, identities, evidence, checkpoints, no-repeat history, and exact next action across skill switches, compaction, retries, timeouts, and handoffs;
+- cross-skill activation is overlay-only: preserve the prior owner's accepted requirements, identities, verified evidence, checkpoints, blockers/no-repeat history, and exact next action; helper/guardrail/subtask skills return control after their bounded work and may not reset or fork shared state;
 - material project checkpoints must be verified on required durable remotes: canonical GitHub/VCS for source/history, connected Google Drive for material artifacts/checkpoint exports when available, and the actual live GitHub Wiki when the project uses one; repo-side `wiki/` source alone is not publication, missing required wikis must be created/bootstrap through an authorized supported route, and unsynced state remains unresolved;
 - exhaustive external-result claims require expected/discovered/accepted/rejected/unresolved reconciliation plus terminal pagination/coverage proof.
 
@@ -34,4 +35,4 @@ Use `scripts/install_execution_constitution.py <skill-dir>` to add or refresh th
 
 ## Activation reality
 
-A correct governance ZIP does not alter already-installed skills. A narrower skill can be selected without loading governance, so every substantive work-driving skill must carry both the local bridge and the mandatory bootstrap URI. Package-level validation is not evidence that the user's installed skill library was replaced. After installation/replacement, verify the installed `SKILL.md` itself contains `UAG_BOOTSTRAP:v0.3.5` and `UAG_EXECUTION_CONSTITUTION:v0.3.5`.
+A correct governance ZIP does not alter already-installed skills. A narrower skill can be selected without loading governance, so every substantive work-driving skill must carry both the local bridge and the mandatory bootstrap URI. Package-level validation is not evidence that the user's installed skill library was replaced. After installation/replacement, verify the installed `SKILL.md` itself contains `UAG_BOOTSTRAP:v0.3.6` and `UAG_EXECUTION_CONSTITUTION:v0.3.6`.
