@@ -71,10 +71,16 @@ For substantial work:
 6. Exercise the exact real workflow and prove the loaded build is current.
 7. Enforce the **Build-first session invariant**: if implementation changed, create a fresh usable build/package before closeout/status ceremony.
 8. Checkpoint durable project memory/Project Constellation at meaningful coherent milestones.
-9. **Publish every material saved file/artifact/checkpoint to connected Drive and verify it**; GitHub, ProjectDump, releases, and other required remotes supplement Drive.
+9. **Publish every material checkpoint to its required durable remotes and verify it**: canonical GitHub/VCS for source/history when applicable, connected Google Drive for material artifacts/checkpoint exports when available, and the actual live GitHub Wiki when the project uses one. ProjectDump, releases, and other required remotes supplement these; a repo-side `wiki/` folder alone is not Wiki publication.
 10. Apply the **Maximum Improvement Rule** once: after the requested result works, continue while a material evidence-backed improvement remains, then perform one independent challenge pass.
 
 Every task-related failure follows diagnose -> fix -> retest. Never convert a realistically solvable project error into a final limitation.
+
+## Remote continuity and live Wiki parity
+
+Treat chats, sandboxes, local workspaces, and convenience libraries as recoverable caches, not authoritative persistence. At every coherent material checkpoint, record the exact source lineage and synchronize the required remote tuple: GitHub/VCS commit, verified Drive artifact/checkpoint identity when available, and live GitHub Wiki publication when applicable. Before compaction, handoff, long interruption-prone gates, or closeout, force one coherent sync boundary. If any required remote is missing/stale/unverified, preserve the pending operation and keep the task unresolved instead of allowing the newest state to die in a stale or broken chat.
+
+When a repository uses GitHub Wiki, update the canonical wiki source with the same feature/governance change, publish it to `.wiki.git`, and verify the live result. If no live Wiki exists yet, create/bootstrap it through an authorized supported route before accepting documentation completion.
 
 ## Stall-safe validation and publication
 
@@ -145,7 +151,7 @@ Favor exact changed-path tests during iteration; run broad suites at convergence
 
 ## Verified artifact publication
 
-For material saved output/checkpoints, apply `references/DRIVE-PERSISTENCE.md`; add `references/ARTIFACT-PUBLISHING.md` for packaging/large files/releases/multipart/deep verification. Connected Google Drive is mandatory when available; GitHub/ProjectDump supplement it. Verify the remote object before claiming durability and record stable identity in project memory.
+For material saved output/checkpoints, apply `references/DRIVE-PERSISTENCE.md`; add `references/ARTIFACT-PUBLISHING.md` for packaging/large files/releases/multipart/deep verification. Connected Google Drive is mandatory when available for artifacts/checkpoint exports, while canonical GitHub/VCS is mandatory for repository source/history and the live GitHub Wiki is mandatory when the project uses one. Verify every required remote before claiming durability and record stable identities/lineage in project memory.
 
 ## Controlled governance evolution
 
