@@ -6,6 +6,15 @@ from pathlib import Path
 
 FIXED_DT=(2026,1,1,0,0,0)
 
+GENERATED_JUNK_PARTS={"__pycache__"}
+GENERATED_JUNK_SUFFIXES={".pyc",".pyo"}
+
+def include_source_file(skill:Path,path:Path):
+    rel=path.relative_to(skill)
+    if any(part in GENERATED_JUNK_PARTS for part in rel.parts): return False
+    if path.suffix.lower() in GENERATED_JUNK_SUFFIXES: return False
+    return path.is_file()
+
 def file_sha(path:Path):
     h=hashlib.sha256()
     with path.open('rb') as f:
@@ -14,7 +23,7 @@ def file_sha(path:Path):
 
 def source_digest(skill:Path):
     h=hashlib.sha256()
-    for f in sorted(p for p in skill.rglob('*') if p.is_file()):
+    for f in sorted(p for p in skill.rglob('*') if include_source_file(skill,p)):
         rel=f.relative_to(skill).as_posix(); b=f.read_bytes()
         h.update(rel.encode()+b'\0'+hashlib.sha256(b).hexdigest().encode()+b'\n')
     return h.hexdigest()
@@ -23,7 +32,7 @@ def package(skill:Path,out_root:Path,source_url:str,revision:str,built_at:str):
     out=out_root/skill.name; out.mkdir(parents=True,exist_ok=True); zpath=out/'skill.zip'
     if zpath.exists(): zpath.unlink()
     with zipfile.ZipFile(zpath,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
-        for f in sorted(p for p in skill.rglob('*') if p.is_file()):
+        for f in sorted(p for p in skill.rglob('*') if include_source_file(skill,p)):
             rel=Path(skill.name)/f.relative_to(skill)
             info=zipfile.ZipInfo(rel.as_posix(),FIXED_DT); info.compress_type=zipfile.ZIP_DEFLATED; info.external_attr=(f.stat().st_mode & 0xFFFF)<<16
             z.writestr(info,f.read_bytes(),compress_type=zipfile.ZIP_DEFLATED,compresslevel=9)
