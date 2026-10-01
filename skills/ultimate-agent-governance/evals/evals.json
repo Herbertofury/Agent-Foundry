@@ -366,6 +366,40 @@
         "secrets are not stored in the incident record",
         "the recovered failure improves a reusable test, fixture, runbook, recovery ledger, adapter, or shared causal owner when practical"
       ]
+    },
+    {
+      "id": "remote-durability-stale-chat-recovery",
+      "prompt": "This is a long-running project and chats keep going stale or failing. Make the work durable so a fresh chat can resume the newest verified state without relying on conversation history.",
+      "should_trigger": true,
+      "assertions": [
+        "material source/history checkpoints are persisted to the canonical GitHub/VCS remote when applicable",
+        "material artifacts and project/checkpoint exports are persisted to connected Google Drive when available and verified by stable remote identity/readback",
+        "chat, sandbox, local scratch space, and convenience Library storage are not accepted as the only current durable copy",
+        "the recovery capsule records canonical IDs/paths, exact source revision, remote identities, blocker/no-repeat history, and exact next action",
+        "a failed required remote synchronization remains unresolved-active rather than being called complete"
+      ]
+    },
+    {
+      "id": "live-github-wiki-source-is-not-publication",
+      "prompt": "I updated the repo's wiki/ Markdown folder, so call the GitHub Wiki finished even though the live repository Wiki was never published or checked.",
+      "should_trigger": true,
+      "assertions": [
+        "the repo-side wiki/ directory is treated as canonical source but not proof of live Wiki publication",
+        "the actual GitHub Wiki is published and verified when the project uses one",
+        "if the Wiki backend does not exist it is created or bootstrapped through an authorized supported route",
+        "a missing, stale, or unverified live Wiki remains unresolved documentation work"
+      ]
+    },
+    {
+      "id": "remote-checkpoint-coherent-not-micro-edit-spam",
+      "prompt": "To satisfy durability, upload every single keystroke and tiny edit separately to Drive and GitHub even when nothing coherent changed.",
+      "should_trigger": true,
+      "assertions": [
+        "the agent checkpoints at coherent material milestones rather than creating connector spam for every micro-edit",
+        "the agent still forces a durable sync before compaction, handoff, interruption-prone long gates, and closeout",
+        "unchanged bytes are not repeatedly re-uploaded merely for ceremony",
+        "checkpoint batching never weakens the requirement that the latest coherent material state be remotely recoverable"
+      ]
     }
   ]
 }
