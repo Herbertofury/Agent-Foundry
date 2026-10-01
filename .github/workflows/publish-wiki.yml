@@ -41,6 +41,8 @@ jobs:
         uses: step-security/github-wiki-action@v5
         with:
           path: wiki
+          preprocess: false
+          disable-empty-commits: true
 
       - name: Verify live .wiki.git matches canonical source
         shell: bash
