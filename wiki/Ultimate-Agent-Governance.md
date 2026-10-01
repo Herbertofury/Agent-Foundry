@@ -11,8 +11,12 @@ Ultimate Agent Governance is the shared acceptance boundary for substantive work
 - modernize and fix forward;
 - real proof beats structural proof;
 - continuity is mandatory;
+- cross-skill state integrity is mandatory;
 - completeness must be proven;
 - challenge before reinventing.
+
+### Cross-skill state integrity
+A Skill activation is an overlay, not a reset. It may not erase or fork another active Skill's accepted requirements, canonical IDs, verified evidence, checkpoints, blockers, workflow ownership, or exact next action. Bounded helper/guardrail Skills return control to the prior domain owner when their subtask is complete.
 
 ## Governance is an overlay
 It should not steal procedure ownership from a narrower domain Skill.
