@@ -44,6 +44,10 @@ Therefore:
 
 A partial remote success is **not** full synchronization. Preserve successful remote identities plus the exact pending operation for any failed remote. Never delete the only good copy while repairing synchronization.
 
+## Cross-skill continuity integrity
+
+Remote durability also protects against Skill transitions. A newly activated Skill must consume the same verified continuity lineage rather than creating a parallel one. Preserve accepted requirements, canonical IDs/paths, evidence, checkpoints, blockers/no-repeat history, current domain owner, and exact next action. Helper/guardrail Skills return to the prior owner after bounded work; they do not overwrite or downgrade the shared checkpoint.
+
 ## Resume rule
 
 A fresh chat should prefer the latest **verified remote lineage** over conversational recency. Resolve repository commit, Drive checkpoint/artifact identity, Wiki publish state, and exact next action; then continue from that boundary instead of restarting discovery.
