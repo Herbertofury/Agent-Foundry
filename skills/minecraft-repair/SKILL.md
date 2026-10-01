@@ -3,17 +3,17 @@ name: minecraft-repair
 description: "Diagnose and repair broken Minecraft clients, servers, modpacks, worlds, mod JARs, loader/config/datapack/resource-pack/shader setups, and launcher/runtime failures. Use when the user explicitly asks to fix/diagnose a Minecraft failure or provides crash logs, broken artifacts, error screenshots, worlds, or configs. For ordinary mod development/build/port work, prefer Minecraft Dev Kit; if Repair is invoked inside an active Dev Kit workflow, repair the bounded failure and return to the preserved Dev Kit next action. Reuse prior Repair Brain evidence instead of rereading it on every skill switch. Compose with zero-loss-chat-accelerator when installed."
 ---
 
-<!-- UAG_BRIDGE_START:v0.3.4 -->
+<!-- UAG_BRIDGE_START:v0.3.5 -->
 ## Mandatory governance bootstrap
 
-<!-- UAG_BOOTSTRAP:v0.3.4 -->
+<!-- UAG_BOOTSTRAP:v0.3.5 -->
 Before any substantive action, load `skills://ultimate-agent-governance/skill.md` once for the current continuity epoch, then return to this skill's domain workflow. Do **not** skip this because this skill is more specific. The domain skill owns procedure; Ultimate Agent Governance owns the shared acceptance boundary. If cross-skill loading is unavailable, fails, or is not supported in the current harness, enforce the embedded constitution below locally with no weakening.
 
 This bootstrap is a **start gate**, not optional guidance: do not mutate, repair, build, optimize, migrate, scrape, package, or claim completion until the shared acceptance contract is active. Skill switches, compaction, retries, timeouts, handoffs, and tool changes never clear it.
 
 ## Shared execution constitution
 
-<!-- UAG_EXECUTION_CONSTITUTION:v0.3.4 -->
+<!-- UAG_EXECUTION_CONSTITUTION:v0.3.5 -->
 - **No blocker closeout.** Failure is a routing signal, not a deliverable. Install/provision missing tools and dependencies; repair environment, DNS/network, cache, runtime, build, auth, or provider state; switch to materially different supported routes; and resume after interruption. Required unresolved work stays active and is never relabeled complete.
 - **Unknown is not absent.** A search/list/API/parser/auth/provider miss becomes `unresolved-active`, not “does not exist.” Use alternate authoritative routes until found or absence is actually proven.
 - **Never suffer the same failure twice.** Reuse prior verified recovery knowledge before rediscovery. After a nontrivial verified recovery, capture signature, environment, cause, failed routes, successful route, verification, invalidation conditions, and regression protection so recurrence is faster and deterministic.
@@ -23,10 +23,11 @@ This bootstrap is a **start gate**, not optional guidance: do not mutate, repair
 - **Challenge before reinventing.** For substantive implementation, architecture, optimization, conversion, integration, or tooling work, run a bounded challenger/integration scan across relevant upstreams, repositories, forks, package/plugin ecosystems, standards, and reference implementations. Prefer authorized adopt/merge/port/wrap/backport/reuse of materially superior pieces over rebuilding weaker duplicates; compose the best pieces when no single candidate wins, preserve provenance/licensing/permission constraints, and record candidate dispositions.
 - **Real proof beats structural proof.** When the real runtime/workflow is available, exercise the actual final artifact and affected user path. Build/static success alone is not runtime proof.
 - **Continuity is mandatory.** Preserve accepted requirements, identities, evidence, checkpoints, failed-route history, recovered fixes, and exact next action across skill switches, timeouts, handoffs, and retries. Never restart solved discovery without an invalidator.
+- **Remote durability is part of completion.** For substantive project work, persist every coherent material checkpoint to the canonical source remote (GitHub/VCS when applicable) and material artifacts/checkpoint exports to connected Google Drive when available, then verify remote identity/readback and record lineage. If a GitHub project uses a Wiki, keep the actual live GitHub Wiki synchronized from canonical docs; a repo-side `wiki/` mirror alone is not publication. If the required Wiki does not exist, create/bootstrap it through an authorized supported route. Unsynced required remotes remain `unresolved-active`; never let the only current copy live in chat, sandbox, Library, or local scratch space.
 - **Completeness must be proven.** For exhaustive external results, reconcile expected/discovered/accepted/rejected/unresolved counts and terminal pagination/coverage before claiming complete.
 
 If progress reaches an action only the user can authorize or perform, preserve the exact checkpoint and request only that smallest action; the unresolved acceptance item remains in progress and must never be called complete.
-<!-- UAG_BRIDGE_END:v0.3.4 -->
+<!-- UAG_BRIDGE_END:v0.3.5 -->
 
 # Minecraft Repair
 
