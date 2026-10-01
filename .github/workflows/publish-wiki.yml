@@ -5,6 +5,12 @@ on:
     branches: [main]
     paths:
       - "wiki/**"
+      - "AGENTS.md"
+      - "PRODUCT_INVARIANTS.md"
+      - "*_STANDARD.md"
+      - "PERFORMANCE_ACCEPTANCE.md"
+      - "RUNTIME_PROOF.md"
+      - "skills/**/SKILL.md"
       - ".github/workflows/publish-wiki.yml"
   workflow_dispatch:
 
@@ -17,13 +23,38 @@ concurrency:
 
 jobs:
   publish:
-    name: Mirror wiki/ to GitHub Wiki
+    name: Mirror and verify live GitHub Wiki
     runs-on: ubuntu-latest
     steps:
       - name: Checkout canonical source
         uses: actions/checkout@v7
 
+      - name: Validate canonical Wiki source
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s wiki/Home.md
+          test -s wiki/_Sidebar.md
+          test -s wiki/Remote-Continuity-and-Wiki-Sync.md
+
       - name: Publish Agent Foundry Wiki
         uses: step-security/github-wiki-action@v5
         with:
           path: wiki
+
+      - name: Verify live .wiki.git matches canonical source
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tmp="$(mktemp -d)"
+          trap 'rm -rf "$tmp"' EXIT
+          git clone --depth 1 "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" "$tmp/wiki-live"
+          find wiki -maxdepth 1 -type f -printf '%f\n' | sort > "$tmp/source-files"
+          find "$tmp/wiki-live" -maxdepth 1 -type f ! -name '.git*' -printf '%f\n' | sort > "$tmp/live-files"
+          diff -u "$tmp/source-files" "$tmp/live-files"
+          while IFS= read -r file; do
+            cmp -- "wiki/$file" "$tmp/wiki-live/$file"
+          done < "$tmp/source-files"
+          echo "Live GitHub Wiki verified against canonical wiki/ source at ${GITHUB_SHA}."
