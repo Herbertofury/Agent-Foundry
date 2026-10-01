@@ -5,8 +5,8 @@ import argparse
 from pathlib import Path
 import sys
 
-MARKER = "<!-- UAG_EXECUTION_CONSTITUTION:v0.3.4 -->"
-BOOTSTRAP = "<!-- UAG_BOOTSTRAP:v0.3.4 -->"
+MARKER = "<!-- UAG_EXECUTION_CONSTITUTION:v0.3.5 -->"
+BOOTSTRAP = "<!-- UAG_BOOTSTRAP:v0.3.5 -->"
 GOVERNANCE_URI = "skills://ultimate-agent-governance/skill.md"
 REQUIRED = [
     "No blocker closeout",
@@ -18,6 +18,7 @@ REQUIRED = [
     "Challenge before reinventing",
     "Real proof beats structural proof",
     "Continuity is mandatory",
+    "Remote durability is part of completion",
     "Completeness must be proven",
 ]
 
