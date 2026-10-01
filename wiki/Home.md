@@ -21,7 +21,9 @@ It exists to prevent the failure modes that ruin long, ambitious agent work:
 - rebuilding weaker duplicates instead of integrating mature work;
 - calling a build “done” without exercising the actual workflow;
 - optimizing performance by silently doing less;
-- suffering the same recoverable failure again.
+- suffering the same recoverable failure again;
+- losing the newest work because a stale/broken chat was the only current copy;
+- updating a repo-side `wiki/` folder while the actual GitHub Wiki silently stays stale.
 
 ## The Foundry promise
 
@@ -44,6 +46,7 @@ It exists to prevent the failure modes that ruin long, ambitious agent work:
 | 🔌 [Interoperability Protocols](Interoperability-Protocols) | MCP, A2A, ACP, AG-UI, ACS |
 | 🧪 [Evaluation & Observability](Evaluation-and-Observability) | Real-harness evals, trajectories, telemetry |
 | ⏳ [Durable Execution](Durable-Execution) | Resumable tasks, idempotency, waits, cancellation |
+| 🔄 [Remote Continuity & Wiki Sync](Remote-Continuity-and-Wiki-Sync) | Verified GitHub + Drive checkpoints and live Wiki parity |
 | 🛡️ [Trust & Supply Chain](Trust-and-Supply-Chain) | Skill quarantine, provenance, attestations, SBOM/AgBOM |
 | 🔐 [Authorization & Runtime Control](Authorization-and-Runtime-Control) | Policy-as-code and Guardian-style enforcement |
 | 📦 [Distribution & Sync](Distribution-and-Sync) | skills.sh, locks, desired-state multi-agent installs |
