@@ -64,6 +64,17 @@ For named project work, keep the layers complementary:
 
 After a meaningful checkpoint, update the project-owned state and Project Constellation/ProjectDump as applicable, then publish the resulting changed checkpoint/export to Drive and record the verified Drive identity. GitHub/ProjectDump synchronization does not satisfy the Drive requirement by itself.
 
+## Cross-remote coherence
+
+Drive durability and source-control durability are complementary, not interchangeable. At a coherent repository checkpoint:
+
+1. persist source/history to the canonical GitHub/VCS repository and record repository, branch/ref, and exact commit;
+2. persist material artifacts and project/checkpoint exports to the canonical Drive location and verify the returned Drive identity/readback;
+3. when the repository uses GitHub Wiki, update the canonical wiki source, publish it to the **actual live Wiki** (`.wiki.git`), and verify the live publication rather than counting the source mirror alone;
+4. record the resulting remote tuple in project memory/Project Constellation so a fresh chat can resume from durable state without trusting conversation recency.
+
+If a required live GitHub Wiki does not exist, create/bootstrap it through an authorized supported route before documentation closeout. A required but unsynchronized remote keeps the checkpoint `unresolved-active` even when another remote succeeded.
+
 ## Failure recovery
 
 If Drive publication fails:
