@@ -22,5 +22,8 @@ Once targeted tests prove a coherent implementation, persist a recoverable check
 ### Retry only with new information
 Never loop an unchanged failure.
 
+### Skill switches preserve ownership
+Treat domain, governance, continuity, repair, and guardrail Skills as composable overlays. Preserve one continuity capsule across the switch, keep the prior domain owner unless a more-specific bounded subtask is active, and return to its exact next action afterward. Never restart or fork the task merely because another Skill loaded.
+
 ## The objective
 **Maximum useful effort. Minimum wasted motion.**
