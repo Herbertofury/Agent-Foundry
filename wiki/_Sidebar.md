@@ -21,6 +21,7 @@
 - [[Interoperability Protocols|Interoperability-Protocols]]
 - [[Evaluation & Observability|Evaluation-and-Observability]]
 - [[Durable Execution|Durable-Execution]]
+- [[Remote Continuity & Wiki Sync|Remote-Continuity-and-Wiki-Sync]]
 - [[Trust & Supply Chain|Trust-and-Supply-Chain]]
 - [[Authorization & Runtime Control|Authorization-and-Runtime-Control]]
 - [[Distribution & Sync|Distribution-and-Sync]]
