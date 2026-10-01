@@ -65,6 +65,7 @@ jobs:
           docs/SKILL-AUTHORING.md
           wiki/Home.md
           wiki/_Sidebar.md
+          wiki/Remote-Continuity-and-Wiki-Sync.md
           EOF
 
       - name: Verify invariant anchors
@@ -86,10 +87,14 @@ jobs:
           grep -qi "adding sleeps, delays, polling, retries" PERFORMANCE_ACCEPTANCE.md
           grep -qi "Continuity is mandatory" PRODUCT_INVARIANTS.md
           grep -qi "Never suffer the same failure twice" PRODUCT_INVARIANTS.md
+          grep -qi "Durable multi-remote checkpoint sync" PRODUCT_INVARIANTS.md
+          grep -qi "Live GitHub Wiki parity" PRODUCT_INVARIANTS.md
+          grep -qi "Remote durability is part of completion" skills/ultimate-agent-governance/SKILL.md
           grep -qi "Challenger" wiki/_Sidebar.md
           grep -qi "Zero-Loss" wiki/_Sidebar.md
           grep -qi "Interoperability" wiki/_Sidebar.md
           grep -qi "Supply Chain" wiki/_Sidebar.md
+          grep -qi "Remote Continuity" wiki/_Sidebar.md
 
       - name: Verify machine-readable registries and schemas
         shell: bash
