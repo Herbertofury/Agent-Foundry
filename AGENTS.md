@@ -41,6 +41,8 @@ Do not duplicate long canonical policy across adapters or wiki pages.
 13. Sensitive actions require real authorization/enforcement boundaries; prompt text alone is not a security boundary.
 14. Published bundles must have verifiable source/digest lineage, and signed attestations should be preferred when the build path supports them.
 15. Protocol adapters preserve native task, cancellation, permission, identity, and streaming semantics rather than flattening them for convenience.
+16. Material checkpoints are not durable until required remotes are synchronized and verified: canonical GitHub/VCS for source/history, connected Google Drive for material artifacts/checkpoint exports when available, plus stable remote lineage recorded for recovery.
+17. If a GitHub project uses a Wiki, keep the **actual live GitHub Wiki** current in the same coherent checkpoint. The repository `wiki/` directory is source only; if the live Wiki does not exist, create/bootstrap it through an authorized supported route and verify publication before closeout.
 
 ## Change discipline
 
@@ -58,9 +60,11 @@ The <code>wiki/</code> directory is the version-controlled source mirror for the
 - <code>wiki/Home.md</code> is the landing page.
 - <code>wiki/_Sidebar.md</code> is primary navigation.
 - Keep page names stable.
-- The publish workflow mirrors <code>wiki/</code> to GitHub Wiki.
+- The publish workflow mirrors <code>wiki/</code> to the repository's live <code>.wiki.git</code> backend and must verify the published content.
+- The repo-side mirror does **not** count as the Wiki being updated until the live GitHub Wiki has been published and verified.
+- If the live Wiki backend does not exist, bootstrap/create it through an authorized supported route before documentation closeout.
 - Canonical policy stays in root standards; wiki pages explain and navigate it.
 
 ## Completion
 
-Do one material challenge pass before closeout. Do not continue “just in case” loops after acceptance and required proof are satisfied.
+Do one material challenge pass before closeout. Verify required GitHub/VCS, Google Drive, and live GitHub Wiki synchronization for the latest material checkpoint before calling the work durable or complete. Do not continue “just in case” loops after acceptance and required proof are satisfied.
