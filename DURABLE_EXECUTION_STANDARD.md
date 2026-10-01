@@ -35,6 +35,19 @@ A provider-specific state may be preserved alongside this normalized state.
 8. **Schema/version state is durable.** Store enough version/protocol/tool identity to reject or migrate incompatible resumptions.
 9. **Terminal failure stays truthful.** A durable failed task is still unresolved work unless acceptance explicitly permits failure as the requested outcome.
 
+## Remote durability and documentation parity
+
+Conversation continuity is not remote durability. Treat chat history, local scratch state, sandboxes, and convenience libraries as caches around a durable checkpoint, not as the checkpoint itself.
+
+For substantive project work, a verified checkpoint should carry the applicable remote tuple:
+- canonical source remote identity: repository, branch/ref, and exact commit;
+- connected Google Drive identity for material artifacts and project/checkpoint exports, including file/folder ID and readback evidence when available;
+- live GitHub Wiki publication receipt when the repository uses a Wiki, tied back to the canonical `wiki/` source lineage.
+
+Persist at coherent milestones, before handoff/compaction/interruption-prone long gates, and before closeout. Do not spam remotes after every micro-edit.
+
+A repo-side `wiki/` directory is source, not publication. If a required GitHub Wiki is absent, create/bootstrap it through an authorized supported route before documentation work is accepted. If any required remote is stale, missing, or unverified, preserve the exact pending sync operation and keep the checkpoint `unresolved-active`.
+
 ## Protocol composition
 
 - MCP Tasks can carry a durable tool-call lifecycle when supported.
