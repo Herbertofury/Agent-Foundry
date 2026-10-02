@@ -43,6 +43,8 @@ Do not duplicate long canonical policy across adapters or wiki pages.
 15. Protocol adapters preserve native task, cancellation, permission, identity, and streaming semantics rather than flattening them for convenience.
 16. Material checkpoints are not durable until required remotes are synchronized and verified: canonical GitHub/VCS for source/history, connected Google Drive for material artifacts/checkpoint exports when available, plus stable remote lineage recorded for recovery.
 17. If a GitHub project uses a Wiki, keep the **actual live GitHub Wiki** current in the same coherent checkpoint. The repository `wiki/` directory is source only; if the live Wiki does not exist, create/bootstrap it through an authorized supported route and verify publication before closeout.
+18. The strongest credible current solution is a baseline to meet or beat, not a ceiling. Before substantive invention, identify the baseline/challengers, reuse or compose superior authorized pieces, preserve protected dimensions, and seek a provable user-valued advantage rather than an unnecessary clone.
+19. For greenfield technical work and touched architecture with stack freedom, start from the strongest current best-fit frontier/bleeding-edge candidate stack using current primary-source evidence. Promote only candidates that survive compatibility, security, maintainability, supportability, performance/quality, and no-loss proof; preserve fixed target envelopes and backport frontier techniques when direct adoption is impossible.
 
 ## Change discipline
 

@@ -2,6 +2,12 @@
 
 Agent Foundry does not preserve stale implementation choices by default.
 
+## Best-in-class baseline
+For substantive technical work, first identify the strongest credible current baseline/challengers. The goal is protected parity plus a real user-valued advantage where the constraints permit one. Reuse or compose superior authorized pieces instead of rebuilding weaker duplicates, and require equivalent-work evidence before claiming superiority.
+
+## Frontier stack selection
+For greenfield work and touched architecture with stack freedom, begin from the strongest current best-fit frontier/bleeding-edge candidate set using current primary sources. Stable is the floor, not always the ceiling: evaluate preview/nightly/commit-level/successor technology when it offers a material advantage. Promote only candidates that pass compatibility, security, maintainability, supportability, reproducibility, performance/quality, and no-loss proof. Pin versions/provenance. Preserve explicit target envelopes and backport/adapt frontier techniques when direct adoption is impossible.
+
 ## Freshness pass
 For substantive version-sensitive work:
 1. identify the exact compatibility envelope;

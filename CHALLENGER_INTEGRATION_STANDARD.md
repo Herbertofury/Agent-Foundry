@@ -4,6 +4,9 @@
 
 This standard governs substantial invention, integration, modernization, conversion, migration, performance engineering, and tooling work.
 
+## Baseline-to-beat objective
+The challenger pass is not only an anti-reinvention search. Identify the strongest credible existing solution, define the user-valued dimensions that matter, and turn challenger evidence into a **beat-the-baseline plan**. Preserve protected dimensions, reuse/compose superior authorized pieces, and seek a real advantage rather than shipping a weaker clone. If only parity is proven, say parity.
+
 ## Search surface
 Use a bounded, relevance-driven pass across upstream projects, GitHub, GitLab, Codeberg, significant forks, package/plugin ecosystems, standards, reference implementations, mature libraries/frameworks, and authorized internal/commercial implementations when relevant.
 

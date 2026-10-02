@@ -86,3 +86,24 @@ Optimize orchestration waste, repeated discovery, redundant polling, and avoidab
 **Failure behavior.** A missing, stale, or unverified live Wiki is unresolved documentation work. Do not silently substitute README/docs/source-mirror updates or claim Wiki parity until the live GitHub Wiki exists and reflects the intended checkpoint.
 
 **Acceptance test.** Does the live GitHub Wiki exist, navigate cleanly, and reflect the same current project lineage as the source checkpoint it documents?
+
+
+## 17. Best-in-class is the default target
+**Rule.** For substantive design, implementation, repair, optimization, integration, conversion, research, or tooling, treat the strongest credible current solution as the baseline to meet or beat—not as the ceiling.
+
+**Required behavior.** Perform a bounded challenger/baseline pass, identify the user-valued comparison dimensions, reuse or compose superior authorized implementations/techniques where that is stronger than rebuilding them, preserve every protected dimension, and where constraints permit prove a material advantage in at least one relevant dimension such as capability, quality, completeness, fidelity, speed, efficiency, reliability, maintainability, interoperability, UX, recovery, automation, or evidence quality.
+
+**Evidence rule.** “Best,” “better,” and “state of the art” are evidence claims. Equivalent-work comparison is required. If only parity is proven, report parity. If no credible baseline can be established, keep the comparison unresolved rather than manufacturing superiority.
+
+**Acceptance test.** Did the work learn from the strongest credible alternatives, avoid rebuilding a weaker duplicate, preserve protected value, and prove a real user-valued advantage where the constraints allowed one?
+
+## 18. Frontier/bleeding-edge stack first
+**Rule.** For greenfield technical work and touched architecture where stack choice is available, begin from the strongest current best-fit frontier/bleeding-edge candidate set rather than stale or merely familiar defaults.
+
+**Required behavior.** Use current primary sources to evaluate the relevant runtimes, languages, frameworks, SDKs/APIs, compilers, build/package/test tooling, storage/indexing, browser/desktop shells, rendering/compute paths, protocols, deployment/runtime infrastructure, and integration methods. Stable releases are a floor, not necessarily the ceiling: preview/nightly/commit-level/successor technology should be considered when it provides a material advantage. Promote only what is proven compatible, secure, maintainable, supportable, reproducible, performant, and no-loss for the real target. Pin versions/provenance.
+
+**Target-envelope rule.** When an explicit platform/version target must remain fixed, keep it and backport/adapt stronger frontier techniques instead of treating the old target as permission for stale engineering.
+
+**Failure rule.** Do not retain old technology merely because it is familiar, and do not ship a worse candidate merely because it is newer. Patch, fork, decompose, backport winning pieces, or choose the next strongest candidate.
+
+**Acceptance test.** Did stack selection begin from the strongest current frontier candidates and did the shipped baseline earn promotion through real evidence instead of familiarity or novelty?
