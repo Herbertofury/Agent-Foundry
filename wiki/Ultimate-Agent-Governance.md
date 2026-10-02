@@ -34,6 +34,11 @@ A Minecraft repair Skill still decides *how* to repair Minecraft. Governance ens
 ## Canonical bundle
 Current validated Ultimate Agent Governance bundle:
 
-SHA-256: <code>8d42e1b1ead43a0342931c18adb708875391a62a561d99eff7429fae57742cf8</code>
+Constitution: <code>v0.3.7</code>  
+SHA-256: <code>6c96091dd8166b2045c93f357993dbf88c74748aaf96bc4d7e034b5b07b8a94b</code>  
+GitHub release: <code>foundry-skills-v0.1.5</code>  
+Release commit: <code>1ac8c8414c336610220b799e3449ccd7f4a7fb0d</code>
 
-[Open the canonical bundle on Google Drive](https://drive.google.com/file/d/1uPozXLHOEJgqphore01mDoBtFnNmwkmR/view)
+[Open the canonical bundle on Google Drive](https://drive.google.com/file/d/1fEh74G0za1a9o40sO8aNk71IPkhWFdkN/view)
+
+[Open the GitHub release](https://github.com/Herbertofury/Agent-Foundry/releases/tag/foundry-skills-v0.1.5)
