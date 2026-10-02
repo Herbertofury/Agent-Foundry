@@ -3,17 +3,17 @@ name: minecraft-repair
 description: "Diagnose and repair broken Minecraft clients, servers, modpacks, worlds, mod JARs, loader/config/datapack/resource-pack/shader setups, and launcher/runtime failures. Use when the user explicitly asks to fix/diagnose a Minecraft failure or provides crash logs, broken artifacts, error screenshots, worlds, or configs. For ordinary mod development/build/port work, prefer Minecraft Dev Kit; if Repair is invoked inside an active Dev Kit workflow, repair the bounded failure and return to the preserved Dev Kit next action. Reuse prior Repair Brain evidence instead of rereading it on every skill switch. Compose with zero-loss-chat-accelerator when installed."
 ---
 
-<!-- UAG_BRIDGE_START:v0.3.7 -->
+<!-- UAG_BRIDGE_START:v0.3.6 -->
 ## Mandatory governance bootstrap
 
-<!-- UAG_BOOTSTRAP:v0.3.7 -->
+<!-- UAG_BOOTSTRAP:v0.3.6 -->
 Before any substantive action, load `skills://ultimate-agent-governance/skill.md` once for the current continuity epoch, then return to this skill's domain workflow. Do **not** skip this because this skill is more specific. The domain skill owns procedure; Ultimate Agent Governance owns the shared acceptance boundary. If cross-skill loading is unavailable, fails, or is not supported in the current harness, enforce the embedded constitution below locally with no weakening.
 
 This bootstrap is a **start gate**, not optional guidance: do not mutate, repair, build, optimize, migrate, scrape, package, or claim completion until the shared acceptance contract is active. Skill switches, compaction, retries, timeouts, handoffs, and tool changes never clear it.
 
 ## Shared execution constitution
 
-<!-- UAG_EXECUTION_CONSTITUTION:v0.3.7 -->
+<!-- UAG_EXECUTION_CONSTITUTION:v0.3.6 -->
 - **No blocker closeout.** Failure is a routing signal, not a deliverable. Install/provision missing tools and dependencies; repair environment, DNS/network, cache, runtime, build, auth, or provider state; switch to materially different supported routes; and resume after interruption. Required unresolved work stays active and is never relabeled complete.
 - **Unknown is not absent.** A search/list/API/parser/auth/provider miss becomes `unresolved-active`, not “does not exist.” Use alternate authoritative routes until found or absence is actually proven.
 - **Never suffer the same failure twice.** Reuse prior verified recovery knowledge before rediscovery. After a nontrivial verified recovery, capture signature, environment, cause, failed routes, successful route, verification, invalidation conditions, and regression protection so recurrence is faster and deterministic.
@@ -21,8 +21,6 @@ This bootstrap is a **start gate**, not optional guidance: do not mutate, repair
 - **Performance is an always-on zero-loss ratchet.** For substantive runtime-affecting work, perform a bounded free-speed pass on the touched or causal path and integrate verified no-loss wins. Explicit performance tasks require at least one measured target/hot-path gain plus no material regression across relevant protected behavior and performance/resource dimensions on equivalent work. Faster-by-doing-less, preservation-only, hidden cost-shifting, and one-metric wins that worsen another protected dimension fail. Every verified better baseline becomes the new floor.
 - **Modernize and fix forward.** Check current best compatible methods/tools/versions when freshness matters. Newer is a candidate until comparative proof shows it is better. Mixed upgrades must be profiled/bisected/decomposed: retain/backport gains, patch/replace regressive internals, then retest before promotion.
 - **Challenge before reinventing.** For substantive implementation, architecture, optimization, conversion, integration, or tooling work, run a bounded challenger/integration scan across relevant upstreams, repositories, forks, package/plugin ecosystems, standards, and reference implementations. Prefer authorized adopt/merge/port/wrap/backport/reuse of materially superior pieces over rebuilding weaker duplicates; compose the best pieces when no single candidate wins, preserve provenance/licensing/permission constraints, and record candidate dispositions.
-- **Best-in-class is the acceptance target.** For substantive design, implementation, repair, optimization, integration, conversion, research, or tooling work, identify the strongest credible current baseline/challengers and the user-valued dimensions that matter. Reuse or compose superior authorized pieces instead of recreating weaker versions. The default goal is not mere parity: preserve every protected dimension and, where constraints permit, materially beat the strongest credible baseline on at least one relevant dimension. Claims of superiority require equivalent-work evidence; if only parity is proven, say parity, and if no credible baseline can be established, keep the comparison unresolved rather than inventing a win.
-- **Frontier stack first, evidence-gated.** For new technical work and touched architecture where stack choice is available, start from the strongest current best-fit frontier/bleeding-edge stack, tools, APIs, runtimes, frameworks, build/test systems, storage, protocols, and integration methods supported by current primary-source evidence. Prefer frontier, preview, nightly, commit-level, or successor technology when it materially improves the result and can be proven compatible, secure, maintainable, supportable, and no-loss for the actual target; do not retain stale defaults merely because they are familiar. Pin provenance/versions, preserve explicit target envelopes, backport frontier techniques when the target must stay fixed, and reject novelty that regresses protected dimensions.
 - **Real proof beats structural proof.** When the real runtime/workflow is available, exercise the actual final artifact and affected user path. Build/static success alone is not runtime proof.
 - **Continuity is mandatory.** Preserve accepted requirements, identities, evidence, checkpoints, failed-route history, recovered fixes, and exact next action across skill switches, timeouts, handoffs, and retries. Never restart solved discovery without an invalidator.
 - **Cross-skill state integrity.** Skills compose as overlays and may not erase, replace, reset, downgrade, fork, or silently reinterpret another active skill's accepted requirements, canonical IDs/paths, verified evidence, checkpoints, blockers/no-repeat history, domain ownership, or exact next action. The narrower domain skill keeps procedure ownership; governance/continuity skills add acceptance and persistence constraints without stealing the workflow. Before a skill switch, preserve a continuity capsule; after a bounded helper/guardrail/subtask, return control to the prior owner and resume its exact next action. Never rewrite another skill bundle or shared state merely to make the current skill pass; governance itself changes only during explicit governance maintenance.
@@ -30,7 +28,7 @@ This bootstrap is a **start gate**, not optional guidance: do not mutate, repair
 - **Completeness must be proven.** For exhaustive external results, reconcile expected/discovered/accepted/rejected/unresolved counts and terminal pagination/coverage before claiming complete.
 
 If progress reaches an action only the user can authorize or perform, preserve the exact checkpoint and request only that smallest action; the unresolved acceptance item remains in progress and must never be called complete.
-<!-- UAG_BRIDGE_END:v0.3.7 -->
+<!-- UAG_BRIDGE_END:v0.3.6 -->
 
 # Minecraft Repair
 
