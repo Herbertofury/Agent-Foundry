@@ -10,6 +10,8 @@ from pathlib import Path
 FOOTER_MARKER = "---\nTo read any file's contents"
 UAG = "ultimate-agent-governance"
 CHALLENGE_BULLET = "- **Challenge before reinventing.** For substantive implementation, architecture, optimization, conversion, integration, or tooling work, run a bounded challenger/integration scan across relevant upstreams, repositories, forks, package/plugin ecosystems, standards, and reference implementations. Prefer authorized adopt/merge/port/wrap/backport/reuse of materially superior pieces over rebuilding weaker duplicates; compose the best pieces when no single candidate wins, preserve provenance/licensing/permission constraints, and record candidate dispositions."
+BEST_IN_CLASS_BULLET = "- **Best-in-class is the acceptance target.** For substantive design, implementation, repair, optimization, integration, conversion, research, or tooling work, identify the strongest credible current baseline/challengers and the user-valued dimensions that matter. Reuse or compose superior authorized pieces instead of recreating weaker versions. The default goal is not mere parity: preserve every protected dimension and, where constraints permit, materially beat the strongest credible baseline on at least one relevant dimension. Claims of superiority require equivalent-work evidence; if only parity is proven, say parity, and if no credible baseline can be established, keep the comparison unresolved rather than inventing a win."
+FRONTIER_STACK_BULLET = "- **Frontier stack first, evidence-gated.** For new technical work and touched architecture where stack choice is available, start from the strongest current best-fit frontier/bleeding-edge stack, tools, APIs, runtimes, frameworks, build/test systems, storage, protocols, and integration methods supported by current primary-source evidence. Prefer frontier, preview, nightly, commit-level, or successor technology when it materially improves the result and can be proven compatible, secure, maintainable, supportable, and no-loss for the actual target; do not retain stale defaults merely because they are familiar. Pin provenance/versions, preserve explicit target envelopes, backport frontier techniques when the target must stay fixed, and reject novelty that regresses protected dimensions."
 PERFORMANCE_BULLET = "- **Performance is an always-on zero-loss ratchet.** For substantive runtime-affecting work, perform a bounded free-speed pass on the touched or causal path and integrate verified no-loss wins. Explicit performance tasks require at least one measured target/hot-path gain plus no material regression across relevant protected behavior and performance/resource dimensions on equivalent work. Faster-by-doing-less, preservation-only, hidden cost-shifting, and one-metric wins that worsen another protected dimension fail. Every verified better baseline becomes the new floor."
 
 
@@ -49,6 +51,14 @@ def normalize_uag(text: str) -> str:
                 text = text[: line_end + 1] + PERFORMANCE_BULLET + "\n" + text[line_end + 1 :]
             else:
                 raise RuntimeError("UAG performance invariant anchor not found")
+    if "**Best-in-class is the acceptance target.**" not in text:
+        anchor = "- **Challenge before reinventing.**"
+        pos = text.find(anchor)
+        if pos >= 0:
+            line_end = text.find("\n", pos)
+            text = text[: line_end + 1] + BEST_IN_CLASS_BULLET + "\n" + FRONTIER_STACK_BULLET + "\n" + text[line_end + 1 :]
+        else:
+            raise RuntimeError("UAG challenger invariant anchor not found")
     if "**Challenge before reinventing.**" not in text:
         anchor = "- **Modernize and fix forward.**"
         pos = text.find(anchor)
