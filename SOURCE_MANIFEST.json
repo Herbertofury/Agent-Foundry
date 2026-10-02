@@ -1,7 +1,7 @@
 {
   "fileCount": 418,
   "schemaVersion": 1,
-  "sizeBytes": 3662066,
+  "sizeBytes": 3668949,
   "skillCount": 8,
   "skills": {
     "artifact-browser-companion": {
@@ -1926,8 +1926,8 @@
         },
         {
           "path": "evals/evals.json",
-          "sha256": "ead47a3b5e0078a1d627825fa670c0cc3d8c93ba1a97d113ca9ad820d8f0d1d0",
-          "sizeBytes": 28419
+          "sha256": "06051ae09e8217c01af8b20b437331de0e06f0df3ad08ca2a2c42c49edaedd94",
+          "sizeBytes": 31329
         },
         {
           "path": "references/app-runtime-performance.md",
@@ -1936,13 +1936,13 @@
         },
         {
           "path": "references/challenger-integration.md",
-          "sha256": "a93dd310d1f78fd2b0819a14e99ff4b45db62db1fb589b227be90dffa9269257",
-          "sizeBytes": 5261
+          "sha256": "0a16f32457f87d67e20ff9a27a83ea1c96bdce59718071aa1e0bcd4f1205d690",
+          "sizeBytes": 5894
         },
         {
           "path": "references/continuous-modernization.md",
-          "sha256": "e98b6a07c61176172f53a216dc034002dba5fc8d9bb5038e558b14e212a8ea18",
-          "sizeBytes": 17245
+          "sha256": "3af885c598287d45b3208f30fffec4faf51fb67c50a79f2019b8862a5f0381ff",
+          "sizeBytes": 20055
         },
         {
           "path": "references/cross-agent-adapters.md",
@@ -1976,8 +1976,8 @@
         },
         {
           "path": "references/shared-execution-constitution.md",
-          "sha256": "d2a92dda939fbd1651b61c0423ec5e451c0fad9731d5a8f8747b3631886e1164",
-          "sizeBytes": 4189
+          "sha256": "63f0ab42e3556f134067bd59db634629d1202d60022f0928ccc1517333682e43",
+          "sizeBytes": 4719
         },
         {
           "path": "references/site-adapter-platform.md",
@@ -2045,8 +2045,8 @@
           "sizeBytes": 6818
         }
       ],
-      "sizeBytes": 203505,
-      "treeDigest": "15cb6a55aaf86d2c938a2524cb51cf1535429e73ad095bbf6a39816288c957a8"
+      "sizeBytes": 210388,
+      "treeDigest": "5aa90b1c0beed1c7f68335f9a02870e4bbeb5d4e9a996b6c65d379c9732927c1"
     },
     "zero-loss-chat-accelerator": {
       "fileCount": 19,
