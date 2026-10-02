@@ -15,6 +15,30 @@ Stability does not mean stagnation. Modernization does not permit regressions. T
 
 ---
 
+## MZ000A — Strongest Credible Baseline Is the Starting Benchmark
+
+For substantive technical work, do not evaluate the proposed solution in isolation. Identify the strongest credible current products, libraries, frameworks, forks, tools, methods, architectures, or workflows that solve the same load-bearing problem. Treat them as benchmark inputs, not as reasons to clone blindly.
+
+The target is **protected parity plus a real advantage**: preserve the dimensions the user cares about and, where the actual constraints permit, prove a material improvement in at least one relevant dimension such as capability, quality, completeness, fidelity, speed, efficiency, reliability, maintainability, interoperability, UX, recovery, automation, or evidence quality. Reuse or compose superior authorized pieces whenever that yields a stronger result than rebuilding them.
+
+Do not claim “best,” “better,” or “state of the art” from aesthetics, novelty, version numbers, or confidence. Use equivalent-work evidence. If only parity is proven, report parity; if a fair baseline cannot be established, keep the comparison unresolved.
+
+**Acceptance:** Was the strongest credible baseline identified and did the final result preserve protected value while proving a real user-valued advantage where the constraints allowed one?
+
+---
+
+## MZ000B — Frontier/Bleeding-Edge Stack Is the Default Candidate Set
+
+For greenfield work and touched architecture where stack choice is available, begin with the strongest current **frontier** candidate set rather than habitual or stale defaults. This includes languages/runtimes, frameworks, SDKs/APIs, compilers, build tools, package managers, test/runtime harnesses, storage/indexing, browser/desktop shells, rendering/compute paths, protocols, deployment/runtime infrastructure, and integration methods.
+
+Use current primary sources to establish the candidate set. Stable releases are a floor, not always the ceiling: preview/nightly/commit-level/successor technology should be evaluated when it offers a material advantage. Promote it only after compatibility, security, maintainability, supportability, migration cost, runtime behavior, and protected quality/performance are verified for the real target. Pin versions/provenance so the chosen frontier does not become an unrepeatable moving target.
+
+If an explicit compatibility envelope prevents adoption of the newest platform, keep the envelope and backport/adapt the strongest newer techniques into it. Do not retain old technology merely because it is familiar, and do not adopt new technology merely because it is new.
+
+**Acceptance:** Did the technical selection begin from the strongest current frontier candidate set and promote the best-fit option through evidence rather than familiarity or novelty?
+
+---
+
 ## MZ001 — Every Substantive Task Gets a Freshness Pass
 
 Before finalizing substantive implementation, identify the load-bearing technology that could materially affect the result and verify whether a newer or better approach exists.

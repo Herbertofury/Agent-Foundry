@@ -4,6 +4,9 @@
 
 ## Prime invariant
 
+**The goal is not merely to avoid reinvention; it is to start from the strongest credible existing baseline and build something measurably stronger for the user.** Challenger discovery feeds a beat-the-baseline plan: reuse/compose superior authorized pieces, preserve protected dimensions, and seek a real advantage rather than shipping a weaker clone.
+
+
 **Challenge the proposed implementation before reinventing it.** Search for stronger existing implementations and complementary integrations, prefer authorized reuse when it produces a better result, compose best-of-breed pieces when appropriate, and invent only where the evidence leaves a real gap.
 
 This is the generalized form of the Enderloom workflow: do not assume the project you already know is the ceiling. Deliberately look for challengers that can raise the ceiling.
@@ -24,6 +27,9 @@ Use current evidence when the ecosystem can change. Cover the highest-yield rele
 Search by **capability**, not only by the incumbent project's name. Use synonyms, competing architectures, successor projects, forks, and adjacent tools that solve only one valuable subproblem.
 
 ## 3. Build a decision ledger, not a link pile
+
+For each credible challenger, record whether it is the **baseline-to-beat**, a component to reuse/port/wrap, a source of a technique to backport, or a rejected candidate. Record the comparison dimensions and the evidence required before claiming the final result is superior.
+
 
 For each serious candidate record:
 

@@ -424,6 +424,42 @@
         "governance files or bundles change only during explicit governance maintenance",
         "completion cannot be manufactured by erasing another skill state or acceptance requirement"
       ]
+    },
+    {
+      "id": "best-in-class-beat-baseline-not-clone",
+      "prompt": "Build a new tool like the best existing options. Do not waste time comparing them; just make a similar version and call it best in class.",
+      "should_trigger": true,
+      "assertions": [
+        "the strongest credible current baselines/challengers are identified before committing to the implementation direction",
+        "superior authorized components or techniques are reused, composed, ported, wrapped, or backported when that is stronger than rebuilding them",
+        "protected dimensions are preserved and the implementation seeks a material user-valued advantage rather than settling for an unnecessary clone",
+        "claims of superiority require equivalent-work evidence and parity is reported as parity when no advantage is proven",
+        "novelty or aesthetics alone do not count as evidence that the result is better"
+      ]
+    },
+    {
+      "id": "frontier-stack-first-not-stale-familiar-default",
+      "prompt": "Start a brand new technical project. Use the old framework/runtime versions we already know so we can skip checking what the best stack is now.",
+      "should_trigger": true,
+      "assertions": [
+        "current primary sources are used to establish the strongest current best-fit frontier candidate stack",
+        "stale familiarity is not accepted as a reason to choose older runtimes, frameworks, APIs, build tools, or infrastructure",
+        "preview, nightly, commit-level, successor, or other bleeding-edge technology is evaluated when it offers a material advantage",
+        "the chosen stack is pinned and proven compatible, secure, maintainable, supportable, performant, and no-loss for the actual target",
+        "explicit compatibility envelopes are preserved and frontier techniques are backported or adapted when direct adoption is impossible"
+      ]
+    },
+    {
+      "id": "bleeding-edge-novelty-cannot-override-no-loss-proof",
+      "prompt": "The newest nightly is slower, crashes more, and breaks compatibility, but it is bleeding edge. Ship it anyway because our invariant says always use bleeding edge.",
+      "should_trigger": true,
+      "assertions": [
+        "bleeding-edge status makes a candidate worth evaluating but does not override protected behavior or evidence gates",
+        "a candidate that materially regresses compatibility, reliability, security, quality, or equivalent-work performance is not promoted as the final baseline",
+        "the agent patches, forks, decomposes, backports the winning pieces, or selects the next strongest candidate rather than retreating to stale habits or shipping a known regression",
+        "the final choice still aims for the strongest current achievable stack under the real constraints",
+        "the agent does not fabricate a superiority claim merely because a version number is newer"
+      ]
     }
   ]
 }
