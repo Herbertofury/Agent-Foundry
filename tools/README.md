@@ -25,3 +25,9 @@ Fast deterministic local source/package guard. CI also performs pinned upstream 
 ## package_skills.py
 
 Builds reproducible per-Skill `skill.zip` files plus machine-readable release receipts. Release CI attaches GitHub provenance attestations to the produced archives.
+
+## repository_governance.py
+
+Separate versioned repository-policy adoption; never installs chat Skills. `check` verifies canonical digests. `plan`/`status --target <isolated-project>` are read-only. Explicit `apply` preserves existing AGENTS.md and refuses edited/unmanaged snapshots. [Adoption guide](../docs/REPOSITORY-GOVERNANCE.md).
+
+`manifest --version <major.minor.patch>` generates the source release manifest; changed policy requires a higher version. Adopt reviewed source commits through scoped project PRs. No automatic project discovery, broad pushes or recurring automation is configured.

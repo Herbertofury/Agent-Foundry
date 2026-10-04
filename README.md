@@ -1,163 +1,49 @@
-<div align="center">
+# Agent Foundry
 
-# ⚒️ Agent Foundry
+Shared engineering invariants for reliable project work, plus explicitly selected chat workflows.
 
-### Build agents that finish the job.
+[Wiki](https://github.com/Herbertofury/Agent-Foundry/wiki) | [Invariants](PRODUCT_INVARIANTS.md) | [Chat skills](catalog/SKILLS.md) | [Repository adoption](docs/REPOSITORY-GOVERNANCE.md)
 
-**Skills · AGENTS.md · Invariants · Governance · Evals · Recovery Intelligence · Challenger Discovery · Zero-Loss Execution**
+Agent Foundry protects the complete result, continuity, root-cause repairs, current best-fit technology, equivalent-work performance and evidence-bound completion. These are requirements, not guarantees of perfect agents or designs.
 
-[![Status](https://img.shields.io/badge/status-active-success?style=for-the-badge)](https://github.com/Herbertofury/Agent-Foundry)
-[![Zero Loss](https://img.shields.io/badge/philosophy-zero--loss-7c3aed?style=for-the-badge)](./PRODUCT_INVARIANTS.md)
-[![Governance](https://img.shields.io/badge/governance-evidence--bound-0f766e?style=for-the-badge)](./AGENTS.md)
-[![Wiki](https://img.shields.io/badge/wiki-Agent%20Foundry-2563eb?style=for-the-badge)](https://github.com/Herbertofury/Agent-Foundry/wiki)
-[![Last Commit](https://img.shields.io/github/last-commit/Herbertofury/Agent-Foundry?style=for-the-badge)](https://github.com/Herbertofury/Agent-Foundry/commits/main)
+## Coding agents and repository governance
 
-**A living engineering system for reliable AI agents: preserve the goal, search for superior existing work, execute without scope loss, prove the real result, and turn failures into reusable improvements.**
+Use project-owned `AGENTS.md` and scoped instructions. [PRODUCT_INVARIANTS.md](PRODUCT_INVARIANTS.md) retains all 18 accepted invariants; root standards supply their gates. [Repository governance](docs/REPOSITORY-GOVERNANCE.md) explains versioned adoption without replacing local commands, architecture or restrictions.
 
-[Explore the Wiki](https://github.com/Herbertofury/Agent-Foundry/wiki) · [Read the Invariants](./PRODUCT_INVARIANTS.md) · [Browse Skills](./catalog/SKILLS.md) · [Build a Skill](./docs/SKILL-AUTHORING.md)
+```sh
+python tools/repository_governance.py check
+python tools/repository_governance.py plan --target /path/to/isolated-project
+```
 
-</div>
+Plans are read-only. No cross-project rollout or recurring automation is enabled. Identical policy files do not prove behavioral compliance.
 
----
+For stack choices, evaluate frontier candidates using current official support/compatibility evidence and the [modernization promotion gate](MODERNIZATION_STANDARD.md). Adopt only candidates that earn security, supportability, reproducibility, runtime and no-loss proof. [Design quality](DESIGN_QUALITY_STANDARD.md) requires a brief, real UI inspection and functional/visual/accessibility evidence.
 
-## Why Agent Foundry exists
+## Current flagship chat components
 
-Most agent failures are not caused by a lack of raw capability. They come from losing the real objective during execution: restarting solved work, shrinking scope, accepting blockers as completion, rebuilding inferior duplicates, skipping runtime proof, or forgetting the fix the next time the same failure appears.
+These nine components are chat workflows selected by the user or compatible chat harness. Coding scripts and exported templates do not make their full prompts automatic repository policy.
 
-**Agent Foundry is the system that prevents that.**
+| Chat component | Purpose |
+|---|---|
+| Ultimate Agent Governance | Chat acceptance and governance authoring |
+| Zero-Loss Chat Accelerator | Chat continuity and anti-stall execution |
+| Project Brain Orchestrator | Chat project identity, checkpoints and remote continuity |
+| Minecraft Dev Kit | Minecraft development and runtime QA |
+| Minecraft Repair | Minecraft diagnosis and repair |
+| Project Visual QA Showcase | Visual QA and showcase artifacts |
+| Artifact Browser Companion | Browsing canonical research artifacts |
+| Revenue Operator | Paid-work and revenue workflows |
+| Skill Creator | Creating and updating chat Skills |
 
-It combines reusable Skills, repository-level agent instructions, product invariants, execution standards, evaluation gates, failure intelligence, continuity rules, and challenger discovery into one coherent architecture.
+The [chat catalog](catalog/SKILLS.md) covers composition and source availability. Eight source packages are mirrored under `skills/`; Skill Creator is externally supplied, not a ninth included source package. The catalog is not an instruction preload list.
 
-> **Maximum useful effort. Minimum wasted motion. No manufactured success.**
+## Sources and evidence
 
-## The Foundry stack
+- [Architecture](docs/ARCHITECTURE.md): separate chat and repository paths.
+- [Challenger standard](CHALLENGER_INTEGRATION_STANDARD.md): bounded reuse-before-rebuild research.
+- [Performance](PERFORMANCE_ACCEPTANCE.md) and [runtime proof](RUNTIME_PROOF.md): equivalent work and real paths.
+- [Trust](THIRD_PARTY_SKILL_SECURITY.md), [authorization](AUTHORIZATION_CONTROL_STANDARD.md) and [provenance](SUPPLY_CHAIN_STANDARD.md): actual enforcement boundaries.
+- [Tools](tools/README.md): explicit Skill installs and separate policy snapshots.
+- [Releases](https://github.com/Herbertofury/Agent-Foundry/releases): published bundles/receipts; a draft PR does not update released packages.
 
-| Layer | Purpose | Canonical home |
-|---|---|---|
-| **Product invariants** | Non-negotiable behavior that must survive every tool/skill/model switch | [PRODUCT_INVARIANTS.md](./PRODUCT_INVARIANTS.md) |
-| **AGENTS.md** | Lean repository-wide instructions and source-of-truth routing | [AGENTS.md](./AGENTS.md) |
-| **Ultimate Agent Governance** | Shared acceptance boundary across substantive work | [catalog/SKILLS.md](./catalog/SKILLS.md#ultimate-agent-governance) |
-| **Zero-Loss Chat Accelerator** | Continuity, anti-stall execution, no rediscovery, fast causal loops | [catalog/SKILLS.md](./catalog/SKILLS.md#zero-loss-chat-accelerator) |
-| **Project Brain Orchestrator** | Durable project identity, checkpoints, Drive/GitHub persistence | [catalog/SKILLS.md](./catalog/SKILLS.md#project-brain-orchestrator) |
-| **Domain skills** | Own the actual procedure for Minecraft, artifacts, revenue, repair, QA, etc. | [catalog/SKILLS.md](./catalog/SKILLS.md) |
-| **Challenger intelligence** | Find, compare, adopt, merge, port, wrap, backport or compose superior work | [CHALLENGER_INTEGRATION_STANDARD.md](./CHALLENGER_INTEGRATION_STANDARD.md) |
-| **Failure intelligence** | Unknown ≠ absent; blocker escalation; reusable incident recovery | [FAILURE_INTELLIGENCE_STANDARD.md](./FAILURE_INTELLIGENCE_STANDARD.md) |
-| **Runtime proof** | Real workflow evidence outranks static confidence | [RUNTIME_PROOF.md](./RUNTIME_PROOF.md) |
-| **Performance acceptance** | Faster and better together; never faster by doing less | [PERFORMANCE_ACCEPTANCE.md](./PERFORMANCE_ACCEPTANCE.md) |
-| **Durable execution** | Resumable task state, idempotency, cancellation, human waits | [DURABLE_EXECUTION_STANDARD.md](./DURABLE_EXECUTION_STANDARD.md) |
-| **Evaluation** | Real-harness behavioral delta, trigger controls, trajectory proof | [EVALUATION_STANDARD.md](./EVALUATION_STANDARD.md) |
-| **Observability** | Vendor-neutral causal traces without making telemetry the truth store | [OBSERVABILITY_STANDARD.md](./OBSERVABILITY_STANDARD.md) |
-| **Interoperability** | MCP / A2A / ACP / AG-UI / ACS boundary mapping | [INTEROPERABILITY_STANDARD.md](./INTEROPERABILITY_STANDARD.md) |
-| **Authorization** | Policy decision/enforcement boundaries for sensitive actions | [AUTHORIZATION_CONTROL_STANDARD.md](./AUTHORIZATION_CONTROL_STANDARD.md) |
-| **Skill trust** | Quarantine, scan, review, permission manifest, sandbox, pin | [THIRD_PARTY_SKILL_SECURITY.md](./THIRD_PARTY_SKILL_SECURITY.md) |
-| **Supply chain** | Checksums, attestations, SBOM/AgBOM, release provenance | [SUPPLY_CHAIN_STANDARD.md](./SUPPLY_CHAIN_STANDARD.md) |
-| **Distribution** | Open Agent Skills compatibility, multi-agent sync, locks | [DISTRIBUTION_STANDARD.md](./DISTRIBUTION_STANDARD.md) |
-
-## Execution architecture
-
-~~~mermaid
-flowchart TD
-    U[User goal] --> A[AGENTS.md / product invariants]
-    A --> G[Ultimate Agent Governance]
-    G --> Z[Zero-Loss execution substrate]
-    Z --> D[Domain skill owns procedure]
-    D --> C[Challenger & integration scan]
-    C --> I[Implement / merge / port / compose]
-    I --> T[Targeted tests]
-    T --> R[Real runtime / workflow proof]
-    R --> P[Durable checkpoint & publication]
-    R --> F[Failure intelligence / regression fixture]
-    F --> G
-    P --> N[Next task resumes from verified state]
-~~~
-
-### The core loop
-
-**Resolve identity → preserve acceptance → challenge before reinventing → implement → targeted test → checkpoint → runtime proof → publish → learn.**
-
-The Foundry deliberately separates **procedure ownership** from **acceptance ownership**.
-
-## The invariants that matter most
-
-### 🧭 Preserve the real objective
-Preserve requested functionality, quality, quantity, compatibility, provenance, fidelity, and verification.
-
-### 🔎 Challenge before reinventing
-Before substantial invention, actively look for stronger existing implementations across upstreams, GitHub, GitLab, Codeberg, forks, packages, plugins, standards, reference implementations, and authorized internal/commercial sources.
-
-### 🧱 Blockers are routing signals
-A failed route is not a deliverable.
-
-### ⚡ Performance and quality improve together
-Performance work succeeds only when the target metric improves **and** protected behavior stays intact.
-
-### 🧪 Evidence beats confidence
-A passing build is useful evidence. It is not a substitute for exercising the actual affected workflow when real runtime proof is available.
-
-### 🧠 Never suffer the same failure twice
-Verified nontrivial recoveries become reusable incident knowledge and regression protection.
-
-### 🔁 Continuity survives everything
-Skill switches, model changes, connectors, compaction, handoffs, retries, and timeouts do not erase accepted requirements, IDs, checkpoints, prior fixes, failed-route history, or the exact next action.
-
-## Challenger intelligence
-
-Every meaningful candidate gets one of these states:
-
-<code>adopt</code> · <code>merge</code> · <code>port</code> · <code>wrap</code> · <code>backport</code> · <code>compose</code> · <code>reject</code> · <code>unresolved</code>
-
-Read the full [Challenger & Integration Standard](./CHALLENGER_INTEGRATION_STANDARD.md).
-
-## Trust + interoperability layer
-
-The second challenger sweep found that the biggest missing pieces were not more prompt frameworks. They were **operational trust and open interoperability**.
-
-Agent Foundry now has explicit homes for:
-- MCP tool/context compatibility and durable Tasks;
-- A2A agent-to-agent collaboration;
-- ACP coding-agent/client compatibility;
-- AG-UI application-facing interaction;
-- OWASP ACS-compatible runtime controls and AgBOM concepts;
-- real-harness Skill evaluation;
-- OpenTelemetry-compatible observability;
-- third-party Skill quarantine/scanning;
-- SLSA-style artifact provenance;
-- skills.sh / open Agent Skills distribution compatibility;
-- desired-state multi-agent Skill synchronization.
-
-See [registry/protocols.json](./registry/protocols.json) for version-sensitive protocol state.
-
-## Current flagship components
-
-- **Ultimate Agent Governance**
-- **Zero-Loss Chat Accelerator**
-- **Project Brain Orchestrator**
-- **Minecraft Dev Kit**
-- **Minecraft Repair**
-- **Project Visual QA Showcase**
-- **Artifact Browser Companion**
-- **Revenue Operator**
-- **Skill Creator**
-
-## Canonical bundle
-
-- File: <code>ultimate-agent-governance-skill.zip</code>
-- SHA-256: <code>8d42e1b1ead43a0342931c18adb708875391a62a561d99eff7429fae57742cf8</code>
-- Size: <code>76,676 bytes</code>
-- [Open canonical Drive bundle](https://drive.google.com/file/d/1uPozXLHOEJgqphore01mDoBtFnNmwkmR/view)
-
-## Wiki
-
-**https://github.com/Herbertofury/Agent-Foundry/wiki**
-
-The repository keeps a source mirror under [wiki/](./wiki/) so documentation changes can be reviewed, versioned, validated, and automatically published.
-
----
-
-<div align="center">
-
-### Forge the behavior. Prove the result. Preserve the knowledge.
-
-**Agent Foundry**
-
-</div>
+`wiki/` is the source mirror. The [live wiki](https://github.com/Herbertofury/Agent-Foundry/wiki) is verified separately when published.

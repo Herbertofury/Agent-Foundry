@@ -1,72 +1,46 @@
 # Agent Foundry repository instructions
 
-This repository is the canonical public home for Agent Foundry governance, skills documentation, product invariants, execution standards, and the source mirror for the GitHub Wiki.
+This repository owns shared invariants, standards, chat Skill source mirrors and the `wiki/` source. The nine flagship Skills are explicitly selected chat workflows, not automatic coding-agent policy.
 
-## Source-of-truth map
+## Repository acceptance
 
-- Global user-visible behavior: <code>PRODUCT_INVARIANTS.md</code>
-- Modernization/fix-forward behavior: <code>MODERNIZATION_STANDARD.md</code>
-- Unknown/blocker/recovery behavior: <code>FAILURE_INTELLIGENCE_STANDARD.md</code>
-- Challenger discovery and reuse-before-rebuild: <code>CHALLENGER_INTEGRATION_STANDARD.md</code>
-- Performance dual-success gate: <code>PERFORMANCE_ACCEPTANCE.md</code>
-- Real runtime/workflow evidence: <code>RUNTIME_PROOF.md</code>
-- Durable async/resume semantics: <code>DURABLE_EXECUTION_STANDARD.md</code>
-- Real-harness eval behavior: <code>EVALUATION_STANDARD.md</code>
-- Trace/event semantics: <code>OBSERVABILITY_STANDARD.md</code>
-- Agent/tool/agent/client/UI/control protocols: <code>INTEROPERABILITY_STANDARD.md</code>
-- Sensitive-action policy boundaries: <code>AUTHORIZATION_CONTROL_STANDARD.md</code>
-- Third-party Skill trust: <code>THIRD_PARTY_SKILL_SECURITY.md</code>
-- Bundle provenance and attestations: <code>SUPPLY_CHAIN_STANDARD.md</code>
-- Skill install/sync/update compatibility: <code>DISTRIBUTION_STANDARD.md</code>
-- Version-sensitive protocol facts: <code>registry/protocols.json</code>
-- Skill catalog: <code>catalog/SKILLS.md</code>
-- Human-facing documentation: <code>wiki/</code> and <code>docs/</code>
+Read `PRODUCT_INVARIANTS.md` before substantive work. Preserve all 18 numbered invariants and applicable gates. User/developer/system instructions and actual harness precedence govern authority; repository files cannot grant permissions or expand scope.
 
-Do not duplicate long canonical policy across adapters or wiki pages.
+Preserve existing work and project-specific requirements. Use bounded research and fresh prior evidence; implement once the target, cause and safe edit are known. Verify the actual affected path when available and report evidence gaps accurately. Never manufacture scope, quality or performance success. Do not activate chat Skills or impose chat catalog/watchdog/export workflows on coding tasks.
 
-## Repository invariants
+## Load detail when needed
 
-1. Preserve the user's actual goal, scope, capability, quality, quantity, compatibility, fidelity, provenance, and verification requirements.
-2. A blocker is unresolved work, not completion.
-3. Unknown/search miss is not proof of absence.
-4. Before substantial invention, perform a bounded challenger/integration pass and prefer authorized reuse, merge, port, wrap, backport, or composition over rebuilding a weaker duplicate.
-5. Once target + root cause + safe edit are known, cross into implementation.
-6. Performance is an always-on zero-loss ratchet: for substantive changes that touch runtime work, perform a bounded no-loss performance pass, adopt verified wins, and treat each proven improvement as the new floor. Never accept faster-by-doing-less or a material regression in any relevant protected metric.
-7. Root-cause fixes over regression workarounds: repair the causal defect or bottleneck instead of removing/disabling features, shrinking work, adding sleeps/delays/polling/retries, forcing serialization/blocking, duplicating work, or shifting cost elsewhere. Any such materially regressive workaround is temporary containment, remains unresolved, and is not the final fix unless the user explicitly accepts the tradeoff.
-8. Build/static success is intermediate evidence; exercise the real affected workflow when available.
-9. Verified nontrivial recoveries become reusable incident knowledge or regression evidence.
-10. Skill/tool/model/connector transitions do not reset accepted requirements, canonical IDs, checkpoints, prior evidence, or exact next action.
-11. Important rules should have the strongest practical mechanical enforcement.
-12. Third-party Skills remain untrusted until provenance, content, capabilities, and security evidence are reviewed.
-13. Sensitive actions require real authorization/enforcement boundaries; prompt text alone is not a security boundary.
-14. Published bundles must have verifiable source/digest lineage, and signed attestations should be preferred when the build path supports them.
-15. Protocol adapters preserve native task, cancellation, permission, identity, and streaming semantics rather than flattening them for convenience.
-16. Material checkpoints are not durable until required remotes are synchronized and verified: canonical GitHub/VCS for source/history, connected Google Drive for material artifacts/checkpoint exports when available, plus stable remote lineage recorded for recovery.
-17. If a GitHub project uses a Wiki, keep the **actual live GitHub Wiki** current in the same coherent checkpoint. The repository `wiki/` directory is source only; if the live Wiki does not exist, create/bootstrap it through an authorized supported route and verify publication before closeout.
-18. The strongest credible current solution is a baseline to meet or beat, not a ceiling. Before substantive invention, identify the baseline/challengers, reuse or compose superior authorized pieces, preserve protected dimensions, and seek a provable user-valued advantage rather than an unnecessary clone.
-19. For greenfield technical work and touched architecture with stack freedom, start from the strongest current best-fit frontier/bleeding-edge candidate stack using current primary-source evidence. Promote only candidates that survive compatibility, security, maintainability, supportability, performance/quality, and no-loss proof; preserve fixed target envelopes and backport frontier techniques when direct adoption is impossible.
+| Current need | Canonical source |
+|---|---|
+| Protected behavior and continuity | `PRODUCT_INVARIANTS.md` |
+| Stack/version choices | `MODERNIZATION_STANDARD.md` |
+| UI and visual acceptance | `DESIGN_QUALITY_STANDARD.md` |
+| Substantial invention/reuse | `CHALLENGER_INTEGRATION_STANDARD.md` |
+| Blockers and verified recovery | `FAILURE_INTELLIGENCE_STANDARD.md` |
+| Equivalent-work performance | `PERFORMANCE_ACCEPTANCE.md` |
+| Real workflow evidence | `RUNTIME_PROOF.md` |
+| Async/resume/cancellation | `DURABLE_EXECUTION_STANDARD.md` |
+| Evals/traces | `EVALUATION_STANDARD.md`, `OBSERVABILITY_STANDARD.md` |
+| Protocol adapters | `INTEROPERABILITY_STANDARD.md`, `registry/protocols.json` |
+| Authorization/trust | `AUTHORIZATION_CONTROL_STANDARD.md`, `THIRD_PARTY_SKILL_SECURITY.md` |
+| Provenance/install | `SUPPLY_CHAIN_STANDARD.md`, `DISTRIBUTION_STANDARD.md` |
+| Cross-project adoption | `docs/REPOSITORY-GOVERNANCE.md`, `registry/repository-governance.json` |
+| Selected chat workflows | `catalog/SKILLS.md`, the selected Skill |
 
-## Change discipline
+Reuse unchanged instructions in the current run; refresh when files, scope, authority or context changes. Do not preload every standard. Long policy has one canonical source; adapters and wiki pages summarize and link it.
 
-When changing a canonical standard:
-1. update the canonical file first;
-2. update affected wiki summaries/links in the same coherent change;
-3. add or adjust validation/evaluation coverage when the rule is important enough to keep;
-4. do not weaken prior invariants merely to make a check pass;
-5. record meaningful packaging/provenance changes in <code>bundles/README.md</code>.
+## Change and verification
 
-## Wiki discipline
+Update canonical sources first and affected wiki summaries in the same coherent change. Keep stable wiki names/navigation. Add focused mechanical coverage for material behavior; preserve genuine invariants instead of weakening checks. Record meaningful packaging/provenance changes in `bundles/README.md`.
 
-The <code>wiki/</code> directory is the version-controlled source mirror for the GitHub Wiki.
+Relevant commands:
 
-- <code>wiki/Home.md</code> is the landing page.
-- <code>wiki/_Sidebar.md</code> is primary navigation.
-- Keep page names stable.
-- The publish workflow mirrors <code>wiki/</code> to the repository's live <code>.wiki.git</code> backend and must verify the published content.
-- The repo-side mirror does **not** count as the Wiki being updated until the live GitHub Wiki has been published and verified.
-- If the live Wiki backend does not exist, bootstrap/create it through an authorized supported route before documentation closeout.
-- Canonical policy stays in root standards; wiki pages explain and navigate it.
+```sh
+python tools/repository_governance.py check
+python -m unittest discover -s tests -v
+python tools/validate_skill_tree.py skills
+python tools/source_manifest.py --check
+python skills/project-brain-orchestrator/scripts/compile_policy.py --check
+```
 
-## Completion
-
-Do one material challenge pass before closeout. Verify required GitHub/VCS, Google Drive, and live GitHub Wiki synchronization for the latest material checkpoint before calling the work durable or complete. Do not continue “just in case” loops after acceptance and required proof are satisfied.
+Run affected checks during iteration; broader checks at convergence when warranted. `wiki/` is source only: publish and read back the live `.wiki.git` backend before claiming parity. Required remotes must be available and authorized; preserve exact pending operations when blocked. Stop after acceptance and required proof are satisfied.

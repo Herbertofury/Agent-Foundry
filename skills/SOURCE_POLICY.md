@@ -17,3 +17,7 @@ Excluded from the canonical source mirror:
 Generated evidence may be preserved separately as release/QA artifacts when it is useful, but it is not treated as source code.
 
 The mirror is normalized through Ultimate Agent Governance before promotion so child Skills inherit the current shared execution constitution without restarting their domain-specific workflow ownership.
+
+## Invocation scope
+
+The eight mirrored packages and externally supplied Skill Creator are chat-oriented flagship workflows. Their embedded constitution applies within selected chats, not automatically to coding-agent repository policy. Keep instruction adoption separate and preserve local requirements; see `docs/REPOSITORY-GOVERNANCE.md`.

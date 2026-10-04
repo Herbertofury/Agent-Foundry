@@ -1,84 +1,18 @@
-<div align="center">
+# Agent Foundry
 
-# ⚒️ Agent Foundry
+Shared engineering invariants, chat workflows and repository governance with distinct entry points.
 
-### Build agents that finish the job.
-
-**Skills · AGENTS.md · Invariants · Governance · Challenger Intelligence · Failure Recovery · Runtime Proof**
-
-[Repository](https://github.com/Herbertofury/Agent-Foundry) · [Getting Started](Getting-Started) · [Skills Catalog](Skills-Catalog) · [Architecture](Architecture)
-
-</div>
-
----
-
-Agent Foundry is a living engineering system for making AI agents **more capable without becoming less reliable**.
-
-It exists to prevent the failure modes that ruin long, ambitious agent work:
-- forgetting requirements after a handoff or tool switch;
-- restarting solved discovery;
-- accepting blockers as completion;
-- rebuilding weaker duplicates instead of integrating mature work;
-- calling a build “done” without exercising the actual workflow;
-- optimizing performance by silently doing less;
-- suffering the same recoverable failure again;
-- losing the newest work because a stale/broken chat was the only current copy;
-- updating a repo-side `wiki/` folder while the actual GitHub Wiki silently stays stale.
-
-## The Foundry promise
-
-> **Preserve the goal. Challenge before reinventing. Implement once the path is known. Prove the real result. Preserve the knowledge.**
-
-| Explore | What it gives you |
+| Start here | Purpose |
 |---|---|
-| 🧭 [Getting Started](Getting-Started) | The shortest path into Agent Foundry |
-| 🏗️ [Architecture](Architecture) | How governance, Zero-Loss, domain skills, and project continuity compose |
-| 🧰 [Skills Catalog](Skills-Catalog) | The flagship skill ecosystem |
-| 📜 [AGENTS.md & Invariants](AGENTS-md-and-Invariants) | What must remain true across every workflow |
-| ⚡ [Zero-Loss Execution](Zero-Loss-Execution) | Anti-stall, continuity, no rediscovery |
-| 👑 [Ultimate Agent Governance](Ultimate-Agent-Governance) | The shared acceptance constitution |
-| 🔎 [Challenger & Integration](Challenger-and-Integration-Standard) | Reuse-before-rebuild and best-of-breed composition |
-| 🧠 [Failure Intelligence](Failure-Intelligence) | Unknown ≠ absent; blockers route forward |
-| 📈 [Performance & Runtime Proof](Performance-and-Runtime-Proof) | Faster **and** correct; evidence over confidence |
-| 🔌 [Cross-Agent Compatibility](Cross-Agent-Compatibility) | Thin adapters, one canonical truth |
-| 🛠️ [Building a Skill](Building-a-Skill) | How to build reusable, testable Skills |
-| 🌌 [Project Constellation Integration](Project-Constellation-Integration) | Durable project memory and continuation |
-| 🔌 [Interoperability Protocols](Interoperability-Protocols) | MCP, A2A, ACP, AG-UI, ACS |
-| 🧪 [Evaluation & Observability](Evaluation-and-Observability) | Real-harness evals, trajectories, telemetry |
-| ⏳ [Durable Execution](Durable-Execution) | Resumable tasks, idempotency, waits, cancellation |
-| 🔄 [Remote Continuity & Wiki Sync](Remote-Continuity-and-Wiki-Sync) | Verified GitHub + Drive checkpoints and live Wiki parity |
-| 🛡️ [Trust & Supply Chain](Trust-and-Supply-Chain) | Skill quarantine, provenance, attestations, SBOM/AgBOM |
-| 🔐 [Authorization & Runtime Control](Authorization-and-Runtime-Control) | Policy-as-code and Guardian-style enforcement |
-| 📦 [Distribution & Sync](Distribution-and-Sync) | skills.sh, locks, desired-state multi-agent installs |
-| 🗺️ [Roadmap](Roadmap) | Where the Foundry goes next |
+| [Chat workflows](Skills-Catalog) | The nine flagship chat components |
+| [Repository instructions](AGENTS-md-and-Invariants) | Coding-agent layering and local requirements |
+| [Getting Started](Getting-Started) | Choose the appropriate path |
+| [Architecture](Architecture) | How both surfaces share standards |
+| [Repository Governance Sync](Repository-Governance-Sync) | Versioned adoption, dry-run drift and preserved customization |
+| [Stack and Design Quality](Stack-and-Design-Quality) | Current source-backed decisions and real visual QA |
 
-## Core execution loop
+The flagship components are intended for chats. They are not a mandatory coding-agent prompt chain. Bundled scripts or `agents/openai.yaml` metadata do not change that distinction. Coding agents use project-owned AGENTS.md, scoped instructions and reviewed shared standards.
 
-~~~mermaid
-flowchart LR
-    A[Resolve identity] --> B[Freeze acceptance]
-    B --> C[Challenge before reinventing]
-    C --> D[Implement]
-    D --> E[Targeted test]
-    E --> F[Checkpoint]
-    F --> G[Real workflow proof]
-    G --> H[Publish]
-    H --> I[Learn & reuse]
-    I --> A
-~~~
+The 18 [product invariants](https://github.com/Herbertofury/Agent-Foundry/blob/main/PRODUCT_INVARIANTS.md) protect scope, quality, continuity, causal fixes, current technology, runtime proof and equivalent-work performance. Preserve the goal, research credible alternatives, implement, verify and preserve authorized checkpoint lineage.
 
-## What makes it different
-
-Agent Foundry is deliberately **not** one giant universal prompt.
-
-It is a layered system:
-- **invariants** define what may never be sacrificed;
-- **governance** defines the shared acceptance boundary;
-- **Zero-Loss** keeps execution moving without losing state;
-- **domain skills** own the actual procedure;
-- **Project Brain** preserves identity, checkpoints, and publication;
-- **evals/audits/runtime proof** turn important rules into evidence.
-
----
-
-### Start here → [Getting Started](Getting-Started)
+[Repository](https://github.com/Herbertofury/Agent-Foundry). See the sidebar for engineering, trust, interoperability and continuity references.

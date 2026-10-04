@@ -51,3 +51,7 @@ Release commit: `1ac8c8414c336610220b799e3449ccd7f4a7fb0d`
 Package/attestation workflow: `36949455928` — success  
 Workflow artifact digest: `sha256:2dd8999e122fca8e37c76d257ce391d866ebb8764dc26e22a70de21dedb9dd6b`  
 Canonical UAG package SHA-256: `6c96091dd8166b2045c93f357993dbf88c74748aaf96bc4d7e034b5b07b8a94b`
+
+## Draft governance separation (2026-10-04)
+
+Under review: chat catalog separated from coding-agent policy; versioned shared-policy snapshot adoption; default Project Brain installer preserves local instructions; legacy export catalog version 4.0.4 with corrected authority and instruction refresh. Source manifest regenerated only for changed Project Brain files. Portable manifest ordering is now platform-independent. Published Skill releases and their existing digest receipts are unchanged; no new release artifact is claimed here.

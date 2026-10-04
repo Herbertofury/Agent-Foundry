@@ -1,5 +1,7 @@
 # Zero-Loss Execution
 
+This page describes a selected chat workflow. [Coding-agent repository policy](AGENTS-md-and-Invariants) is separate; this workflow is not automatically loaded by repository instructions.
+
 Zero-Loss is the execution substrate that keeps ambitious work moving **without reducing the requested result**.
 
 ## Core behaviors

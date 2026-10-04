@@ -1,21 +1,21 @@
 {
   "schema_version": 2,
-  "bundle_version": "4.0.3",
-  "generated_at_utc": "2026-08-30T19:00:38.668878+00:00",
-  "catalog_sha256": "06ea2fd4e32de844e24c6760e66ae8e2a0d9174150b25ee888a1dc7382eff891",
+  "bundle_version": "4.0.4",
+  "generated_at_utc": "2026-10-04T10:16:01.246504+00:00",
+  "catalog_sha256": "29f031c0fe11d47a16f9dda1e4d0167f346f176deee77e92f4149a5444d19c70",
   "canonical_root": "assets/agents-md-hybrid",
   "files": {
     "AGENTS.md": {
-      "sha256": "275c7edb66abb0ccc9f90ce38abaf2bffd764a8e0d1b1cdf586110370cbd9b09",
-      "bytes": 30847
+      "sha256": "2d366439d24e66903825c1eb7e8dc6cf3986d844db7eae4d954a67734646818b",
+      "bytes": 31081
     },
     "AGENTS.modular.md": {
-      "sha256": "a9c822b3acb4b7c9a4821540e3b387c19c4a45cbc17f1e1a4e8b3b94b9101322",
-      "bytes": 9556
+      "sha256": "7b4f90848d49b5cb01913730db20f5fdc644ed0ca768c05e46e13532c0d05208",
+      "bytes": 9755
     },
     "README.md": {
-      "sha256": "c311bac55320d893c1b1c1d678547aa5746ee9bd613db561bf9c006365135589",
-      "bytes": 3945
+      "sha256": "7a6ff69078fa32ff804d3c09cdcf54bfc9e6f176c47aa970a834f480a4b78fbe",
+      "bytes": 1367
     },
     ".agents/ENVIRONMENT.md": {
       "sha256": "40dc14f8cdb9191d0047260bab449010e0806be53bd2817afcce7547c05300ce",

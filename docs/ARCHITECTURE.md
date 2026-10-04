@@ -1,26 +1,14 @@
 # Architecture
 
-Agent Foundry separates **what must remain true** from **how a specific task is performed**.
+Shared engineering invariants feed two distinct instruction surfaces.
 
-## Layers
+| Surface | Entry point | Owns |
+|---|---|---|
+| Chat workflows | Explicitly selected Skill | Chat orchestration, continuity and domain procedure |
+| Coding agents/repositories | Project-owned AGENTS.md and scoped instructions | Local setup, commands, restrictions and reviewed shared policy |
+| Shared standards | Product invariants and root standards | Protected behavior, current-stack promotion, runtime/performance proof and trust |
+| Mechanical evidence | Tests, audits and versioned locks | Specific checks, not blanket agent-quality guarantees |
 
-### 1. Product invariants
-The protected behavior boundary. They survive every skill/tool/model switch.
+The nine flagship components belong to the chat surface. In a selected chat, the narrowest domain Skill owns procedure; Governance, Zero-Loss and Project Brain supply relevant overlays without resetting state. Repository instructions do not require their activation.
 
-### 2. Governance
-Ultimate Agent Governance owns the shared acceptance contract: no blocker closeout, unknown-not-absent, zero fake success, modernization, challenger discovery, evidence-bound completion.
-
-### 3. Zero-Loss execution
-Zero-Loss Chat Accelerator owns continuity and anti-stall mechanics: state reuse, single-flight reads, implementation crossing, checkpoint-before-long-gate, progress watchdogs, and no rediscovery.
-
-### 4. Domain skills
-The narrowest applicable skill owns procedure. Examples: Minecraft Dev Kit, Minecraft Repair, Project Visual QA Showcase, document/spreadsheet/presentation skills, Revenue Operator.
-
-### 5. Project continuity
-Project Brain Orchestrator persists canonical project identity, checkpoints, publication receipts, Drive/GitHub state, and exact next action.
-
-### 6. Mechanical enforcement
-Tests, audits, schemas, evals, completion receipts, runtime proof, and performance gates make important rules harder to forget.
-
-## Composition rule
-Skills are overlays, not resets. Activating a narrower skill must not erase still-applicable acceptance or continuity state from the wider system.
+`tools/foundry_sync.py` distributes explicitly selected Skill packages. `tools/repository_governance.py` separately plans/checks policy snapshots while preserving local instructions. Neither is automatic cross-project deployment. See [repository governance](REPOSITORY-GOVERNANCE.md).

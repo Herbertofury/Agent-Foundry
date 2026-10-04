@@ -1,35 +1,37 @@
-### ⚒️ Agent Foundry
+### Agent Foundry
 
 **Start**
 - [[Home]]
 - [[Getting Started|Getting-Started]]
 - [[Architecture]]
 
-**Core System**
-- [[Skills Catalog|Skills-Catalog]]
-- [[AGENTS.md & Invariants|AGENTS-md-and-Invariants]]
-- [[Zero-Loss Execution|Zero-Loss-Execution]]
+**Chat Workflows**
+- [[Chat Skills Catalog|Skills-Catalog]]
 - [[Ultimate Agent Governance|Ultimate-Agent-Governance]]
+- [[Zero-Loss Execution|Zero-Loss-Execution]]
+- [[Project Constellation Integration|Project-Constellation-Integration]]
+- [[Building a Skill|Building-a-Skill]]
 
-**Engineering Standards**
-- [[Challenger & Integration|Challenger-and-Integration-Standard]]
-- [[Failure Intelligence|Failure-Intelligence]]
-- [[Performance & Runtime Proof|Performance-and-Runtime-Proof]]
+**Coding Agents and Repository Policy**
+- [[AGENTS.md and Invariants|AGENTS-md-and-Invariants]]
+- [[Repository Governance Sync|Repository-Governance-Sync]]
+- [[Stack and Design Quality|Stack-and-Design-Quality]]
 - [[Cross-Agent Compatibility|Cross-Agent-Compatibility]]
 
-**Trust & Interop**
-- [[Interoperability Protocols|Interoperability-Protocols]]
-- [[Evaluation & Observability|Evaluation-and-Observability]]
-- [[Durable Execution|Durable-Execution]]
-- [[Remote Continuity & Wiki Sync|Remote-Continuity-and-Wiki-Sync]]
-- [[Trust & Supply Chain|Trust-and-Supply-Chain]]
-- [[Authorization & Runtime Control|Authorization-and-Runtime-Control]]
-- [[Distribution & Sync|Distribution-and-Sync]]
+**Engineering Standards**
+- [[Challenger and Integration|Challenger-and-Integration-Standard]]
+- [[Failure Intelligence|Failure-Intelligence]]
+- [[Performance and Runtime Proof|Performance-and-Runtime-Proof]]
 
-**Build**
-- [[Building a Skill|Building-a-Skill]]
-- [[Project Constellation Integration|Project-Constellation-Integration]]
+**Trust, Interoperability and Continuity**
+- [[Interoperability Protocols|Interoperability-Protocols]]
+- [[Evaluation and Observability|Evaluation-and-Observability]]
+- [[Durable Execution|Durable-Execution]]
+- [[Remote Continuity and Wiki Sync|Remote-Continuity-and-Wiki-Sync]]
+- [[Trust and Supply Chain|Trust-and-Supply-Chain]]
+- [[Authorization and Runtime Control|Authorization-and-Runtime-Control]]
+- [[Distribution and Sync|Distribution-and-Sync]]
+- [[Wiki Publishing|Wiki-Publishing]]
 - [[Roadmap]]
 
----
 [Repository](https://github.com/Herbertofury/Agent-Foundry)

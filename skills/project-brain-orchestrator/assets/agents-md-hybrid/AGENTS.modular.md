@@ -43,7 +43,7 @@ Deferred discovery is mandatory: redundant context, duplicate module reads, and 
 
 # ACTIVE-INSTRUCTION REFRESH
 
-At each checkpoint below, reload and re-apply every instruction that governs the target before continuing:
+At the checkpoints below, check whether scope, authority, files or context changed. Reload changed/newly applicable instructions; reuse unchanged instructions already loaded in the current run:
 
 - at the start of every user request
 - after any context compaction, summarization, restart, or resumed session
@@ -55,26 +55,24 @@ At each checkpoint below, reload and re-apply every instruction that governs the
 
 Required procedure:
 
-1. Reload every applicable `AGENTS.md` from repository root to the target path.
+1. Resolve applicable instructions from repository root to target; reload when changed or missing from active context.
 2. Load only newly relevant or changed specialized modules; reuse unchanged modules already loaded in the current task.
 3. Read any directly referenced project documentation required by those files.
 4. Extract all task-relevant mandatory rules into the active acceptance checklist.
 5. Reconcile conflicts using the precedence rules below before editing.
 6. Rebuild the checklist whenever instructions or scope change.
 
-Do not rely on an earlier read or claim compliance without these refreshes.
+An earlier read remains valid until its source, scope, authority or active context changes. Reconcile invalidated guidance before editing.
 
 # INSTRUCTION PRECEDENCE
 
 Apply instructions in this order:
 
-1. Platform and system safety requirements.
+1. Platform/system and developer instructions, in the harness's actual authority order.
 2. The user's current explicit request and corrections.
-3. The nearest `AGENTS.md` governing the target file or directory.
-4. Parent and repository-root `AGENTS.md` files.
-5. Loaded `.agents/` rule modules and referenced repository documentation.
-6. Established project conventions.
-7. General defaults.
+3. Applicable repository instructions, following actual harness discovery/scope rules.
+4. Explicitly selected chat modules and references within that scope.
+5. Established project conventions and general defaults.
 
 A narrower instruction may specialize a broader one. Resolve conflicts from authority and scope before editing; ask only the smallest question when evidence cannot resolve a real ambiguity.
 

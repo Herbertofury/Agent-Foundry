@@ -72,3 +72,9 @@ Collections are useful for Foundry presets, but a pack is not a security boundar
 ## Future OCI adapter
 
 OCI artifact distribution is promising for immutable digests, registries, signatures, and enterprise mirroring, but Foundry treats current Agent Skills OCI conventions as an evolving compatibility target rather than a settled official standard.
+
+## Separate chat distribution from repository policy
+
+The nine flagship components are explicitly selected chat workflows. A native Skill install is not automatic repository policy. `tools/foundry_sync.py` manages Skill directories; managed copy reconciliation refuses locally edited content. Review conflicts and preserve customization instead of replacing it.
+
+Repository policy uses the separate versioned snapshot/lock and read-only drift plan in [docs/REPOSITORY-GOVERNANCE.md](docs/REPOSITORY-GOVERNANCE.md). Preserve project-owned root/nested instructions and require reviewed adapter integration. Never copy the chat all-in-one contract across projects or overwrite customization to achieve parity.

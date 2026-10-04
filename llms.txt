@@ -8,6 +8,11 @@
 - [AGENTS.md](https://github.com/Herbertofury/Agent-Foundry/blob/main/AGENTS.md)
 - [Product invariants](https://github.com/Herbertofury/Agent-Foundry/blob/main/PRODUCT_INVARIANTS.md)
 
+## Separate instruction surfaces
+- [Chat workflow catalog](https://github.com/Herbertofury/Agent-Foundry/blob/main/catalog/SKILLS.md)
+- [Repository governance adoption](https://github.com/Herbertofury/Agent-Foundry/blob/main/docs/REPOSITORY-GOVERNANCE.md)
+- [Design quality](https://github.com/Herbertofury/Agent-Foundry/blob/main/DESIGN_QUALITY_STANDARD.md)
+
 ## Execution standards
 - [Challenger integration](https://github.com/Herbertofury/Agent-Foundry/blob/main/CHALLENGER_INTEGRATION_STANDARD.md)
 - [Failure intelligence](https://github.com/Herbertofury/Agent-Foundry/blob/main/FAILURE_INTELLIGENCE_STANDARD.md)
