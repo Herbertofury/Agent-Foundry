@@ -41,3 +41,16 @@ Modernization and challenger discovery are linked but not identical:
 - challenger discovery asks “what existing implementations can we adopt, merge, port, wrap, backport, or compose?”
 
 Use both when substantial invention or migration is involved.
+
+## Stack decision evidence
+
+For a material stack choice, record the target envelope, candidate versions/support status, dated primary-source links, expected advantage, relevant comparative proof, migration cost and rollback path. Reuse current evidence until a load-bearing fact or target changes. Research is bounded by the actual decision; documentation-only changes do not require an unrelated stack migration.
+
+Evaluate frontier candidates alongside the strongest supported production baseline. Preview/nightly technology remains a candidate until supportability and reproducibility are demonstrated for the real target. Pin the selected versions and lockfiles; record why a newer candidate was rejected rather than floating production to arbitrary HEAD. This implements invariant 18's promotion gate and preserves invariant 9's production-worthy requirement.
+
+Examples of primary-source decision inputs, checked 2026-10-04:
+- [Node.js release/support policy](https://nodejs.org/en/about/previous-releases): production applications use Active or Maintenance LTS; a higher Current version alone is not a production recommendation.
+- [React's application guidance](https://react.dev/learn/creating-a-react-app): compare framework capabilities and deployment requirements for a new React application. This is input to a React decision, not a requirement that every project use React or one specific framework.
+- For user-facing work, apply [DESIGN_QUALITY_STANDARD.md](DESIGN_QUALITY_STANDARD.md) and its current W3C/Playwright/Web Vitals references. A newer library does not establish visual quality.
+
+Verify the relevant official support matrix again when making a future version-sensitive decision; these links are a research route, not a frozen version mandate.

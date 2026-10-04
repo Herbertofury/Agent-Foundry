@@ -53,7 +53,7 @@ def atomic_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     fd, temp = tempfile.mkstemp(prefix=path.name + ".", dir=path.parent)
     try:
-        with os.fdopen(fd, "w", encoding="utf-8") as fh:
+        with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as fh:
             json.dump(data, fh, indent=2, sort_keys=True)
             fh.write("\n")
         os.replace(temp, path)
@@ -150,6 +150,8 @@ class FoundrySync:
                     actions.append(Action("conflict", target_name, name, str(dest), mode, "non-directory path exists", src_digest, current))
                 elif not managed:
                     actions.append(Action("conflict", target_name, name, str(dest), mode, "unmanaged directory exists", src_digest, current))
+                elif current != (entry or marker or {}).get("sourceDigest"):
+                    actions.append(Action("conflict", target_name, name, str(dest), mode, "managed copy locally edited; preserve customization", src_digest, current))
                 elif current == src_digest:
                     actions.append(Action("noop", target_name, name, str(dest), mode, "managed copy matches source", src_digest, current))
                 else:

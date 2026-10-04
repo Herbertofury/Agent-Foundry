@@ -1,26 +1,11 @@
-# Distribution & Sync
+# Distribution and Sync
 
-Agent Foundry should be installable across agent harnesses without inventing a proprietary Skill format.
+## Explicit chat Skill distribution
+`tools/foundry_sync.py` implements desired-state plans, managed copy/symlink installs and drift status for selected Skill packages. Verify native harness directories before enabling targets. Repository source includes local-edit conflict protection for managed copy updates. Existing releases retain their earlier behavior until updated.
 
-## Baselines
+Open Agent Skills format and pinned release provenance are the baseline. Popularity or pack membership is not trust; use the third-party security pipeline.
 
-- Open Agent Skills <code>SKILL.md</code> format
-- Open <code>AGENTS.md</code> repository instruction convention
-- Git as canonical source
-- pinned/digested releases for durable installs
+## Repository governance adoption
+[Repository Governance Sync](Repository-Governance-Sync) is a separate versioned path with versioned snapshots, local-edit conflicts and preserved project-owned instructions. It does not activate chat Skills or copy root AGENTS.md across projects.
 
-## Ecosystem compatibility
-
-The <code>skills</code> CLI and skills.sh provide useful discovery/install/update compatibility across many agent harnesses.
-
-For multi-agent machines and teams, Foundry prefers a **desired-state** approach:
-
-<code>declare → plan → sync → status</code>
-
-Botfile is a strong challenger pattern: one curated source fans out into agent-native directories using a plan-first, non-clobbering model.
-
-## Trust is separate
-
-Popularity, install count, or inclusion in a pack does not equal trust. Distribution feeds the third-party Skill security pipeline.
-
-[Read DISTRIBUTION_STANDARD.md](https://github.com/Herbertofury/Agent-Foundry/blob/main/DISTRIBUTION_STANDARD.md)
+[Distribution standard](https://github.com/Herbertofury/Agent-Foundry/blob/main/DISTRIBUTION_STANDARD.md).

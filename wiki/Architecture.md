@@ -1,37 +1,19 @@
 # Architecture
 
-Agent Foundry separates **acceptance ownership** from **procedure ownership**.
+Shared product invariants feed two distinct instruction surfaces.
 
-~~~mermaid
+```mermaid
 flowchart TD
-    U[User Goal] --> I[Product Invariants]
-    I --> G[Ultimate Agent Governance]
-    G --> Z[Zero-Loss Chat Accelerator]
-    Z --> D[Domain Skill]
-    D --> C[Challenger / Integration Pass]
-    C --> M[Implementation]
-    M --> V[Targeted Verification]
-    V --> R[Runtime Proof]
-    R --> P[Project Brain / Durable Publication]
-    R --> F[Failure Intelligence]
-    F --> G
-~~~
+    I[Shared product invariants and standards] --> C[Explicitly selected chat workflows]
+    I --> R[Reviewed repository governance adapter]
+    C --> D[Chat domain procedure and continuity]
+    R --> L[Project AGENTS.md and scoped local instructions]
+    D --> V[Relevant runtime and acceptance evidence]
+    L --> V
+```
 
-## Acceptance ownership
-Governance answers: **what may not be lost, weakened, faked, or forgotten?**
+The nine [flagship components](Skills-Catalog) are chat workflows. In selected chats, the domain Skill owns procedure; Governance, Zero-Loss and Project Brain provide relevant acceptance/continuity overlays without resetting state.
 
-## Procedure ownership
-The narrowest relevant Skill answers: **how do we actually do this task?**
+Coding agents use project instructions and reviewed shared policy. They do not automatically load chat orchestration, catalogs, watchdogs or all-in-one contracts. [Repository Governance Sync](Repository-Governance-Sync) preserves local commands and checks adopted digests.
 
-## Continuity ownership
-Zero-Loss and Project Brain preserve:
-- requirements;
-- canonical IDs/paths;
-- evidence freshness;
-- hashes/run IDs;
-- checkpoints;
-- failed-route history;
-- exact next action.
-
-## Mechanical enforcement
-Important rules should graduate from prose into tests, audit scripts, schemas, eval cases, completion receipts, performance gates, and runtime proof.
+Tests, audits, runtime proof and visual review validate specific behavior. File parity does not guarantee semantic compliance, perfect design or agent quality.

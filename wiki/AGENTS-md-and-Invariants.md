@@ -1,37 +1,16 @@
-# AGENTS.md & Invariants
+# AGENTS.md and Invariants
 
-A good <code>AGENTS.md</code> is a **router**, not an encyclopedia.
+Coding-agent instructions are a repository surface. The nine flagship components are [chat workflows](Skills-Catalog), even when they contain coding tools or instruction exports.
 
-## Put in AGENTS.md
-- repository-wide execution rules;
-- canonical source locations;
-- commands needed for validation;
-- local scope differences;
-- short non-obvious rules an agent must see early.
+## Useful local instructions
+Keep setup, validation commands, architecture routes, restricted paths and short non-obvious rules in project-owned AGENTS.md. Scope subsystem rules near the files they govern. Follow actual harness discovery/precedence; user/developer/system authority outranks repository files.
 
-## Move out of AGENTS.md
-- long domain workflows → Skills;
-- framework-specific detail → scoped instructions;
-- long architecture explanations → references;
-- non-negotiable user-visible behavior → invariant files;
-- runtime proof → dedicated runtime standard;
-- performance equivalence → performance acceptance standard.
+Load detailed standards only when relevant. Reuse unchanged instructions and refresh when context, scope, authority or sources change. Avoid duplicated standalone/modular contracts and blanket rereads.
 
-## Why
-Large repeated instruction blocks create drift, waste context, and make it harder to know which copy is authoritative.
+## Preserve the accepted invariants
+[PRODUCT_INVARIANTS.md](https://github.com/Herbertofury/Agent-Foundry/blob/main/PRODUCT_INVARIANTS.md) retains all 18 invariants. Thin routing does not discard safety, scope, no-loss performance, current-stack promotion gates or real proof.
 
-**Agent Foundry principle: one truth, many thin adapters.**
-
-**Root-cause fixes over regression workarounds.** Removing features, reducing work, adding waits/polling/retries, forcing serialization, duplicating work, or shifting cost elsewhere does not count as a completed fix when equivalent behavior or performance regresses. Temporary containment stays unresolved until the causal defect is repaired or the user explicitly accepts the tradeoff.
-
-Canonical repository files:
-- [PRODUCT_INVARIANTS.md](https://github.com/Herbertofury/Agent-Foundry/blob/main/PRODUCT_INVARIANTS.md)
-- [AGENTS.md](https://github.com/Herbertofury/Agent-Foundry/blob/main/AGENTS.md)
-- [MODERNIZATION_STANDARD.md](https://github.com/Herbertofury/Agent-Foundry/blob/main/MODERNIZATION_STANDARD.md)
-
+[Repository Governance Sync](Repository-Governance-Sync) preserves local instructions and versions shared policy. Legacy Project Brain all-in-one/modular exports are explicit chat-oriented compatibility material, not default coding-agent installation.
 
 ## Remote durability is part of completion
-
-For substantive project work, keep the latest coherent checkpoint on durable remotes rather than trusting the current chat. Source/history belongs in the canonical GitHub/VCS repository; material artifacts and checkpoint exports belong in connected Google Drive when available; and projects that use GitHub Wiki must keep the **actual live Wiki** synchronized. A repo-side <code>wiki/</code> mirror is canonical source, not proof of publication.
-
-A missing or stale required remote remains unresolved work. The closeout question is simple: **could a fresh chat resume from verified remote state without this conversation?**
+Keep checkpoint lineage on required, available, authorized remotes. Source/history belongs in canonical VCS; connected Drive can carry required artifacts/exports. `wiki/` is source only: verify live publication. Report a blocked required remote precisely. Do not add unrequested catalog, connector or export work to unrelated coding tasks.

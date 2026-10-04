@@ -1,22 +1,7 @@
 # Cross-Agent Compatibility
 
-Agent Foundry is built around **canonical policy + thin adapters**.
+Engineering invariants can be shared through canonical standards and thin scoped adapters. The nine flagship chat workflows are separate; compatibility does not make their complete prompts automatic repository policy.
 
-## The goal
-The same high-level acceptance behavior should survive across:
-- ChatGPT Skills;
-- Codex/coding agents;
-- repository AGENTS.md systems;
-- domain-specific agents;
-- connected tool workflows;
-- future agent runtimes.
+Preserve actual harness discovery, authority, permissions, cancellation and native task semantics. Local setup and exceptions remain project-owned. Check adapter integration and versioned policy drift separately from explicit Skill installs.
 
-## The rule
-Do not maintain large independent copies of the same policy for every harness.
-
-Instead:
-1. keep one canonical standard;
-2. expose a short bridge/adapter in each harness;
-3. mechanically audit parity where the rule is critical.
-
-This reduces context waste and policy drift while preserving behavior.
+[Repository Governance Sync](Repository-Governance-Sync) explains the versioned adoption path. File parity is auditable; semantic compliance and quality require behavior/runtime evidence.

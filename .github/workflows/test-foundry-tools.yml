@@ -7,12 +7,28 @@ on:
       - "tools/**"
       - "tests/**"
       - "config/**"
+      - "registry/repository-governance.json"
+      - "*_STANDARD.md"
+      - "PRODUCT_INVARIANTS.md"
+      - "PERFORMANCE_ACCEPTANCE.md"
+      - "RUNTIME_PROOF.md"
+      - "THIRD_PARTY_SKILL_SECURITY.md"
+      - "templates/**"
+      - "skills/project-brain-orchestrator/**"
       - ".github/workflows/test-foundry-tools.yml"
   pull_request:
     paths:
       - "tools/**"
       - "tests/**"
       - "config/**"
+      - "registry/repository-governance.json"
+      - "*_STANDARD.md"
+      - "PRODUCT_INVARIANTS.md"
+      - "PERFORMANCE_ACCEPTANCE.md"
+      - "RUNTIME_PROOF.md"
+      - "THIRD_PARTY_SKILL_SECURITY.md"
+      - "templates/**"
+      - "skills/project-brain-orchestrator/**"
       - ".github/workflows/test-foundry-tools.yml"
   workflow_dispatch:
 
@@ -31,3 +47,7 @@ jobs:
         run: python -m py_compile tools/*.py
       - name: Run integration tests
         run: python -m unittest discover -s tests -v
+      - name: Verify repository policy version and digests
+        run: python tools/repository_governance.py check
+      - name: Verify generated legacy policy outputs
+        run: python skills/project-brain-orchestrator/scripts/compile_policy.py --check

@@ -1,7 +1,7 @@
 {
   "fileCount": 418,
   "schemaVersion": 1,
-  "sizeBytes": 3668949,
+  "sizeBytes": 3664041,
   "skillCount": 8,
   "skills": {
     "artifact-browser-companion": {
@@ -1385,23 +1385,23 @@
         },
         {
           "path": "assets/agents-md-hybrid/AGENTS.md",
-          "sha256": "275c7edb66abb0ccc9f90ce38abaf2bffd764a8e0d1b1cdf586110370cbd9b09",
-          "sizeBytes": 30847
+          "sha256": "2d366439d24e66903825c1eb7e8dc6cf3986d844db7eae4d954a67734646818b",
+          "sizeBytes": 31081
         },
         {
           "path": "assets/agents-md-hybrid/AGENTS.modular.md",
-          "sha256": "a9c822b3acb4b7c9a4821540e3b387c19c4a45cbc17f1e1a4e8b3b94b9101322",
-          "sizeBytes": 9556
+          "sha256": "7b4f90848d49b5cb01913730db20f5fdc644ed0ca768c05e46e13532c0d05208",
+          "sizeBytes": 9755
         },
         {
           "path": "assets/agents-md-hybrid/MANIFEST.json",
-          "sha256": "e61a1006556f4e33bcd664605d3540f79096201ea4a019f027bd714024f9e4a9",
+          "sha256": "1cdebb0bd7b3ddc3e00b935e3b3a57acd49b06b8e8b70349d9a45720c3ff74ba",
           "sizeBytes": 2255
         },
         {
           "path": "assets/agents-md-hybrid/README.md",
-          "sha256": "c311bac55320d893c1b1c1d678547aa5746ee9bd613db561bf9c006365135589",
-          "sizeBytes": 3945
+          "sha256": "7a6ff69078fa32ff804d3c09cdcf54bfc9e6f176c47aa970a834f480a4b78fbe",
+          "sizeBytes": 1367
         },
         {
           "path": "assets/codex/ACTIVE-TASK.template.json",
@@ -1495,8 +1495,8 @@
         },
         {
           "path": "policies/policy-catalog.json",
-          "sha256": "06ea2fd4e32de844e24c6760e66ae8e2a0d9174150b25ee888a1dc7382eff891",
-          "sizeBytes": 115889
+          "sha256": "29f031c0fe11d47a16f9dda1e4d0167f346f176deee77e92f4149a5444d19c70",
+          "sizeBytes": 113707
         },
         {
           "path": "references/ARTIFACT-CREDENTIAL-HANDLING.md",
@@ -1520,13 +1520,13 @@
         },
         {
           "path": "references/BUNDLE-README.md",
-          "sha256": "c311bac55320d893c1b1c1d678547aa5746ee9bd613db561bf9c006365135589",
-          "sizeBytes": 3945
+          "sha256": "7a6ff69078fa32ff804d3c09cdcf54bfc9e6f176c47aa970a834f480a4b78fbe",
+          "sizeBytes": 1367
         },
         {
           "path": "references/CORE.md",
-          "sha256": "a9c822b3acb4b7c9a4821540e3b387c19c4a45cbc17f1e1a4e8b3b94b9101322",
-          "sizeBytes": 9556
+          "sha256": "7b4f90848d49b5cb01913730db20f5fdc644ed0ca768c05e46e13532c0d05208",
+          "sizeBytes": 9755
         },
         {
           "path": "references/DRIVE-PERSISTENCE.md",
@@ -1555,8 +1555,8 @@
         },
         {
           "path": "references/FULL-CONTRACT.md",
-          "sha256": "275c7edb66abb0ccc9f90ce38abaf2bffd764a8e0d1b1cdf586110370cbd9b09",
-          "sizeBytes": 30847
+          "sha256": "2d366439d24e66903825c1eb7e8dc6cf3986d844db7eae4d954a67734646818b",
+          "sizeBytes": 31081
         },
         {
           "path": "references/LEARNING.md",
@@ -1610,7 +1610,7 @@
         },
         {
           "path": "references/SOURCE-MANIFEST.json",
-          "sha256": "e61a1006556f4e33bcd664605d3540f79096201ea4a019f027bd714024f9e4a9",
+          "sha256": "1cdebb0bd7b3ddc3e00b935e3b3a57acd49b06b8e8b70349d9a45720c3ff74ba",
           "sizeBytes": 2255
         },
         {
@@ -1705,8 +1705,8 @@
         },
         {
           "path": "scripts/install_agents_bundle.py",
-          "sha256": "f48ed6c7e430ee358821394d0118d68c864bbd9144599e25360ee79f59bbd7a2",
-          "sizeBytes": 5904
+          "sha256": "4d0a1be102f6dc3297586a494758b3fe0c2d38431f2ff216a96dda6684ef1b76",
+          "sizeBytes": 7468
         },
         {
           "path": "scripts/library_manager.py",
@@ -1809,8 +1809,8 @@
           "sizeBytes": 20558
         }
       ],
-      "sizeBytes": 1055395,
-      "treeDigest": "1284025a578fdbf4de927919e221697ec66166becb9171a99e8e138c337fa5a6"
+      "sizeBytes": 1050487,
+      "treeDigest": "c07e2d728a29535e2064762b9a266a0c568a5146a1beac56e892d4bf7a4126ca"
     },
     "project-visual-qa-showcase": {
       "fileCount": 8,

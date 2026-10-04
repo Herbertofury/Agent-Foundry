@@ -1,37 +1,35 @@
-# Agent Foundry Skill Catalog
+# Agent Foundry Chat Skill Catalog
+
+All nine flagship components are chat-oriented workflows selected in ChatGPT or a compatible chat harness. This catalog is not automatic coding-agent policy or a preload checklist. See [repository adoption](../docs/REPOSITORY-GOVERNANCE.md).
 
 ## Ultimate Agent Governance
-**Role:** shared acceptance constitution and governance authoring.
-
-Owns no blocker closeout, unknown-not-absent, challenger/integration, modernization/fix-forward, completeness proof, reusable failure intelligence, and runtime/performance acceptance boundaries.
-
-Current validated bundle:
-- SHA-256: <code>8d42e1b1ead43a0342931c18adb708875391a62a561d99eff7429fae57742cf8</code>
-- [Drive bundle](https://drive.google.com/file/d/1uPozXLHOEJgqphore01mDoBtFnNmwkmR/view)
+Chat acceptance and governance authoring. [Mirrored source](../skills/ultimate-agent-governance/SKILL.md).
 
 ## Zero-Loss Chat Accelerator
-**Role:** always-on execution substrate for continuity, anti-stall, no rediscovery, implementation crossing, single-flight equivalent reads, wait leases, checkpoint-before-long-gate, and maximum useful effort with minimum wasted motion.
+Chat continuity, anti-stall execution and state reuse. [Mirrored source](../skills/zero-loss-chat-accelerator/SKILL.md).
 
 ## Project Brain Orchestrator
-**Role:** durable project control plane for canonical identity, checkpoints, Drive/GitHub persistence, Project Constellation state, build-first closeout, and publication receipts.
+Chat project identity, checkpoints and remote continuity. [Mirrored source](../skills/project-brain-orchestrator/SKILL.md).
 
 ## Minecraft Dev Kit
-**Role:** Minecraft implementation, ports, conversions, benchmarking, release QA, and real runtime proof.
+Minecraft development, conversions and runtime QA. [Mirrored source](../skills/minecraft-dev-kit/SKILL.md).
 
 ## Minecraft Repair
-**Role:** bounded diagnosis and repair of broken clients, servers, modpacks, worlds, loaders, configs, packs, and JARs.
+Bounded Minecraft diagnosis and repair. [Mirrored source](../skills/minecraft-repair/SKILL.md).
 
 ## Project Visual QA Showcase
-**Role:** deterministic visual QA and showcase artifacts from real project assets.
+Visual QA and showcase artifacts. [Mirrored source](../skills/project-visual-qa-showcase/SKILL.md).
 
 ## Artifact Browser Companion
-**Role:** searchable/browsable companion applications around canonical research artifacts.
+Companion browsers for canonical artifacts. [Mirrored source](../skills/artifact-browser-companion/SKILL.md).
 
 ## Revenue Operator
-**Role:** real-world paid-work, monetization, outreach, and revenue pipeline execution.
+Paid-work and revenue workflows. [Mirrored source](../skills/revenue-operator/SKILL.md).
 
 ## Skill Creator
-**Role:** create and update reusable ChatGPT Skills with validation and packaging.
+Creates and updates reusable chat Skills. Externally supplied capability; `skills/skill-creator/` is not included in this repository's source mirror or current releases. Check availability in the actual chat harness.
 
-## Composition
-The narrowest domain Skill owns procedure. Governance and Zero-Loss remain active as acceptance/continuity overlays. Project Brain joins when durable project state, artifacts, Drive, GitHub, or handoff continuity matter.
+## Chat composition
+The narrowest selected domain Skill owns procedure. Governance and Zero-Loss provide relevant acceptance/continuity overlays. Project Brain joins when project state or remote continuity matters. Preserve accepted requirements and state across transitions. This chat composition does not activate Skills in repository instructions or authorize external actions.
+
+Published bundle receipts are in [GitHub releases](https://github.com/Herbertofury/Agent-Foundry/releases); a draft source change does not update those packages.

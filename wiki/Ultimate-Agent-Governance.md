@@ -1,5 +1,7 @@
 # Ultimate Agent Governance
 
+This page describes a selected chat workflow. [Coding-agent repository policy](AGENTS-md-and-Invariants) is separate; this workflow is not automatically loaded by repository instructions.
+
 Ultimate Agent Governance is the shared acceptance boundary for substantive work.
 
 ## Constitution highlights

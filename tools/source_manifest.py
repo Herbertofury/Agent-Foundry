@@ -20,7 +20,8 @@ def skill_record(skill: Path) -> dict:
     files = []
     tree = hashlib.sha256()
     total = 0
-    for path in sorted(p for p in skill.rglob("*") if p.is_file()):
+    for path in sorted((p for p in skill.rglob("*") if p.is_file()),
+                       key=lambda p: p.relative_to(skill).as_posix()):
         rel = path.relative_to(skill)
         if any(part in EXCLUDED_PARTS for part in rel.parts) or path.suffix in EXCLUDED_SUFFIXES:
             continue
@@ -67,7 +68,7 @@ def main() -> int:
     data = build(args.root)
     rendered = json.dumps(data, indent=2, sort_keys=True) + "\n"
     if args.write:
-        args.manifest.write_text(rendered, encoding="utf-8")
+        args.manifest.write_text(rendered, encoding="utf-8", newline="\n")
         print(f"WROTE {args.manifest}: {data['skillCount']} skills, {data['fileCount']} files, {data['sizeBytes']} bytes")
         return 0
 
