@@ -108,8 +108,11 @@ def plan(repo: Path, target: Path) -> tuple[dict, dict, list[dict]]:
         actions.append({"action": "review", "path": "AGENTS.md", "reason": "preserved; add a reviewed reference to .agents/foundry/AGENTS-adapter.md"})
     override = safe_path(target, "AGENTS.override.md")
     if override.exists():
-        actions.append({"action": "review", "path": "AGENTS.override.md",
-                        "reason": "preserved; review harness precedence and adapter integration in the override"})
+        if not override.is_file():
+            actions.append({"action": "conflict", "path": "AGENTS.override.md", "reason": "not a regular file"})
+        elif not re.search(r"\.agents/foundry/(?:PRODUCT_INVARIANTS|AGENTS-adapter)\.md", override.read_text(encoding="utf-8")):
+            actions.append({"action": "review", "path": "AGENTS.override.md",
+                            "reason": "preserved; review harness precedence and add adapter integration to the override"})
     lock_current = lock.get("version") == manifest["version"] and managed == {
         destination(k): v for k, v in manifest["files"].items()}
     actions.append({"action": "noop" if lock_current else "update", "path": LOCK,

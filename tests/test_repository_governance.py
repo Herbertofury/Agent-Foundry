@@ -35,6 +35,10 @@ class RepositoryGovernanceTests(unittest.TestCase):
         (self.source / "registry").mkdir()
         self.manifest()
         subprocess.run(["git", "init", "-q", str(self.source)], check=True)
+        # Keep temporary fixtures synchronous: detached Git maintenance can race
+        # TemporaryDirectory cleanup after a successful test on Linux runners.
+        for key, value in (("maintenance.auto", "false"), ("gc.auto", "0")):
+            subprocess.run(["git", "-C", str(self.source), "config", "--local", key, value], check=True)
         subprocess.run(["git", "-C", str(self.source), "add", "."], check=True, capture_output=True)
         subprocess.run(["git", "-C", str(self.source), "-c", "user.name=Test",
                         "-c", "user.email=test@example.invalid", "commit", "-qm", "fixture"], check=True)
@@ -132,6 +136,8 @@ class RepositoryGovernanceTests(unittest.TestCase):
         actions = governance.apply(self.source, self.target)
         self.assertTrue(any(x["action"] == "review" and x["path"] == "AGENTS.override.md" for x in actions))
         self.assertEqual(path.read_bytes(), before)
+        path.write_text(path.read_text(encoding="utf-8") + "Read `.agents/foundry/AGENTS-adapter.md`.\n", encoding="utf-8")
+        self.assertTrue(all(x["action"] == "noop" for x in governance.plan(self.source, self.target)[2]))
 
     def test_manifest_order_is_independent_of_path_platform(self):
         import source_manifest
