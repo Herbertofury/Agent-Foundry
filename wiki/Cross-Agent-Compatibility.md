@@ -4,4 +4,4 @@ Engineering invariants can be shared through canonical standards and thin scoped
 
 Preserve actual harness discovery, authority, permissions, cancellation and native task semantics. Local setup and exceptions remain project-owned. Check adapter integration and versioned policy drift separately from explicit Skill installs.
 
-[Repository Governance Sync](Repository-Governance-Sync) explains the proposed adoption path. File parity is auditable; semantic compliance and quality require behavior/runtime evidence.
+[Repository Governance Sync](Repository-Governance-Sync) explains the versioned adoption path. File parity is auditable; semantic compliance and quality require behavior/runtime evidence.

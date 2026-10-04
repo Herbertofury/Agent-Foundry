@@ -12,4 +12,4 @@ Start with audience, tasks, references, platform and the existing design system.
 
 Use [WCAG 2.2](https://www.w3.org/WAI/WCAG22/quickref/) for web keyboard, focus, semantics, contrast and reflow acceptance. Use [controlled visual baselines](https://playwright.dev/docs/test-snapshots) for plausible regressions; a diff cannot establish that the original design was good. Distinguish [lab performance evidence from field Web Vitals](https://web.dev/articles/vitals). Report inspected surfaces and gaps rather than promising flawless design.
 
-The draft proposes a dedicated design quality standard and expanded modernization decision guidance. They are under review, not released package behavior. Coding agents can perform QA with available native tools without activating Project Visual QA Showcase.
+The repository provides a dedicated design quality standard and expanded modernization decision guidance on main. Existing released Skill packages have not been updated. Coding agents can perform QA with available native tools without activating Project Visual QA Showcase.
