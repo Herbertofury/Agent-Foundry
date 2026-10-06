@@ -127,7 +127,9 @@ Agent Foundry now has explicit homes for:
 
 See [registry/protocols.json](./registry/protocols.json) for version-sensitive protocol state.
 
-## Current flagship components
+## Chat-facing skill components
+
+These are reusable skills for **ChatGPT chats**, not a roster of autonomous agents. Their names do not select a model, create an agent, grant tools, or expand permissions. Enable only the relevant skill for the chat task.
 
 - **Ultimate Agent Governance**
 - **Zero-Loss Chat Accelerator**
@@ -138,6 +140,10 @@ See [registry/protocols.json](./registry/protocols.json) for version-sensitive p
 - **Artifact Browser Companion**
 - **Revenue Operator**
 - **Skill Creator**
+
+## Agent and repository execution
+
+`AGENTS.md`, canonical standards, `agents/` adapters and `evals/` govern actual agent/repository execution separately. Keep adapters lean: point to the applicable canonical rule instead of copying every chat skill into each agent prompt. See [chat/agent boundaries](docs/CHAT-AND-AGENT-BOUNDARIES.md).
 
 ## Canonical bundle
 

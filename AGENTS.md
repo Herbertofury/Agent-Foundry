@@ -46,6 +46,8 @@ Do not duplicate long canonical policy across adapters or wiki pages.
 18. The strongest credible current solution is a baseline to meet or beat, not a ceiling. Before substantive invention, identify the baseline/challengers, reuse or compose superior authorized pieces, preserve protected dimensions, and seek a provable user-valued advantage rather than an unnecessary clone.
 19. For greenfield technical work and touched architecture with stack freedom, start from the strongest current best-fit frontier/bleeding-edge candidate stack using current primary-source evidence. Promote only candidates that survive compatibility, security, maintainability, supportability, performance/quality, and no-loss proof; preserve fixed target envelopes and backport frontier techniques when direct adoption is impossible.
 
+20. At project start, quickly check the canonical hub/internal to-dos, preserve the primary request, tackle relevant authorized adjacent items without duplicating active work, and mark completion only with evidence; see `PRODUCT_INVARIANTS.md` section 19.
+
 ## Change discipline
 
 When changing a canonical standard:

@@ -107,3 +107,15 @@ Optimize orchestration waste, repeated discovery, redundant polling, and avoidab
 **Failure rule.** Do not retain old technology merely because it is familiar, and do not ship a worse candidate merely because it is newer. Patch, fork, decompose, backport winning pieces, or choose the next strongest candidate.
 
 **Acceptance test.** Did stack selection begin from the strongest current frontier candidates and did the shipped baseline earn promotion through real evidence instead of familiarity or novelty?
+
+
+## 19. Project to-do awareness without task drift
+**Rule.** Before substantive project work, make one quick check of the canonical project hub, open issues/roadmap, and repository-local to-do list. Preserve the user's current request as the primary objective.
+
+**Required behavior.** Identify applicable open items and work already in progress. Tackle related, authorized to-dos alongside the requested change when they share the touched area or can be completed without jeopardizing the primary task. Do not duplicate another worker's active changes. Refresh the list at meaningful checkpoints, not before every tool call.
+
+**Evidence-bound tracking.** Mark an item complete only after its actual acceptance checks pass. Link the relevant commit, test result, artifact, or runtime evidence. Partial work stays partial; blocked work records the blocker and exact next action. Keep the canonical hub/internal list and live Wiki status consistent where those surfaces exist.
+
+**Boundaries.** A to-do entry is context, not new permission to publish, spend, delete, expand access, or change unrelated scope. Respect the latest user priorities, environment limits and other active work. An inaccessible hub does not halt independent work: record the missing check and continue safely. Avoid ceremonial audits, repeated rediscovery, or opportunistic backlog work that delays the requested result.
+
+**Acceptance test.** Did we check the relevant to-dos, advance sensible authorized adjacent work, avoid duplicate effort, and update only the statuses supported by evidence?
