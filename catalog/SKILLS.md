@@ -18,8 +18,11 @@ Current validated bundle:
 ## Minecraft Dev Kit
 **Role:** Minecraft implementation, ports, conversions, benchmarking, release QA, and real runtime proof.
 
+Boundary reference:
+- [Chat and Code Boundary](../docs/MINECRAFT_DEV_KIT_CHAT_AND_CODE_BOUNDARY.md)
+
 ## Minecraft Repair
-**Role:** bounded diagnosis and repair of broken clients, servers, modpacks, worlds, loaders, configs, packs, and JARs.
+**Role:** bounded diagnosis and repair of broken clients, servers, worlds, loaders, configs, packs, and JARs.
 
 ## Project Visual QA Showcase
 **Role:** deterministic visual QA and showcase artifacts from real project assets.
