@@ -52,6 +52,10 @@ It exists to prevent the failure modes that ruin long, ambitious agent work:
 | 📦 [Distribution & Sync](Distribution-and-Sync) | skills.sh, locks, desired-state multi-agent installs |
 | 🗺️ [Roadmap](Roadmap) | Where the Foundry goes next |
 
+## Chats and agents have different roles
+
+The [Skills Catalog](Skills-Catalog) contains **chat-facing skills**, not autonomous agent definitions. Repository agents use lean `AGENTS.md` routing, canonical standards and explicit adapters. Do not force every chat skill into every agent. [Boundary guide](https://github.com/Herbertofury/Agent-Foundry/blob/main/docs/CHAT-AND-AGENT-BOUNDARIES.md).
+
 ## Core execution loop
 
 ~~~mermaid

@@ -35,3 +35,10 @@ Canonical repository files:
 For substantive project work, keep the latest coherent checkpoint on durable remotes rather than trusting the current chat. Source/history belongs in the canonical GitHub/VCS repository; material artifacts and checkpoint exports belong in connected Google Drive when available; and projects that use GitHub Wiki must keep the **actual live Wiki** synchronized. A repo-side <code>wiki/</code> mirror is canonical source, not proof of publication.
 
 A missing or stale required remote remains unresolved work. The closeout question is simple: **could a fresh chat resume from verified remote state without this conversation?**
+
+
+## Project to-dos alongside requested work
+
+Before substantive work, quickly check the canonical hub/issues and internal to-dos. Keep the primary request first; tackle related authorized items when useful, without duplicating active work or derailing the task. Mark items complete only with acceptance evidence and keep partial/blocked work accurately labeled. Avoid repeated full-backlog scans.
+
+Canonical rule: [Product invariant 19](https://github.com/Herbertofury/Agent-Foundry/blob/main/PRODUCT_INVARIANTS.md#19-project-to-do-awareness-without-task-drift). Chat-facing skills stay separate from repository agent adapters; keep `AGENTS.md` short and link to the canonical policy.

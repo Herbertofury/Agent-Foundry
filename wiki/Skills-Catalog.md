@@ -1,4 +1,6 @@
-# Skills Catalog
+# Chat Skills Catalog
+
+The components below are intended for **ChatGPT chats**. They are reusable procedures, not independent agents, model selectors or permission grants. The agent/repository layer is documented separately in [AGENTS.md & Invariants](AGENTS-md-and-Invariants) and the [boundary guide](https://github.com/Herbertofury/Agent-Foundry/blob/main/docs/CHAT-AND-AGENT-BOUNDARIES.md).
 
 ## 👑 Ultimate Agent Governance
 Shared acceptance constitution and governance architecture.
