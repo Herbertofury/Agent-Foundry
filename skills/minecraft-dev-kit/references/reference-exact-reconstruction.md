@@ -144,3 +144,27 @@ Preserve the contract with the final asset so later iterations can rerun the sam
 ## Release bar
 
 Do not say “exact” unless every supplied required view/time passes its recorded parity threshold and a human review finds no material observable mismatch. Say **inferred** for unseen structure. Say **native verified** only after the actual target Minecraft build has been loaded and exercised.
+
+## Reference authority and collection reconciliation
+
+Before fitting, reconcile original ChatGPT/Drive/project references with
+`scripts/reference_catalog.py ROOT --policy POLICY.json --output CATALOG.json`.
+The explicit policy assigns directory roles and per-file overrides; unknown files
+stay unclassified. Primary designs, alternate states, baseline textures,
+inspiration, rejected iterations and superseded art are distinct roles. Preserve
+original bytes and record source/decision links. Byte-duplicate and decoded-pixel-duplicate groups are reported separately,
+never deleted automatically. PNG metadata differences do not establish a new design.
+Pixel comparison includes orientation, color-profile bytes and all animation frames/timing.
+
+For a modeling target, add `variant`, optional `state`, and `expected_sha256` to
+its override. Use `--variant ID --state base` to require exactly one hash-pinned
+primary/state target. A filename, folder membership, or newer timestamp alone
+must not silently approve a reference. Rejected/superseded art cannot be selected.
+Run `reference_catalog_selftest.py` after changing this gate.
+
+A catalog verifies identity and selection only. It does not prove that a model
+looks like its reference. Keep reference-view geometry, eyes/lashes, crown and
+hair volume, foot attachments, materials, glow and animation acceptance separate
+from build/server success. Preserve the user's no-image-generation requirement
+when it applies; native screenshots must always remain distinguishable from
+concept art and offline renders.
