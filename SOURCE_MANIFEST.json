@@ -1,7 +1,7 @@
 {
-  "fileCount": 418,
+  "fileCount": 420,
   "schemaVersion": 1,
-  "sizeBytes": 3668949,
+  "sizeBytes": 3677666,
   "skillCount": 8,
   "skills": {
     "artifact-browser-companion": {
@@ -117,7 +117,7 @@
       "treeDigest": "5ff9106b75116e3270fe2eaed67ad336b78224c9c9ed0eb253c169ee25394577"
     },
     "minecraft-dev-kit": {
-      "fileCount": 220,
+      "fileCount": 222,
       "files": [
         {
           "path": "README.md",
@@ -695,6 +695,16 @@
           "sizeBytes": 6899
         },
         {
+          "path": "scripts/reference_catalog.py",
+          "sha256": "21c9acab6ac62e4fb98d275a356ca4630516ca5800a5abd684c8ef4dbb706543",
+          "sizeBytes": 5534
+        },
+        {
+          "path": "scripts/reference_catalog_selftest.py",
+          "sha256": "1298344f606a6313edb2500d864a0c4bea53d855eff169e27206fc0fb2055b76",
+          "sizeBytes": 3183
+        },
+        {
           "path": "scripts/reference_cuboid_fit.py",
           "sha256": "e2d847974332c2b5509ce29c5ae8cb2a478b5e877382263ecf21724ade230c81",
           "sizeBytes": 15410
@@ -1220,8 +1230,8 @@
           "sizeBytes": 2836
         }
       ],
-      "sizeBytes": 1994184,
-      "treeDigest": "27ced9641bed71d844fdce88b1e18f23883ad2ab4dbf7bde7fe6c65800a71b2f"
+      "sizeBytes": 2002901,
+      "treeDigest": "6e1f3a7b307e3f82a1f93dcf856a4bb8946dd232b227f6557a867bea4d7ee89f"
     },
     "minecraft-repair": {
       "fileCount": 15,
