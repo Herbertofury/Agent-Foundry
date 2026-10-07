@@ -1,7 +1,7 @@
 {
   "fileCount": 420,
   "schemaVersion": 1,
-  "sizeBytes": 3677666,
+  "sizeBytes": 3679225,
   "skillCount": 8,
   "skills": {
     "artifact-browser-companion": {
@@ -316,8 +316,8 @@
         },
         {
           "path": "references/reference-exact-reconstruction.md",
-          "sha256": "2f56caf7debdf57450e5b35a4a42ddeb090faf5d659ff75b69c68c65e3dac98f",
-          "sizeBytes": 10001
+          "sha256": "3c332a17646771267a7577e164a65879646efdf949ec32a4418e324f1c08350e",
+          "sizeBytes": 11560
         },
         {
           "path": "references/reference-model-reconstruction.md",
@@ -1230,8 +1230,8 @@
           "sizeBytes": 2836
         }
       ],
-      "sizeBytes": 2002901,
-      "treeDigest": "6e1f3a7b307e3f82a1f93dcf856a4bb8946dd232b227f6557a867bea4d7ee89f"
+      "sizeBytes": 2004460,
+      "treeDigest": "74091ce428c0caf01893ae33ac0a544100cc40a32c7209be6745d982403a5d6d"
     },
     "minecraft-repair": {
       "fileCount": 15,
