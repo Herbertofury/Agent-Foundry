@@ -3,6 +3,8 @@
 ## Performance: continuous zero-loss ratchet
 Performance is an always-on objective for substantive runtime work. Agents perform a bounded free-speed pass on the affected path, integrate verified no-loss wins, and make each proven improvement the new baseline.
 
+Ordinary feature and fix work also pursues runtime speed, cold/warm startup, initialization and time-to-ready alongside the primary task. Preserve all capabilities without artificial caps, regressions or deferred first-use cost. Checkpoints record measured before/after evidence and regression checks, or explain no safe opportunity / blocked measurement. See [product invariant 14](https://github.com/Herbertofury/Agent-Foundry/blob/main/PRODUCT_INVARIANTS.md#14-continuous-zero-loss-performance-ratchet) for the canonical rule.
+
 For explicit performance work, optimization must show:
 - equivalent workload/result identity;
 - a real target-metric or hot-path improvement; **and**
