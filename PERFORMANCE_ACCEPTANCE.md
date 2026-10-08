@@ -3,6 +3,8 @@
 Agent Foundry treats performance, quality, completeness, and user experience as simultaneous requirements.
 
 ## Always-on free-speed pass
+
+Follow [product invariant 14](PRODUCT_INVARIANTS.md#14-continuous-zero-loss-performance-ratchet) throughout ordinary feature, fix, refactor and integration work, not only at closeout. Always strive to improve runtime speed and cold/warm startup, initialization and time-to-ready alongside the primary task on affected paths. Preserve every capability and the complete workload: artificial caps, feature loss, weaker quality, regressions and shifting startup cost into first use are not wins. Record measured before/after evidence and regression checks, or a specific no-safe-opportunity / measurement-blocked outcome; never claim an unmeasured speedup.
 Performance is an always-on engineering objective for substantive work that can affect runtime cost or responsiveness. Before closeout, inspect the touched or causally related path for plausible **no-loss** improvements: eliminate unnecessary work, improve algorithms/data structures, batch work, reduce round trips and allocations, use incremental state, correct caching/indexing, safe concurrency, async I/O, better scheduling, native/runtime fast paths, and hardware acceleration where useful.
 
 This pass is bounded and evidence-driven. Do not wander into unrelated micro-optimization when there is no plausible causal opportunity. But when a verified no-loss win is available in the affected path, leaving the slower implementation in place is incomplete engineering.
