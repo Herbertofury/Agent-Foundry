@@ -59,3 +59,17 @@ Added in the 2026-09-27 sweep:
 - add an installer/sync prototype with plan → apply → status semantics;
 - add ACP/AG-UI adapters to Project Constellation where they materially improve client interoperability;
 - add ACS compatibility experiments without treating the young reference implementation as the sole enforcement boundary.
+
+
+## Execution reconciliation · November 12, 2026
+
+The historical waves above describe intent, not a fresh list of missing source. Reconcile the existing skill trees, schemas and installer before duplicating them. [Draft PR #3](https://github.com/Herbertofury/Agent-Foundry/pull/3) separates chat/repository paths and proposes safe versioned governance; proposed code is not a released bundle.
+
+Continue through [no-loss distribution milestone](https://github.com/Herbertofury/Agent-Foundry/milestone/1) and [qualification issue #4](https://github.com/Herbertofury/Agent-Foundry/issues/4):
+- [ ] Qualify clean install, customization, update/drift plan, conflict refusal/resolution and rollback on supported platforms.
+- [ ] Preserve all invariants and project-specific edits through the complete workflow.
+- [ ] Resolve or explicitly retain the two broader-suite baseline failures documented in PR #3 without weakening gates.
+- [ ] Verify actual release bundle checksums/provenance and supported-runtime behavior, not only schemas and host tests.
+- [ ] Reconcile landed, proposed, tested and shipped status for each historical roadmap item against evidence.
+
+No automatic cross-project rollout or permission expansion is included. Existing implementation, local edits and historical evidence remain authoritative.
