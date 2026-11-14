@@ -33,3 +33,5 @@
 
 ---
 [Repository](https://github.com/Herbertofury/Agent-Foundry)
+
+- [Repository governance sync](Repository-Governance-Sync)

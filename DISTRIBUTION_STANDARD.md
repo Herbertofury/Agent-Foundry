@@ -72,3 +72,5 @@ Collections are useful for Foundry presets, but a pack is not a security boundar
 ## Future OCI adapter
 
 OCI artifact distribution is promising for immutable digests, registries, signatures, and enterprise mirroring, but Foundry treats current Agent Skills OCI conventions as an evolving compatibility target rather than a settled official standard.
+
+See [versioned repository adoption](docs/REPOSITORY-GOVERNANCE.md) for the implemented plan/apply/status tool and local/shared boundary.
