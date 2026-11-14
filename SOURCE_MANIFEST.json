@@ -1,7 +1,7 @@
 {
   "fileCount": 420,
   "schemaVersion": 1,
-  "sizeBytes": 3679225,
+  "sizeBytes": 3680789,
   "skillCount": 8,
   "skills": {
     "artifact-browser-companion": {
@@ -1715,8 +1715,8 @@
         },
         {
           "path": "scripts/install_agents_bundle.py",
-          "sha256": "f48ed6c7e430ee358821394d0118d68c864bbd9144599e25360ee79f59bbd7a2",
-          "sizeBytes": 5904
+          "sha256": "4d0a1be102f6dc3297586a494758b3fe0c2d38431f2ff216a96dda6684ef1b76",
+          "sizeBytes": 7468
         },
         {
           "path": "scripts/library_manager.py",
@@ -1819,8 +1819,8 @@
           "sizeBytes": 20558
         }
       ],
-      "sizeBytes": 1055395,
-      "treeDigest": "1284025a578fdbf4de927919e221697ec66166becb9171a99e8e138c337fa5a6"
+      "sizeBytes": 1056959,
+      "treeDigest": "0f34239287443c4ac07aa3f8e87719fa2673ee371951761c1679109372ebec35"
     },
     "project-visual-qa-showcase": {
       "fileCount": 8,

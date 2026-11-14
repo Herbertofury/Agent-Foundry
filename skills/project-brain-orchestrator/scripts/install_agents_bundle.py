@@ -22,7 +22,9 @@ def backup_existing(target:Path,paths:list[Path]):
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__); ap.add_argument('target',type=Path)
-    ap.add_argument('--mode',choices=('all-in-one','modular','hybrid'),default='hybrid')
+    ap.add_argument('--mode',choices=('repository','all-in-one','modular','hybrid'),default='repository')
+    ap.add_argument('--dry-run',action='store_true',help='Read-only plan; never installs files.')
+    ap.add_argument('--legacy-chat-contract',action='store_true',help='Explicitly opt into legacy chat-oriented contracts instead of thin repository governance.')
     ap.add_argument('--without-tools',action='store_true')
     ap.add_argument('--init-memory',action='store_true',help='Initialize project-owned second-brain state after installation.')
     ap.add_argument('--project-name',help='Project name required with --init-memory.')
@@ -34,7 +36,22 @@ def main():
     args=ap.parse_args(); target=args.target.expanduser().resolve()
     if not target.is_dir(): print(f'Target is not an existing directory: {target}',file=sys.stderr); return 2
     root=Path(__file__).resolve().parents[1]; bundle=root/'assets/agents-md-hybrid'
+    if args.init_memory and not args.project_name:
+        print('--project-name is required with --init-memory',file=sys.stderr); return 2
+    if args.mode=='repository':
+        if args.init_memory or args.init_library:
+            print('Initialize chat memory/library separately; repository adoption does not activate chat workflows.',file=sys.stderr); return 2
+        tool=root.parents[1]/'tools/repository_governance.py'
+        if not tool.is_file():
+            print('Thin repository adoption requires the canonical Agent-Foundry checkout; legacy export is not a substitute.',file=sys.stderr); return 2
+        return subprocess.run([sys.executable,str(tool),'plan' if args.dry_run else 'apply','--target',str(target)],timeout=120).returncode
+    if not args.legacy_chat_contract:
+        print('Legacy modes require --legacy-chat-contract; prefer the default repository adapter.',file=sys.stderr); return 2
     planned=[Path('AGENTS.md'),Path('AGENTS-all-in-one.md'),Path('AGENTS.modular.md'),Path('AGENTS-README.md'),Path('.agents')]
+    if any((target/p).exists() or (target/p).is_symlink() for p in planned):
+        print('Refusing to replace existing project instructions/modules; use thin repository adoption and review local integration.',file=sys.stderr); return 2
+    if args.dry_run:
+        print(f'Would install explicitly selected legacy {args.mode} chat contract into {target}'); return 0
     backup=backup_existing(target,planned)
     if args.mode=='all-in-one':
         copy_path(bundle/'AGENTS.md',target/'AGENTS.md')

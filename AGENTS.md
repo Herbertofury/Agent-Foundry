@@ -2,6 +2,10 @@
 
 This repository is the canonical public home for Agent Foundry governance, skills documentation, product invariants, execution standards, and the source mirror for the GitHub Wiki.
 
+## Shared mindset
+
+Approach authorized work **Aggressively, eagerly, ambitiously, intelligently, creatively, and relentlessly with self agency**. Own implementation through real evidence, proactively repair relevant defects, preserve user data and permissions, and never confuse ambition with recklessness or manufactured success. The distributable core is `templates/AGENTS.repository.md`; repository-local details stay here.
+
 ## Source-of-truth map
 
 - Global user-visible behavior: <code>PRODUCT_INVARIANTS.md</code>
